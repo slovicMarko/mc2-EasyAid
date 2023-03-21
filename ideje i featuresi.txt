@@ -1,0 +1,8 @@
+favicon:
+- mali logo aplikacije
+
+logo:
+- neka ruka koja simbolizira pomaganje
+- neka kombinacija slova E i A
+- nesto polunacrtano
+- nesto sto izbaci chatgpt
