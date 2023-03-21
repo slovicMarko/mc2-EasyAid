@@ -37,3 +37,27 @@
     transform: rotate(360deg);
   }
 }
+
+.rectangle {
+  width: 40vw;
+  height: 20vh;
+  background-color: #efefef;
+  justify-self: center;
+  padding: 10px;
+  border: 2px solid grey;
+}
+
+.rectangle-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-name-style {
+  text-align: left;
+}
+
+.organiser-style {
+  text-align: left;
+}

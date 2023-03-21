@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+
+const EventBubble=() => {
+  return (
+    <>
+    <div className="rectangle-container">
+      <div className="rectangle" >
+        <h1 className="event-name-style">Ime eventa</h1>
+        <h2 className="organiser-style">Organizator</h2>
+        <p>Kratak opis akcije......</p>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    </>
+  );
+}
 
 function App() {
   return (
+    <>
+    <br/>
+    <br/>
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <EventBubble/>
+    <EventBubble/>
+    <EventBubble/>
+    <EventBubble/>
     </div>
+    </>
+    
   );
 }
 
