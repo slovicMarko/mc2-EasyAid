@@ -1,12 +1,23 @@
 import React from "react";
-import loginForm from "./form";
+import loginForm from "./login_form";
+import registerForm from "./register_form";
+
+
+
 
 function LoginScreen() {
-  return (
-   <div className="loginForm">
+   
+   let check = "login";
+   
+  if (check === "login") {
+     return <div className="loginForm">
       {loginForm()}
-   </div>   
-  );
-};
+      </div>;
+  } else if (check === "register") {
+     return <div className="loginForm">
+      {registerForm()}
+      </div>;
+  }
+}
 
 export default LoginScreen;

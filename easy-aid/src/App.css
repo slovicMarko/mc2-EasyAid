@@ -103,6 +103,7 @@ body {
 
 .formContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -126,7 +127,7 @@ body {
   border: 3px solid #7c7c7c;
   border-radius: 10px;
   padding: 0 15px;
-  transition: 0.4s ease;
+  transition: 0.4s  ease-in;
 }
 
 .input:focus {
@@ -137,7 +138,7 @@ body {
 .input:focus::-webkit-input-placeholder {
   /* WebKit browsers */
   color: transparent;
-  transition: 0.3s ease;
+  transition: 0.3s ease-out;
 }
 
 .loginBtn {
@@ -155,12 +156,32 @@ body {
   cursor: pointer;
   user-select: none;
   transition: 0.4s ease;
+  border-style: none;
 }
 
 .loginBtn:hover {
   color: #212121;
   background-color: #548aff;
 }
+
+.logRegSwitch{
+  margin: 10px 0 0 0;
+}
+
+.switch{
+  color: #548aff;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transform: 0.4s ease;
+}
+
+.switch:hover{
+  color: #2a5ece;
+}
+
+
+
 
 .event-name-style {
   text-align: left;
