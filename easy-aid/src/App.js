@@ -6,8 +6,6 @@ import LoginScreen from "./components/loginScreen";
 import MainFeed from "./components/mainFeed";
 import { useState } from "react";
 
-
-
 const LoginButton = () => {
   const [isActive, setIsActive] = useState(false);
 
@@ -30,19 +28,22 @@ const AppRouting = () => {
     <div className="router-position">
       <Router>
         <div className="App">
-          <ul className="App-header-login">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/loginScreen">
-                <LoginButton />
-              </Link>
-            </li>
-            <li>
-              <Link to="/mainFeed">feed</Link>
-            </li>
-          </ul>
+          
+          <div className="navbar">
+            <Link className="link navBtn" to="/">
+              HOME
+            </Link>
+
+            <Link className="link navBtn" to="/loginScreen">
+              LOGIN
+              {/*<LoginButton />*/}
+            </Link>
+
+            <Link className="link navBtn" to="/mainFeed">
+              FEED
+            </Link>
+          </div>
+
           <Routes>
             <Route exact path="/" element={<HomeScreen />}></Route>
             <Route exact path="/loginScreen" element={<LoginScreen />}></Route>
