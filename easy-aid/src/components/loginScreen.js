@@ -1,10 +1,10 @@
 import React from "react";
-import formEvent from "./form";
+import loginForm from "./form";
 
 function LoginScreen() {
   return (
    <div className="loginForm">
-      {formEvent()}
+      {loginForm()}
    </div>   
   );
 };
