@@ -37,7 +37,6 @@
   color: white;
 }
 
-
 .App-link {
   color: #61dafb;
 }
@@ -52,11 +51,14 @@
 }
 
 .rectangle {
-  width: 40vw;
-  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 250px;
   background-color: #efefef;
   justify-self: center;
-  padding: 10px;
+  text-align: left;
+  padding: 15px;
   border: 2px solid grey;
 }
 
@@ -86,7 +88,7 @@
 }
 
 .login-button:hover {
-  background-color:rgb(26, 161, 8);
+  background-color: rgb(26, 161, 8);
 }
 
 .important-text {
@@ -96,7 +98,7 @@
 }
 
 .router-position {
-  top:0;
-  width:100%;
-  z-index:100;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
