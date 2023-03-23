@@ -1,21 +1,23 @@
 import React from "react";
 
+// LOGIN
+
 const loginForm = () => {
   return (
     <div className="formContainer">
-      <form class="form">
-        <div class="formField">
+      <form className="form">
+        <div className="formField">
           <input
-            class="input input--text"
+            className="input input--text"
             id="formInput#text"
             type="text"
             name="text"
             placeholder="username"
           />
         </div>
-        <div class="formField">
+        <div className="formField">
           <input
-            class="input input--password"
+            className="input input--password"
             id="formInput#passwprd"
             type="password"
             name="password"
@@ -24,11 +26,15 @@ const loginForm = () => {
         </div>
 
         <div className="formField">
-            <div className="loginBtn">
-                Login
-            </div>
+          <button type="submit" className="loginBtn">
+            Login
+          </button>
         </div>
       </form>
+      <div className="logRegSwitch" id="switch">
+        Nemas račun?
+        <i className="switch"> Registriraj se!</i>
+      </div>
     </div>
   );
 };
