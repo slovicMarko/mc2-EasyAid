@@ -195,3 +195,30 @@ body {
   width: 100%;
   z-index: 100;
 }
+
+.front-windows {
+  width: 60%;
+  height: 15%;
+  border-style: solid;
+  border: 3px solid #7c7c7c;
+  background-color: #7c7c7c;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+
+.front-window-font {
+  font-size: 20px;
+  font-family: Verdana;
+  color: rgb(226, 226, 236)
+}
+
+.sponsor-logo {
+  height :20vh;
+ 
+  object-fit: contain;
+}
+
+.home-empty {
+  height: 20vh;
+  width : 100%;
+}
