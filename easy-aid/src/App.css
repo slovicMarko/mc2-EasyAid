@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
 body {
   background: #f0f0f0;
   overflow: hidden;
@@ -111,6 +114,16 @@ body {
   height: 30vw;
 }
 
+
+.appName{
+  margin: 0 0 30px 0;
+  font-size: 44px;
+  font-weight: bold;
+  font-family: 'Roboto', 'sans-serif';
+  user-select: none;
+
+}
+
 .formField {
   display: flex;
   flex-direction: column;
@@ -171,9 +184,11 @@ body {
 .switch{
   color: #548aff;
   font-weight: bold;
+  font-style: italic;
   cursor: pointer;
   user-select: none;
   transform: 0.4s ease;
+  text-decoration: none;
 }
 
 .switch:hover{

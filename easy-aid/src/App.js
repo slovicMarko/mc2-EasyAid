@@ -5,6 +5,9 @@ import HomeScreen from "./components/homeScreen";
 import LoginScreen from "./components/loginScreen";
 import MainFeed from "./components/mainFeed";
 import { useState } from "react";
+import loginForm from "./components/login_form";
+import registerForm from "./components/register_form";
+import RegisterScreen from "./components/registerScreen";
 
 const LoginButton = () => {
   const [isActive, setIsActive] = useState(false);
@@ -28,7 +31,6 @@ const AppRouting = () => {
     <div className="router-position">
       <Router>
         <div className="App">
-          
           <div className="navbar">
             <Link className="link navBtn" to="/">
               HOME
@@ -47,6 +49,7 @@ const AppRouting = () => {
           <Routes>
             <Route exact path="/" element={<HomeScreen />}></Route>
             <Route exact path="/loginScreen" element={<LoginScreen />}></Route>
+            <Route exact path="/registerForm" element={<RegisterScreen />}></Route>
             <Route exact path="/mainFeed" element={<MainFeed />}></Route>
           </Routes>
         </div>

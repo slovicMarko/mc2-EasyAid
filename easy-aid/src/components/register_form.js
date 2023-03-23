@@ -1,11 +1,12 @@
 import React from "react";
-import activateSwitch from "./loginScreen";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 // REGISTER
 
 const registerForm = () => {
   return (
     <div className="formContainer">
+      <div className="appName">EasyAid</div>
       <form className="form">
         <div className="formField">
           <input
@@ -43,10 +44,10 @@ const registerForm = () => {
       </form>
       <div className="logRegSwitch" id="switch">
         Već imaš račun?
-        <i onClick={activateSwitch} className="switch">
+        <Link className="switch" to="/loginScreen">
           {" "}
           Prijavi se!
-        </i>
+        </Link>
       </div>
     </div>
   );

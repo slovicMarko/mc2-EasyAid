@@ -1,10 +1,13 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 
 // LOGIN
 
 const loginForm = () => {
   return (
     <div className="formContainer">
+      <div className="appName">EasyAid</div>
       <form className="form">
         <div className="formField">
           <input
@@ -33,7 +36,10 @@ const loginForm = () => {
       </form>
       <div className="logRegSwitch" id="switch">
         Nemas račun?
-        <i className="switch"> Registriraj se!</i>
+        <Link className="switch" to="/registerForm">
+          {" "}
+          Registriraj se!
+        </Link>
       </div>
     </div>
   );
