@@ -5,9 +5,30 @@ import HomeScreen from "./components/homeScreen";
 import LoginScreen from "./components/loginScreen";
 import MainFeed from "./components/mainFeed";
 import { useState } from "react";
-import loginForm from "./components/login_form";
-import registerForm from "./components/register_form";
 import RegisterScreen from "./components/registerScreen";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCKBJXxJapVO-5xhKjSRoGbkdh839CF78U",
+  authDomain: "test-project-3762d.firebaseapp.com",
+  projectId: "test-project-3762d",
+  storageBucket: "test-project-3762d.appspot.com",
+  messagingSenderId: "654001614157",
+  appId: "1:654001614157:web:f219a26d530eb94846db04",
+  measurementId: "G-F7LMM1DB14"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+
 
 const LoginButton = () => {
   const [isActive, setIsActive] = useState(false);

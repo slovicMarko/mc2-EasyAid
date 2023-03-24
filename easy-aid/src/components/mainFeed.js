@@ -6,6 +6,9 @@ function MainFeed() {
     <div>
       <h1>Main Feed</h1>
       <div className="EventBubble">{EventBubble()}</div>
+      <div className="EventBubble">{EventBubble()}</div>
+      <div className="EventBubble">{EventBubble()}</div>
+      <div className="EventBubble">{EventBubble()}</div>
     </div>
   );
 }

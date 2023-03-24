@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 body {
   background: #f0f0f0;
-  overflow: hidden;
 }
 
 .App {
@@ -114,14 +112,12 @@ body {
   height: 30vw;
 }
 
-
-.appName{
+.appName {
   margin: 0 0 30px 0;
   font-size: 44px;
   font-weight: bold;
-  font-family: 'Roboto', 'sans-serif';
+  font-family: "Roboto", "sans-serif";
   user-select: none;
-
 }
 
 .formField {
@@ -140,7 +136,7 @@ body {
   border: 3px solid #7c7c7c;
   border-radius: 10px;
   padding: 0 15px;
-  transition: 0.4s  ease-in;
+  transition: 0.4s ease-in;
 }
 
 .input:focus {
@@ -177,11 +173,11 @@ body {
   background-color: #548aff;
 }
 
-.logRegSwitch{
+.logRegSwitch {
   margin: 10px 0 0 0;
 }
 
-.switch{
+.switch {
   color: #548aff;
   font-weight: bold;
   font-style: italic;
@@ -191,12 +187,9 @@ body {
   text-decoration: none;
 }
 
-.switch:hover{
+.switch:hover {
   color: #2a5ece;
 }
-
-
-
 
 .event-name-style {
   text-align: left;
@@ -245,16 +238,16 @@ body {
 .front-window-font {
   font-size: 20px;
   font-family: Verdana;
-  color: rgb(226, 226, 236)
+  color: rgb(226, 226, 236);
 }
 
 .sponsor-logo {
-  height :20vh;
- 
+  height: 20vh;
+
   object-fit: contain;
 }
 
 .home-empty {
   height: 20vh;
-  width : 100%;
+  width: 100%;
 }
