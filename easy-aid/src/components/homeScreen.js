@@ -1,6 +1,8 @@
 import React from 'react';
-//import sponzor1 from "../images";
-  
+import sponzor_1 from "../images/sponzor1.jpg";
+import sponzor_2 from "../images/sponzor2.jpg";
+import sponzor_3 from "../images/sponzor3.jpg";
+
 function EmptySpace ({windowHeightPercentage}) {
     return (
         <div style={{ height: `${windowHeightPercentage}vh` }}> </div>
@@ -34,9 +36,9 @@ function HomeScreen () {
 
             <hr/>
             <h2>Sponzori</h2>
-            <img className='sponsor-logo' src="../images/sponzor1.jpg" alt="Sponzor1"></img>
-            <img className='sponsor-logo' src="../images/sponzor2.jpg" alt="Sponzor2"></img>
-            <img className='sponsor-logo' src="../images/sponzor3.jpg" alt="Sponzor3"></img>
+            <img className='sponsor-logo' src={sponzor_1} alt="Sponzor1"></img>
+            <img className='sponsor-logo' src={sponzor_2} alt="Sponzor2"></img>
+            <img className='sponsor-logo' src={sponzor_3} alt="Sponzor3"></img>
             <hr/>
 
         </>
