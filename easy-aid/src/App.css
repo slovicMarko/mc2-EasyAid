@@ -63,9 +63,11 @@ body {
   height: 250px;
   background-color: #efefef;
   justify-self: center;
-  text-align: left;
   padding: 15px;
-  border: 2px solid grey;
+  border: 3px solid grey;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   /*Neam pojma sta koja vrijednost znaci w3schools*/
+
 }
 
 .rectangle-container {
@@ -81,6 +83,10 @@ body {
   align-items: center;
   padding: 20px;
   font-size: 24px;
+  background-color: rgb(219, 54, 25);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .navBtn {
@@ -90,6 +96,7 @@ body {
   width: 70px;
   border-radius: 10px;
   transition: 0.4s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .navBtn:hover {
@@ -226,13 +233,15 @@ body {
 }
 
 .front-windows {
-  width: 60%;
+  width: 60vw;
   height: 15%;
   border-style: solid;
+  margin:auto;
   border: 3px solid #7c7c7c;
   background-color: #7c7c7c;
   border-radius: 10px;
-  padding: 0 15px;
+  padding: 15px 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .front-window-font {
@@ -243,8 +252,9 @@ body {
 
 .sponsor-logo {
   height: 20vh;
-
+  padding: 10px;
   object-fit: contain;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 .home-empty {

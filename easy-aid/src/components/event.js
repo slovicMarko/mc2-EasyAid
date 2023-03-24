@@ -1,6 +1,6 @@
 import React from "react";
 
-const EventBubble = () => {
+const EventBubble = (sifra) => {
   return (
     <>
       <div className="rectangle-container">
