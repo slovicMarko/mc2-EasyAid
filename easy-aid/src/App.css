@@ -56,12 +56,16 @@ body {
   }
 }
 
+
+/*DIO ZA EVENTOVE ˇ  */
+
+
 .rectangle {
   display: flex;
   flex-direction: column;
   width: 450px;
   height: 250px;
-  background-color: #efefef;
+  /*background-color: #efefef;*/
   justify-self: center;
   padding: 15px;
   border: 3px solid grey;
@@ -76,6 +80,24 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.bubble-div {
+  background-color: white;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.bubble-div:hover {
+  transition: 0.4s ease;
+  background-color: rgb(223, 220, 220);
+}
+
+.bubble-div:active {
+  transition: 0.2s ease;
+  background-color: rgb(117, 127, 173);
+}
+
+/*DIO ZA ROUTER ˇ*/
 
 .navbar {
   display: flex;
@@ -200,10 +222,12 @@ body {
 
 .event-name-style {
   text-align: left;
+  color: rgb(0, 0, 0)
 }
 
 .organiser-style {
   text-align: left;
+  color: rgb(0, 0, 0);
 }
 
 .login-button {

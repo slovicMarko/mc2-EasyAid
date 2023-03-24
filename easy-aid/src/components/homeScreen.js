@@ -2,12 +2,7 @@ import React from 'react';
 import sponzor_1 from "../images/sponzor1.jpg";
 import sponzor_2 from "../images/sponzor2.jpg";
 import sponzor_3 from "../images/sponzor3.jpg";
-
-function EmptySpace ({windowHeightPercentage}) {
-    return (
-        <div style={{ height: `${windowHeightPercentage}vh` }}> </div>
-    );
-}
+import EmptySpace from "./standard.js"
 
 function HomeScreen () {
     return(
