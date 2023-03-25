@@ -1,18 +1,14 @@
 import React from "react";
 
-const EventBubble = (sifra) => {
+const EventBubble = () => {
   return (
-    <>
-      <div className="rectangle-container">
-        <div className="rectangle">
-          <h1 className="event-name-style">Ime eventa</h1>
-          <h2 className="organiser-style">Organizator</h2>
-          <p>Kratak opis akcije......</p>
-        </div>
+    <div className="eventContainer">
+      <div className="eventTitle">
+        Event Name
+        <div className="eventMaker">Organizator</div>
       </div>
-      <br />
-      <br />
-    </>
+      <div className="aboutEvent">O akciji...</div>
+    </div>
   );
 };
 

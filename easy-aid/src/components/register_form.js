@@ -38,7 +38,7 @@ const registerForm = () => {
 
         <div className="formField">
           <button type="submit" className="loginBtn">
-            Login
+            Register
           </button>
         </div>
       </form>

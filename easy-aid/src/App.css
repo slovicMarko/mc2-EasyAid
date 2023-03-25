@@ -47,45 +47,14 @@ body {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.rectangle {
-  display: flex;
-  flex-direction: column;
-  width: 450px;
-  height: 250px;
-  background-color: #efefef;
-  justify-self: center;
-  padding: 15px;
-  border: 3px solid grey;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   /*Neam pojma sta koja vrijednost znaci w3schools*/
-
-}
-
-.rectangle-container {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   font-size: 24px;
-  background-color: rgb(219, 54, 25);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  background-color: rgb(17, 67, 124);
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -198,33 +167,9 @@ body {
   color: #2a5ece;
 }
 
-.event-name-style {
-  text-align: left;
-}
 
-.organiser-style {
-  text-align: left;
-}
 
-.login-button {
-  text-align: center;
-  width: 150px;
-  height: 40px;
-  background-color: rgb(30, 199, 8);
-  color: white;
-  border: 2px solid grey;
-  transition: background-color 0.3s ease-in-out;
-}
 
-.login-button:hover {
-  background-color: rgb(26, 161, 8);
-}
-
-.important-text {
-  color: beige;
-  font-weight: 600;
-  font-family: Verdana;
-}
 
 .router-position {
   top: 0;
@@ -236,7 +181,7 @@ body {
   width: 60vw;
   height: 15%;
   border-style: solid;
-  margin:auto;
+  margin: auto;
   border: 3px solid #7c7c7c;
   background-color: #7c7c7c;
   border-radius: 10px;
