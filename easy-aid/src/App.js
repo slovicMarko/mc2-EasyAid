@@ -8,6 +8,8 @@ import { useState } from "react";
 import RegisterScreen from "./components/registerScreen";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import {Logo1} from "./logo1";
+import { EmptySpace } from "./components/standard";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -53,6 +55,7 @@ const AppRouting = () => {
       <Router>
         <div className="App">
           <div className="navbar">
+            <Logo1/>
             <Link className="link navBtn" to="/">
               HOME
             </Link>
@@ -66,7 +69,7 @@ const AppRouting = () => {
               FEED
             </Link>
           </div>
-
+          <EmptySpace windowHeightPercentage={5}/>
           <Routes>
             <Route exact path="/" element={<HomeScreen />}></Route>
             <Route exact path="/loginScreen" element={<LoginScreen />}></Route>

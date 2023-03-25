@@ -1,6 +1,6 @@
 import React from "react";
 import EventBubble from "./event.js";
-import EmptySpace from "./standard.js";
+import {EmptySpace} from "./standard.js";
 
 function MainFeed() {
   return (

@@ -105,7 +105,7 @@ body {
   align-items: center;
   padding: 20px;
   font-size: 24px;
-  background-color: rgb(219, 54, 25);
+  background-color: rgb(241, 126, 105);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -285,3 +285,19 @@ body {
   height: 20vh;
   width: 100%;
 }
+
+
+/*Logo*/
+
+.logo-color {
+  fill: rgb(3, 43, 131);
+}
+
+.logo-small-size {
+  width:17%;
+}
+
+.logo-wide-size {
+  width:40%;
+}
+

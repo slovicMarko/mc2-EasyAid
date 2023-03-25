@@ -2,11 +2,18 @@ import React from 'react';
 import sponzor_1 from "../images/sponzor1.jpg";
 import sponzor_2 from "../images/sponzor2.jpg";
 import sponzor_3 from "../images/sponzor3.jpg";
-import EmptySpace from "./standard.js"
+import {EmptySpace} from "./standard.js";
+import {Logo1, Logo1Full} from "../logo1.js";
+
+/*
+https://react-icons.github.io/react-icons/    za ikone, instalirao sam sve
+https://www.freecodecamp.org/news/how-to-use-svg-icons-in-react-with-react-icons-and-font-awesome/  za dodatne ikone, isto sve rj
+*/
 
 function HomeScreen () {
     return(
         <>
+        <Logo1Full/>
             <EmptySpace windowHeightPercentage={15} />
             <div className="front-windows">
                 <p className="front-window-font">
