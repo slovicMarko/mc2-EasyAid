@@ -4,8 +4,6 @@ body {
   background: #f0f0f0;
 }
 
-
-
 .App {
   text-align: center;
 }
@@ -107,9 +105,10 @@ body {
   font-size: 24px;
   /*
   background-color: rgb(17, 67, 124);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   */
   background-color: rgb(241, 126, 105);
-
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
