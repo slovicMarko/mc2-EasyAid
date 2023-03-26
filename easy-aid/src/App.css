@@ -19,11 +19,6 @@ body {
   }
 }
 
-
-.hidden{
-  opacity: 0;
-}
-
 .App-header {
   /*background-color: #282c34;*/
 
@@ -61,7 +56,9 @@ body {
   }
 }
 
+
 /*DIO ZA EVENTOVE ˇ  */
+
 
 .rectangle {
   display: flex;
@@ -73,7 +70,8 @@ body {
   padding: 15px;
   border: 3px solid grey;
   border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Neam pojma sta koja vrijednost znaci w3schools*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   /*Neam pojma sta koja vrijednost znaci w3schools*/
+
 }
 
 .rectangle-container {
@@ -86,8 +84,8 @@ body {
 .bubble-div {
   background-color: white;
   cursor: pointer;
-  transition: 0.4s ease;
   border-radius: 20px;
+  transition: 0.4s ease;
 }
 
 .bubble-div:hover {
@@ -97,7 +95,7 @@ body {
 
 .bubble-div:active {
   transition: 0.2s ease;
-  background-color: rgb(117, 127, 173);
+  background-color: #548aff;
 }
 
 /*DIO ZA ROUTER ˇ*/
@@ -108,11 +106,6 @@ body {
   align-items: center;
   padding: 20px;
   font-size: 24px;
-  /*
-  background-color: rgb(17, 67, 124);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  */
   background-color: rgb(241, 126, 105);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -228,13 +221,34 @@ body {
 
 .event-name-style {
   text-align: left;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0)
 }
 
 .organiser-style {
   text-align: left;
   color: rgb(0, 0, 0);
 }
+
+.login-button {
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(30, 199, 8);
+  color: white;
+  border: 2px solid grey;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: rgb(26, 161, 8);
+}
+
+.important-text {
+  color: beige;
+  font-weight: 600;
+  font-family: Verdana;
+}
+
 .router-position {
   top: 0;
   width: 100%;
@@ -245,7 +259,7 @@ body {
   width: 60vw;
   height: 15%;
   border-style: solid;
-  margin: auto;
+  margin:auto;
   border: 3px solid #7c7c7c;
   background-color: #7c7c7c;
   border-radius: 10px;
@@ -271,6 +285,7 @@ body {
   width: 100%;
 }
 
+
 /*Logo*/
 
 .logo-color {
@@ -278,9 +293,10 @@ body {
 }
 
 .logo-small-size {
-  width: 17%;
+  width:17%;
 }
 
 .logo-wide-size {
-  width: 40%;
+  width:40%;
 }
+
