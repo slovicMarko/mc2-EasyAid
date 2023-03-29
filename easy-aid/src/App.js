@@ -49,7 +49,7 @@ const LoginButton = () => {
 
 const AppRouting = () => {
   return (
-    <div className="router-position">
+    <div className="router-position" >
       <Router>
         <div className="App">
           <div className="navbar">
@@ -87,7 +87,10 @@ const AppRouting = () => {
 function App() {
   return (
     <>
-      <AppRouting />
+      <div id="MainDiv">
+        <AppRouting />
+
+      </div>
     </>
   );
 }
