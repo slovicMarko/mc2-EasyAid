@@ -88,11 +88,12 @@ body {
 .bubble-div:hover {
   transition: 0.4s ease;
   background-color: rgb(238, 255, 237);
+  transform: translateY(-3px);
 }
 
 .bubble-div:active {
   transition: 0.2s ease;
-  background-color: #37ce50;
+  background-color: #baffc6;
 }
 
 /*DIO ZA ROUTER ˇ*/
@@ -120,6 +121,8 @@ body {
 .navBtn:hover {
   color: #212121;
   background-color: #37ce50;
+  font-weight: bold;
+  transform: translateY(-3px);
 }
 
 .link {
@@ -156,8 +159,8 @@ body {
 .background-logo {
   position: absolute;
   z-index: -99;
-  right: 65%;
-  top: 15%;
+  right: 62vw;
+  top: 7vw;
 }
 
 .input {
@@ -321,7 +324,6 @@ body {
   position: absolute;
   top: 3%;
   right: 3%;
-  width: 8%;
   height: 5%;
   text-align: center;
   color: white;
@@ -344,6 +346,7 @@ body {
 }
 
 .modal-open {
+  transition: 0.2s ease;
   overflow: hidden; /* prevent scrolling while modal is open */
   /*background-color: rgba(255, 255, 255, 01) ; /**/
 }

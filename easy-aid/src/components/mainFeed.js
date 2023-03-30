@@ -5,7 +5,7 @@ import ReactModal from "react-modal";
 
 function MainFeed() {
   if (document.body.style.overflow === "hidden") {
-    document.body.style.overflow = "visible"
+    document.body.style.overflow = "visible";
   }
   return (
     <div>

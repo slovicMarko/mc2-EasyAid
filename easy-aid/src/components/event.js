@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import ReactModal from "react-modal";
 
 /*
@@ -17,32 +17,27 @@ function Bubble(props) {
 */
 
 function Bubble(props) {
-  return (
-    <div className="bubble-div">
-      {props.children}
-    </div>
-  );
+  return <div className="bubble-div">{props.children}</div>;
 }
 
 //////////////////////
 
 const EventBubble = () => {
-
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => {
-    document.body.classList.add('modal-open');
+    document.body.classList.add("modal-open");
     //const mainDiv=document.getElementById('MainDiv');
     //mainDiv.classList.add("modal-open");
     setShowModal(true);
-  }
+  };
 
   const handleCloseModal = () => {
-    document.body.classList.remove('modal-open');
+    document.body.classList.remove("modal-open");
     //const mainDiv=document.getElementById('MainDiv');
     //mainDiv.classList.remove("modal-open");
     setShowModal(false);
-  }
+  };
 
   const EventInfoModal = () => (
     <ReactModal
@@ -50,21 +45,36 @@ const EventBubble = () => {
       onRequestClose={handleCloseModal}
       ariaHideApp={false} // This is required to avoid a warning message
       className="event-window-info"
+      id="modal-window"
       style={{
         overlay: {
-          backgroundColor: 'rgba(230, 255, 230, 0.2)' // Boja pozadine kad se otvori modal
-        }}}
+          backgroundColor: "rgba(230, 255, 230, 0.2)", // Boja pozadine kad se otvori modal
+          backdropFilter: "blur(2px)",
+          transition: "0.3s",
+        },
+      }}
     >
       <h2>Organiziranje pomoći X i Y</h2>
       <h3>Udruga ta i ta</h3>
-      <button onClick={handleCloseModal} className="event-modal-button">IZAĐI</button>
+      <button onClick={handleCloseModal} className="event-modal-button">
+        IZAĐI
+      </button>
       <h4>Datum:</h4>
       <p>12.travnja 2023.</p>
       <h4>Opis</h4>
       <div className="event-info-text">
-        Lorem ipsum Lorem Ipsum Lorem Ipsum WWW WWWWWWWWW WWWWWWWWWWWWWW WWWWW WWWWWWWWWWW WWWWWWWWWWWWWWWW WWWWWWWWWWWWWWWWWW WWWWWWW WWWWWWWWWWWWWWWW WWWWWWWWW
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. A amet ipsum
+        ipsam sed adipisci, id doloribus consequatur aliquam voluptas iste quasi
+        eligendi cumque ut hic, cupiditate iure voluptatem provident nobis ipsa
+        voluptatum sunt soluta? At commodi animi assumenda repellat, asperiores,
+        nemo id maiores iure, blanditiis eius quis doloremque corporis
+        consequatur incidunt harum? Voluptatum reprehenderit laudantium,
+        necessitatibus libero iure tenetur, ratione deleniti similique quo
+        suscipit repellat commodi, sequi accusantium nihil culpa unde eligendi
+        tempora. Illum placeat sapiente quaerat ipsam molestias eaque magnam,
+        magni deleniti id expedita! Non, iste quis reiciendis officiis assumenda
+        dolorum ex perferendis, quos consequatur, optio nobis magni dolores.
       </div>
-      
     </ReactModal>
   );
 
@@ -81,22 +91,21 @@ const EventBubble = () => {
   */
   //////////////////
 
-  
   return (
     <>
-    <div >
-      <div className="rectangle-container" >
-        <Bubble>
-        {showModal && <EventInfoModal/>}
+      <div>
+        <div className="rectangle-container">
+          <Bubble>
+            {showModal && <EventInfoModal />}
 
-        <div className="rectangle" onClick={handleOpenModal}>
-            <h1 className="event-name-style">Ime eventa</h1>
-            <h2 className="organiser-style">Organizator</h2>
-            <p>Kratak opis akcije...</p>
-          </div>
-        </Bubble>
-      </div>  
-    </div>
+            <div className="rectangle" onClick={handleOpenModal}>
+              <h1 className="event-name-style">Ime eventa</h1>
+              <h2 className="organiser-style">Organizator</h2>
+              <p>Kratak opis akcije...</p>
+            </div>
+          </Bubble>
+        </div>
+      </div>
     </>
   );
 };
