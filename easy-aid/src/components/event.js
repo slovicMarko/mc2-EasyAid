@@ -39,6 +39,10 @@ const EventBubble = () => {
     setShowModal(false);
   };
 
+
+
+
+  
   const EventInfoModal = () => (
     <ReactModal
       isOpen={showModal}
@@ -48,8 +52,9 @@ const EventBubble = () => {
       id="modal-window"
       style={{
         overlay: {
-          backgroundColor: "rgba(230, 255, 230, 0.2)", // Boja pozadine kad se otvori modal
-          backdropFilter: "blur(2px)",
+          //backgroundColor: "rgba(230, 255, 230, 0.2)", // Boja pozadine kad se otvori modal
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          //backdropFilter: "blur(2px)",
           transition: "0.3s",
         },
       }}

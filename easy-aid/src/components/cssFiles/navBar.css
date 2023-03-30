@@ -32,7 +32,7 @@
 }
 
 .logo-small-size {
-  position: relative;
+  position: absolute;
   width: 60px;
-  float: left;
+  right: 90%;
 }
