@@ -11,6 +11,9 @@ https://www.freecodecamp.org/news/how-to-use-svg-icons-in-react-with-react-icons
 */
 
 function HomeScreen () {
+    if (document.body.style.overflow === "hidden") {
+        document.body.style.overflow = "visible"
+      }
     return(
         <>
         <Logo1Full/>

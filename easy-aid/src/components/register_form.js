@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../images/logo.svg";
+
 
 // REGISTER
 
 const registerForm = () => {
   return (
     <div className="formContainer">
+      <div className="background-logo">
+        <img src={logo} alt="background-logo" />
+      </div>
       <div className="appName">EasyAid</div>
       <form className="form">
         <div className="formField">
