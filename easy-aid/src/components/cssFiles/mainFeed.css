@@ -84,10 +84,25 @@
 
 .event-info-text {
   width: 60%;
+  height: 50%;
+  float: left;
 }
 
 .modal-open {
   transition: 0.2s ease;
   overflow: hidden; /* prevent scrolling while modal is open */
   /*background-color: rgba(255, 255, 255, 01) ; /**/
+}
+
+.event-info-stats {
+  width: 35%;
+  height: 50%;
+  float: right;
+}
+
+.event-stats-numbers {
+  color:#379f48;
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 10px;
 }

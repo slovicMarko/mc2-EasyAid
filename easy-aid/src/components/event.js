@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactModal from "react-modal";
+import { EmptySpace } from "./standard";
 
 /*
 function Bubble(props) {
@@ -64,21 +65,33 @@ const EventBubble = () => {
       <button onClick={handleCloseModal} className="event-modal-button">
         IZAĐI
       </button>
-      <h4>Datum:</h4>
-      <p>12.travnja 2023.</p>
-      <h4>Opis</h4>
+
+      <EmptySpace windowHeightPercentage={2} isGlobal={false}/>
       <div className="event-info-text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. A amet ipsum
-        ipsam sed adipisci, id doloribus consequatur aliquam voluptas iste quasi
-        eligendi cumque ut hic, cupiditate iure voluptatem provident nobis ipsa
-        voluptatum sunt soluta? At commodi animi assumenda repellat, asperiores,
-        nemo id maiores iure, blanditiis eius quis doloremque corporis
-        consequatur incidunt harum? Voluptatum reprehenderit laudantium,
-        necessitatibus libero iure tenetur, ratione deleniti similique quo
-        suscipit repellat commodi, sequi accusantium nihil culpa unde eligendi
-        tempora. Illum placeat sapiente quaerat ipsam molestias eaque magnam,
-        magni deleniti id expedita! Non, iste quis reiciendis officiis assumenda
-        dolorum ex perferendis, quos consequatur, optio nobis magni dolores.
+        <b>Datum:</b>
+        <p>12.travnja 2023.</p>
+        <h4>Opis</h4>
+        <div >
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. A amet ipsum
+          ipsam sed adipisci, id doloribus consequatur aliquam voluptas iste quasi
+          eligendi cumque ut hic, cupiditate iure voluptatem provident nobis ipsa
+          voluptatum sunt soluta? At commodi animi assumenda repellat, asperiores,
+          nemo id maiores iure, blanditiis eius quis doloremque corporis
+          consequatur incidunt harum? Voluptatum reprehenderit laudantium,
+          necessitatibus libero iure tenetur, ratione deleniti similique quo
+          suscipit repellat commodi, sequi accusantium nihil culpa unde eligendi
+          tempora. Illum placeat sapiente quaerat ipsam molestias eaque magnam,
+          magni deleniti id expedita! Non, iste quis reiciendis officiis assumenda
+          dolorum ex perferendis, quos consequatur, optio nobis magni dolores.
+        </div>
+      </div>
+      
+      <div className="event-info-stats" id="event-info-statsID">
+        <b>Broj ljudi</b>
+        <p className="event-stats-numbers">28</p>
+        <EmptySpace windowHeightPercentage={5} isGlobal={false}/>
+        <b>Zainteresiranih</b>
+        <p className="event-stats-numbers">50</p>
       </div>
     </ReactModal>
   );
