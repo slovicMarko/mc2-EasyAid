@@ -1,4 +1,9 @@
 import "./App.css";
+import "./components/cssFiles/navBar.css";
+import "./components/cssFiles/logRegScreen.css";
+import "./components/cssFiles/mainFeed.css";
+import "./components/cssFiles/homeScreen.css";
+
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import HomeScreen from "./components/homeScreen";
@@ -30,26 +35,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-const LoginButton = () => {
-  const [isActive, setIsActive] = useState(false);
-
-  const handleClick = () => {
-    setIsActive(!isActive);
-  };
-
-  return (
-    <button
-      className={`login-button ${isActive ? "active" : ""}`}
-      onClick={handleClick}
-    >
-      Click Me
-    </button>
-  );
-};
-
 const AppRouting = () => {
   return (
-    <div className="router-position" >
+    <div className="router-position">
       <Router>
         <div className="App">
           <div className="navbar">
@@ -67,7 +55,7 @@ const AppRouting = () => {
               FEED
             </Link>
           </div>
-          <EmptySpace windowHeightPercentage={5} />
+          {/*<EmptySpace windowHeightPercentage={5} /> */}
           <Routes>
             <Route exact path="/" element={<HomeScreen />}></Route>
             <Route exact path="/loginScreen" element={<LoginScreen />}></Route>
@@ -89,7 +77,6 @@ function App() {
     <>
       <div id="MainDiv">
         <AppRouting />
-
       </div>
     </>
   );

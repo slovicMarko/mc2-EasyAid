@@ -1,0 +1,95 @@
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 200px 0 0 0;
+  }
+  
+  .appName {
+    margin: 0 0 30px 0;
+    font-size: 44px;
+    font-weight: bold;
+    font-family: "Roboto", "sans-serif";
+    user-select: none;
+  }
+  
+  .formField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .background-logo {
+    position: absolute;
+    z-index: -99;
+    right: 62vw;
+    top: 7vw;
+  }
+  
+  .input {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    border-style: solid;
+    border: 3px solid #7c7c7c;
+    border-radius: 10px;
+    padding: 0 15px;
+    transition: 0.4s ease-in;
+  }
+  
+  .input:focus {
+    outline: none;
+    border: 3px solid #37ce50;
+  }
+  
+  .input:focus::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: transparent;
+    transition: 0.3s ease-out;
+  }
+  
+  .loginBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #379f48;
+    width: 300px;
+    height: 50px;
+    margin: 20px 0 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.4s ease;
+    border-style: none;
+  }
+  
+  .loginBtn:hover {
+    color: #212121;
+    background-color: #37ce50;
+  }
+  
+  .logRegSwitch {
+    margin: 10px 0 0 0;
+  }
+  
+  .switch {
+    color: #379f48;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    user-select: none;
+    transform: 0.4s ease;
+    text-decoration: none;
+  }
+  
+  .switch:hover {
+    color: #37ce50;
+  }
