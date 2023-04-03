@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 
-
 // REGISTER
 
 const registerForm = () => {
@@ -48,9 +47,8 @@ const registerForm = () => {
         </div>
       </form>
       <div className="logRegSwitch" id="switch">
-        Već imaš račun?
+        Već imaš račun?&nbsp
         <Link className="switch" to="/loginScreen">
-          {" "}
           Prijavi se!
         </Link>
       </div>

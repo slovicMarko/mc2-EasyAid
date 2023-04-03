@@ -1,11 +1,9 @@
 import React from "react";
-import loginForm from "./login_form";
+import loginForm from "./LoginForm";
+
+import "./loginPage.css";
 
 function LoginScreen() {
-  
-  if (document.body.style.overflow != "hidden") {
-    document.body.style.overflow = "hidden"
-  }
   return <div className="loginForm">{loginForm()}</div>;
 }
 

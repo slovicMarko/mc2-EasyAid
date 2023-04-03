@@ -40,9 +40,8 @@ const loginForm = () => {
         </div>
       </form>
       <div className="logRegSwitch" id="switch">
-        Nemas račun?
+        Nemas račun?&nbsp
         <Link className="switch" to="/registerForm">
-          {" "}
           Registriraj se!
         </Link>
       </div>
