@@ -1,9 +1,6 @@
 'use client';
-
 import React, { useState } from "react";
-//import ReactModal from "react-modal";
 import { EmptySpace } from "./standard";
-import { Portal } from 'react-portal';
 
 
 /*
