@@ -1,13 +1,27 @@
 import React from "react";
-import { EmptySpace } from "../standard.js";
-import { Logo1, Logo1Full } from "../logo1.js";
+import { EmptySpace } from "src/components/standard.js";
+import { Logo1, Logo1Full } from "src/components/logo1.js";
 
-import "./homePage.css";
+//import "./homePage.css";
 
 /*
 https://react-icons.github.io/react-icons/    za ikone, instalirao sam sve
 https://www.freecodecamp.org/news/how-to-use-svg-icons-in-react-with-react-icons-and-font-awesome/  za dodatne ikone, isto sve rj
 */
+
+/*
+Ovo je test stranica!
+
+Izbrisati po zavrsetku!
+
+Sve stranice moraju biti u pages, ne u podmapama jer ih Link href nezeli registrirati
+
+Probo sam sve moguce kombinacije i ovak jedino radi
+
+Sutra to rj
+
+*/
+
 
 function HomePage() {
   return (

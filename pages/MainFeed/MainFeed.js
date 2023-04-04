@@ -2,8 +2,8 @@
 
 //import React, { useState } from "react";
 import React from "react";
-import EventBubble from "../event.js";
-import { EmptySpace } from "../standard.js";
+import EventBubble from "../../src/components/event.js";
+import { EmptySpace } from "../../src/components/standard.js";
 //import ReactModal from "react-modal";
 
 function MainFeed() {

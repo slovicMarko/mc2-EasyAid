@@ -1,6 +1,6 @@
-import HomePage from "@/components/HomePage/HomePage";
-import LoginPage from "@/components/LoginPage/LoginPage";
-import MainFeed from "@/components/MainFeed/MainFeed";
+import HomePage from "pages/HomePage/HomePage";
+//import LoginPage from "@/components/LoginPage/LoginPage";
+//import MainFeed from "../../pages/MainFeed/MainFeed";
 
 
 export default function Home() {
