@@ -1,5 +1,7 @@
 import "./globals.css";
 
+import "../components/FirebaseApp.js";
+
 export const metadata = {
   title: "EasyAid",
   description: "Aplikacija koja spaja volontere i organizatore",
