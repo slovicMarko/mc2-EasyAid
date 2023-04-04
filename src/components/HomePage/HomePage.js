@@ -9,7 +9,7 @@ https://react-icons.github.io/react-icons/    za ikone, instalirao sam sve
 https://www.freecodecamp.org/news/how-to-use-svg-icons-in-react-with-react-icons-and-font-awesome/  za dodatne ikone, isto sve rj
 */
 
-function HomeScreen() {
+function HomePage() {
   return (
     <>
       <EmptySpace windowHeightPercentage={5} />
@@ -57,4 +57,4 @@ function HomeScreen() {
   );
 }
 
-export default HomeScreen;
+export default HomePage;

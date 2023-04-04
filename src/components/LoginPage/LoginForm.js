@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import logo from "../images/logo.svg";
-
+//import { Link } from "react-router-dom";
+//import logo from "/images/logo.svg";
 
 
 // LOGIN
@@ -10,7 +9,7 @@ const loginForm = () => {
   return (
     <div className="formContainer">
       <div className="background-logo">
-        <img src={logo} alt="background-logo" />
+        <img src="/images/logo.svg" alt="background-logo" />
       </div>
       <div className="appName">EasyAid</div>
       <form className="form">
@@ -41,7 +40,7 @@ const loginForm = () => {
       </form>
       <div className="logRegSwitch" id="switch">
         Nemas račun?&nbsp
-        <Link className="switch" to="/registerForm">
+        <Link className="switch" href="/registerForm">
           Registriraj se!
         </Link>
       </div>

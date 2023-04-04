@@ -14,7 +14,9 @@
     "firebase": "^9.19.1",
     "next": "^13.2.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-create-portal": "^0.5.2",
+    "react-dom": "^18.2.0",
+    "react-portal": "^4.2.2"
   },
   "devDependencies": {
     "webpack": "^5.77.0",

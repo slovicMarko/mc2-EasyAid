@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import logo from "../images/logo.svg";
+//import { Link } from "react-router-dom";
+import logo from "/images/logo.svg";
 
 // REGISTER
 
@@ -8,7 +8,7 @@ const registerForm = () => {
   return (
     <div className="formContainer">
       <div className="background-logo">
-        <img src={logo} alt="background-logo" />
+        <img src="/images/logo.svg" alt="background-logo" />
       </div>
       <div className="appName">EasyAid</div>
       <form className="form">
@@ -48,7 +48,7 @@ const registerForm = () => {
       </form>
       <div className="logRegSwitch" id="switch">
         Već imaš račun?&nbsp
-        <Link className="switch" to="/loginScreen">
+        <Link className="switch" href="/loginScreen">
           Prijavi se!
         </Link>
       </div>

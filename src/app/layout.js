@@ -1,6 +1,13 @@
 import "./globals.css";
+import "@/components/cssFiles/navBar.css";
 
 import "../components/FirebaseApp.js";
+
+
+import Link from 'next/link';
+import HomePage from "@/components/HomePage/HomePage";
+import LoginPage from "@/components/LoginPage/LoginPage";
+import MainFeed from "@/components/MainFeed/MainFeed";
 
 export const metadata = {
   title: "EasyAid",
@@ -13,7 +20,31 @@ export default function RootLayout({ children }) {
       <body>
         <div className="router-position">
           <div className="App">
-            <div className="navbar">TU UBACI NAVIGACIJU</div>
+            <div className="navbar">
+            <>
+      <div id="MainDiv">
+        <div className="router-position">
+            <div className="App">
+              <div className="navbar">
+                {/*<Logo1 />*/}
+                <Link className="link navBtn" href="@/components/HomePage/HomePage">
+                  HOME
+                </Link>
+
+                <Link className="link navBtn" href="/components/LoginPage">
+                  LOGIN
+                  {/*<LoginButton />*/}
+                </Link>
+
+                <Link className="link navBtn" href="/MainFeed">
+                  FEED
+                </Link>
+              </div>
+            </div>
+        </div>
+      </div>
+    </>
+            </div>
             {children}
           </div>
         </div>

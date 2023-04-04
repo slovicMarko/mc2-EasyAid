@@ -1,6 +1,10 @@
+'use client';
+
 import React, { useState } from "react";
-import ReactModal from "react-modal";
+//import ReactModal from "react-modal";
 import { EmptySpace } from "./standard";
+import { Portal } from 'react-portal';
+
 
 /*
 function Bubble(props) {
@@ -17,26 +21,22 @@ function Bubble(props) {
 }
 */
 
+/*
 function Bubble(props) {
   return <div className="bubble-div">{props.children}</div>;
 }
 
-//////////////////////
 
 const EventBubble = () => {
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => {
     document.body.classList.add("modal-open");
-    //const mainDiv=document.getElementById('MainDiv');
-    //mainDiv.classList.add("modal-open");
     setShowModal(true);
   };
 
   const handleCloseModal = () => {
     document.body.classList.remove("modal-open");
-    //const mainDiv=document.getElementById('MainDiv');
-    //mainDiv.classList.remove("modal-open");
     setShowModal(false);
   };
 
@@ -53,9 +53,7 @@ const EventBubble = () => {
       id="modal-window"
       style={{
         overlay: {
-          //backgroundColor: "rgba(230, 255, 230, 0.2)", // Boja pozadine kad se otvori modal
           backgroundColor: "rgba(0, 0, 0, 0.5)",
-          //backdropFilter: "blur(2px)",
           transition: "0.3s",
         },
       }}
@@ -96,19 +94,6 @@ const EventBubble = () => {
     </ReactModal>
   );
 
-  /*
-  <ChildComponent handleCloseModal={handleCloseModal} />
-  */
-  /*
-  const ChildComponent = ({ handleCloseModal }) => (
-    <div>
-      <p>This is a child component inside the modal.</p>
-      <button onClick={handleCloseModal}>Izađi</button>
-    </div>
-  );
-  */
-  //////////////////
-
   return (
     <>
       <div>
@@ -128,4 +113,6 @@ const EventBubble = () => {
   );
 };
 
+
 export default EventBubble;
+*/

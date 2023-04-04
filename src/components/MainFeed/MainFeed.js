@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+
+
+//import React, { useState } from "react";
+import React from "react";
 import EventBubble from "../event.js";
 import { EmptySpace } from "../standard.js";
-import ReactModal from "react-modal";
+//import ReactModal from "react-modal";
 
 function MainFeed() {
   if (document.body.style.overflow === "hidden") {
