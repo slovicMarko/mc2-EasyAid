@@ -3,8 +3,8 @@ import loginForm from "./LoginForm";
 
 import "./loginPage.css";
 
-function LoginScreen() {
+function LoginPage() {
   return <div className="loginForm">{loginForm()}</div>;
 }
 
-export default LoginScreen;
+export default LoginPage;
