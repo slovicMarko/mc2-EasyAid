@@ -27,11 +27,11 @@ export default function RootLayout({ children }) {
             <div className="App">
               <div className="navbar">
                 {/*<Logo1 />*/}
-                <Link className="link navBtn" href={<HomePage/>}>
+                <Link className="link navBtn" href="/HomePage">
                   HOME
                 </Link>
 
-                <Link className="link navBtn" href={<LoginPage/>}>
+                <Link className="link navBtn" href="/LoginPage">
                   LOGIN
                   {/*<LoginButton />*/}
                 </Link>
