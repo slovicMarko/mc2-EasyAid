@@ -3,9 +3,8 @@
 body {
   background: #f0f0f0;
   overflow-x: hidden;
-}
-
-.App {
+  font-family: "Roboto";
+  margin: 0;
   text-align: center;
 }
 
@@ -22,14 +21,6 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
-
-/*DIO ZA ROUTER ˇ*/
-
-.router-position {
-  top: 0;
-  width: 100%;
-  z-index: 100;
 }
 
 /*Logo*/
