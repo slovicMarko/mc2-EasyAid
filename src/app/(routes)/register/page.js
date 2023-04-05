@@ -1,5 +1,5 @@
 import React from "react";
-import registerForm from "../../../components/login/RegisterForm";
+import registerForm from "../../../components/RegisterForm";
 
 //import ".login.css";
 
