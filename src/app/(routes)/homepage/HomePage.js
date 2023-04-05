@@ -45,25 +45,27 @@ function HomePage() {
 
       <hr />
       <h2>Sponzori</h2>
-      <div className="sponsor-logo">
-        <Image
-          //loader={sponzori}
-          src="/images/porscheDigital.jpg"
-          alt="Porsche Digital Croatia"
-          title="Porsche Digital Croatia"
-          height={100}
-          width={100}
-        />
-      </div>
-      <div className="sponsor-logo">
-        <Image
-          //loader={sponzori}
-          src="/images/tvzMc2.png"
-          alt="Tvz Mc2"
-          title="Tvz Mc2"
-          height={100}
-          width={100}
-        />
+      <div className="sponsor-images">
+        <div className="sponsor-logo">
+          <Image
+            //loader={sponzori}
+            src="/images/porscheDigital.jpg"
+            alt="Porsche Digital Croatia"
+            title="Porsche Digital Croatia"
+            fill="true"
+            className="sponsor"
+          />
+        </div>
+        <div className="sponsor-logo">
+          <Image
+            //loader={sponzori}
+            src="/images/tvzMc2.png"
+            alt="Tvz Mc2"
+            title="Tvz Mc2"
+            fill="true"
+            className="sponsor"
+          />
+        </div>
       </div>
       <hr />
     </>

@@ -16,16 +16,28 @@
   color: rgb(226, 226, 236);
 }
 
+.sponsor-images {
+  display:inline-block;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top:30px;
+  margin-bottom: 30px;
+}
 
 .sponsor-logo {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   padding: 10px;
   object-fit: contain;
-  border-radius: 50%;
-  margin:0 5px 0 5px;
-  white-space: nowrap;
+  margin:0 20px 0 20px;
+  position: relative;
+  float: left;
   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+.sponsor {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .logo-wide-size {
