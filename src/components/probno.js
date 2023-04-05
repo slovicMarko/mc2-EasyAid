@@ -1,21 +1,27 @@
 import React from "react";
-import Image from "next/image";
-
-import { Logo1Full } from "src/components/logo1.js";
 import { EmptySpace } from "src/components/standard.js";
+import { Logo1Full } from "src/components/logo1.js";
 
-import "./homePage.css";
+//import "./homePage.css";
 
 /*
 https://react-icons.github.io/react-icons/    za ikone, instalirao sam sve
 https://www.freecodecamp.org/news/how-to-use-svg-icons-in-react-with-react-icons-and-font-awesome/  za dodatne ikone, isto sve rj
 */
 
-/*  loader za Image
-const sponzori = () => {
-  return `../../public/images/`;
-};
+/*
+Ovo je test stranica!
+
+Izbrisati po zavrsetku!
+
+Sve stranice moraju biti u pages, ne u podmapama jer ih Link href nezeli registrirati
+
+Probo sam sve moguce kombinacije i ovak jedino radi
+
+Sutra to rj
+
 */
+
 
 function HomePage() {
   return (
@@ -45,16 +51,11 @@ function HomePage() {
 
       <hr />
       <h2>Sponzori</h2>
-      <img className="sponsor-logo" src={"sponzor1.jpg"} alt="Sponzor1"></img>
-      {/*
-      <Image
-        loader={sponzori}
-        src="/sponzor1.jpg"
-        alt="sponzor"
-        width={500}
-        height={500}
-  />*/}
-
+      <img
+        className="sponsor-logo"
+        src="/images/sponzor_1"
+        alt="Sponzor1"
+      ></img>
       <img
         className="sponsor-logo"
         src="/images/sponzor_2"

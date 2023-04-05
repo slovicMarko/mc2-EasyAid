@@ -1,9 +1,7 @@
-
-
 import React from "react";
-import loginForm from "./LoginForm";
+import loginForm from "../../../components/login/LoginForm";
 
-import "./loginPage.css";
+import "./login.css";
 
 function LoginPage() {
   return <div className="loginForm">{loginForm()}</div>;

@@ -1,12 +1,12 @@
+"use client";
+
 import "./globals.css";
-import "@/components/cssFiles/navBar.css";
+import "../components/cssFiles/navBar.css";
 
 import "../components/FirebaseApp.js";
-import HomePage from "@/components/HomePage/HomePage";
-import LoginPage from "@/components/LoginPage/LoginPage";
-import MainFeed from "@/components/MainFeed/MainFeed";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export const metadata = {
   title: "EasyAid",
@@ -14,6 +14,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const router = useRouter();
   return (
     <html lang="en">
       <body>
@@ -24,17 +25,13 @@ export default function RootLayout({ children }) {
                 <div className="router-position">
                   <div className="App">
                     <div className="navbar">
-                      {/*<Logo1 />*/}
-                      <Link className="link navBtn" href="/HomePage">
+                      <Link className="link navBtn" href="/">
                         HOME
                       </Link>
-
-                      <Link className="link navBtn" href="/LoginPage">
+                      <Link className="link navBtn" href="/login">
                         LOGIN
-                        {/*<LoginButton />*/}
                       </Link>
-
-                      <Link className="link navBtn" href="/MainFeed">
+                      <Link className="link navBtn" href="/feed">
                         FEED
                       </Link>
                     </div>

@@ -1,10 +1,11 @@
 import React from "react";
+import Link from "next/link";
 //import { Link } from "react-router-dom";
-import logo from "/images/logo.svg";
+//import logo from "/images/logo.svg";
 
-// REGISTER
+// LOGIN
 
-const registerForm = () => {
+const loginForm = () => {
   return (
     <div className="formContainer">
       <div className="background-logo">
@@ -12,15 +13,6 @@ const registerForm = () => {
       </div>
       <div className="appName">EasyAid</div>
       <form className="form">
-        <div className="formField">
-          <input
-            className="input input--text"
-            id="formInput#text"
-            type="text"
-            name="email"
-            placeholder="email"
-          />
-        </div>
         <div className="formField">
           <input
             className="input input--text"
@@ -42,18 +34,18 @@ const registerForm = () => {
 
         <div className="formField">
           <button type="submit" className="loginBtn">
-            Register
+            Login
           </button>
         </div>
       </form>
       <div className="logRegSwitch" id="switch">
-        Već imaš račun?&nbsp
-        <Link className="switch" href="/loginScreen">
-          Prijavi se!
+        Nemas račun?&nbsp;
+        <Link className="switch" href="/register">
+          Registriraj se!
         </Link>
       </div>
     </div>
   );
 };
 
-export default registerForm;
+export default loginForm;

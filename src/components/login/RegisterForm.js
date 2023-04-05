@@ -1,11 +1,9 @@
 import React from "react";
 import Link from "next/link";
-//import { Link } from "react-router-dom";
-//import logo from "/images/logo.svg";
 
-// LOGIN
+// REGISTER
 
-const loginForm = () => {
+const registerForm = () => {
   return (
     <div className="formContainer">
       <div className="background-logo">
@@ -13,6 +11,15 @@ const loginForm = () => {
       </div>
       <div className="appName">EasyAid</div>
       <form className="form">
+        <div className="formField">
+          <input
+            className="input input--text"
+            id="formInput#text"
+            type="text"
+            name="email"
+            placeholder="email"
+          />
+        </div>
         <div className="formField">
           <input
             className="input input--text"
@@ -34,18 +41,18 @@ const loginForm = () => {
 
         <div className="formField">
           <button type="submit" className="loginBtn">
-            Login
+            Register
           </button>
         </div>
       </form>
       <div className="logRegSwitch" id="switch">
-        Nemas račun?&nbsp
-        <Link className="switch" href="/registerForm">
-          Registriraj se!
+        Već imaš račun?&nbsp;
+        <Link className="switch" href="/login">
+          Prijavi se!
         </Link>
       </div>
     </div>
   );
 };
 
-export default loginForm;
+export default registerForm;

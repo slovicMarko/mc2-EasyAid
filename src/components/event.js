@@ -1,7 +1,6 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import { EmptySpace } from "./standard";
-
 
 /*
 function Bubble(props) {
