@@ -11,11 +11,11 @@ https://react-icons.github.io/react-icons/    za ikone, instalirao sam sve
 https://www.freecodecamp.org/news/how-to-use-svg-icons-in-react-with-react-icons-and-font-awesome/  za dodatne ikone, isto sve rj
 */
 
-/*  loader za Image
+
 const sponzori = () => {
-  return `../../public/images/`;
-};
-*/
+  return `../../public/images/`
+}
+
 
 function HomePage() {
   return (
@@ -45,26 +45,26 @@ function HomePage() {
 
       <hr />
       <h2>Sponzori</h2>
-      <img className="sponsor-logo" src={"sponzor1.jpg"} alt="Sponzor1"></img>
-      {/*
-      <Image
-        loader={sponzori}
-        src="/sponzor1.jpg"
-        alt="sponzor"
-        width={500}
-        height={500}
-  />*/}
-
-      <img
-        className="sponsor-logo"
-        src="/images/sponzor_2"
-        alt="Sponzor2"
-      ></img>
-      <img
-        className="sponsor-logo"
-        src="/images/sponzor_3"
-        alt="Sponzor3"
-      ></img>
+      <div className="sponsor-logo">
+        <Image
+          //loader={sponzori}
+          src="/images/porscheDigital.jpg"
+          alt="Porsche Digital Croatia"
+          title="Porsche Digital Croatia"
+          height={100}
+          width={100}
+        />
+      </div>
+      <div className="sponsor-logo">
+        <Image
+          //loader={sponzori}
+          src="/images/tvzMc2.png"
+          alt="Tvz Mc2"
+          title="Tvz Mc2"
+          height={100}
+          width={100}
+        />
+      </div>
       <hr />
     </>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { EmptySpace } from "src/components/standard.js";
-import { Logo1Full } from "src/components/logo1.js";
+import { Logo1, Logo1Full } from "src/components/logo1.js";
 
 //import "./homePage.css";
 
