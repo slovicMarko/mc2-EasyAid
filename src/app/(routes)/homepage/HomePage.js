@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
-import { Logo1Full } from "src/components/logo1.js";
-import { EmptySpace } from "src/components/standard.js";
+import Link from "next/link";
 
 import "./homePage.css";
 
@@ -20,54 +18,63 @@ const sponzori = () => {
 function HomePage() {
   return (
     <>
-      <EmptySpace windowHeightPercentage={5} />
-      <Logo1Full />
-      <EmptySpace windowHeightPercentage={15} />
+      {/*<Logo1Full />*/}
+
       <div className="front-windows">
+        <h1 >Volontiraj i pomogni drugima oko sebe!</h1>
         <p className="front-window-font">
-          Oduvijek ste željeli volontirati, a neznate kako početi?
-        </p>
-      </div>
-      <EmptySpace windowHeightPercentage={10} />
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Cras ac nulla sed odio placerat
+            maximus vel elementum mi.</p>
+    
 
-      <div className="front-windows">
-        <p className="front-window-font">
-          Bavite se organizacijom volonterskih akcija i planiranje Vam je
-          oduvijek bio problem?
-        </p>
-      </div>
-      <EmptySpace windowHeightPercentage={10} />
-
-      <div className="front-windows">
-        <p className="front-window-font">---</p>
-      </div>
-      <EmptySpace windowHeightPercentage={5} />
-
-      <hr />
-      <h2>Sponzori</h2>
-      <div className="sponsor-images">
-        <div className="sponsor-logo">
-          <Image
-            //loader={sponzori}
-            src="/images/porscheDigital.jpg"
-            alt="Porsche Digital Croatia"
-            title="Porsche Digital Croatia"
-            fill="true"
-            className="sponsor"
-          />
-        </div>
-        <div className="sponsor-logo">
-          <Image
-            //loader={sponzori}
-            src="/images/tvzMc2.png"
-            alt="Tvz Mc2"
-            title="Tvz Mc2"
-            fill="true"
-            className="sponsor"
-          />
+        <div className="eventButtons">
+          <Link className="greenButton" href="/">Pronađi događaj</Link>
+          <Link className="regularButton" href="/">Stvori događaj</Link>
         </div>
       </div>
-      <hr />
+
+      <div className="partneri">
+        <h2>Partneri u suradnji</h2>
+        <div className="sponsor-images">
+          <div className="sponsor-logo">
+            <Image
+              //loader={sponzori}
+              src="/images/porscheDigital.jpg"
+              alt="Porsche Digital Croatia"
+              title="Porsche Digital Croatia"
+              fill="true"
+              className="sponsor"
+            />
+          </div>
+          <div className="sponsor-logo">
+            <Image
+              //loader={sponzori}
+              src="/images/tvzMc2.png"
+              alt="Tvz Mc2"
+              title="Tvz Mc2"
+              fill="true"
+              className="sponsor"
+            />
+          </div>
+          <div className="sponsor-logo">
+            <Image
+              //loader={sponzori}
+              src="/images/tvzLogo.png"
+              alt="Tehničko veleučilište u Zagrebu"
+              title="Tehničko veleučilište u Zagrebu"
+              fill="true"
+              className="sponsor"
+            />
+          </div>
+        </div>
+        <hr />
+      </div>
+      
+      <div className="aboutEasyAid">
+        <h2>Želiš volontirati, a ne znaš gdje početi?</h2>
+      </div>
+
     </>
   );
 }
