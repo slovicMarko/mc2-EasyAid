@@ -2,9 +2,10 @@
 
 import "./globals.css";
 
-import "../components/FirebaseApp.js";
+//import "../components/FirebaseApp.js";
 
 import Navbar from "./Navbar";
+import { Auth } from "./auth";
 
 export const metadata = {
   title: "EasyAid",
@@ -19,7 +20,8 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navbar />
-        {children}
+        <Auth />
+        {/*children*/}
       </body>
     </html>
   );
