@@ -18,7 +18,7 @@
   max-width: 500px;
   height: 200px;
   position: relative;
-  left:300px;
+  left:200px;
   top:90px;
   text-align: left;
 }
@@ -58,7 +58,7 @@ h1 {
   height: 150px;
   position: relative;
   top:60px;
-  left:300px;
+  left:200px;
   text-align: left;
 }
 
@@ -120,13 +120,43 @@ h2 {
 .eventButtons {
   position: absolute;
   top:490px;
-  left:320px;
+  left:220px;
   display:inline-block;
 }
 
+#SecondHeading {
+  position: relative;
+  top:100px;
+}
+
 .aboutEasyAid {
+  display: flex;
   height:800px;
   width:100%;
   position: relative;
-  top:100px;
+  top:90px;
+}
+
+.fotoGeneral1 {
+  width:50vw;
+  height:calc(50vw*0.66667);
+  position: relative;
+  margin:70px 20px 50px 220px;
+}
+
+.sideText {
+  width:300px;
+  margin-top: 70px;
+  margin-left: 30px;
+  text-align: left;
+}
+
+.sideText h4 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.sideText p {
+  margin-bottom: 70px;
 }

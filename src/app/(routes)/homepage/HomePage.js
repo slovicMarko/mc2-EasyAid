@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import akcija1 from 'public/images/akcija1.png'
 
 import "./homePage.css";
 
@@ -71,8 +72,29 @@ function HomePage() {
         <hr />
       </div>
       
+      <h2 id="SecondHeading">Želiš volontirati, a ne znaš gdje početi?</h2>
       <div className="aboutEasyAid">
-        <h2>Želiš volontirati, a ne znaš gdje početi?</h2>
+        <div className="fotoGeneral1">
+          <Image
+              src={akcija1}
+              //src="/images/akcija1.png"
+              alt="Volonteri"
+              fill="true"
+              className="foto1"
+          />
+        </div>
+        <div className="sideText">
+          <h4>Uvijek aktualni događaji</h4>
+          <p>U odjeljku "Aktualni događaji" možeš vidjeti sve aktualne akcije</p>
+
+          <h4>Pretraga po lokaciji</h4>
+          <p>Želiš pronaći akciju u svojoj blizini?</p>
+
+          <h4>Aktualnost događaja</h4>
+          <p>Zaprati organizatora tako da nikad ne propustiš niti jednu željenu akciju</p>
+
+          <button className="greenButton">Pronađi događaj</button>
+        </div>
       </div>
 
     </>
