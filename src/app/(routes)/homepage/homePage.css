@@ -131,7 +131,7 @@ h2 {
 
 .aboutEasyAid {
   display: flex;
-  height:800px;
+  height:730px;
   width:100%;
   position: relative;
   top:90px;
@@ -144,19 +144,62 @@ h2 {
   margin:70px 20px 50px 220px;
 }
 
-.sideText {
+.sideText1 {
   width:300px;
   margin-top: 70px;
   margin-left: 30px;
   text-align: left;
-}
-
-.sideText h4 {
-  font-size: 22px;
-  font-weight: 500;
   margin-bottom: 0px;
 }
 
-.sideText p {
+.sideText1 h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.sideText1 p {
   margin-bottom: 70px;
+  color:#3D3D3D;
+}
+
+#ThirdHeading {
+  position:relative;
+  top:100px;
+}
+
+.aboutOrganisation {
+  position: relative;
+  display: flex;
+  top:100px;
+}
+
+.fotoGeneral2 {
+  width:30vw;
+  height:calc(30vw*1.12);
+  position: relative;
+  margin:70px 20px 50px 220px;
+  background-color:#bcffbc;
+  border-radius: 25px;
+}
+
+.sideText2 {
+  width:400px;
+  height:calc(30vw*1.12);
+  position: relative;
+  margin:70px 20px 50px 200px;
+  /*background-color:#bcffbc;*/
+  border-radius: 25px;
+  text-align:left;
+}
+
+.sideText2 h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.sideText2 p {
+  margin-bottom: -10px;
+  color:#3D3D3D;
 }
