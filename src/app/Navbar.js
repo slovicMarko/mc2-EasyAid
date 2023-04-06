@@ -1,23 +1,46 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-import { Logo1Full } from "src/components/logo1.js";
 import "../components/cssFiles/navBar.css";
 
 function Navbar() {
   return (
     <>
       <div className="navbar">
-        <Logo1Full className="logoFullUpper"/>
-        <Link className="link navBtn" href="/">
-          HOME
-        </Link>
-        <Link className="link navBtn" href="/login">
-          LOGIN
-        </Link>
-        <Link className="link navBtn" href="/feed">
-          FEED
-        </Link>
+        <div className="navbar--logo--container">
+          <Image
+            //loader={sponzori}
+            src="/images/logo.svg"
+            alt="EasyAid logo"
+            title="EasyAid"
+            width={50}
+            height={50}
+            className="navbar--logo"
+          />
+        </div>
+        <div className="navbar--navigation">
+          <Link className="btn--nav" href="/">
+            Naslovna strana
+          </Link>
+          <Link className="btn--nav" href="/feed">
+            Feed
+          </Link>
+          <Link className="btn--nav" href="/">
+            Aktivne akcije
+          </Link>
+          <Link className="btn--nav" href="/">
+            Organizatori
+          </Link>
+        </div>
+        <div className="navbar--auth">
+          <Link className="btn--auth--login" href="/login">
+            Prijavi se
+          </Link>
+          <Link className="btn--auth--reg" href="/register">
+            Registriraj se
+          </Link>
+        </div>
       </div>
     </>
   );

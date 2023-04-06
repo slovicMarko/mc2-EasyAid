@@ -25,10 +25,7 @@
 
 .sponsor-images {
   display:inline-block;
-  margin-left:auto;
-  margin-right: auto;
-  margin-top:30px;
-  margin-bottom: 30px;
+  margin: 30px 20px;
 }
 
 .sponsor-logo {
@@ -36,7 +33,7 @@
   width: 150px;
   padding: 10px;
   object-fit: contain;
-  margin:0 100px 0 100px;
+  margin:0 100px 30px 100px;
   position: relative;
   float: left;
   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/

@@ -20,8 +20,8 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navbar />
-        <Auth />
-        {/*children*/}
+        
+        {children}
       </body>
     </html>
   );

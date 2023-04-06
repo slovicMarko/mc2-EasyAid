@@ -2,12 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   font-size: 24px;
   text-align: center;
   background-color: rgb(196, 255, 187);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: 100;
   position: relative;
 }
 
@@ -41,8 +40,67 @@
 }
 
 .logoFullUpper {
-  height:60px;
-  position:absolute;
+  height: 60px;
+  position: absolute;
   left: 50px;
   z-index: -1;
+}
+
+.navbar--logo--container {
+  z-index: 2;
+  margin: 0 0 0 150px;
+}
+
+.navbar--logo {
+  color: #0927ac;
+}
+
+.navbar--navigation {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.navbar--auth {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 0 40px 0 0;
+}
+
+.btn--auth--reg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border-radius: 30px;
+  border: 2px solid #379f48;
+  color: white;
+  background-color: #379f48;
+  transition: 0.4s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Nisam siguran koliko shadow paše, mozda malo smanjiti*/
+  user-select: none;
+  line-height: 55px;
+  text-decoration: none;
+}
+
+.btn--auth--login {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 40px;
+}
+
+.btn--nav {
+  color: #000;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
 }

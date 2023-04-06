@@ -1,7 +1,7 @@
 import React from "react";
 import registerForm from "../../../components/RegisterForm";
 
-//import ".login.css";
+import "../login/login.css";
 
 function RegisterScreen() {
   return <div className="loginForm">{registerForm()}</div>;
