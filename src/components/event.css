@@ -1,0 +1,165 @@
+.rectangle {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 250px;
+    /*background-color: #efefef;*/
+    justify-self: center;
+    padding: 15px;
+    border: 3px solid grey;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Neam pojma sta koja vrijednost znaci w3schools*/
+  }
+  
+  .rectangle-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bubble-div {
+    background-color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.4s ease;
+  }
+  
+  .bubble-div:hover {
+    transition: 0.4s ease;
+    background-color: rgb(238, 255, 237);
+    transform: translateY(-3px);
+  }
+  
+  .bubble-div:active {
+    transition: 0.2s ease;
+    background-color: #baffc6;
+  }
+  
+  .event-name-style {
+    text-align: left;
+    color: rgb(0, 0, 0);
+  }
+  
+  .organiser-style {
+    text-align: left;
+    color: rgb(0, 0, 0);
+  }
+  
+  .event-window-info {
+    width: 50vw;
+    height: 70vh;
+    border: 2px solid #379f48 !important;
+    border-radius: 15px;
+    background-color: #fff;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .event-modal-button {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    height: 5%;
+    text-align: center;
+    color: white;
+    border: 2px #379f48;
+    background-color: #379f48;
+    margin: 5px 10px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: 0.4s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .event-modal-button:hover {
+    color: #212121;
+    background-color: #37ce50;
+  }
+  
+  .event-info-text {
+    width: 60%;
+    height: 50%;
+    float: left;
+  }
+  
+  .modal-open {
+    transition: 0.2s ease;
+    overflow: hidden; /* prevent scrolling while modal is open */
+    /*background-color: rgba(255, 255, 255, 01) ; /**/
+  }
+  
+  .event-info-stats {
+    width: 35%;
+    height: 50%;
+    float: right;
+  }
+  
+  .event-stats-numbers {
+    color:#379f48;
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  /*TREBA PROMIJENITI*/
+
+  .portal-container{
+    text-align: center;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.modal-container {
+    position: fixed;
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 999;
+    padding: 40px 20px 20px;
+  }
+   
+  .modal-content {
+    width: 60%;
+    height: 60%;
+    background-color: #282c34;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+ 
+  .close-btn{
+    padding: 10px;
+  }
+
+  .portal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 50px; /* Adjust the margin as needed */
+    z-index: 9999;
+    background-color: white;
+    overflow-y: auto;
+  }

@@ -1,21 +1,7 @@
 "use client";
-import React, { useState } from "react";
-import { EmptySpace } from "./standard";
+//import React, { useState } from "react";
+//import ReactDOM from "react-dom";
 
-/*
-function Bubble(props) {
-  const handleClick = () => {
-    console.log('Div was clicked!');
-    // do something else here
-  };
-
-  return (
-    <div onClick={handleClick}>
-      {props.children}
-    </div>
-  );
-}
-*/
 
 /*
 function Bubble(props) {
@@ -59,8 +45,6 @@ const EventBubble = () => {
       <button onClick={handleCloseModal} className="event-modal-button">
         IZAĐI
       </button>
-
-      <EmptySpace windowHeightPercentage={2} isGlobal={false}/>
       <div className="event-info-text">
         <b>Datum:</b>
         <p>12.travnja 2023.</p>
@@ -83,7 +67,6 @@ const EventBubble = () => {
       <div className="event-info-stats" id="event-info-statsID">
         <b>Broj ljudi</b>
         <p className="event-stats-numbers">28</p>
-        <EmptySpace windowHeightPercentage={5} isGlobal={false}/>
         <b>Zainteresiranih</b>
         <p className="event-stats-numbers">50</p>
       </div>
@@ -108,7 +91,96 @@ const EventBubble = () => {
     </>
   );
 };
-
-
-export default EventBubble;
 */
+
+/*
+
+      <h2>Organiziranje pomoći X i Y</h2>
+      <h3>Udruga ta i ta</h3>
+      <button onClick={handleCloseModal} className="event-modal-button">
+        IZAĐI
+      </button>
+      <div className="event-info-text">
+        <b>Datum:</b>
+        <p>12.travnja 2023.</p>
+        <h4>Opis</h4>
+        <div >
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. A amet ipsum
+          ipsam sed adipisci, id doloribus consequatur aliquam voluptas iste quasi
+          eligendi cumque ut hic, cupiditate iure voluptatem provident nobis ipsa
+          voluptatum sunt soluta? At commodi animi assumenda repellat, asperiores,
+          nemo id maiores iure, blanditiis eius quis doloremque corporis
+          consequatur incidunt harum? Voluptatum reprehenderit laudantium,
+          necessitatibus libero iure tenetur, ratione deleniti similique quo
+          suscipit repellat commodi, sequi accusantium nihil culpa unde eligendi
+          tempora. Illum placeat sapiente quaerat ipsam molestias eaque magnam,
+          magni deleniti id expedita! Non, iste quis reiciendis officiis assumenda
+          dolorum ex perferendis, quos consequatur, optio nobis magni dolores.
+        </div>
+      </div>
+      
+      <div className="event-info-stats" id="event-info-statsID">
+        <b>Broj ljudi</b>
+        <p className="event-stats-numbers">28</p>
+        <b>Zainteresiranih</b>
+        <p className="event-stats-numbers">50</p>
+      </div>
+*/
+
+/*
+const EventPortal = ({children}) => {
+  return ReactDOM.createPortal(
+    <div className="portal-container">
+      {children}
+    </div>,
+    document.getElementById("portal-root")
+  );
+};
+ 
+export default EventPortal;
+
+*/
+import React, { useEffect, useRef, useState } from 'react';
+import ReactDOM from 'react-dom';
+import "./event.css";
+
+function MyPortal(props) {
+  const [isVisible, setIsVisible] = useState(false);
+  const elRef = useRef(null);
+
+  useEffect(() => {
+    const el = document.createElement('div');
+    elRef.current = el;
+    document.body.appendChild(el);
+    return () => {
+      document.body.removeChild(el);
+    };
+  }, []);
+
+  const handleClick = () => {
+    setIsVisible(!isVisible);
+  };
+
+  const handleDelete = () => {
+    setIsVisible(false);
+  };
+
+  if (elRef.current) {
+    return (
+      <>
+        <div onClick={handleClick}>{props.trigger}</div>
+        {isVisible && ReactDOM.createPortal(
+          <div className="portal">
+            <button onClick={handleDelete}>Delete</button>
+            {props.children}
+          </div>,
+          elRef.current
+        )}
+      </>
+    );
+  } else {
+    return null;
+  }
+}
+
+export default MyPortal;
