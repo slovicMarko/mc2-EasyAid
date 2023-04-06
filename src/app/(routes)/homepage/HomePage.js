@@ -83,7 +83,7 @@ function HomePage() {
               className="foto1"
           />
         </div>
-        <div className="sideText">
+        <div className="sideText1">
           <h4>Uvijek aktualni događaji</h4>
           <p>U odjeljku "Aktualni događaji" možeš vidjeti sve aktualne akcije</p>
 
@@ -97,6 +97,18 @@ function HomePage() {
         </div>
       </div>
 
+      <h2 id="ThirdHeading">Problem ti je organizacija i promocija?</h2>
+      <div className="aboutOrganisation">
+        <div className="fotoGeneral2"></div>
+        <div className="sideText2">
+          <h4>Sve na jednom mjestu</h4>
+          {/*Previše se ponavlja treba srediti tekst*/}
+          <p>Dosta vam je korištenja različitih aplikacija kako bi 
+              dogovorili akciju?</p>
+          <p>Nudimo vam aplikaciju u kojoj možete dogovoriti sve
+              detalje unutar jednog obrasca.</p>
+        </div>
+      </div>
     </>
   );
 }
