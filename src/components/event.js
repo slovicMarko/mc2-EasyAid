@@ -140,6 +140,8 @@ const EventPortal = ({children}) => {
 export default EventPortal;
 
 */
+
+/*
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import "./event.css";
@@ -184,3 +186,26 @@ function MyPortal(props) {
 }
 
 export default MyPortal;
+
+*/
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './event.css';
+
+const Event = ({ onClose }) => {
+  return ReactDOM.createPortal(
+    <div className="event">
+      <div className="event__content">
+        <button className="event__close" onClick={onClose}>
+          Close
+        </button>
+        <h2>Event Title</h2>
+        <p>Event description goes here.</p>
+      </div>
+    </div>,
+    document.body
+  );
+};
+
+export default Event;

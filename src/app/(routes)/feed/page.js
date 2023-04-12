@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import EventPortal from "@/components/event";
-import { Portal } from "react-portal";
-import MyPortal from '@/components/event';
+//import { Portal } from "react-portal";
+import Event from '@/components/event';
 
 
 /*
@@ -21,18 +21,23 @@ function MainFeed() {
 */
 
 function MainFeed() {
- 
-  const trigger = <div className="trigger">Click me to show the portal!</div>;
+  const [isEventOpen, setIsEventOpen] = useState(false);
+
+  const handleEventClick = () => {
+    setIsEventOpen(true);
+  };
+
+  const handleEventClose = () => {
+    setIsEventOpen(false);
+  };
 
   return (
     <div>
-      <h1>Welcome to my app</h1>
-      {trigger}
-      <MyPortal trigger={trigger}>
-        <p>This is my portal content</p>
-      </MyPortal>
+      <button onClick={handleEventClick}>Open Event</button>
+      {isEventOpen && <Event onClose={handleEventClose} />}
     </div>
   );
-}
+};
+
 
 export default MainFeed;
