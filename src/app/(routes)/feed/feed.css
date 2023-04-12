@@ -107,13 +107,11 @@
   margin-top: 10px;
 }
 
-/*EXPERIMENTAL PORTALS*/
-
-.trigger {
-  cursor: pointer;
-  background-color: lightblue;
-  padding: 10px;
-  border-radius: 5px;
-  position: relative;
-  z-index: 50;
+.openButton {
+  margin:50px 0 0 0;
+  padding:0px;
+  border-radius: 10px;
+  border: 1px solid #379f48;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
