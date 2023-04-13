@@ -11,7 +11,7 @@ function Navbar() {
         <div className="navbar--logo--container">
           <Image
             //loader={sponzori}
-            src="/images/fulllogo.svg"
+            src="/images/logo.svg"
             alt="EasyAid logo"
             title="EasyAid"
             fill="true"

@@ -17,6 +17,7 @@ const loginForm = () => {
           <input
             className="input input--text"
             id="formInput#text"
+            autoComplete="off"
             type="text"
             name="text"
             placeholder="username"

@@ -15,21 +15,4 @@ function ImportingFirebase() {
   return;
 }
 
-/*
-const auth = getAuth(firebaseApp);
-const db = getFirestore(firebaseApp);
-db.collection("todos").getDocs();
-const todosCol = collection(db, "todos");
-const snapshot = await getDocs(todosCol);
-*/
-// Detect asuth state
-/*
-onAuthStateChanged(auth, (user) => {
-  if (user != null) {
-    console.log("logged in!");
-  } else {
-    console.log("No user!");
-  }
-});*/
-
 export default ImportingFirebase;
