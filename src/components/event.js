@@ -197,11 +197,20 @@ export const Event = ({ onClose }) => {
   return ReactDOM.createPortal(
     <div className="event">
       <div className="eventContent">
+        
+        <div className='eventHeader'>
+          <h2>Pomoć stradalima u potresu (selo to i to)</h2>
+          <h3>Crveni Križ</h3>
+        </div>
+        <div className='eventSideInfo'>
+          <h4>Zainteresiranih</h4>
+          <h5>28</h5>
+          <h4>Dolazi</h4>
+          <h5>12</h5>
+        </div>
         <button className="closeButton" onClick={onClose}>
           Close
         </button>
-        <h2>Naziv akcije</h2>
-        <h3>Organizator</h3>
         <p>Opis akcije WW WWWWW WW WWW WWWWWW WWWWW WW  WWW WWWWW WWWW WWW WWW WWWWW WWW WWWWW WWW WW WWWW WW WWWWWW WWWW WWWWWW WW WWWWWW WWW WWWW WWWWW  W</p>
       </div>
     </div>,
@@ -224,12 +233,12 @@ export function EventBubble() {
     <div className="eventButton">
       <button onClick={handleEventClick}>
         <div className='eventBubble'>
-          <div className="eventHeader">
+          <div className="eventBubbleHeader">
             <h2>Naziv akcije</h2>
           </div>
           <div className='eventMiddle'>
             <h3>Organizator</h3>
-            <p>16. svibnja 2023.</p>
+            <h4>16. svibnja 2023.</h4>
           </div>
           
           <p>Kratak opis, Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>

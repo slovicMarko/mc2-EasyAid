@@ -131,7 +131,51 @@
   background-color: white;
   padding: 20px;
   border: 2px solid #379f48;
+  border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 18px;
+}
+
+.eventContent h2 {
+  width:100%;
+  height:120px;
+  text-align: left;
+  font-size: 2.5em;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.eventContent h3 {
+  width:100%;
+  height:70px;
+  text-align: left;
+  font-size:1.8em;
+}
+
+.eventContent p {
+  width:90%;
+  height:70px;
+  text-align: left;
+  font-size:1em;
+  margin:5px auto auto 0px;
+  clear:both;
+}
+
+.eventSideInfo {
+  width:30%;
+  float:left;
+  margin:50px;
+  text-align:left;
+}
+
+.eventSideInfo h4 {
+  margin-top:0;
+  text-align: left;
+}
+
+.eventHeader {
+  width:60%;
+  float:left;
 }
 
 .closeButton {
@@ -144,7 +188,7 @@
 
 .eventButton button {
   width:30%;
-  min-width: 500px;
+  min-width: 600px;
   height:18%;
   min-height: 300px;
   padding:0;
@@ -169,14 +213,14 @@
   height:100%;
 }
 
-.eventHeader {
+.eventBubbleHeader {
   background-color: rgba(20, 255, 0, 0.07);
   width:100%;
   height:90px;
   position: relative;
 }
 
-.eventHeader h2 {
+.eventBubbleHeader h2 {
   text-align: left;
   font-size: 2em;
   width:60%;
@@ -188,22 +232,25 @@
 .eventMiddle {
   width:100%;
 }
-.eventMiddle h3 {
-  float:left;
-}
-
-.eventMiddle p {
-  float:left;
-  width:30%;
-}
 
 .eventBubble h3 {
+  float:left;
   text-align: left;
   font-size: 1.6em;
   width:60%;
   height:60px;
-  margin:10px 20px 10px 20px;
+  margin:10px 10px 10px 20px;
 }
+.eventBubble h4{
+  float:left;
+  font-size: 1.4;
+  width:30%;
+  height:60px;
+  margin:18px 20px 10px 0px;
+  text-align: center;
+  font-weight: normal;
+}
+
 
 .eventBubble p {
   text-align: left;
