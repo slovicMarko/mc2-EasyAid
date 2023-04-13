@@ -221,13 +221,17 @@ export function EventBubble() {
   };
 
   return (
-    <div>
-      <button className="openButton" onClick={handleEventClick}>
+    <div className="eventButton">
+      <button onClick={handleEventClick}>
         <div className='eventBubble'>
           <div className="eventHeader">
             <h2>Naziv akcije</h2>
           </div>
-          <h3>Organizator</h3>
+          <div className='eventMiddle'>
+            <h3>Organizator</h3>
+            <p>16. svibnja 2023.</p>
+          </div>
+          
           <p>Kratak opis, Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
         </div>
       </button>
