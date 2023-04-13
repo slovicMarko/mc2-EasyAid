@@ -140,6 +140,8 @@ const EventPortal = ({children}) => {
 export default EventPortal;
 
 */
+
+/*
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import "./event.css";
@@ -184,3 +186,50 @@ function MyPortal(props) {
 }
 
 export default MyPortal;
+
+*/
+
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
+import './event.css';
+
+export const Event = ({ onClose }) => {
+  return ReactDOM.createPortal(
+    <div className="event">
+      <div className="eventContent">
+        <button className="closeButton" onClick={onClose}>
+          Close
+        </button>
+        <h2>Naziv akcije</h2>
+        <h3>Organizator</h3>
+        <p>Opis akcije WW WWWWW WW WWW WWWWWW WWWWW WW  WWW WWWWW WWWW WWW WWW WWWWW WWW WWWWW WWW WW WWWW WW WWWWWW WWWW WWWWWW WW WWWWWW WWW WWWW WWWWW  W</p>
+      </div>
+    </div>,
+    document.body
+  );
+};
+
+export function EventBubble() {
+  const [isEventOpen, setIsEventOpen] = useState(false);
+
+  const handleEventClick = () => {
+    setIsEventOpen(true);
+  };
+
+  const handleEventClose = () => {
+    setIsEventOpen(false);
+  };
+
+  return (
+    <div>
+      <button className="openButton" onClick={handleEventClick}>
+        <div className='eventBubble'>
+          <h2>Naziv akcije</h2>
+          <h3>Organizator</h3>
+          <p>Kratak opis, Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+        </div>
+      </button>
+      {isEventOpen && <Event onClose={handleEventClose} />}
+    </div>
+  );
+};
