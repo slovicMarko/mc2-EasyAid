@@ -3,7 +3,7 @@ import "firebase/firestore";
 
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-
+/*
 const firebaseApp = initializeApp({
   apiKey: "FIREBASE_API_KEY",
   authDomain: "FIREBASE_AUTH_DOMAIN",
@@ -15,7 +15,7 @@ const firebaseApp = initializeApp({
 });
 
 const auth = getAuth(firebaseApp);
-
+*/
 /*
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
