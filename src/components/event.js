@@ -224,7 +224,9 @@ export function EventBubble() {
     <div>
       <button className="openButton" onClick={handleEventClick}>
         <div className='eventBubble'>
-          <h2>Naziv akcije</h2>
+          <div className="eventHeader">
+            <h2>Naziv akcije</h2>
+          </div>
           <h3>Organizator</h3>
           <p>Kratak opis, Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
         </div>
