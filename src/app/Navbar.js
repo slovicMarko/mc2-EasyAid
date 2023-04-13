@@ -11,11 +11,10 @@ function Navbar() {
         <div className="navbar--logo--container">
           <Image
             //loader={sponzori}
-            src="/images/logo.svg"
+            src="/images/fulllogo.svg"
             alt="EasyAid logo"
             title="EasyAid"
-            width={50}
-            height={50}
+            fill="true"
             className="navbar--logo"
           />
         </div>
