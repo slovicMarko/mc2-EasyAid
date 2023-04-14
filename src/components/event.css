@@ -162,9 +162,10 @@
 }
 
 .eventSideInfo {
-  width:30%;
+  width:20%;
   float:left;
   margin:50px;
+  margin-right: 10px;
   text-align:left;
 }
 
@@ -179,9 +180,16 @@
 }
 
 .closeButton {
-  position: relative;
-  top: 10px;
-  right: 10px;
+  float:left;
+  margin:50px 10px 50px 10px;
+  border:1px solid #379f48;
+  border-radius: 5px;
+  background-color: #379f48;
+  color:white;
+  width:10%;
+  height:5%;
+  min-width: 50px;
+  min-height: 30px;
 }
 
 /*Event Bubble*/
