@@ -1,75 +1,44 @@
 .navbar {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  width: 100vw;
+  padding: 15px 30px;
   font-size: 24px;
   text-align: center;
   background-color: rgb(196, 255, 187);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  position: relative;         /*Mozda bi moglo ic fixed ovisno o tom kak na se svida*/
-  z-index: 100;
-}
-
-.navBtn {
-  background-color: #379f48;
-  margin: 10px 30px;
-  padding: 10px 60px;
-  width: 70px;
-  border-radius: 10px;
-  transition: 0.4s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  user-select: none;
-}
-
-.navBtn:hover {
-  color: #212121;
-  background-color: #37ce50;
-  font-weight: bold;
-  transform: translateY(-3px);
-}
-
-.link {
-  text-decoration: none;
-  color: #fff;
-}
-
-.logo-small-size {
-  position: absolute;
-  width: 60px;
-  right: 90%;
-}
-
-.logoFullUpper {
-  height: 60px;
-  position: absolute;
-  left: 50px;
-  z-index: -1;
-}
-
-.navbar--logo--container {
-  z-index: -10;
-  margin: 0 0 0 150px;
-  position: relative;
-}
-
-.navbar--logo {
-  color: #0927ac;
+  position: relative; /*Mozda bi moglo ic fixed ovisno o tom kak na se svida*/
+  z-index: 10;
 }
 
 .navbar--navigation {
-  width: 100px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: auto;
 }
 
+/* LOGO */
+
+
+
+.logo--slika{
+  width: fit-content;
+  position: relative;
+  margin: 0 30px;
+}
+
+
+/* GUMBI ZA PRIJAVU */
+
 .navbar--auth {
   display: flex;
   justify-content: right;
   align-items: center;
-  margin: 0 40px 0 0;
+  margin: 0 80px 0 0;
 }
 
 .btn--auth--reg {
@@ -100,9 +69,13 @@
   margin: 0 40px;
 }
 
+/* NAVIGACIJA */
+
 .btn--nav {
   color: #000;
+  white-space: nowrap;
   text-decoration: none;
-  margin: 0 20px;
+  margin: 0 30px;
   font-size: 18px;
+  width: auto;
 }

@@ -10,7 +10,6 @@
   position: relative;
 }
 
-
 .front-window-font {
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
@@ -18,13 +17,13 @@
   max-width: 500px;
   height: 200px;
   position: relative;
-  left:200px;
-  top:90px;
+  left: 200px;
+  top: 90px;
   text-align: left;
 }
 
 .sponsor-images {
-  display:inline-block;
+  display: inline-block;
   margin: 30px 20px;
 }
 
@@ -33,7 +32,7 @@
   width: 150px;
   padding: 10px;
   object-fit: contain;
-  margin:0 100px 30px 100px;
+  margin: 0 100px 30px 100px;
   position: relative;
   float: left;
   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
@@ -54,14 +53,14 @@ h1 {
   max-width: 600px;
   height: 150px;
   position: relative;
-  top:60px;
-  left:200px;
+  top: 60px;
+  left: 200px;
   text-align: left;
 }
 
 .partneri {
   position: relative;
-  top:50px;
+  top: 50px;
 }
 
 h2 {
@@ -69,21 +68,21 @@ h2 {
 }
 
 .regularButton {
-  width:200px;
-  height:60px;
+  text-align: center;
+  width: 200px;
+  height: 60px;
   font-size: 20px;
   font-weight: 300;
   border-radius: 30px;
-  border:2px solid black;
-  color:black;
+  border: 2px solid black;
+  color: black;
   background-color: #edffed;
-  margin-right:60px;
-  float:left;
+  margin-right: 60px;
+  float: left;
   transition: 0.4s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);       /*Nisam siguran koliko shadow paše, mozda malo smanjiti*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Nisam siguran koliko shadow paše, mozda malo smanjiti*/
   line-height: 55px;
   text-decoration: none;
-
 }
 
 .regularButton:hover {
@@ -91,58 +90,59 @@ h2 {
 }
 
 .greenButton {
-  width:200px;
-  height:60px;
+  text-align: center;
+  width: 200px;
+  height: 60px;
   font-size: 20px;
   font-weight: 300;
   border-radius: 30px;
-  border:2px solid #379f48;
-  color:white;
+  border: 2px solid #379f48;
+  color: white;
   background-color: #379f48;
-  margin-right:60px;
-  float:left;
+  margin-right: 60px;
+  float: left;
   transition: 0.4s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);                 /*Nisam siguran koliko shadow paše, mozda malo smanjiti*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Nisam siguran koliko shadow paše, mozda malo smanjiti*/
   user-select: none;
   line-height: 55px;
   text-decoration: none;
 }
 
 .greenButton:hover {
-  color:black;
+  color: black;
   background-color: #37ce50;
   border-color: #37ce50;
 }
 
 .eventButtons {
   position: absolute;
-  top:490px;
-  left:220px;
-  display:inline-block;
+  top: 490px;
+  left: 220px;
+  display: inline-block;
 }
 
 #SecondHeading {
   position: relative;
-  top:100px;
+  top: 100px;
 }
 
 .aboutEasyAid {
   display: flex;
-  height:730px;
-  width:100%;
+  height: 730px;
+  width: 100%;
   position: relative;
-  top:90px;
+  top: 90px;
 }
 
 .fotoGeneral1 {
-  width:50vw;
-  height:calc(50vw*0.66667);
+  width: 50vw;
+  height: calc(50vw * 0.66667);
   position: relative;
-  margin:70px 20px 50px 220px;
+  margin: 70px 20px 50px 220px;
 }
 
 .sideText1 {
-  width:300px;
+  width: 300px;
   margin-top: 70px;
   margin-left: 30px;
   text-align: left;
@@ -157,37 +157,37 @@ h2 {
 
 .sideText1 p {
   margin-bottom: 70px;
-  color:#3D3D3D;
+  color: #3d3d3d;
 }
 
 #ThirdHeading {
-  position:relative;
-  top:100px;
+  position: relative;
+  top: 100px;
 }
 
 .aboutOrganisation {
   position: relative;
   display: flex;
-  top:100px;
+  top: 100px;
 }
 
 .fotoGeneral2 {
-  width:30vw;
-  height:calc(30vw*1.12);
+  width: 30vw;
+  height: calc(30vw * 1.12);
   position: relative;
-  margin:70px 20px 50px 220px;
-  background-color:#bcffbc;
+  margin: 70px 20px 50px 220px;
+  background-color: #bcffbc;
   border-radius: 25px;
 }
 
 .sideText2 {
-  width:400px;
-  height:calc(30vw*1.12);
+  width: 400px;
+  height: calc(30vw * 1.12);
   position: relative;
-  margin:70px 20px 50px 200px;
+  margin: 70px 20px 50px 200px;
   /*background-color:#bcffbc;*/
   border-radius: 25px;
-  text-align:left;
+  text-align: left;
 }
 
 .sideText2 h4 {
@@ -198,5 +198,10 @@ h2 {
 
 .sideText2 p {
   margin-bottom: -10px;
-  color:#3D3D3D;
+  color: #3d3d3d;
+}
+
+hr {
+  width: 75%;
+  margin: 150px auto;
 }

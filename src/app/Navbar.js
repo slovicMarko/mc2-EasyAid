@@ -8,15 +8,31 @@ function Navbar() {
   return (
     <>
       <div className="navbar">
-        <div className="navbar--logo--container">
+        <div className="logo--container">
+          <Link href="/">
+            <Image
+              src="/images/full_logo.svg"
+              alt="EasyAid logo"
+              title="EasyAid"
+              height={"30"}
+              width={"400"}
+              className="logo--slika"
+            />
+          </Link>
+
+          {/*
+          <img src="images/logo_slika.svg" alt="logo" className="logo--slika"/>
+          <img src="images/logo_text.svg" alt="logo text" className="logo--slika"/>
+          
           <Image
-            //loader={sponzori}
-            src="/images/logo.svg"
+            src="/images/logo_text.svg"
             alt="EasyAid logo"
             title="EasyAid"
-            fill="true"
-            className="navbar--logo"
+            height={"30"}
+            width={"30"}
+            className="logo--slika"
           />
+        */}
         </div>
         <div className="navbar--navigation">
           <Link className="btn--nav" href="/">
@@ -25,10 +41,10 @@ function Navbar() {
           <Link className="btn--nav" href="/feed">
             Feed
           </Link>
-          <Link className="btn--nav" href="/">
+          <Link className="btn--nav" href="/feed">
             Aktivne akcije
           </Link>
-          <Link className="btn--nav" href="/">
+          <Link className="btn--nav" href="#">
             Organizatori
           </Link>
         </div>

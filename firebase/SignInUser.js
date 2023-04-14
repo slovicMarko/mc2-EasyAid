@@ -1,5 +1,6 @@
 "use client";
 
+import { redirect } from 'next/navigation';
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -73,6 +74,7 @@ function Login() {
 
   if (user) {
     console.log("Prijavljen");
+
   } else {
     console.log("Nema korisnika");
   }
