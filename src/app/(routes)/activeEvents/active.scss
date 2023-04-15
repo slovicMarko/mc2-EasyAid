@@ -1,0 +1,117 @@
+.rectangle {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 250px;
+    /*background-color: #efefef;*/
+    justify-self: center;
+    padding: 15px;
+    border: 3px solid grey;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Neam pojma sta koja vrijednost znaci w3schools*/
+  }
+  
+  .rectangle-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bubble-div {
+    background-color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.4s ease;
+  }
+  
+  .bubble-div:hover {
+    transition: 0.4s ease;
+    background-color: rgb(238, 255, 237);
+    transform: translateY(-3px);
+  }
+  
+  .bubble-div:active {
+    transition: 0.2s ease;
+    background-color: #baffc6;
+  }
+  
+  .event-name-style {
+    text-align: left;
+    color: rgb(0, 0, 0);
+  }
+  
+  .organiser-style {
+    text-align: left;
+    color: rgb(0, 0, 0);
+  }
+  
+  .event-window-info {
+    width: 50vw;
+    height: 70vh;
+    border: 2px solid #379f48 !important;
+    border-radius: 15px;
+    background-color: #fff;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .event-modal-button {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    height: 5%;
+    text-align: center;
+    color: white;
+    border: 2px #379f48;
+    background-color: #379f48;
+    margin: 5px 10px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: 0.4s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .event-modal-button:hover {
+    color: #212121;
+    background-color: #37ce50;
+  }
+  
+  .event-info-text {
+    width: 60%;
+    height: 50%;
+    float: left;
+  }
+  
+  .modal-open {
+    transition: 0.2s ease;
+    overflow: hidden; /* prevent scrolling while modal is open */
+    /*background-color: rgba(255, 255, 255, 01) ; /**/
+  }
+  
+  .event-info-stats {
+    width: 35%;
+    height: 50%;
+    float: right;
+  }
+  
+  .event-stats-numbers {
+    color:#379f48;
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  
+  .openButton {
+    margin:50px 0 0 0;
+    padding:0px;
+    border-radius: 10px;
+    border: 1px solid #379f48;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
