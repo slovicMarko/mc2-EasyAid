@@ -1,6 +1,5 @@
-
-:root{
-  --greenBtn: #379f48
+:root {
+  --greenBtn: #379f48;
 }
 /*
 .front-windows {
@@ -209,25 +208,105 @@ hr {
   margin: 0 32px;
 }*/
 
-
-
-
-
 /*  NOVOO  */
 
-
-.container{
-  
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  max-width: 800px;
+  margin: 0 15%;
 }
 
+.front-windows {
+  background-color: #edffed;
+  min-height: 600px;
+  height: fit-content;
+}
 
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15%;
+  text-align: left;
+}
 
-.sponsor-logo{
+.content h1 {
+  width: fit-content;
+  max-width: 600px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 72px;
+  margin: 104px 0 32px;
+}
+
+.content p {
+  width: fit-content;
+  max-width: 480px;
+  font-weight: 300;
+  line-height: 21px;
+  font-size: 18px;
+}
+
+.eventButtons {
+  margin: 36px 0;
+}
+
+.linkBtn {
+  text-align: center;
+  width: 180px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 50px;
+  border: none;
+  margin: 0 56px 20px 0;
+  float: left;
+  transition: 0.4s ease;
+  user-select: none;
+  line-height: 55px;
+  text-decoration: none;
+}
+
+.linkBtn.greenBtn {
+  background: var(--greenBtn);
+  color: #fff;
+}
+.linkBtn.greenBtn:hover {
+  transition: 0.4s ease;
+  background-color: #2cd849;
+  color: #303030;
+  font-weight: bold;
+}
+
+.linkBtn.regularBtn {
+  border: 2px solid #303030;
+  color: #303030;
+}
+
+.linkBtn.regularBtn:hover {
+  transition: 0.4s ease;
+  background-color: var(--greenBtn);
+  border: 2px solid var(--greenBtn);
+  color: #fff;
+  font-weight: bold;
+}
+
+#SecondHeading {
+  margin: 104px 0 0;
+}
+
+.topEvents {
+  display: flex;
+  margin: 104px 0;
+}
+
+.sponsor-logo {
   display: none;
 }
 
 .front-windows {
-  
 }
 
 .sponsor-images {

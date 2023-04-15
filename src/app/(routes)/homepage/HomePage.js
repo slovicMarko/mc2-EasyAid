@@ -19,19 +19,22 @@ function HomePage() {
   return (
     <>
       <div className="front-windows">
-        <h1>Volontiraj i pomogni drugima oko sebe!</h1>
-        <p className="front-window-font">
-          Kroz volontiranje imate priliku ne samo pomoći drugima, već i sami
-          sebi pružiti jedinstveno iskustvo koje će vas obogatiti i ispuniti.
-        </p>
+        <div className="backgroundColor"></div>
+        <div className="content">
+          <h1>Volontiraj i pomogni drugima oko sebe!</h1>
+          <p className="front-window-font">
+            Kroz volontiranje imate priliku ne samo pomoći drugima, već i sami
+            sebi pružiti jedinstveno iskustvo koje će vas obogatiti i ispuniti.
+          </p>
 
-        <div className="eventButtons">
-          <Link className="greenButton" href="/feed">
-            Pronađi događaj
-          </Link>
-          <Link className="regularButton" href="/">
-            Stvori događaj
-          </Link>
+          <div className="eventButtons">
+            <Link className="linkBtn greenBtn" href="/feed">
+              Pronađi događaj
+            </Link>
+            <Link className="linkBtn regularBtn" href="/">
+              Stvori događaj
+            </Link>
+          </div>
         </div>
       </div>
       <div className="container">
