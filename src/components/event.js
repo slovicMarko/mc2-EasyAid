@@ -225,7 +225,7 @@ export const Event = ({ onClose }) => {
   );
 };
 
-export function EventBubble({ isPreview }) {
+export function EventBubble({ isPreview, isInActive}) {
   const [isEventOpen, setIsEventOpen] = useState(false);
 
   const handleEventClick = () => {
@@ -236,8 +236,24 @@ export function EventBubble({ isPreview }) {
     setIsEventOpen(false);
   };
 
+  console.log("isInActive: ",isInActive);
+  console.log("isPreview: ",isPreview);
+
+  let eventClass = '';
+  if (isPreview==true) {
+    eventClass = 'event--preview';
+  }
+  else if (isInActive ==true) {
+    eventClass = 'event--active';
+  }
+  else {
+    eventClass = 'eventButton';
+  }
+
+  
+
   return (
-    <div className={isPreview ? "event--preview" : "eventButton"}>
+    <div className={eventClass}>
       <button onClick={handleEventClick}>
         <div className="eventBubble">
           <div className="eventBubbleHeader">
@@ -255,3 +271,36 @@ export function EventBubble({ isPreview }) {
     </div>
   );
 }
+
+/*
+export function EventSmall() {
+  const [isEventOpen, setIsEventOpen] = useState(false);
+
+  const handleEventClick = () => {
+    setIsEventOpen(true);
+  };
+
+  const handleEventClose = () => {
+    setIsEventOpen(false);
+  };
+
+  return (
+    <div className="eventSmall">
+      <button onClick={handleEventClick}>
+        <div className="">
+          <div className="">
+            <h2>Naziv akcije</h2>
+          </div>
+          <div className="">
+            <h3>Organizator</h3>
+            <h4>16. svibnja 2023.</h4>
+          </div>
+
+          <p>Kratak opis, Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+        </div>
+      </button>
+      {isEventOpen && <Event onClose={handleEventClose} />}
+    </div>
+  );
+}
+*/

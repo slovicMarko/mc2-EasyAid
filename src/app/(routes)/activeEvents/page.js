@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { EventBubble } from "@/components/event";
-import "./organiser.scss";
+import "./active.scss";
 
 function ActiveFeed() {
   const [loading, setLoading] = useState(true);
@@ -26,8 +26,11 @@ function ActiveFeed() {
     <div>
       {finishedLoadingAndCanShow && (
         <div>
-          <EventBubble />
-          <EventBubble />
+          <div>
+          <EventBubble isInActive/>
+          <EventBubble isInActive/>
+          </div>
+          
         </div>
       )}
     </div>

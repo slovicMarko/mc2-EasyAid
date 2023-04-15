@@ -311,3 +311,45 @@
     
   }
 }
+
+
+.event--active button {
+  width: 300px;
+  padding: 0;
+  border-radius: 10px;
+  border: 2px solid #379f48;
+  transition: 0.2s ease-in-out;
+  font-size: 16px;
+
+  .event--active button:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+    width: 30.5%;
+  }
+
+  .eventBubble {
+    
+  }
+
+  .eventBubbleHeader {
+    background-color: rgba(20, 255, 0, 0.07);
+  }
+
+  .eventBubbleHeader h2 {
+    text-align: left;
+  }
+
+  .eventMiddle {
+  }
+
+  .eventBubble h3 {
+
+  }
+
+  .eventBubble h4 {
+    
+  }
+
+  .eventBubble p {
+    
+  }
+}
