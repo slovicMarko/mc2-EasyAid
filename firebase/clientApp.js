@@ -1,7 +1,8 @@
+/*
 import { getFirestore } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-const auth = getAuth();
+ const auth = getAuth();
 const user = auth.currentUser;
 
 if (user) {
@@ -10,7 +11,6 @@ if (user) {
   console.log("Nema korisnika");
 }
 
-/*
 const db = getFirestore();
 db.collection("todos").getDocs();
 const todosCol = collection(db, "todos");
@@ -18,7 +18,7 @@ const snapshot = await getDocs(todosCol);
 
 // Detect asuth state
 
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, () => {
   if (user != null) {
     console.log("logged in!");
   } else {

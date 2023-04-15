@@ -1,29 +1,28 @@
 "use client";
 
-import { redirect } from 'next/navigation';
 import Link from "next/link";
 import { useState } from "react";
 import {
   getAuth,
   signInWithEmailAndPassword,
   AuthErrorCodes,
+  onAuthStateChanged,
 } from "firebase/auth";
-import { NextLink } from "next/link";
 
 import { initializeApp } from "firebase/app";
+console.log("sads", process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
 
 const firebaseConfig = {
-  apiKey: "AIzaSyANkahWnt2XEit45aipdfGXmF0EF6EohVc",
-  authDomain: "FIREBASE_AUTH_DOMAIN",
-  databaseURL:
-    "https://mc2-easyaid-default-rtdb.europe-west1.firebasedatabase.app/",
-  projectId: "FIREBASE_PROJECT_ID",
-  storageBucket: "FIREBASE_STORAGE_BUCKET",
-  messagingSenderId: "FIREBASE_MESSAGING_SENDER_ID",
-  appId: "FIREBASE_APP_ID",
-  measurementId: "FIREBASE_MEASUREMENT_ID",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
-
+console.log(firebaseConfig);
 const app = initializeApp(firebaseConfig);
 
 function Login() {
@@ -70,14 +69,9 @@ function Login() {
     }));
   };
 
-  const user = auth.currentUser;
-
-  if (user) {
-    console.log("Prijavljen");
-
-  } else {
-    console.log("Nema korisnika");
-  }
+  onAuthStateChanged(auth, (user) => {
+    console.log(user);
+  });
 
   return (
     <div className="formContainer">

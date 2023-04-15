@@ -1,10 +1,14 @@
+
+:root{
+  --greenBtn: #379f48
+}
+/*
 .front-windows {
   width: 100%;
   height: 700px;
   margin: 0;
-  /*border: 3px solid #c3ffbb;*/
   background-color: #edffed;
-  padding: 15px 15px;
+  padding: 15px 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 50;
   position: relative;
@@ -35,7 +39,6 @@
   margin: 0 100px 30px 100px;
   position: relative;
   float: left;
-  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 .sponsor {
@@ -80,7 +83,6 @@ h2 {
   margin-right: 60px;
   float: left;
   transition: 0.4s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Nisam siguran koliko shadow paše, mozda malo smanjiti*/
   line-height: 55px;
   text-decoration: none;
 }
@@ -102,7 +104,6 @@ h2 {
   margin-right: 60px;
   float: left;
   transition: 0.4s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Nisam siguran koliko shadow paše, mozda malo smanjiti*/
   user-select: none;
   line-height: 55px;
   text-decoration: none;
@@ -121,80 +122,71 @@ h2 {
   display: inline-block;
 }
 
-#SecondHeading {
+
+.container{
+  margin: 0 132px;
   position: relative;
-  top: 100px;
+}
+
+#SecondHeading {
+  margin: 96px auto;
 }
 
 .aboutEasyAid {
   display: flex;
-  height: 730px;
-  width: 100%;
-  position: relative;
-  top: 90px;
+  justify-content: right;
+  align-items: flex-start;
+  margin: 128px 0;
 }
 
-.fotoGeneral1 {
-  width: 50vw;
-  height: calc(50vw * 0.66667);
-  position: relative;
-  margin: 70px 20px 50px 220px;
+.fotoGeneral1 img{
+  margin-right: 96px;
+  width: 500px;
+  height: calc(500px *0.6666);
 }
 
 .sideText1 {
-  width: 300px;
-  margin-top: 70px;
+  width: min-content;
   margin-left: 30px;
   text-align: left;
-  margin-bottom: 0px;
 }
 
 .sideText1 h4 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 0px;
+  white-space: nowrap;
+  margin: 0 auto 24px;
 }
 
 .sideText1 p {
-  margin-bottom: 70px;
+  width: fit-content;
+  margin-bottom: 50px;
+  line-height: 1.5;
   color: #3d3d3d;
 }
 
 #ThirdHeading {
-  position: relative;
   top: 100px;
 }
 
 .aboutOrganisation {
-  position: relative;
   display: flex;
-  top: 100px;
+  justify-content: left;
 }
 
 .fotoGeneral2 {
-  width: 30vw;
-  height: calc(30vw * 1.12);
+  width: 360px;
+  height: 480px;
   position: relative;
-  margin: 70px 20px 50px 220px;
   background-color: #bcffbc;
   border-radius: 25px;
 }
 
 .sideText2 {
   width: 400px;
-  height: calc(30vw * 1.12);
-  position: relative;
-  margin: 70px 20px 50px 200px;
-  /*background-color:#bcffbc;*/
-  border-radius: 25px;
   text-align: left;
 }
 
-.sideText2 h4 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 0px;
-}
 
 .sideText2 p {
   margin-bottom: -10px;
@@ -204,4 +196,40 @@ h2 {
 hr {
   width: 75%;
   margin: 150px auto;
+}
+
+.topEvents{
+  display: flex;
+  justify-content: center;
+}
+
+.eventProba{
+  width: 350px;
+  height: 200px;
+  margin: 0 32px;
+}*/
+
+
+
+
+
+/*  NOVOO  */
+
+
+.container{
+  
+}
+
+
+
+.sponsor-logo{
+  display: none;
+}
+
+.front-windows {
+  
+}
+
+.sponsor-images {
+  display: none;
 }
