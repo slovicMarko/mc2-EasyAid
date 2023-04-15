@@ -208,7 +208,7 @@
   font-size: 18px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-  .eventButton button:hover {
+  &:hover {
     background-color: rgba(0, 255, 0, 0.1);
     width: 30.5%;
   }
@@ -279,9 +279,9 @@
   transition: 0.2s ease-in-out;
   font-size: 16px;
 
-  .event--preview button:hover {
+  &:hover {
     background-color: rgba(0, 255, 0, 0.1);
-    width: 30.5%;
+    //width: 305px;
   }
 
   .eventBubble {
@@ -313,7 +313,7 @@
 }
 
 
-.event--active button {
+.event--active-feed button {
   width: 300px;
   padding: 0;
   border-radius: 10px;
@@ -321,9 +321,9 @@
   transition: 0.2s ease-in-out;
   font-size: 16px;
 
-  .event--active button:hover {
+  &:hover {
     background-color: rgba(0, 255, 0, 0.1);
-    width: 30.5%;
+    width: 305px;
   }
 
   .eventBubble {

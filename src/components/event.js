@@ -244,7 +244,7 @@ export function EventBubble({ isPreview, isInActive}) {
     eventClass = 'event--preview';
   }
   else if (isInActive ==true) {
-    eventClass = 'event--active';
+    eventClass = 'event--active-feed';
   }
   else {
     eventClass = 'eventButton';

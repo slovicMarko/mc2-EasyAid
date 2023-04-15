@@ -25,13 +25,18 @@ function ActiveFeed() {
   return (
     <div>
       {finishedLoadingAndCanShow && (
-        <div>
-          <div>
-          <EventBubble isInActive/>
-          <EventBubble isInActive/>
+        <section id="sectionEvents">
+          <div className="activeEvents">
+            <h2>Aktivne akcije</h2>
+            <EventBubble isInActive/>
+            <EventBubble isInActive/>
           </div>
-          
-        </div>
+          <div className="pastEvents">
+            <h2>Prošle akcije</h2>
+            <EventBubble isInActive/>
+            <EventBubble isInActive/>
+          </div>
+        </section>
       )}
     </div>
   );
