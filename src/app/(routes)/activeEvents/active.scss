@@ -1,18 +1,47 @@
 
-#sectionEvents {
-    margin: 50px 20px 50px 300px;
+.activeFeed {
+    height:80%;
+    min-height: 400px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#section-events {
+    margin-top: 50px;
+    width:400px;
+    height:400px;
     h2 {
         font-size: 18px;
+        width:200px;
         margin:20px auto 10px auto;
     }
 }
 
-.activeEvents {
+#section-info {
+    margin-top: 70px;
+    width:600px;
+    height:400px;
+
+    h2 {
+        font-size: 18px;
+        width:200px;
+        margin:20px auto 10px auto;
+    }
+}
+
+#about-event {
+    height:800px;
+    max-width:600px;
+    background-color: aliceblue;
+}
+
+.active-events {
     width:30%;
     max-width: 600px;
 }
-.pastEvents {
+.past-events {
     width:30%;
     max-width: 600px;
 }
