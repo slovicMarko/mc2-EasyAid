@@ -77,11 +77,11 @@ export function EventBubble({ isPreview, isInActive, isInFeed }) {
   const handleEventClose = () => {
     setIsEventOpen(false);
   };
-
+  /*
   console.log("isInActive: ", isInActive);
   console.log("isPreview: ", isPreview);
   console.log("isInFeed: ", isInFeed);
-
+  */
   let eventClass = "";
   if (isPreview === true) {
     eventClass = "event--preview";
@@ -92,19 +92,23 @@ export function EventBubble({ isPreview, isInActive, isInFeed }) {
   } else if (isInFeed === true) {
     eventClass = "eventButton";
   }
+  console.log("eventClass", eventClass);
 
   return (
     <div className={eventClass}>
       <button onClick={handleEventClick}>
         <div className="eventBubble">
           <div className="eventBubbleHeader">
-            <h2>Naziv akcije</h2>
+            <h2>Pomoć žrtvama potresa(centar Petrinje)</h2>
           </div>
           <div className="eventMiddle">
-            <h3>Organizator</h3>
-            <h4>16. svibnja 2023.</h4>
+            <h3>Hrvatski crveni križ</h3>
+            <h4>25.lipnja 2023.</h4>
           </div>
-          <p>Kratak opis, Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+          <p>
+            Potrebna pomoć u području graditeljstva (popravljanje krovova i
+            skidanje dimnjaka), briga o starijim i nemoćnim osobama
+          </p>
         </div>
       </button>
 

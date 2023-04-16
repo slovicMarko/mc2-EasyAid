@@ -4,7 +4,7 @@ import Link from "next/link";
 import akcija1 from "public/images/akcija1.png";
 import { EventBubble } from "@/components/event";
 
-import "./homePage.css";
+import "./homePage.scss";
 
 /*
 https://react-icons.github.io/react-icons/    za ikone, instalirao sam sve
@@ -38,7 +38,9 @@ function HomePage() {
         </div>
       </div>
       <div className="container">
-        <h2 id="SecondHeading">Želiš volontirati, a ne znaš gdje početi?</h2>
+        <h2 id="SecondHeading" className="headings">
+          Želiš volontirati, a ne znaš gdje početi?
+        </h2>
         <div className="topEvents">
           <div className="eventProba">
             <EventBubble isPreview />
@@ -51,17 +53,18 @@ function HomePage() {
           </div>
         </div>
         <div className="aboutEasyAid">
-          <div className="fotoGeneral1">
+          <div className="imageContainer">
             <Image
               src={akcija1}
               //src="/images/akcija1.png"
               alt="Volonteri"
-              className="foto1"
+              layout="responsive"
+              className="photo1"
             />
             {/*
              */}
           </div>
-          <div className="sideText1">
+          <div className="sideText">
             <h4>Uvijek aktualni događaji</h4>
             <p>
               U odjeljku "Aktualni događaji" možeš vidjeti sve aktualne akcije
@@ -76,32 +79,34 @@ function HomePage() {
               akciju
             </p>
 
-            <Link className="greenButton" href="/feed">
+            <Link className="linkBtn greenBtn" href="/feed">
               Pronađi događaj
             </Link>
           </div>
         </div>
 
-        <h2 id="ThirdHeading">Problem ti je organizacija i promocija?</h2>
+        <h2 id="ThirdHeading" className="headings">
+          Problem ti je organizacija i promocija?
+        </h2>
         <div className="aboutOrganisation">
-          <div className="fotoGeneral2"></div>
-          <div className="sideText1">
-            <h4>Sve na jednom mjestu</h4>
+          <div className="imageContainer2"></div>
+          <div className="sideText2">
+            <h2>Sve na jednom mjestu</h2>
             {/*Previše se ponavlja treba srediti tekst*/}
             <p>
               Dosta vam je korištenja različitih aplikacija kako bi dogovorili
-              akciju?
+              akciju? Nudimo vam aplikaciju u kojoj možete dogovoriti sve
+              detalje unutar jednog obrasca.
             </p>
-            <p>
-              Nudimo vam aplikaciju u kojoj možete dogovoriti sve detalje unutar
-              jednog obrasca.
-            </p>
+            <Link className="linkBtn regularBtn" href="/">
+              Stvori događaj
+            </Link>
           </div>
         </div>
 
         <div className="partneri">
           <hr />
-          <h2>Partneri u suradnji</h2>
+          <h2 className="headings">Partneri u suradnji</h2>
           <div className="sponsor-images">
             <div className="sponsor-logo">
               <Image
@@ -109,7 +114,7 @@ function HomePage() {
                 src="/images/porscheDigital.jpg"
                 alt="Porsche Digital Croatia"
                 title="Porsche Digital Croatia"
-                fill="true"
+                layout="fill"
                 className="sponsor"
               />
             </div>
@@ -119,17 +124,18 @@ function HomePage() {
                 src="/images/tvzMc2.png"
                 alt="Tvz Mc2"
                 title="Tvz Mc2"
-                fill="true"
+                layout="fill"
                 className="sponsor"
               />
             </div>
+
             <div className="sponsor-logo">
               <Image
                 //loader={sponzori}
                 src="/images/tvzLogo.png"
                 alt="Tehničko veleučilište u Zagrebu"
                 title="Tehničko veleučilište u Zagrebu"
-                fill="true"
+                layout="fill"
                 className="sponsor"
               />
             </div>

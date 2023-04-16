@@ -1,5 +1,6 @@
 :root {
   --greenBtn: #379f48;
+  --gray: #303030;
 }
 /*
 .front-windows {
@@ -216,6 +217,7 @@ hr {
   margin: 0 auto;
   width: fit-content;
   max-width: 85%;
+  text-align: left;
 }
 
 .front-windows {
@@ -227,8 +229,8 @@ hr {
 .content {
   display: flex;
   flex-direction: column;
-  margin: 0 15%;
   text-align: left;
+  margin: 0 15%;
 }
 
 .content h1 {
@@ -275,13 +277,13 @@ hr {
 .linkBtn.greenBtn:hover {
   transition: 0.4s ease;
   background-color: #2cd849;
-  color: #303030;
+  color: var(--gray);
   font-weight: bold;
 }
 
 .linkBtn.regularBtn {
-  border: 2px solid #303030;
-  color: #303030;
+  border: 2px solid var(--gray);
+  color: var(--gray);
 }
 
 .linkBtn.regularBtn:hover {
@@ -292,27 +294,119 @@ hr {
   font-weight: bold;
 }
 
+.headings {
+  display: flex;
+  justify-content: center;
+  margin: 104px 10px;
+}
+
 #SecondHeading {
-  margin: 104px 0 0;
 }
 
 .topEvents {
   display: flex;
-  justify-content: center;
-  margin: 104px 0;
+  justify-content: space-between;
+  margin: 0 0 208px;
 }
 
 .eventProba {
   margin: 0 10px;
 }
 
-.sponsor-logo {
-  display: none;
+.aboutEasyAid {
+  display: flex;
+  justify-content: flex-start;
 }
 
-.front-windows {
+.imageContainer {
+  margin: 0 10px;
+  width: fit-content;
+
+  .photo1 {
+    object-fit: contain;
+    width: 100%;
+    position: relative;
+    height: unset;
+    max-height: 380px;
+  }
 }
 
-.sponsor-images {
-  display: none;
+.sideText {
+  color: var(--gray);
+  max-width: 300px;
+  width: fit-content;
+  margin: 0 20px 0 80px;
+
+  h4 {
+    margin: 0 0 24px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 150%;
+    margin: 0 0 24px;
+  }
+
+  .greenBtn {
+    margin: 0;
+  }
+}
+
+.aboutOrganisation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 104px;
+
+  .imageContainer2 {
+    width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    background-color: rgba(71, 191, 91, 0.24);
+  }
+
+  .sideText2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--gray);
+    max-width: 400px;
+    width: fit-content;
+    margin: 0 0 0 80px;
+
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .regularBtn {
+      margin: 36px 0 0;
+    }
+  }
+}
+
+.partneri {
+  margin: 0 0 208px 0;
+
+  hr {
+    margin: 0 10px;
+  }
+
+  .sponsor-images {
+    display: flex;
+    justify-content: space-between;
+
+    .sponsor-logo {
+      height: 180px;
+      width: 180px;
+      object-fit: contain;
+      position: relative;
+      margin: 0 10px;
+
+      .sponsor {
+        width: 100%;
+        height: unset;
+        border-radius: 100%;
+      }
+    }
+  }
 }
