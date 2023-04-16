@@ -208,7 +208,7 @@
   font-size: 18px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-  .eventButton button:hover {
+  &:hover {
     background-color: rgba(0, 255, 0, 0.1);
     width: 30.5%;
   }
@@ -268,14 +268,56 @@
   }
 }
 
+//main
+
 .event--preview button {
   background-color: rgba(5, 255, 0, 0.07);
   border: none;
   padding: 32px;
 
-  .event--preview button:hover {
-    transform: translateY(-3px);
-    transition: 0.3s ease;
+  &:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+  }
+
+  .eventBubble {
+  }
+
+  .eventBubbleHeader {
+    background-color: rgba(20, 255, 0, 0.07);
+  }
+
+  .eventBubbleHeader h2 {
+    text-align: left;
+  }
+
+  .eventMiddle {
+  }
+
+  .eventBubble h3 {
+  }
+
+  .eventBubble h4 {
+  }
+
+  .eventBubble p {
+  }
+}
+
+
+
+// active feed
+
+.event--active-feed button {
+  width: 300px;
+  padding: 0;
+  border-radius: 10px;
+  border: 2px solid #379f48;
+  transition: 0.2s ease-in-out;
+  font-size: 16px;
+
+  &:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+    width: 305px;
   }
 
   .eventBubble {

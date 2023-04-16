@@ -41,10 +41,10 @@ function Navbar() {
           <Link className="btn--nav" href="/feed">
             Feed
           </Link>
-          <Link className="btn--nav" href="/feed">
+          <Link className="btn--nav" href="/activeEvents">
             Aktivne akcije
           </Link>
-          <Link className="btn--nav" href="#">
+          <Link className="btn--nav" href="/organiser">
             Organizatori
           </Link>
         </div>

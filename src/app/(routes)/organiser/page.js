@@ -6,9 +6,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { EventBubble } from "@/components/event";
-import "./feed.scss";
+import "./organiser.scss";
 
-function MainFeed() {
+function OrganiserFeed() {
   const [loading, setLoading] = useState(true);
   const [canShow, setCanShow] = useState(false);
 
@@ -26,14 +26,14 @@ function MainFeed() {
     <div>
       {finishedLoadingAndCanShow && (
         <div>
-          <EventBubble isInFeed/>
-          <EventBubble isInFeed/>
-          <EventBubble isInFeed/>
-          <EventBubble isInFeed/>
+          <EventBubble />
+          <EventBubble />
+          <EventBubble />
+          <EventBubble />
         </div>
       )}
     </div>
   );
 }
 
-export default MainFeed;
+export default OrganiserFeed;
