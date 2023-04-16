@@ -247,7 +247,6 @@ export function EventBubble({ isPreview }) {
             <h3>Organizator</h3>
             <h4>16. svibnja 2023.</h4>
           </div>
-
           <p>Kratak opis, Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
         </div>
       </button>

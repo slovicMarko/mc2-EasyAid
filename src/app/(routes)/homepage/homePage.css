@@ -213,10 +213,9 @@ hr {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
   width: fit-content;
-  max-width: 800px;
-  margin: 0 15%;
+  max-width: 85%;
 }
 
 .front-windows {
@@ -299,7 +298,12 @@ hr {
 
 .topEvents {
   display: flex;
+  justify-content: center;
   margin: 104px 0;
+}
+
+.eventProba {
+  margin: 0 10px;
 }
 
 .sponsor-logo {
