@@ -176,6 +176,7 @@
 //main
 
 .event--preview button {
+  
   color: var(--gray);
   text-align: left;
   border-radius: 16px;
@@ -189,6 +190,7 @@
     background-color: rgba(0, 255, 0, 0.1);
     transition: 0.3s ease;
     transform: translateY(-4px);
+    cursor: pointer;
   }
 
   .eventBubble {

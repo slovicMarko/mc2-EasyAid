@@ -40,7 +40,7 @@ export const Event = ({ onClose }) => {
 };
 
 const EventDiv = () => {
-  const portalContainer = document.getElementById("about-event");
+  const portalContainer = document.getElementById("about-event");            //ref
   return ReactDOM.createPortal(
     <div className="event">
       <div className="eventContent">
