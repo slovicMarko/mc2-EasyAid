@@ -79,11 +79,7 @@ export function EventBubble({ isPreview, isInActive, isInFeed }) {
   const handleEventClose = () => {
     setIsEventOpen(false);
   };
-  /*
-  console.log("isInActive: ", isInActive);
-  console.log("isPreview: ", isPreview);
-  console.log("isInFeed: ", isInFeed);
-  */
+
   let eventClass = "";
   if (isPreview === true) {
     eventClass = "event--preview";
@@ -118,36 +114,3 @@ export function EventBubble({ isPreview, isInActive, isInFeed }) {
     </div>
   );
 }
-
-/*
-export function EventSmall() {
-  const [isEventOpen, setIsEventOpen] = useState(false);
-
-  const handleEventClick = () => {
-    setIsEventOpen(true);
-  };
-
-  const handleEventClose = () => {
-    setIsEventOpen(false);
-  };
-
-  return (
-    <div className="eventSmall">
-      <button onClick={handleEventClick}>
-        <div className="">
-          <div className="">
-            <h2>Naziv akcije</h2>
-          </div>
-          <div className="">
-            <h3>Organizator</h3>
-            <h4>16. svibnja 2023.</h4>
-          </div>
-
-          <p>Kratak opis, Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-        </div>
-      </button>
-      {isEventOpen && <Event onClose={handleEventClose} />}
-    </div>
-  );
-}
-*/

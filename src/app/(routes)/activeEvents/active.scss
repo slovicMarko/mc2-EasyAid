@@ -4,25 +4,25 @@
     min-height: 400px;
     text-align: center;
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: center;
 }
 
 #section-events {
     margin-top: 50px;
     width:400px;
-    height:400px;
-    h2 {
+    height:fit-content;
+    h1 {
         font-size: 18px;
         width:200px;
-        margin:20px auto 10px auto;
+        margin:20px auto 20px auto;
     }
 }
 
 #section-info {
     margin-top: 70px;
     width:600px;
-    height:400px;
+    height: 1000px;
 
     h2 {
         font-size: 18px;
@@ -38,10 +38,10 @@
 }
 
 .active-events {
-    width:30%;
+    width:100%;
     max-width: 600px;
 }
 .past-events {
-    width:30%;
+    width:100%;
     max-width: 600px;
 }

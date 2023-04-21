@@ -5,7 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-import { EventBubble } from "@/components/event";
+import { EventEdit} from "@/components/EventEditable";
 import "./organiser.scss";
 
 function OrganiserFeed() {
@@ -26,10 +26,10 @@ function OrganiserFeed() {
     <div>
       {finishedLoadingAndCanShow && (
         <div>
-          <EventBubble />
-          <EventBubble />
-          <EventBubble />
-          <EventBubble />
+          <EventEdit />
+          <EventEdit />
+          <EventEdit />
+          <EventEdit />
         </div>
       )}
     </div>

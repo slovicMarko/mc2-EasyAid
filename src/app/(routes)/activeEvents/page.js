@@ -26,12 +26,12 @@ function ActiveFeed() {
         <div className="activeFeed">
           <section id="section-events">
             <div className="active-events">
-              <h2>Aktivne akcije</h2>
+              <h1>Aktivne akcije</h1>
               <EventBubble isInActive/>
               <EventBubble isInActive/>
             </div>
             <div className="past-events">
-              <h2>Prošle akcije</h2>
+              <h1>Prošle akcije</h1>
               <EventBubble isInActive/>
               <EventBubble isInActive/>
             </div>
