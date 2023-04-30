@@ -27,7 +27,7 @@ function OrganiserFeed() {
       {finishedLoadingAndCanShow && (
         <div>
           <EventEdit />
-          <EventEdit />
+          <EventEdit/>
           <EventEdit />
           <EventEdit />
         </div>

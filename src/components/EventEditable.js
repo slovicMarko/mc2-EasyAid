@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
-
 import "./cssFiles/eventEditable.scss";
 import { Event } from "./eventModal";
 import { EventEditModal } from "./EventEditableModal";
+
 
 export function EventEdit() {
   const [isEventOpen, setIsEventOpen] = useState(false);
@@ -20,7 +19,11 @@ export function EventEdit() {
 
   return (
     <div className="eventOrganiser">
+      <button id="editButton">
+          Edit
+        </button>
       <button onClick={handleEventClick}>
+        
         <div className="eventEditBubble">
           <div className="eventEditBubbleHeader">
             <h2>Pomoć žrtvama potresa(centar Petrinje)</h2>
