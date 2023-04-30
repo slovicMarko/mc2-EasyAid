@@ -4,28 +4,8 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 import "./cssFiles/eventEditable.scss";
-
-export const EventEditModal = ({ onClose }) => {
-  return ReactDOM.createPortal(
-    <div className="eventEdit">
-      <div className="eventEditContent">
-        <div className="eventEditHeader">
-          
-        </div>
-        <div className="eventEditSideInfo">
-          
-        </div>
-        <button className="closeButton" onClick={onClose}>
-          Izađi
-        </button>
-        <div>
-          
-        </div>
-      </div>
-    </div>,
-    document.body
-  );
-};
+import { Event } from "./eventModal";
+import { EventEditModal } from "./EventEditableModal";
 
 export function EventEdit() {
   const [isEventOpen, setIsEventOpen] = useState(false);

@@ -85,8 +85,11 @@
 }
 
 .mainContent p {
-  width: 90%;
-  height: 100px;
+  width: 900px;
+  margin:0 auto;
+  height: 100%;
+  padding:20px;
+  box-sizing: border-box;
   text-align: left;
   font-size: 1em;
   clear: both;
