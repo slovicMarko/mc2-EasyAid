@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import { useRef } from 'react';
 
 import "./cssFiles/event.scss";
 
@@ -40,8 +41,8 @@ export const Event = ({ onClose }) => {
 };
 
 const EventDiv = () => {
-  const portalContainer = document.getElementById("about-event");            //ref
-  return ReactDOM.createPortal(
+  const myRef = useRef(null);        //ref
+  return (
     <div className="event">
       <div className="eventContent">
         <div className="eventHeader">
@@ -64,7 +65,6 @@ const EventDiv = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-    </div>,
-    portalContainer
+    </div>
   );
 };
