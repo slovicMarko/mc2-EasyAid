@@ -11,15 +11,11 @@ https://react-icons.github.io/react-icons/    za ikone, instalirao sam sve
 https://www.freecodecamp.org/news/how-to-use-svg-icons-in-react-with-react-icons-and-font-awesome/  za dodatne ikone, isto sve rj
 */
 
-const sponzori = () => {
-  return `../../public/images/`;
-};
 
 function HomePage() {
   return (
     <>
       <div className="front-windows">
-        <div className="backgroundColor"></div>
         <div className="content">
           <h1>Volontiraj i pomogni drugima oko sebe!</h1>
           <p className="front-window-font">
@@ -27,36 +23,35 @@ function HomePage() {
             sebi pružiti jedinstveno iskustvo koje će vas obogatiti i ispuniti.
           </p>
 
-          <div className="eventButtons">
-            <Link className="linkBtn greenBtn" href="/feed">
+          <div className="event-buttons">
+            <Link className="link-btn green-btn" href="/feed">
               Pronađi događaj
             </Link>
-            <Link className="linkBtn regularBtn" href="/">
+            <Link className="link-btn regular-btn" href="/">
               Stvori događaj
             </Link>
           </div>
         </div>
       </div>
       <div className="container">
-        <h2 id="SecondHeading" className="headings">
+        <h2 className="headings">
           Želiš volontirati, a ne znaš gdje početi?
         </h2>
-        <div className="topEvents">
-          <div className="eventProba">
+        <div className="top-events">
+          <div className="event-proba">
             <EventBubble isPreview />
           </div>
-          <div className="eventProba">
+          <div className="event-proba">
             <EventBubble isPreview />
           </div>
-          <div className="eventProba">
+          <div className="event-proba">
             <EventBubble isPreview />
           </div>
         </div>
-        <div className="aboutEasyAid">
-          <div className="imageContainer">
+        <div className="about-easyAid">
+          <div className="image-container">
             <Image
               src={akcija1}
-              //src="/images/akcija1.png"
               alt="Volonteri"
               layout="responsive"
               className="photo1"
@@ -64,7 +59,7 @@ function HomePage() {
             {/*
              */}
           </div>
-          <div className="sideText">
+          <div className="side-text">
             <h4>Uvijek aktualni događaji</h4>
             <p>
               U odjeljku "Aktualni događaji" možeš vidjeti sve aktualne akcije
@@ -79,26 +74,25 @@ function HomePage() {
               akciju
             </p>
 
-            <Link className="linkBtn greenBtn" href="/feed">
+            <Link className="link-btn green-btn" href="/feed">
               Pronađi događaj
             </Link>
           </div>
         </div>
 
-        <h2 id="ThirdHeading" className="headings">
+        <h2 className="headings">
           Problem ti je organizacija i promocija?
         </h2>
-        <div className="aboutOrganisation">
-          <div className="imageContainer2"></div>
-          <div className="sideText2">
+        <div className="about-organisation">
+          <div className="image-container2"></div>
+          <div className="side-text2">
             <h2>Sve na jednom mjestu</h2>
-            {/*Previše se ponavlja treba srediti tekst*/}
             <p>
               Dosta vam je korištenja različitih aplikacija kako bi dogovorili
               akciju? Nudimo vam aplikaciju u kojoj možete dogovoriti sve
               detalje unutar jednog obrasca.
             </p>
-            <Link className="linkBtn regularBtn" href="/">
+            <Link className="link-btn regular-btn" href="/">
               Stvori događaj
             </Link>
           </div>
@@ -110,7 +104,6 @@ function HomePage() {
           <div className="sponsor-images">
             <div className="sponsor-logo">
               <Image
-                //loader={sponzori}
                 src="/images/porscheDigital.jpg"
                 alt="Porsche Digital Croatia"
                 title="Porsche Digital Croatia"
@@ -120,7 +113,6 @@ function HomePage() {
             </div>
             <div className="sponsor-logo">
               <Image
-                //loader={sponzori}
                 src="/images/tvzMc2.png"
                 alt="Tvz Mc2"
                 title="Tvz Mc2"
@@ -131,7 +123,6 @@ function HomePage() {
 
             <div className="sponsor-logo">
               <Image
-                //loader={sponzori}
                 src="/images/tvzLogo.png"
                 alt="Tehničko veleučilište u Zagrebu"
                 title="Tehničko veleučilište u Zagrebu"

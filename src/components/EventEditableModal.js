@@ -6,15 +6,15 @@ import "./cssFiles/eventEditable.scss";
 
 export const EventEditModal = ({ onClose }) => {
   return ReactDOM.createPortal(
-    <div className="eventEdit">
-      <div className="eventEditContent">
-        <div className="eventEditHeader">
+    <div className="event-edit">
+      <div className="event-edit-content">
+        <div className="event-edit-header">
           {/*form */}
         </div>
-        <div className="eventEditSideInfo">
+        <div className="event-edit-side-info">
           {/*form */}
         </div>
-        <button className="closeButton" onClick={onClose}>
+        <button className="close-button" onClick={onClose}>
           Izađi
         </button>
         <div>

@@ -3,7 +3,7 @@
     --gray: #303030;
   }
   
-  .eventEdit {
+  .event-edit {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     z-index: 1100;
   }
   
-  .eventEditContent {
+  .event-edit-content {
     width: 1000px;
     height: 600px;
     background-color: white;
@@ -27,7 +27,7 @@
     font-size: 16px;
   }
   
-  .eventEditContent h2 {
+  .event-edit-content h2 {
     width: 100%;
     height: 80px;
     text-align: left;
@@ -36,7 +36,7 @@
     margin-bottom: 10px;
   }
   
-  .eventEditContent h3 {
+  .event-edit-content h3 {
     width: 100%;
     height: 60px;
     text-align: left;
@@ -44,7 +44,7 @@
     margin-bottom:10px;
   }
   
-  .eventEditSideInfo {
+  .event-edit-side-info {
     width: 20%;
     float: left;
     margin: 20px;
@@ -52,17 +52,17 @@
     text-align: left;
   }
   
-  .eventEditSideInfo h4 {
+  .event-edit-side-info h4 {
     margin-top: 0;
     text-align: left;
   }
   
-  .eventEditHeader {
+  .event-edit-header {
     width: 60%;
     float: left;
   }
   
-  .closeButton {
+  .close-button {
     float: right;
     margin: 20px 10px 20px 10px;
     border: 1px solid #379f48;
@@ -75,7 +75,7 @@
     min-height: 30px;
   }
   
-  .eventEditMain {
+  .event-edit-main {
      clear:both;
     background-image: url("/images/mainContentBack1.jpg");
     background-position: center;
@@ -84,7 +84,7 @@
     height:400px;
   }
   
-  .eventEditMain p {
+  .event-edit-main p {
     width: 90%;
     height: 100px;
     text-align: left;
@@ -95,7 +95,7 @@
   
   /*Event Bubble*/
   
-  #editButton {
+  #edit-button {
     width: 100px;
     min-width: 100px;
     height: 90px;
@@ -113,7 +113,7 @@
   }
   
 
-  .eventOrganiser button {
+  .event-organiser button {
     width: 30%;
     min-width: 600px;
     height: 18%;
@@ -134,14 +134,14 @@
     }
     
  
-    .eventEditBubble {
+    .event-edit-bubble {
       display: flex;
       flex-direction: column;
       margin: 0;
       height: 100%;
     }
 
-    .eventEditBubbleHeader {
+    .event-edit-bubble-header {
       background-color: #379f48;
       width: 100%;
       height: 90px;
@@ -150,7 +150,7 @@
       border: none;
     }
   
-    .eventEditBubbleHeader h2 {
+    .event-edit-bubble-header h2 {
       text-align: left;
       font-size: 1.25rem;
       width: 90%;
@@ -159,11 +159,11 @@
       color:white;
     }
   
-    .eventEditMiddle {
+    .event-edit-middle {
       width: 100%;
     }
   
-    .eventEditBubble h3 {
+    .event-edit-bubble h3 {
       float: left;
       text-align: left;
       font-size: 1em;
@@ -171,7 +171,7 @@
       height: 60px;
       margin: 20px 10px 10px 20px;
     }
-    .eventEditBubble h4 {
+    .event-edit-bubble h4 {
       float: left;
       font-size: 1.4;
       width: 30%;
@@ -181,7 +181,7 @@
       font-weight: normal;
     }
   
-    .eventEditBubble p {
+    .event-edit-bubble p {
       text-align: left;
       font-size: 1em;
       width: 90%;

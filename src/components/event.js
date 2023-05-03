@@ -10,12 +10,12 @@ const EventDiv = () => {
   const portalContainer = document.getElementById("about-event");            //ref
   return ReactDOM.createPortal(
     <div className="event">
-      <div className="eventContent">
-        <div className="eventHeader">
+      <div className="event-content">
+        <div className="event-header">
           <h2>Pomoć stradalima u potresu (selo to i to)</h2>
           <h3>Crveni Križ</h3>
         </div>
-        <div className="eventSideInfo">
+        <div className="event-side-info">
           <h4>Zainteresiranih</h4>
           <h5>28</h5>
           <h4>Dolazi</h4>
@@ -55,18 +55,18 @@ export function EventBubble({ isPreview, isInActive, isInFeed }) {
     eventClass = "event--active-feed";
     isInFeed = false;
   } else if (isInFeed === true) {
-    eventClass = "eventButton";
+    eventClass = "event-button";
   }
-  console.log("eventClass", eventClass);
+  console.log("event-class", eventClass);
 
   return (
     <div className={eventClass}>
       <button onClick={handleEventClick}>
-        <div className="eventBubble">
-          <div className="eventBubbleHeader">
+        <div className="event-bubble">
+          <div className="event-bubble-header">
             <h2>Pomoć žrtvama potresa(centar Petrinje)</h2>
           </div>
-          <div className="eventMiddle">
+          <div className="event-middle">
             <h3>Hrvatski crveni križ</h3>
             <h4>25.lipnja 2023.</h4>
           </div>

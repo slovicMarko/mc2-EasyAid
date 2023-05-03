@@ -5,13 +5,13 @@ import Link from "next/link";
 
 const registerForm = () => {
   return (
-    <div className="formContainer">
+    <div className="form-container">
       <div className="background-logo">
         <img src="/images/logo.svg" alt="background-logo" />
       </div>
-      <div className="appName">EasyAid</div>
+      <div className="app-name">EasyAid</div>
       <form className="form">
-        <div className="formField">
+        <div className="form-field">
           <input
             className="input input--text"
             id="formInput#text"
@@ -20,7 +20,7 @@ const registerForm = () => {
             placeholder="email"
           />
         </div>
-        <div className="formField">
+        <div className="form-field">
           <input
             className="input input--text"
             id="formInput#text"
@@ -29,7 +29,7 @@ const registerForm = () => {
             placeholder="username"
           />
         </div>
-        <div className="formField">
+        <div className="form-field">
           <input
             className="input input--password"
             id="formInput#passwprd"
@@ -39,13 +39,13 @@ const registerForm = () => {
           />
         </div>
 
-        <div className="formField">
-          <button type="submit" className="loginBtn">
+        <div className="form-field">
+          <button type="submit" className="login-btn">
             Register
           </button>
         </div>
       </form>
-      <div className="logRegSwitch" id="switch">
+      <div className="log-reg-switch" id="switch">
         Već imaš račun?&nbsp;
         <Link className="switch" href="/login">
           Prijavi se!

@@ -74,13 +74,13 @@ function Login() {
   });
 
   return (
-    <div className="formContainer">
+    <div className="form-container">
       <div className="background-logo">
         <img src="/images/logo.svg" alt="background-logo" />
       </div>
-      <div className="appName">EasyAid</div>
+      <div className="app-name">EasyAid</div>
       <form autoComplete="off" className="form" onSubmit={handleSubmit}>
-        <div className="formField">
+        <div className="form-field">
           <input
             className="input input--text"
             id="formInput#text"
@@ -93,7 +93,7 @@ function Login() {
             autoComplete="true"
           />
         </div>
-        <div className="formField">
+        <div className="form-field">
           <input
             className="input input--password"
             id="formInput#passwprd"
@@ -107,19 +107,19 @@ function Login() {
           />
         </div>
 
-        <div className="formField">
+        <div className="form-field">
           {error ? <p className="login-error">{error}</p> : null}
           <button
             title="Login"
             aria-label="Login"
             type="submit"
-            className="loginBtn"
+            className="login-btn"
           >
             Login
           </button>
         </div>
       </form>
-      <div className="logRegSwitch" id="switch">
+      <div className="log-reg-switch" id="switch">
         Nemas račun?&nbsp;
         <Link className="switch" href="/register">
           Registriraj se!

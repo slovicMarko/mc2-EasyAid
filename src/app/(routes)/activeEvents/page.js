@@ -23,7 +23,7 @@ function ActiveFeed() {
   return (
     <div>
       {finishedLoadingAndCanShow && (
-        <div className="activeFeed">
+        <div className="active-feed">
           <section id="section-events">
             <div className="active-events">
               <h1>Aktivne akcije</h1>

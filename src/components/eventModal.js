@@ -9,21 +9,21 @@ import "./cssFiles/event.scss";
 export const Event = ({ onClose }) => {
   return ReactDOM.createPortal(
     <div className="event">
-      <div className="eventContent">
-        <div className="eventHeader">
+      <div className="event-content">
+        <div className="event-header">
           <h2>Pomoć stradalima u potresu (selo to i to) .................................</h2>
           <h3>Crveni Križ</h3>
         </div>
-        <div className="eventSideInfo">
+        <div className="event-side-info">
           <h4>Zainteresiranih</h4>
           <h5>28</h5>
           <h4>Dolazi</h4>
           <h5>12</h5>
         </div>
-        <button className="closeButton" onClick={onClose}>
+        <button className="close-button" onClick={onClose}>
           Izađi
         </button>
-        <div class="mainContent">
+        <div class="main-content">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -44,12 +44,12 @@ const EventDiv = () => {
   const myRef = useRef(null);        //ref
   return (
     <div className="event">
-      <div className="eventContent">
-        <div className="eventHeader">
+      <div className="event-content">
+        <div className="event-header">
           <h2>Pomoć stradalima u potresu (selo to i to)</h2>
           <h3>Crveni Križ</h3>
         </div>
-        <div className="eventSideInfo">
+        <div className="event-side-info">
           <h4>Zainteresiranih</h4>
           <h5>28</h5>
           <h4>Dolazi</h4>

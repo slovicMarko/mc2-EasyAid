@@ -18,17 +18,17 @@ export function EventEdit() {
   };
 
   return (
-    <div className="eventOrganiser">
-      <button id="editButton">
+    <div className="event-organiser">
+      <button id="edit-button">
           Edit
         </button>
       <button onClick={handleEventClick}>
         
-        <div className="eventEditBubble">
-          <div className="eventEditBubbleHeader">
+        <div className="event-edit-bubble">
+          <div className="event-edit-bubble-header">
             <h2>Pomoć žrtvama potresa(centar Petrinje)</h2>
           </div>
-          <div className="eventEditMiddle">
+          <div className="event-edit-middle">
             <h3>Hrvatski crveni križ</h3>
             <h4>25.lipnja 2023.</h4>
           </div>
