@@ -23,7 +23,7 @@ export const Event = ({ onClose }) => {
         <button className="close-button" onClick={onClose}>
           Izađi
         </button>
-        <div class="main-content">
+        <div className="main-content">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -40,16 +40,15 @@ export const Event = ({ onClose }) => {
   );
 };
 
-const EventDiv = () => {
-  const myRef = useRef(null);        //ref
-  return (
-    <div className="event">
-      <div className="event-content">
-        <div className="event-header">
+export const EventDiv = () => {
+  return ReactDOM.render(
+    <div className="event-stat">
+      <div className="event-content-stat">
+        <div className="event-header-stat">
           <h2>Pomoć stradalima u potresu (selo to i to)</h2>
           <h3>Crveni Križ</h3>
         </div>
-        <div className="event-side-info">
+        <div className="event-side-info-stat">
           <h4>Zainteresiranih</h4>
           <h5>28</h5>
           <h4>Dolazi</h4>
@@ -65,6 +64,6 @@ const EventDiv = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-    </div>
+    </div>,document.getElementById('about-event')
   );
 };
