@@ -1,5 +1,6 @@
+"use client";
+
 import { useState } from "react";
-import auth from "../../firebase/clientApp";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 export const Auth = () => {
@@ -29,29 +30,3 @@ export const Auth = () => {
     </div>
   );
 };
-
-{
-  /*
-
-import React from "react";
-import firebase from "../../firebase/clientApp";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  updateEmail,
-} from "firebase/auth";
-
-const Authentification = () => {
-  const auth = getAuth(app);
-  const user = auth.currentUser;
-  if (user !== null) {
-    console.log(user);
-    updateEmail(user, "marko.sloic@mail.hr");
-  } else {
-    console.log("nema korisnika");
-  }
-};
-
-export default Authentification;
-*/
-}

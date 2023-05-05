@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 import "../components/cssFiles/navBar.css";
 
@@ -19,20 +20,6 @@ function Navbar() {
               className="logo--slika"
             />
           </Link>
-
-          {/*
-          <img src="images/logo_slika.svg" alt="logo" className="logo--slika"/>
-          <img src="images/logo_text.svg" alt="logo text" className="logo--slika"/>
-          
-          <Image
-            src="/images/logo_text.svg"
-            alt="EasyAid logo"
-            title="EasyAid"
-            height={"30"}
-            width={"30"}
-            className="logo--slika"
-          />
-        */}
         </div>
         <div className="navbar--navigation">
           <Link className="btn--nav" href="/">
@@ -48,6 +35,7 @@ function Navbar() {
             Organizatori
           </Link>
         </div>
+
         <div className="navbar--auth">
           <Link className="btn--auth--login" href="/login">
             Prijavi se

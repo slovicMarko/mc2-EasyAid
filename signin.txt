@@ -7,7 +7,9 @@ import {
   signInWithEmailAndPassword,
   AuthErrorCodes,
   onAuthStateChanged,
-  signOut,
+  updateProfile,
+  setPersistence,
+  browserLocalPersistence,
 } from "firebase/auth";
 
 import firebaseConfig from "./FirebaseConfig";
@@ -25,20 +27,18 @@ function Login() {
   // get authentication instance
   const auth = getAuth();
 
-  let user = auth.currentUser;
-
   // handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
     setError("");
     let email = input.email.toLowerCase().trim();
     let password = input.password;
-
+    /*
     // sign in user
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        console.log(auth.currentUser);
+        console.log(userCredential.user);
         // ...
       })
       .catch((err) => {
@@ -52,8 +52,26 @@ function Login() {
           alert(err.code);
         }
       });
+      */
   };
-
+  /*
+  setPersistence(auth, browserLocalPersistence)
+    .then(() => {
+      // Existing and future Auth states are now persisted in the current
+      // session only. Closing the window would clear any existing state even
+      // if a user forgets to sign out.
+      // ...
+      // New sign-in will be persisted with session persistence.
+      console.log(auth);
+      return signInWithEmailAndPassword(auth, email, password);
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      console.log(auth);
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+*/
   const handleChange = (e) => {
     setInput((prevState) => ({
       ...prevState,
@@ -61,35 +79,32 @@ function Login() {
     }));
   };
 
-  const handleSignOut = (e) => {
-    auth
-      .signOut()
-      .then((auth) => {
-        // Signed in
-        console.log("Signed Out");
-        // ...
-      })
-      .catch((err) => {
-        console.log("Signed Out with error");
-      });
-  };
-
   onAuthStateChanged(auth, (user) => {
-    if (user) {
-      console.log("Prijavljen");
-    } else {
-      console.log("Odjavljan");
-    }
+    console.log(user);
   });
 
+  /*
+  updateProfile(auth.currentUser, {
+    displayName: "Slova",
+  })
+    .then(() => {
+      // Profile updated!
+      // ...
+    })
+    .catch((error) => {
+      // An error occurred
+      // ...
+    });
+    */
+
   return (
-    <div className="form-container">
+    <div className="formContainer">
       <div className="background-logo">
         <img src="/images/logo.svg" alt="background-logo" />
       </div>
-      <div className="app-name">EasyAid</div>
+      <div className="appName">EasyAid</div>
       <form autoComplete="off" className="form" onSubmit={handleSubmit}>
-        <div className="form-field">
+        <div className="formField">
           <input
             className="input input--text"
             id="formInput#text"
@@ -102,7 +117,7 @@ function Login() {
             autoComplete="true"
           />
         </div>
-        <div className="form-field">
+        <div className="formField">
           <input
             className="input input--password"
             id="formInput#passwprd"
@@ -116,22 +131,19 @@ function Login() {
           />
         </div>
 
-        <div className="form-field">
+        <div className="formField">
           {error ? <p className="login-error">{error}</p> : null}
           <button
             title="Login"
             aria-label="Login"
             type="submit"
-            className="login-btn"
+            className="loginBtn"
           >
             Login
           </button>
-          <div title="Odjavi me" className="sign-out" onClick={handleSignOut}>
-            Odjavi me
-          </div>
         </div>
       </form>
-      <div className="log-reg-switch" id="switch">
+      <div className="logRegSwitch" id="switch">
         Nemas račun?&nbsp;
         <Link className="switch" href="/register">
           Registriraj se!
