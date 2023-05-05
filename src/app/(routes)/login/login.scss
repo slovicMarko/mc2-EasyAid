@@ -1,4 +1,4 @@
-.formContainer {
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,7 +7,7 @@
   margin: 100px 0 0 0;
 }
 
-.appName {
+.app-name {
   margin: 0 0 30px 0;
   font-size: 44px;
   font-weight: bold;
@@ -15,7 +15,7 @@
   user-select: none;
 }
 
-.formField {
+.form-field {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +54,7 @@
   transition: 0.3s ease-out;
 }
 
-.loginBtn {
+.login-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +72,7 @@
   border-style: none;
 }
 
-.loginBtn:hover {
+.login-btn:hover {
   color: #212121;
   background-color: #37ce50;
 }
@@ -100,7 +100,7 @@
   background-color: #204d27;
 }
 
-.logRegSwitch {
+.log-reg-switch {
   margin: 10px 0 0 0;
 }
 

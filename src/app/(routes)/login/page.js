@@ -7,6 +7,7 @@ import "./login.scss";
 function LoginPage() {
   return (
     <div className="loginForm">
+      {/*loginForm()*/}
       <Login />
     </div>
   );

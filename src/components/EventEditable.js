@@ -1,31 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
-
 import "./cssFiles/eventEditable.scss";
+import { Event } from "./eventModal";
+import { EventEditModal } from "./EventEditableModal";
 
-export const EventEditModal = ({ onClose }) => {
-  return ReactDOM.createPortal(
-    <div className="eventEdit">
-      <div className="eventEditContent">
-        <div className="eventEditHeader">
-          
-        </div>
-        <div className="eventEditSideInfo">
-          
-        </div>
-        <button className="closeButton" onClick={onClose}>
-          Izađi
-        </button>
-        <div>
-          
-        </div>
-      </div>
-    </div>,
-    document.body
-  );
-};
 
 export function EventEdit() {
   const [isEventOpen, setIsEventOpen] = useState(false);
@@ -39,13 +18,17 @@ export function EventEdit() {
   };
 
   return (
-    <div className="eventOrganiser">
+    <div className="event-organiser">
+      <button id="edit-button">
+          Edit
+        </button>
       <button onClick={handleEventClick}>
-        <div className="eventEditBubble">
-          <div className="eventEditBubbleHeader">
+        
+        <div className="event-edit-bubble">
+          <div className="event-edit-bubble-header">
             <h2>Pomoć žrtvama potresa(centar Petrinje)</h2>
           </div>
-          <div className="eventEditMiddle">
+          <div className="event-edit-middle">
             <h3>Hrvatski crveni križ</h3>
             <h4>25.lipnja 2023.</h4>
           </div>

@@ -16,7 +16,7 @@
   z-index: 1100;
 }
 
-.eventContent {
+.event-content {
   width: 1000px;
   height: 600px;
   background-color: white;
@@ -27,7 +27,7 @@
   font-size: 16px;
 }
 
-.eventContent h2 {
+.event-content h2 {
   width: 100%;
   height: 80px;
   text-align: left;
@@ -36,7 +36,7 @@
   margin-bottom: 10px;
 }
 
-.eventContent h3 {
+.event-content h3 {
   width: 100%;
   height: 60px;
   text-align: left;
@@ -44,7 +44,7 @@
   margin-bottom:10px;
 }
 
-.eventSideInfo {
+.event-side-info {
   width: 20%;
   float: left;
   margin: 20px;
@@ -52,17 +52,17 @@
   text-align: left;
 }
 
-.eventSideInfo h4 {
+.event-side-info h4 {
   margin-top: 0;
   text-align: left;
 }
 
-.eventHeader {
+.event-header {
   width: 60%;
   float: left;
 }
 
-.closeButton {
+.close-button {
   float: right;
   margin: 20px 10px 20px 10px;
   border: 1px solid #379f48;
@@ -75,7 +75,7 @@
   min-height: 30px;
 }
 
-.mainContent {
+.main-content {
    clear:both;
   background-image: url("/images/mainContentBack1.jpg");
   background-position: center;
@@ -84,9 +84,12 @@
   height:400px;
 }
 
-.mainContent p {
-  width: 90%;
-  height: 100px;
+.main-content p {
+  width: 900px;
+  margin:0 auto;
+  height: 100%;
+  padding:20px;
+  box-sizing: border-box;
   text-align: left;
   font-size: 1em;
   clear: both;
@@ -95,7 +98,7 @@
 
 /*Event Bubble*/
 
-.eventButton button {
+.event-button button {
   width: 30%;
   min-width: 600px;
   height: 18%;
@@ -115,14 +118,14 @@
     transform: translateY(-4px);
   }
 
-  .eventBubble {
+  .event-bubble {
     display: flex;
     flex-direction: column;
     margin: 0;
     height: 100%;
   }
 
-  .eventBubbleHeader {
+  .event-bubble-header {
     background-color: #379f48;
     width: 100%;
     height: 90px;
@@ -131,7 +134,7 @@
     border: none;
   }
 
-  .eventBubbleHeader h2 {
+  .event-bubble-header h2 {
     text-align: left;
     font-size: 1.25rem;
     width: 90%;
@@ -140,11 +143,11 @@
     color:white;
   }
 
-  .eventMiddle {
+  .event-middle {
     width: 100%;
   }
 
-  .eventBubble h3 {
+  .event-bubble h3 {
     float: left;
     text-align: left;
     font-size: 1em;
@@ -152,7 +155,7 @@
     height: 60px;
     margin: 20px 10px 10px 20px;
   }
-  .eventBubble h4 {
+  .event-bubble h4 {
     float: left;
     font-size: 1.4;
     width: 30%;
@@ -162,7 +165,7 @@
     font-weight: normal;
   }
 
-  .eventBubble p {
+  .event-bubble p {
     text-align: left;
     font-size: 1em;
     width: 90%;
@@ -193,14 +196,14 @@
     cursor: pointer;
   }
 
-  .eventBubble {
+  .event-bubble {
     max-width: 280px;
     width: fit-content;
     min-height: 280px;
     height: fit-content;
   }
 
-  .eventBubbleHeader {
+  .event-bubble-header {
     color: #f0f0f0;
     background-color: var(--greenBtn);
     min-height: 72px;
@@ -209,18 +212,18 @@
     border-top-right-radius: 16px;
   }
 
-  .eventBubbleHeader h2 {
+  .event-bubble-header h2 {
     font-size: 16px;
     font-weight: 800;
     margin: 0;
     padding: 24px 32px;
   }
 
-  .eventMiddle {
+  .event-middle {
     padding: 16px 32px 0;
   }
 
-  .eventBubble p {
+  .event-bubble p {
     padding: 16px 32px 32px;
     letter-spacing: 0.5px;
     line-height: 130%;
@@ -248,14 +251,14 @@
     cursor: pointer;
   }
 
-  .eventBubble {
+  .event-bubble {
     max-width: 280px;
     width: fit-content;
     min-height: 280px;
     height: fit-content;
   }
 
-  .eventBubbleHeader {
+  .event-bubble-header {
     color: #f0f0f0;
     background-color: var(--greenBtn);
     min-height: 72px;
@@ -264,18 +267,18 @@
     border-top-right-radius: 16px;
   }
 
-  .eventBubbleHeader h2 {
+  .event-bubble-header h2 {
     font-size: 16px;
     font-weight: 800;
     margin: 0;
     padding: 24px 32px;
   }
 
-  .eventMiddle {
+  .event-middle {
     padding: 16px 32px 0;
   }
 
-  .eventBubble p {
+  .event-bubble p {
     padding: 16px 32px 32px;
     letter-spacing: 0.5px;
     line-height: 130%;

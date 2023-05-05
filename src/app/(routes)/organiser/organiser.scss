@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 450px;
     height: 250px;
-    /*background-color: #efefef;*/
     justify-self: center;
     padding: 15px;
     border: 3px solid grey;
@@ -90,8 +89,7 @@
   
   .modal-open {
     transition: 0.2s ease;
-    overflow: hidden; /* prevent scrolling while modal is open */
-    /*background-color: rgba(255, 255, 255, 01) ; /**/
+    overflow: hidden;
   }
   
   .event-info-stats {
@@ -105,13 +103,4 @@
     font-weight: 500;
     font-size: 30px;
     margin-top: 10px;
-  }
-  
-  .openButton {
-    margin:50px 0 0 0;
-    padding:0px;
-    border-radius: 10px;
-    border: 1px solid #379f48;
-    background-color: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
