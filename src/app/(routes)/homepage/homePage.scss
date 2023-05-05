@@ -230,7 +230,8 @@ hr {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: 0 15%;
+  max-width: 85%;
+  margin: 0 auto;
 }
 
 .content h1 {
@@ -400,9 +401,11 @@ hr {
       width: 180px;
       object-fit: contain;
       position: relative;
+      aspect-ratio: 1;
       margin: 0 10px;
 
       .sponsor {
+        aspect-ratio: 1;
         width: 100%;
         height: unset;
         border-radius: 100%;
