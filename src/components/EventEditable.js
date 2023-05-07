@@ -8,6 +8,7 @@ import { EventEditModal } from "./EventEditableModal";
 
 export function EventEdit() {
   const [isEventOpen, setIsEventOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   const handleEventClick = () => {
     setIsEventOpen(true);
@@ -17,9 +18,17 @@ export function EventEdit() {
     setIsEventOpen(false);
   };
 
+  const handleFormClick = () => {
+    setIsFormOpen(true);
+  };
+
+  const handleFormClose = () => {
+    setIsFormOpen(false);
+  };
+
   return (
     <div className="event-organiser">
-      <button id="edit-button">
+      <button id="edit-button" onClick={handleFormClick}>
           Edit
         </button>
       <button onClick={handleEventClick}>
@@ -39,7 +48,8 @@ export function EventEdit() {
         </div>
       </button>
 
-      {isEventOpen && <EventEditModal onClose={handleEventClose} />}
+      {isFormOpen && <EventEditModal onClose={handleFormClose} />}
+      {isEventOpen && <Event onClose={handleEventClose} />}
     </div>
   );
 }

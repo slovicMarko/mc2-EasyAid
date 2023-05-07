@@ -1,8 +1,8 @@
 "use client";
 "use router";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect} from "react";
 import { useRouter } from "next/navigation";
-
+import ReactDOM  from "react-dom/client";
 import { EventBubble } from "@/components/event";
 import "./active.scss";
 
@@ -16,7 +16,24 @@ function ActiveFeed() {
     return router.pathname === href; // check if the current page's URL path matches the link's href attribute
   };
 
+  const [activeEvent, setActiveEvent] = useState(null);
+
   const finishedLoadingAndCanShow = loading && !canShow;
+
+  const activeEvents = [
+    { id: 1, title: "Event 1"},
+    { id: 2, title: "Event 2"},
+    { id: 3, title: "Event 3"},
+  ];
+  
+  const eventRootRef = useRef(null);
+
+  useEffect(() => {
+    if (eventRootRef.current) {
+      ReactDOM.createRoot(eventRootRef.current).render(<EventBubble />);
+    }
+  }, [eventRootRef]);
+
 
   console.log(finishedLoadingAndCanShow);
 
@@ -27,8 +44,20 @@ function ActiveFeed() {
           <section id="section-events">
             <div className="active-events">
               <h1>Aktivne akcije</h1>
+              {/*
               <EventBubble isInActive/>
               <EventBubble isInActive/>
+              */}
+              {activeEvents.map((event) => (
+                <EventBubble
+                key={event.id}
+                isPreview={false}
+                isInActive={true}
+                isInFeed={false}
+                title={event.title}
+                date={event.date}
+                />
+              ))}
             </div>
             <div className="past-events">
               <h1>Prošle akcije</h1>
@@ -37,7 +66,7 @@ function ActiveFeed() {
             </div>
           </section>
           <section id="section-info">
-            <div id="about-event">
+            <div id="about-event" ref={eventRootRef}>
 
             </div>
             <hr/>

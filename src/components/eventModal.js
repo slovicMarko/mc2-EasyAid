@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { useRef } from 'react';
 
 import "./cssFiles/event.scss";
 
@@ -41,7 +40,7 @@ export const Event = ({ onClose }) => {
 };
 
 export const EventDiv = () => {
-  return ReactDOM.render(
+  return (
     <div className="event-stat">
       <div className="event-content-stat">
         <div className="event-header-stat">
@@ -64,6 +63,6 @@ export const EventDiv = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-    </div>,document.getElementById('about-event')
+    </div>
   );
 };
