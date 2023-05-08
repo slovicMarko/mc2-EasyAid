@@ -14,13 +14,15 @@ export const EventEditModal = ({ onClose }) => {
             <textarea type="text" name="eventName" id="event-name-field" maxLength="150" required></textarea>
             <h3>Organizator</h3>
           </div>
-          <button className="close-button" onClick={onClose}>
+          <button className="close-button" id="edit-close" onClick={onClose}>
             Izađi
           </button>
+          <input type="submit" value="Objavi" id="submit-button"/>
             <div id="edit-middle">
               <label for="event-about-field">Opis:</label><br/>
               <textarea type="text" name="eventAbout" id="event-about-field" cols="20" rows="10" required></textarea>
-              {/*slika */}
+              <label for="background-about-image">Pozadinska slika:</label><br/>
+              <input type="file" name="backgroundImage" id="event-about-image"></input>
             </div>
         </form>
       </div>

@@ -10,17 +10,17 @@ export const Event = ({ onClose }) => {
     <div className="event">
       <div className="event-content">
         <div className="event-header">
-          <h2>Pomoć stradalima u potresu (selo to i to) .................................</h2>
-          <h3>Crveni Križ</h3>
+            <h2>Pomoć stradalima u potresu (selo to i to) .................................</h2>
+            <h3>Crveni Križ</h3>
         </div>
         <div className="event-side-info">
-          <h4>Zainteresiranih</h4>
-          <h5>28</h5>
-          <h4>Dolazi</h4>
-          <h5>12</h5>
+            <h4>Zainteresiranih</h4>
+            <h5>28</h5>
+            <h4>Dolazi</h4>
+            <h5>12</h5>
         </div>
         <button className="close-button" onClick={onClose}>
-          Izađi
+            Izađi
         </button>
         <div className="main-content">
           <p>

@@ -47,12 +47,18 @@
 .event-side-info {
   width: 20%;
   float: left;
-  margin: 20px;
-  margin-right: 10px;
+  /*margin: 20px;
+  margin-right: 10px;*/
+  padding:20px;
   text-align: left;
 }
 
 .event-side-info h4 {
+  margin-top: 0;
+  text-align: left;
+}
+
+.event-side-info h5 {
   margin-top: 0;
   text-align: left;
 }
