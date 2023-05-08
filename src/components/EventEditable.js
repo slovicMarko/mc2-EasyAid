@@ -30,7 +30,10 @@ export function EventEdit() {
     <div className="event-organiser">
       <button id="edit-button" onClick={handleFormClick}>
           Edit
-        </button>
+      </button>
+      <button id="info-button" >
+          Info
+      </button>
       <button onClick={handleEventClick}>
         
         <div className="event-edit-bubble">

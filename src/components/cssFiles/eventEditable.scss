@@ -122,6 +122,25 @@
     color:white;
   }
 
+  #info-button {
+    width: 90px;
+    min-width: 90px;
+    height: 70px;
+    min-height: 70px;
+    padding: 0;
+    margin: 0px 0 0 0;
+    border-radius: 16px;
+    transition: 0.2s ease-in-out;
+    font-size: 16px;
+    position: absolute;
+    top:150px;
+    right:-100px;
+    z-index: 10;
+    background-color: #edffed;
+    border: 2px solid var(--gray);
+    color:black;
+  }
+
   .event-organiser button {
     width: 100%;
     min-width: 600px;
