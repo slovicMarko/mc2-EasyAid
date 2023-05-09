@@ -52,6 +52,7 @@ function Login() {
           alert(err.code);
         }
       });
+    console.log(user);
   };
 
   const handleChange = (e) => {

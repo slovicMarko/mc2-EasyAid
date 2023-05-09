@@ -26,10 +26,10 @@ function MainFeed() {
     <div>
       {finishedLoadingAndCanShow && (
         <div>
-          <EventBubble isInFeed/>
-          <EventBubble isInFeed/>
-          <EventBubble isInFeed/>
-          <EventBubble isInFeed/>
+          <EventBubble isInFeed />
+          <EventBubble isInFeed />
+          <EventBubble isInFeed />
+          <EventBubble isInFeed />
         </div>
       )}
     </div>

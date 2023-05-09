@@ -1,10 +1,14 @@
 import React from "react";
-import registerForm from "../../../components/RegisterForm";
+
+import Register from "../../../../firebase/SignUpUser";
 
 import "../login/login.scss";
 
 function RegisterScreen() {
-  return <div className="login-form">{registerForm()}</div>;
+  return (
+    <div className="loginForm">
+      <Register />
+    </div>
+  );
 }
-
 export default RegisterScreen;

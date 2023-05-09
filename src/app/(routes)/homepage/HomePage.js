@@ -11,7 +11,6 @@ https://react-icons.github.io/react-icons/    za ikone, instalirao sam sve
 https://www.freecodecamp.org/news/how-to-use-svg-icons-in-react-with-react-icons-and-font-awesome/  za dodatne ikone, isto sve rj
 */
 
-
 function HomePage() {
   return (
     <>
@@ -34,17 +33,15 @@ function HomePage() {
         </div>
       </div>
       <div className="container">
-        <h2 className="headings">
-          Želiš volontirati, a ne znaš gdje početi?
-        </h2>
+        <h2 className="headings">Želiš volontirati, a ne znaš gdje početi?</h2>
         <div className="top-events">
-          <div className="event-proba">
+          <div className="event-lijevi">
             <EventBubble isPreview />
           </div>
-          <div className="event-proba">
+          <div className="event-sredina">
             <EventBubble isPreview />
           </div>
-          <div className="event-proba">
+          <div className="event-desni">
             <EventBubble isPreview />
           </div>
         </div>
@@ -80,9 +77,7 @@ function HomePage() {
           </div>
         </div>
 
-        <h2 className="headings">
-          Problem ti je organizacija i promocija?
-        </h2>
+        <h2 className="headings">Problem ti je organizacija i promocija?</h2>
         <div className="about-organisation">
           <div className="image-container2"></div>
           <div className="side-text2">

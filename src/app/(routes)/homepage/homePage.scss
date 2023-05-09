@@ -8,7 +8,7 @@
   flex-direction: column;
   margin: 0 auto;
   width: fit-content;
-  max-width: 85%;
+  max-width: 1000px;
   text-align: left;
 }
 
@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  max-width: 85%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -99,8 +99,14 @@
   margin: 0 0 208px;
 }
 
-.event-proba {
+.event-lijevi {
+  margin: 0 10px 0 0;
+}
+.event-sredina {
   margin: 0 10px;
+}
+.event-desni {
+  margin: 0 0 0 10px;
 }
 
 .about-easyAid {
