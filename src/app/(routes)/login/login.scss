@@ -73,31 +73,7 @@
 }
 
 .login-btn:hover {
-  color: #212121;
-  background-color: #37ce50;
-}
-
-.sign-out {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3d7446;
-  width: 100%;
-  height: 50px;
-  margin: 20px 0 0 0;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 10px;
-  color: #fff;
-  cursor: pointer;
-  user-select: none;
-  transition: 0.4s ease;
-  border-style: none;
-}
-
-.sign-out:hover {
-  transition: 0.4s ease;
-  background-color: #204d27;
+  background-color: #0b6e1a;
 }
 
 .log-reg-switch {

@@ -13,6 +13,8 @@ import {
 import firebaseConfig from "./FirebaseConfig";
 import { initializeApp } from "firebase/app";
 
+import SignOut from "@/components/auth/SignOut";
+
 const app = initializeApp(firebaseConfig);
 
 function Login() {
@@ -120,16 +122,13 @@ function Login() {
         <div className="form-field">
           {error ? <p className="login-error">{error}</p> : null}
           <button
-            title="Login"
-            aria-label="Login"
+            title="Prijavi se"
+            aria-label="Prijavi se"
             type="submit"
             className="login-btn"
           >
-            Login
+            Prijavi se
           </button>
-          <div title="Odjavi me" className="sign-out" onClick={handleSignOut}>
-            Odjavi me
-          </div>
         </div>
       </form>
       <div className="log-reg-switch" id="switch">

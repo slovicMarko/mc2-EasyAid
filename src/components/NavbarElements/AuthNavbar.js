@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
+import SignOut from "../auth/SignOut";
+
 function AuthNavbar() {
   const [user, setUser] = useState(null);
 
@@ -16,9 +18,12 @@ function AuthNavbar() {
   return (
     <div className="navbar--auth">
       {user ? (
-        <Link className="btn--auth--login" href="/profile/marko">
-          Profil
-        </Link>
+        <>
+          <Link className="btn--auth--login" href="/profile/marko">
+            Profil
+          </Link>
+          <SignOut isInNavbar/>
+        </>
       ) : (
         <>
           <Link className="btn--auth--login" href="/login">

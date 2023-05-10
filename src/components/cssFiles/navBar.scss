@@ -52,7 +52,6 @@
   color: white;
   background-color: #379f48;
   transition: 0.4s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*Nisam siguran koliko shadow paše, mozda malo smanjiti*/
   user-select: none;
   line-height: 55px;
   text-decoration: none;
@@ -73,4 +72,29 @@
   margin: 0 30px;
   font-size: 18px;
   width: auto;
+}
+
+.sign-out-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border-radius: 30px;
+  border: 2px solid #379f48;
+  color: white;
+  background-color: #379f48;
+  transition: 0.4s ease;
+  user-select: none;
+  line-height: 55px;
+  text-decoration: none;
+}
+
+.sign-out-navbar:hover {
+  transition: 0.4s ease;
+  background-color: #0b6e1a;
+  border-color: #0b6e1a;
 }
