@@ -30,9 +30,7 @@ function OrganiserFeed() {
 
   return (
     <div>
-      <button className="add-icon">
-        Dodaj akciju
-      </button>
+      <FontAwesomeIcon icon={faCirclePlus} className="add-icon"/>
       {finishedLoadingAndCanShow && (
         <div>
           {organiserEvents.map((event) => (
