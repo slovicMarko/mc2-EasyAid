@@ -9,4 +9,22 @@
 
 table {
     width:100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding:10px;
+
+}
+
+.user-name {
+    border-top:1px solid #379f48;
+}
+
+.num-of-events {
+    color:#379f48;
+    font-weight:bold;
+    font-size: 16px;
+    text-align: right;
+    border-top:1px solid #379f48;
 }

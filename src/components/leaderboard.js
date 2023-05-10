@@ -24,9 +24,9 @@ export const Leaderboard = () => {
         <tbody>
           {leaderboardData.map((user, index) => (
             <tr key={index}>
-              <td>{user.place}</td>
-              <td>{user.name}</td>
-              <td>{user.score}</td>
+              <td>{user.place}.</td>
+              <td className='user-name'>{user.name}</td>
+              <td className='num-of-events'>{user.score}</td>
             </tr>
           ))}
         </tbody>
