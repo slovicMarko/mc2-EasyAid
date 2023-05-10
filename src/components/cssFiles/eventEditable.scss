@@ -25,6 +25,9 @@
     border-radius: 16px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 16px;
+
+    background: rgb(237,255,237);
+    background: linear-gradient(180deg, rgba(237,255,237,1) 0%, rgba(237,255,237,1) 30%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%);
   }
   
   .event-edit-content h2 {

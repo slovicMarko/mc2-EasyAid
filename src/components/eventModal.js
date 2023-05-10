@@ -22,6 +22,9 @@ export const Event = ({ onClose }) => {
         <button className="close-button" onClick={onClose}>
             Izađi
         </button>
+        <button className="register-button" >
+            Prijavi se!
+        </button>
         <div className="main-content">
           <section>
             <p>
