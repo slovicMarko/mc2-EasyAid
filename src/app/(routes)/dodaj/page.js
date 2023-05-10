@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { getFirestore, setDoc, doc } from "firebase/firestore";
+import { getFirestore, collection, setDoc, doc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "../../../../firebase/FirebaseConfig";
 
@@ -36,14 +36,23 @@ function DodajAkciju() {
     let link = input.link;
     let number_volunteer = input.number_volunteer;
 
-    setDoc(doc(db, "organizator_project", title), {
-      active: active,
-      adress: adress,
-      description: description,
-      city: city,
-      link: link,
-      number_volunteer: number_volunteer,
-    });
+    setDoc(
+      doc(
+        db,
+        "organizator",
+        "volonterski-centar-kutina",
+        "organizator-project",
+        title
+      ),
+      {
+        active: active,
+        adress: adress,
+        description: description,
+        city: city,
+        link: link,
+        number_volunteer: number_volunteer,
+      }
+    );
   };
 
   const handleChange = (e) => {

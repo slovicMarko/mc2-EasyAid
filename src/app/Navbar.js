@@ -6,6 +6,9 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import "../components/cssFiles/navBar.css";
 
 function Navbar() {
+
+  
+
   return (
     <>
       <div className="navbar">
