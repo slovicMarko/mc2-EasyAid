@@ -23,6 +23,12 @@ function ActiveFeed() {
     { id: 3, title: "Event 3", date: "1. svibnja. 2023.", organizer: "Župa Kutina", about:"Loremfs hhhh hhhh hhhhhhhhh hhhhhhhhhhhh hhhhhhhh hhhhhhhhh hhhh hhhhhhhmm"},
   ];
 
+  const pastEvents = [
+    { id: 0, title: "Event 0", date: "1. ožujka. 2023.", organizer: "Hrvatski Crveni Križ", about:"Loremm u bj bh bh bhb hbh bh bh bh bhb h hbh bh bh bhb hb m"},
+    { id: -1, title: "Event -1", date: "nekad", organizer: "72 sata bez kompromisa", about:"Loremmmf"},
+    { id: -2, title: "Event -2 s tim i tim naslovom", date: "nekad", organizer: "Župa Kutina", about:"Lorem sdnshdi iwiichiihieh ihw hwi oiwi ni wi iwni"},
+  ];
+
   console.log(finishedLoadingAndCanShow);
 
   return (
@@ -47,8 +53,18 @@ function ActiveFeed() {
             </div>
             <div className="past-events">
               <h1>Prošle akcije</h1>
-              <EventBubble isInActive/>
-              <EventBubble isInActive/>
+              {pastEvents.map((event) => (
+                <EventBubble
+                key={event.id}
+                isPreview={false}
+                isInActive={true}
+                isInFeed={false}
+                title={event.title}
+                date={event.date}
+                organizer = {event.organizer}
+                about={event.about}
+                />
+              ))}
             </div>
           </section>
           <section id="section-info">
