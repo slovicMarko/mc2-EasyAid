@@ -5,7 +5,7 @@ import "./cssFiles/event.scss";
 import { Event, EventDiv } from "./eventModal";
 import reactDom from "react-dom";
 
-export function EventBubble({ isPreview, isInActive, isInFeed }) {
+export function EventBubble({ isPreview, isInActive, isInFeed, title, date}) {
   const [isEventOpen, setIsEventOpen] = useState(false);
 
   const handleEventClick = () => {
@@ -32,11 +32,11 @@ export function EventBubble({ isPreview, isInActive, isInFeed }) {
       <button onClick={handleEventClick}>
         <div className="event-bubble">
           <div className="event-bubble-header">
-            <h2>Pomoć žrtvama potresa(centar Petrinje)</h2>
+            <h2>{title}</h2>
           </div>
           <div className="event-middle">
             <h3>Hrvatski crveni križ</h3>
-            <h4>25.lipnja 2023.</h4>
+            <h4>{date}</h4>
           </div>
           <p>
             Potrebna pomoć u području graditeljstva (popravljanje krovova i

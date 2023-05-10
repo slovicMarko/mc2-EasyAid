@@ -19,9 +19,9 @@ function ActiveFeed() {
   const finishedLoadingAndCanShow = loading && !canShow;
 
   const activeEvents = [
-    { id: 1, title: "Event 1"},
-    { id: 2, title: "Event 2"},
-    { id: 3, title: "Event 3"},
+    { id: 1, title: "Event 1", date: "1. ožujka. 2023."},
+    { id: 2, title: "Event 2", date: "1. travnja. 2023."},
+    { id: 3, title: "Event 3", date: "1. svibnja. 2023."},
   ];
 
   console.log(finishedLoadingAndCanShow);
