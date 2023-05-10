@@ -18,9 +18,9 @@ const app = initializeApp(firebaseConfig);
 
 function Register() {
   const [input, setInput] = useState({
-    email: "markeza@gmail.com",
-    username: "slovicm",
-    password: "Marko13579",
+    email: "",
+    username: "",
+    password: "",
   });
   const [error, setError] = useState(null);
 

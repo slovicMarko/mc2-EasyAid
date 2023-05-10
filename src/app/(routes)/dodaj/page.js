@@ -3,22 +3,20 @@
 import { useState } from "react";
 
 import { getFirestore, setDoc, doc } from "firebase/firestore";
-
-import firebaseConfig from "../../../../firebase/FirebaseConfig";
 import { initializeApp } from "firebase/app";
-
-const app = initializeApp(firebaseConfig);
-
-const db = getFirestore(app);
+import firebaseConfig from "../../../../firebase/FirebaseConfig";
 
 import "../login/login.scss";
-import { set } from "firebase/database";
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 function DodajAkciju() {
   const [input, setInput] = useState({
     active: true,
     title: "",
     adress: "",
+    date: "",
     description: "",
     city: "",
     image: "",
@@ -32,6 +30,7 @@ function DodajAkciju() {
     let active = input.active;
     let title = input.title;
     let adress = input.adress;
+    let date = input.date;
     let description = input.description;
     let city = input.city;
     let link = input.link;
@@ -86,6 +85,26 @@ function DodajAkciju() {
             type="text"
             onChange={handleChange}
             value={input.title}
+            required
+          />
+        </div>
+
+        <textarea
+          rows="10"
+          cols="40"
+          className=""
+          placeholder="opis"
+          name="description"
+          onChange={handleChange}
+          value={input.description}
+        ></textarea>
+        <div className="form-field">
+          <input
+            className="input"
+            id="formInput#text"
+            name="date"
+            type="date"
+            onChange={handleChange}
             required
           />
         </div>

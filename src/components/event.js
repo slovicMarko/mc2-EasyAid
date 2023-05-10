@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import React, { useState, useRef } from "react";
 import "./cssFiles/event.scss";
 import { Event, EventDiv } from "./eventModal";
+import reactDom from "react-dom";
 
 export function EventBubble({ isPreview, isInActive, isInFeed }) {
   const [isEventOpen, setIsEventOpen] = useState(false);
