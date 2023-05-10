@@ -2,7 +2,7 @@
 "use router";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-
+import { Leaderboard } from "@/components/leaderboard";
 import { EventBubble } from "@/components/event";
 import "./feed.scss";
 
@@ -26,23 +26,28 @@ function MainFeed() {
   ];
 
   return (
-    <div>
-      {finishedLoadingAndCanShow && (
-        <div>
-          {feedEvents.map((event) => (
-                <EventBubble
-                key={event.id}
-                isPreview={false}
-                isInActive={false}
-                isInFeed={true}
-                title={event.title}
-                date={event.date}
-                organizer = {event.organizer}
-                about={event.about}
-                />
-              ))}
-        </div>
-      )}
+    <div className="feed-wrapper">
+      <aside >
+        <Leaderboard/>
+      </aside>
+      <div>
+        {finishedLoadingAndCanShow && (
+          <div>
+            {feedEvents.map((event) => (
+                  <EventBubble
+                  key={event.id}
+                  isPreview={false}
+                  isInActive={false}
+                  isInFeed={true}
+                  title={event.title}
+                  date={event.date}
+                  organizer = {event.organizer}
+                  about={event.about}
+                  />
+                ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
