@@ -16,8 +16,6 @@ function ActiveFeed() {
     return router.pathname === href; // check if the current page's URL path matches the link's href attribute
   };
 
-  const [activeEvent, setActiveEvent] = useState(null);
-
   const finishedLoadingAndCanShow = loading && !canShow;
 
   const activeEvents = [
@@ -25,15 +23,6 @@ function ActiveFeed() {
     { id: 2, title: "Event 2"},
     { id: 3, title: "Event 3"},
   ];
-  
-  const eventRootRef = useRef(null);
-
-  useEffect(() => {
-    if (eventRootRef.current) {
-      ReactDOM.createRoot(eventRootRef.current).render(<EventBubble />);
-    }
-  }, [eventRootRef]);
-
 
   console.log(finishedLoadingAndCanShow);
 
@@ -44,10 +33,6 @@ function ActiveFeed() {
           <section id="section-events">
             <div className="active-events">
               <h1>Aktivne akcije</h1>
-              {/*
-              <EventBubble isInActive/>
-              <EventBubble isInActive/>
-              */}
               {activeEvents.map((event) => (
                 <EventBubble
                 key={event.id}
@@ -66,7 +51,7 @@ function ActiveFeed() {
             </div>
           </section>
           <section id="section-info">
-            <div id="about-event" ref={eventRootRef}>
+            <div id="about-event" >
 
             </div>
             <hr/>

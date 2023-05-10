@@ -1,8 +1,6 @@
 "use client";
 "use router";
 import React, { useState } from "react";
-import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { EventBubble } from "@/components/event";

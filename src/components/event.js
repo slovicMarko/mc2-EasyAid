@@ -1,13 +1,11 @@
 "use client"
 
 import React, { useState, useRef } from "react";
-import ReactDOM from "react-dom/client";
 import "./cssFiles/event.scss";
 import { Event, EventDiv } from "./eventModal";
 
 export function EventBubble({ isPreview, isInActive, isInFeed }) {
   const [isEventOpen, setIsEventOpen] = useState(false);
-  const eventRoot = useRef(null);
 
   const handleEventClick = () => {
     setIsEventOpen(true);
@@ -28,10 +26,6 @@ export function EventBubble({ isPreview, isInActive, isInFeed }) {
     eventClass = "event-button";
   }
 
-  if (isEventOpen && isInActive) {
-    ReactDOM.createRoot(eventRoot.current).render(<EventDiv />);
-  }
-
   return (
     <div className={eventClass}>
       <button onClick={handleEventClick}>
@@ -50,9 +44,7 @@ export function EventBubble({ isPreview, isInActive, isInFeed }) {
         </div>
       </button>
 
-      <div ref={eventRoot}></div>
-
-      {isEventOpen && isInFeed && <Event onClose={handleEventClose} />}
+      {isEventOpen && <Event onClose={handleEventClose} />}
     </div>
   );
 }
