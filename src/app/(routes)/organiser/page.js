@@ -1,8 +1,8 @@
 "use client";
 "use router";
 import React, { useState } from "react";
-import Head from "next/head";
-import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 import { useRouter } from "next/navigation";
 
 import { EventEdit} from "@/components/EventEditable";
@@ -30,6 +30,9 @@ function OrganiserFeed() {
 
   return (
     <div>
+      <button className="add-icon">
+        Dodaj akciju
+      </button>
       {finishedLoadingAndCanShow && (
         <div>
           {organiserEvents.map((event) => (
