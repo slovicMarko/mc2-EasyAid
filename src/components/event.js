@@ -44,7 +44,13 @@ export function EventBubble({ isPreview, isInActive, isInFeed, title, date, orga
         </div>
       </button>
 
-      {isEventOpen && <Event onClose={handleEventClose} />}
+      {isEventOpen && 
+          <Event onClose={handleEventClose} 
+          title = {title}
+          date = {date}
+          organizer = {organizer}
+          about = {about}
+          />}
     </div>
   );
 }

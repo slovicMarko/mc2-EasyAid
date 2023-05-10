@@ -12,6 +12,13 @@ https://www.freecodecamp.org/news/how-to-use-svg-icons-in-react-with-react-icons
 */
 
 function HomePage() {
+
+  const homeEvents = [
+    { id: 1, title: "Event 1 na kojem radis to to i to", date: "1. ožujka. 2023.", organizer: "Hrvatski Crveni Križ", about:"Loreremm u bj bh bh bhb hbh bh bh bh bhb h hbh bh bh bhb hb mmmm"},
+    { id: 2, title: "Event 2", date: "1. travnja. 2023.", organizer: "72 sata bez kompromisa", about:"Loremmmf"},
+    { id: 3, title: "Event 3", date: "1. svibnja. 2023.", organizer: "Župa Kutina", about:"Loremfs hhhh hhhh hhhhhhhhh hhhhhhhhhhhh hhhhhhhh hhhhhhhhh hhhh hhhhhhhmm"},
+  ];
+
   return (
     <>
       <div className="front-windows">
@@ -36,13 +43,28 @@ function HomePage() {
         <h2 className="headings">Želiš volontirati, a ne znaš gdje početi?</h2>
         <div className="top-events">
           <div className="event-lijevi">
-            <EventBubble isPreview />
+            <EventBubble isPreview 
+            title = {homeEvents[0].title}
+            date = {homeEvents[0].date}
+            organizer = {homeEvents[0].organizer}
+            about = {homeEvents[0].about}
+            />
           </div>
           <div className="event-sredina">
-            <EventBubble isPreview />
+            <EventBubble isPreview
+            title = {homeEvents[1].title}
+            date = {homeEvents[1].date}
+            organizer = {homeEvents[1].organizer}
+            about = {homeEvents[1].about}
+            />
           </div>
           <div className="event-desni">
-            <EventBubble isPreview />
+            <EventBubble isPreview 
+            title = {homeEvents[2].title}
+            date = {homeEvents[2].date}
+            organizer = {homeEvents[2].organizer}
+            about = {homeEvents[2].about}
+            />
           </div>
         </div>
         <div className="about-easyAid">
