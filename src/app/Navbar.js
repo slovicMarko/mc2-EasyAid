@@ -1,14 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-import "../components/cssFiles/navBar.css";
+import "../components/cssFiles/navBar.scss";
+import AuthNavbar from "@/components/AuthNavbar";
+import NavigationNavbar from "@/components/NavigationNavbar";
 
 function Navbar() {
-
-  
-
   return (
     <>
       <div className="navbar">
@@ -24,29 +22,8 @@ function Navbar() {
             />
           </Link>
         </div>
-        <div className="navbar--navigation">
-          <Link className="btn--nav" href="/">
-            Naslovna strana
-          </Link>
-          <Link className="btn--nav" href="/feed">
-            Feed
-          </Link>
-          <Link className="btn--nav" href="/activeEvents">
-            Aktivne akcije
-          </Link>
-          <Link className="btn--nav" href="/organiser">
-            Organizatori
-          </Link>
-        </div>
-
-        <div className="navbar--auth">
-          <Link className="btn--auth--login" href="/login">
-            Prijavi se
-          </Link>
-          <Link className="btn--auth--reg" href="/register">
-            Registriraj se
-          </Link>
-        </div>
+        <NavigationNavbar />
+        <AuthNavbar />
       </div>
     </>
   );
