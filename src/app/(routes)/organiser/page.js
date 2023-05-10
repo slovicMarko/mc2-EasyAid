@@ -20,16 +20,27 @@ function OrganiserFeed() {
 
   const finishedLoadingAndCanShow = loading && !canShow;
 
-  console.log(finishedLoadingAndCanShow);
+  const organiserEvents = [
+    { id: 1, title: "Event 1 na kojem radis to to i to", date: "1. ožujka. 2023.", organizer: "Hrvatski Crveni Križ", about:"Loreremm u bj bh bh bhb hbh bh bh bh bhb h hbh bh bh bhb hb mmmm"},
+    { id: 2, title: "Event 2", date: "1. travnja. 2023.", organizer: "72 sata bez kompromisa", about:"Loremmmf"},
+    { id: 3, title: "Event 3", date: "1. svibnja. 2023.", organizer: "Župa Kutina", about:"Loremfs hhhh hhhh hhhhhhhhh hhhhhhhhhhhh hhhhhhhh hhhhhhhhh hhhh hhhhhhhmm"},
+    { id: 4, title: "Event 4", date: "1. prosinca. 2023.", organizer: "Caritas Zagreb", about:"Loremfs dgdfdfhdfhdfh hhhhhhhhhhhh hhhhhhhh hhhhhhhhh hhhh hhhhhhhmm"}
+  ];
+
 
   return (
     <div>
       {finishedLoadingAndCanShow && (
         <div>
-          <EventEdit />
-          <EventEdit/>
-          <EventEdit />
-          <EventEdit />
+          {organiserEvents.map((event) => (
+                <EventEdit
+                key={event.id}
+                title={event.title}
+                date={event.date}
+                organizer = {event.organizer}
+                about={event.about}
+                />
+              ))}
         </div>
       )}
     </div>

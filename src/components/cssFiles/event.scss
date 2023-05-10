@@ -85,6 +85,11 @@
   height: 50px;
   min-width: 50px;
   min-height: 30px;
+  transition: 0.4s ease-in;
+}
+
+.register-button:hover {
+  cursor:pointer;
 }
 
 .close-button {
@@ -98,6 +103,11 @@
   height: 50px;
   min-width: 50px;
   min-height: 30px;
+  transition: 0.4s ease-in;
+}
+
+.close-button:hover {
+  cursor:pointer;
 }
 
 .main-content {
@@ -163,6 +173,7 @@
     background-color: rgba(0, 255, 0, 0.1);
     transition: 0.3s ease;
     transform: translateY(-4px);
+    cursor:pointer;
   }
 
   .event-bubble {

@@ -6,7 +6,7 @@ import { Event } from "./eventModal";
 import { EventEditModal } from "./EventEditableModal";
 
 
-export function EventEdit() {
+export function EventEdit({title, date, organizer, about}) {
   const [isEventOpen, setIsEventOpen] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
 
@@ -38,21 +38,24 @@ export function EventEdit() {
         
         <div className="event-edit-bubble">
           <div className="event-edit-bubble-header">
-            <h2>Pomoć žrtvama potresa(centar Petrinje)</h2>
+            <h2>{title}</h2>
           </div>
           <div className="event-edit-middle">
-            <h3>Hrvatski crveni križ</h3>
-            <h4>25.lipnja 2023.</h4>
+            <h3>{organizer}</h3>
+            <h4>{date}</h4>
           </div>
-          <p>
-            Potrebna pomoć u području graditeljstva (popravljanje krovova i
-            skidanje dimnjaka), briga o starijim i nemoćnim osobama
-          </p>
+          <p>{about}</p>
         </div>
       </button>
 
       {isFormOpen && <EventEditModal onClose={handleFormClose} />}
-      {isEventOpen && <Event onClose={handleEventClose} />}
+      {isEventOpen && 
+          <Event onClose={handleEventClose} 
+          title = {title}
+          date = {date}
+          organizer = {organizer}
+          about = {about}
+          />}
     </div>
   );
 }
