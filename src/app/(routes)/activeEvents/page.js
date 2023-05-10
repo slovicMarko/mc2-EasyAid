@@ -2,7 +2,6 @@
 "use router";
 import React, { useState, useRef, useEffect} from "react";
 import { useRouter } from "next/navigation";
-import ReactDOM  from "react-dom/client";
 import { EventBubble } from "@/components/event";
 import "./active.scss";
 
@@ -19,9 +18,9 @@ function ActiveFeed() {
   const finishedLoadingAndCanShow = loading && !canShow;
 
   const activeEvents = [
-    { id: 1, title: "Event 1", date: "1. ožujka. 2023."},
-    { id: 2, title: "Event 2", date: "1. travnja. 2023."},
-    { id: 3, title: "Event 3", date: "1. svibnja. 2023."},
+    { id: 1, title: "Event 1 na kojem radis to to i to", date: "1. ožujka. 2023.", organizer: "Hrvatski Crveni Križ", about:"Loremmm"},
+    { id: 2, title: "Event 2", date: "1. travnja. 2023.", organizer: "72 sata bez kompromisa", about:"Loremmmf"},
+    { id: 3, title: "Event 3", date: "1. svibnja. 2023.", organizer: "Župa Kutina", about:"Loremfs hhhh hhhh hhhhhhhhh hhhhhhhhhhhh hhhhhhhh hhhhhhhhh hhhh hhhhhhhmm"},
   ];
 
   console.log(finishedLoadingAndCanShow);
@@ -41,6 +40,8 @@ function ActiveFeed() {
                 isInFeed={false}
                 title={event.title}
                 date={event.date}
+                organizer = {event.organizer}
+                about={event.about}
                 />
               ))}
             </div>
