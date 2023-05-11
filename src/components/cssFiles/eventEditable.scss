@@ -224,3 +224,48 @@
     }
   }
   
+@media (max-width:560px){
+  
+  .event-organiser {
+   height:12%;
+   min-height:240px;
+   min-width: 400px;
+  }
+
+  .event-organiser button {
+    min-width: 400px;
+
+    .event-edit-bubble {
+      
+    }
+
+    .event-edit-bubble-header {
+      
+    }
+  
+    .event-edit-bubble-header h2 {
+      
+    }
+  
+    .event-edit-middle {
+      
+    }
+  
+    .event-edit-bubble h3 {
+      
+    }
+    .event-edit-bubble h4 {
+      margin:20px 5px 20px 0;
+    }
+  
+    .event-edit-bubble p {
+      
+    }
+  }
+  
+
+  #edit-button {
+    top:140px;
+  }
+
+}
