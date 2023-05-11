@@ -7,13 +7,10 @@ import {
   signInWithEmailAndPassword,
   AuthErrorCodes,
   onAuthStateChanged,
-  signOut,
 } from "firebase/auth";
 
 import firebaseConfig from "./FirebaseConfig";
 import { initializeApp } from "firebase/app";
-
-import SignOut from "@/components/auth/SignOut";
 
 const app = initializeApp(firebaseConfig);
 

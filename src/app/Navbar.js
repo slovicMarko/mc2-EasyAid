@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 import "../components/cssFiles/navBar.scss";
 import AuthNavbar from "@/components/NavbarElements/AuthNavbar";

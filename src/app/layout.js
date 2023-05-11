@@ -2,13 +2,7 @@
 
 import "./globals.css";
 
-//import "../components/FirebaseApp.js";
-
 import Navbar from "./Navbar";
-//import "../../firebase/FirebaseConfig";
-import { Login } from "../../firebase/SignInUser";
-import ImportingFirebase from "../../firebase/RealtimeDB.js";
-import { Auth } from "./auth";
 
 export const metadata = {
   title: "EasyAid",
@@ -23,8 +17,6 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navbar />
-        {/*<ImportingFirebase />*/}
-
         {children}
       </body>
     </html>
