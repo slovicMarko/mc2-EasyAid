@@ -22,15 +22,21 @@
 
 #edit-middle {
     float:left;
-    width:100%;
+    width:65%;
     height:400px;
 }
 
 #event-about-field {
     font-size:14px;
     font-family: "Roboto";
-    width:900px;
+    width:600px;
     resize:none;
+}
+
+#edit-side {
+    float:right;
+    width:35%;
+    height:400px;
 }
 
 label {
