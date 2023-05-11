@@ -1,11 +1,12 @@
 "use client";
+"use router";
 
 import Link from "next/link";
-import { use, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import {
   getAuth,
   createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
   AuthErrorCodes,
   onAuthStateChanged,
   updateProfile,
@@ -24,6 +25,7 @@ function Register() {
   });
   const [error, setError] = useState(null);
 
+  const router = useRouter();
   const auth = getAuth();
 
   let user = auth.currentUser;
@@ -57,6 +59,13 @@ function Register() {
       });
   };
 
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      console.log("Prijavljen");
+      router.push(`/profile/${user.displayName}`);
+    }
+  });
+
   const handleChange = (e) => {
     setInput((prevState) => ({
       ...prevState,
@@ -74,7 +83,7 @@ function Register() {
         <div className="form-field">
           <input
             className="input input--text"
-            id="formInput#text"
+            id="formInput#email"
             name="email"
             placeholder="Enter email"
             type="text"

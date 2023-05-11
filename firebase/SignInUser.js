@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -15,6 +16,7 @@ import { initializeApp } from "firebase/app";
 const app = initializeApp(firebaseConfig);
 
 function Login() {
+  const router = useRouter();
   const [input, setInput] = useState({
     email: "marko@email.com",
     password: "marko123",
@@ -65,7 +67,6 @@ function Login() {
     auth
       .signOut()
       .then((auth) => {
-        // Signed in
         console.log("Signed Out");
         // ...
       })
@@ -77,6 +78,7 @@ function Login() {
   onAuthStateChanged(auth, (user) => {
     if (user) {
       console.log("Prijavljen");
+      router.push("/feed");
     } else {
       console.log("Odjavljan");
     }

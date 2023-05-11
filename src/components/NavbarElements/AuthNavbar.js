@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { initializeApp } from "firebase/app";
+import firebaseConfig from "../../../firebase/FirebaseConfig";
 
 import SignOut from "../auth/SignOut";
 
 function AuthNavbar() {
+  const app = initializeApp(firebaseConfig);
+
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -22,7 +26,7 @@ function AuthNavbar() {
           <Link className="btn--auth--login" href="/profile/marko">
             Profil
           </Link>
-          <SignOut isInNavbar/>
+          <SignOut isInNavbar />
         </>
       ) : (
         <>
