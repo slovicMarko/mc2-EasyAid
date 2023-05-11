@@ -24,6 +24,9 @@ export const EventEditModal = ({ onClose }) => {
               <label for="background-about-image">Pozadinska slika:</label><br/>
               <input type="file" name="backgroundImage" id="event-about-image"></input>
             </div>
+            <div id="edit-side">
+              <label for="event-materials-field">Potrebni materijali:</label>
+            </div>
         </form>
       </div>
     </div>,
