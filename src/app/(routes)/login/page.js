@@ -1,6 +1,6 @@
 import React from "react";
 
-import Login from "../../../../firebase/SignInUser";
+import Login from "../../../firebase/SignInUser";
 
 import "./login.scss";
 

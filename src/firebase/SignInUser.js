@@ -7,7 +7,6 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   AuthErrorCodes,
-  onAuthStateChanged,
 } from "firebase/auth";
 
 import firebaseConfig from "./FirebaseConfig";
@@ -23,25 +22,20 @@ function Login() {
   });
   const [error, setError] = useState(null);
 
-  // get authentication instance
   const auth = getAuth();
 
   let user = auth.currentUser;
 
-  // handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
     setError("");
     let email = input.email.toLowerCase().trim();
     let password = input.password;
 
-    // sign in user
     signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
+      .then(() => {
         console.log(auth.currentUser);
         router.push("/feed");
-        // ...
       })
       .catch((err) => {
         if (

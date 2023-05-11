@@ -1,10 +1,8 @@
 "use router";
 
-import React from "react";
 import { useRouter } from "next/navigation";
 
 import { getAuth } from "firebase/auth";
-import { push } from "firebase/database";
 
 function SignOut(isInNavbar) {
   const auth = getAuth();
@@ -12,11 +10,10 @@ function SignOut(isInNavbar) {
   const handleSignOut = (e) => {
     auth
       .signOut()
-      .then((auth) => {
-        console.log("Signed Out");
+      .then(() => {
         router.push("/");
       })
-      .catch((err) => {
+      .catch(() => {
         console.log("Signed Out with error");
       });
   };

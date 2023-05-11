@@ -4,10 +4,10 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { getFirestore, collection, setDoc, doc } from "firebase/firestore";
+import { getFirestore, setDoc, doc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
-import firebaseConfig from "../../../../firebase/FirebaseConfig";
+import firebaseConfig from "../../../firebase/FirebaseConfig";
 
 import "../login/login.scss";
 
@@ -100,7 +100,6 @@ function DodajAkciju() {
         autoComplete="off"
         className="form"
         onSubmit={handleSubmit}
-        action="/feed"
       >
         <div className="form-field">
           <input
@@ -158,7 +157,6 @@ function DodajAkciju() {
         <div className="form-field">
           <input
             className="input input--text"
-            id="formInput#text"
             name="city"
             placeholder="grad"
             type="text"
@@ -170,18 +168,6 @@ function DodajAkciju() {
         <div className="form-field">
           <input
             className="input input--text"
-            id="formInput#text"
-            name="link"
-            placeholder="link"
-            type="text"
-            onChange={handleChange}
-            value={input.link}
-          />
-        </div>
-        <div className="form-field">
-          <input
-            className="input input--text"
-            id="formInput#text"
             name="number_volunteer"
             placeholder="broj volontera"
             type="number"
@@ -193,7 +179,6 @@ function DodajAkciju() {
         <div className="form-field">
           <button
             title="Spremi"
-            aria-label="Spremi"
             type="submit"
             className="login-btn"
           >

@@ -1,4 +1,3 @@
-import React from 'react';
 import './cssFiles/leaderboard.scss';
 
 const leaderboardData = [

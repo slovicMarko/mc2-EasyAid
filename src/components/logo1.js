@@ -3,7 +3,6 @@ export const Logo1Full = (props) => (
   <svg
     className="logo-wide-size"
     viewBox="0 0 369.895 108.274"
-    /*className="css-1j8o68f"*/
     {...props}
   >
     <g xmlns="http://www.w3.org/2000/svg" className="logo-color">

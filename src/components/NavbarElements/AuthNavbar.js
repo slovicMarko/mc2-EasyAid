@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-import firebaseConfig from "../../../firebase/FirebaseConfig";
+import firebaseConfig from "../../firebase/FirebaseConfig";
 
 import SignOut from "../auth/SignOut";
 

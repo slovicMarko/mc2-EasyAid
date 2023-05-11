@@ -1,11 +1,18 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import { memo, useMemo, useState } from "react";
 import "./cssFiles/event.scss";
-import { Event, EventDiv } from "./eventModal";
-import reactDom from "react-dom";
+import { Event } from "./eventModal";
 
-export function EventBubble({ isPreview, isInActive, isInFeed, title, date, organizer, about}) {
+export function EventBubble({
+  isPreview,
+  isInActive,
+  isInFeed,
+  title,
+  date,
+  organizer,
+  about,
+}) {
   const [isEventOpen, setIsEventOpen] = useState(false);
 
   const handleEventClick = () => {
@@ -16,16 +23,16 @@ export function EventBubble({ isPreview, isInActive, isInFeed, title, date, orga
     setIsEventOpen(false);
   };
 
-  let eventClass = "";
-  if (isPreview === true) {
-    eventClass = "event--preview";
-    isInFeed = false;
-  } else if (isInActive === true) {
-    eventClass = "event--active-feed";
-    isInFeed = false;
-  } else if (isInFeed === true) {
-    eventClass = "event-button";
-  }
+  const eventClass = useMemo(() => {
+    if (isPreview === true) {
+      return "event--preview";
+    } else if (isInActive === true) {
+      return "event--active-feed";
+    } else if (isInFeed === true) {
+      return "event-button";
+    }
+    return "";
+  }, [isPreview, isInActive, isInFeed]);
 
   return (
     <div className={eventClass}>
@@ -38,19 +45,19 @@ export function EventBubble({ isPreview, isInActive, isInFeed, title, date, orga
             <h3>{organizer}</h3>
             <h4>{date}</h4>
           </div>
-          <p>
-            {about}
-          </p>
+          <p>{about}</p>
         </div>
       </button>
 
-      {isEventOpen && 
-          <Event onClose={handleEventClose} 
-          title = {title}
-          date = {date}
-          organizer = {organizer}
-          about = {about}
-          />}
+      {isEventOpen && (
+        <Event
+          onClose={handleEventClose}
+          title={title}
+          date={date}
+          organizer={organizer}
+          about={about}
+        />
+      )}
     </div>
   );
 }

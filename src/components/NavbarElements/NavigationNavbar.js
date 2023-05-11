@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -15,14 +15,14 @@ function NavigationNavbar() {
 
   return (
     <div className="navbar--navigation">
+      <Link className="btn--nav" href="/">
+        Naslovna strana
+      </Link>
+      <Link className="btn--nav" href="/feed">
+        Feed
+      </Link>
       {user ? (
         <>
-          <Link className="btn--nav" href="/">
-            Naslovna strana
-          </Link>
-          <Link className="btn--nav" href="/feed">
-            Feed
-          </Link>
           <Link className="btn--nav" href="/activeEvents">
             Aktivne akcije
           </Link>
@@ -30,16 +30,7 @@ function NavigationNavbar() {
             Organizatori
           </Link>
         </>
-      ) : (
-        <>
-          <Link className="btn--nav" href="/">
-            Naslovna strana
-          </Link>
-          <Link className="btn--nav" href="/feed">
-            Feed
-          </Link>
-        </>
-      )}
+      ) : null}
     </div>
   );
 }
