@@ -18,6 +18,10 @@ function OrganiserFeed() {
     return router.pathname === href; // check if the current page's URL path matches the link's href attribute
   };
 
+  const addEvent = () => {
+    router.push("/dodaj");
+  };
+
   const finishedLoadingAndCanShow = loading && !canShow;
 
   const organiserEvents = [
@@ -55,7 +59,11 @@ function OrganiserFeed() {
 
   return (
     <div>
-      <FontAwesomeIcon icon={faCirclePlus} className="add-icon" />
+      <FontAwesomeIcon
+        icon={faCirclePlus}
+        className="add-icon"
+        onClick={addEvent}
+      />
       {finishedLoadingAndCanShow && (
         <div>
           {organiserEvents.map((event) => (

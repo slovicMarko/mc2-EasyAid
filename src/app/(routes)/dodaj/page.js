@@ -1,17 +1,22 @@
 "use client";
+"use router";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { getFirestore, collection, setDoc, doc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
+import { getStorage, ref, uploadBytes } from "firebase/storage";
 import firebaseConfig from "../../../../firebase/FirebaseConfig";
 
 import "../login/login.scss";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const storage = getStorage();
 
 function DodajAkciju() {
+  const router = useRouter();
   const [input, setInput] = useState({
     active: true,
     title: "",
@@ -22,6 +27,7 @@ function DodajAkciju() {
     image: "",
     link: "",
     number_volunteer: "",
+    image: "",
   });
 
   const handleSubmit = (e) => {
@@ -53,6 +59,7 @@ function DodajAkciju() {
         number_volunteer: number_volunteer,
       }
     );
+    router.push("/organiser");
   };
 
   const handleChange = (e) => {
@@ -60,6 +67,28 @@ function DodajAkciju() {
       ...prevState,
       [e.target.name]: e.target.value,
     }));
+  };
+  /*
+  const handleChangeImage = async (e) => {
+    try {
+      setInput((prevState) => ({
+        ...prevState,
+        [e.target.image]: e.target.file[0],
+      }));
+      console.log(e.target.name);
+    } catch (error) {
+      console.error("Error uploading image: ", error);
+    }
+  };*/
+
+  const uploadImage = async (file) => {
+    try {
+      const storageRef = ref(storage, "images/" + file.name);
+      await uploadBytes(storageRef, file);
+      console.log("Image uploaded successfully.");
+    } catch (error) {
+      console.error("Error uploading image: ", error);
+    }
   };
 
   return (
@@ -73,18 +102,6 @@ function DodajAkciju() {
         onSubmit={handleSubmit}
         action="/feed"
       >
-        <div className="form-field">
-          <select
-            className="input"
-            name="active"
-            id="active"
-            onChange={handleChange}
-            value={input.active}
-          >
-            <option value="true">Aktivno</option>
-            <option value="false">Neaktivno</option>
-          </select>
-        </div>
         <div className="form-field">
           <input
             className="input input--text"
@@ -127,6 +144,15 @@ function DodajAkciju() {
             onChange={handleChange}
             value={input.description}
             required
+          />
+        </div>
+        <div className="form-field">
+          <label for="background-about-image">Pozadinska slika:</label>
+          <input
+            type="file"
+            name="image"
+            accept="image/png, image/jpeg"
+            onChange={(e) => uploadImage(e.target.files[0])}
           />
         </div>
         <div className="form-field">

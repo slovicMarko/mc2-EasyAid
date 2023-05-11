@@ -40,6 +40,7 @@ function Login() {
       .then((userCredential) => {
         // Signed in
         console.log(auth.currentUser);
+        router.push("/feed");
         // ...
       })
       .catch((err) => {
@@ -47,13 +48,12 @@ function Login() {
           err.code === AuthErrorCodes.INVALID_PASSWORD ||
           err.code === AuthErrorCodes.USER_DELETED
         ) {
-          setError("The email address or password is incorrect");
+          setError("Neispravan email ili lozinka.");
         } else {
           console.log(err.code);
           alert(err.code);
         }
       });
-    console.log(user);
   };
 
   const handleChange = (e) => {
@@ -62,27 +62,6 @@ function Login() {
       [e.target.name]: e.target.value,
     }));
   };
-
-  const handleSignOut = (e) => {
-    auth
-      .signOut()
-      .then((auth) => {
-        console.log("Signed Out");
-        // ...
-      })
-      .catch((err) => {
-        console.log("Signed Out with error");
-      });
-  };
-
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      console.log("Prijavljen");
-      router.push("/feed");
-    } else {
-      console.log("Odjavljan");
-    }
-  });
 
   return (
     <div className="form-container">

@@ -8,7 +8,6 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   AuthErrorCodes,
-  onAuthStateChanged,
   updateProfile,
 } from "firebase/auth";
 
@@ -46,8 +45,12 @@ function Register() {
         })
           .then(() => {
             console.log("Profile updated");
+            router.push(`/profile/${user.displayName}`);
           })
-          .catch((error) => {});
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+          });
 
         console.log(user);
         // ...
@@ -55,16 +58,16 @@ function Register() {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
+        if (errorCode === AuthErrorCodes.INVALID_EMAIL) {
+          setError("Neispravna email adresa.");
+        } else if (errorCode === AuthErrorCodes.WEAK_PASSWORD) {
+          setError("Lozinka mora sadržavati minimalno 6 znakova.");
+        } else {
+          console.log(errorCode);
+          alert(errorCode);
+        }
       });
   };
-
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      console.log("Prijavljen");
-      router.push(`/profile/${user.displayName}`);
-    }
-  });
 
   const handleChange = (e) => {
     setInput((prevState) => ({
