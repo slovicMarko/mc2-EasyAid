@@ -14,11 +14,11 @@ table {
 
 th, td {
     padding:10px;
-
+    height:40px;
 }
 
 .user-name {
-    border-top:1px solid #379f48;
+    border-top:1px solid #303030;
 }
 
 .num-of-events {
@@ -26,5 +26,5 @@ th, td {
     font-weight:bold;
     font-size: 16px;
     text-align: right;
-    border-top:1px solid #379f48;
+    border-top:1px solid #303030;
 }

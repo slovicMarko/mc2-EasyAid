@@ -31,9 +31,11 @@ export function EventEdit({title, date, organizer, about}) {
       <button id="edit-button" onClick={handleFormClick}>
           Edit
       </button>
+      {/*
       <button id="info-button" >
           Info
       </button>
+      */}
       <button onClick={handleEventClick}>
         
         <div className="event-edit-bubble">
