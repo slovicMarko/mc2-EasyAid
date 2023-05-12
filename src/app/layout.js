@@ -2,7 +2,7 @@
 
 import "./globals.css";
 
-import Navbar from "./Navbar";
+import Navbar from "../components/NavbarElements/Navbar";
 
 export const metadata = {
   title: "EasyAid",

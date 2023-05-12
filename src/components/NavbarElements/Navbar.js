@@ -1,4 +1,4 @@
-import "../components/cssFiles/navBar.scss";
+import "../cssFiles/navbar.scss";
 import AuthNavbar from "@/components/NavbarElements/AuthNavbar";
 import NavigationNavbar from "@/components/NavbarElements/NavigationNavbar";
 import LogoNavbar from "@/components/NavbarElements/LogoNavbar";

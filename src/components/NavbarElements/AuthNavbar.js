@@ -5,7 +5,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "../../firebase/FirebaseConfig";
 
-import SignOut from "../auth/SignOut";
+import SignOut from "../../firebase/SignOut";
 
 function AuthNavbar() {
   const app = initializeApp(firebaseConfig);

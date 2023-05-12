@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import akcija1 from "public/images/akcija1.png";
-import { EventBubble } from "@/components/event";
+import { EventBubble } from "@/components/event/event";
 
-import "./homePage.scss";
+import "./cssFiles/HomePage.scss";
 
 const homeEvents = [
   {

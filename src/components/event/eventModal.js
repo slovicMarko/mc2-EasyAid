@@ -2,28 +2,26 @@
 
 import ReactDOM from "react-dom";
 
-import "./cssFiles/event.scss";
+import "./../cssFiles/event.scss";
 
-export const Event = ({ onClose, title, date, organizer, about}) => {
+export const Event = ({ onClose, title, date, organizer, about }) => {
   return ReactDOM.createPortal(
     <div className="event">
       <div className="event-content">
         <div className="event-header">
-            <h2>{title}</h2>
-            <h3>{organizer}</h3>
+          <h2>{title}</h2>
+          <h3>{organizer}</h3>
         </div>
         <div className="event-side-info">
-            <h4>Zainteresiranih</h4>
-            <h5>28</h5>
-            <h4>Dolazi</h4>
-            <h5>12</h5>
+          <h4>Zainteresiranih</h4>
+          <h5>28</h5>
+          <h4>Dolazi</h4>
+          <h5>12</h5>
         </div>
         <button className="close-button" onClick={onClose}>
-            Izađi
+          Izađi
         </button>
-        <button className="register-button" >
-            Prijavi se!
-        </button>
+        <button className="register-button">Prijavi se!</button>
         <div className="main-content">
           <section>
             <p>{about}</p>

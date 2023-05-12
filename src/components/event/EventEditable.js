@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "./cssFiles/eventEditable.scss";
+import "./../cssFiles/eventEditable.scss";
 import { Event } from "./eventModal";
 import { EventEditModal } from "./EventEditableModal";
 
