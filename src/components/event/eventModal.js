@@ -1,7 +1,6 @@
 "use client";
 
 import ReactDOM from "react-dom";
-
 import "./../cssFiles/event.scss";
 
 export const Event = ({ onClose, title, date, organizer, about }) => {

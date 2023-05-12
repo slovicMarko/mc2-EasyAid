@@ -97,9 +97,8 @@ aside h5 {
 }
 
 .register-button {
-  //float: right;
   margin: 0px 0px;
-  border: 1px solid #379f48;
+  border: 2px solid #379f48;
   border-radius: 40px;
   background-color: #379f48;
   color: white;
@@ -111,16 +110,19 @@ aside h5 {
 }
 
 .register-button:hover {
+  font-weight: bold;
+  background-color: #0b6e1a;
+  border-color:#0b6e1a;
+  color:white;
   cursor:pointer;
 }
 
 .close-button {
-  //float: right;
   margin: 0px 0px;
-  border: 2px solid var(--gray);
+  border: 2px solid #379f48;
   border-radius: 40px;
   background-color: #edffed;
-  color: var(--gray);
+  color: #379f48;
   width: 100px;
   height: 50px;
   min-width: 50px;
@@ -129,6 +131,10 @@ aside h5 {
 }
 
 .close-button:hover {
+  font-weight: bold;
+  color:white;
+  background-color: #0b6e1a;
+  border-color:#0b6e1a;
   cursor:pointer;
 }
 

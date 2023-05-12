@@ -21,11 +21,9 @@
     height: 600px;
     background-color: white;
     padding: 20px;
-    //border: 2px solid #379f48;
     border-radius: 16px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 16px;
-
     background: rgb(237,255,237);
     background: linear-gradient(180deg, rgba(237,255,237,1) 0%, rgba(237,255,237,1) 30%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%);
   }
@@ -235,34 +233,10 @@
   .event-organiser button {
     min-width: 400px;
 
-    .event-edit-bubble {
-      
-    }
-
-    .event-edit-bubble-header {
-      
-    }
-  
-    .event-edit-bubble-header h2 {
-      
-    }
-  
-    .event-edit-middle {
-      
-    }
-  
-    .event-edit-bubble h3 {
-      
-    }
     .event-edit-bubble h4 {
       margin:20px 5px 20px 0;
     }
-  
-    .event-edit-bubble p {
-      
-    }
   }
-  
 
   #edit-button {
     top:140px;
