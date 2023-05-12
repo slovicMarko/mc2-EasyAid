@@ -5,7 +5,7 @@ import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { EventEdit } from "@/components/EventEditable";
+import { EventEdit } from "@/components/event/EventEditable";
 import "./organiser.scss";
 
 const isActive = (href) => {

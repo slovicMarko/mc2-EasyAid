@@ -20,7 +20,6 @@
   width: 1000px;
   height: 600px;
   padding: 20px;
-  //border: 2px solid #379f48;
   border-radius: 16px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 16px;
@@ -46,22 +45,32 @@
   margin-bottom:10px;
 }
 
+.event-top {
+  display:flex;
+  justify-content: space-between;
+}
+
 .event-side-info {
-  width: 20%;
-  float: left;
-  /*margin: 20px;
-  margin-right: 10px;*/
-  padding:20px;
-  text-align: left;
+  text-align: center;
 }
 
 .event-side-info h4 {
+  margin-top:20px;
+}
+
+aside {
+  width: 100px;
+  margin-top:20px;
+  text-align: left;
+}
+
+aside h4 {
   margin-top: 0;
   text-align: left;
   margin-bottom:10px;
 }
 
-.event-side-info h5 {
+aside h5 {
   margin-top: 0;
   text-align: left;
   margin-bottom:30px;
@@ -71,12 +80,25 @@
 
 .event-header {
   width: 60%;
-  float: left;
+}
+
+.event-text-buttons {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width:240px;
+  height:fit-content;
 }
 
 .register-button {
-  float: right;
-  margin: 10px 10px 10px 10px;
+  //float: right;
+  margin: 0px 0px;
   border: 1px solid #379f48;
   border-radius: 40px;
   background-color: #379f48;
@@ -93,8 +115,8 @@
 }
 
 .close-button {
-  float: right;
-  margin: 20px 10px 10px 10px;
+  //float: right;
+  margin: 0px 0px;
   border: 2px solid var(--gray);
   border-radius: 40px;
   background-color: #edffed;
@@ -111,12 +133,8 @@
 }
 
 .main-content {
-   clear:both;
-  background-image: url("/images/mainContentBack1.jpg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height:400px;
+  clear:both;
+  height:300px;
 }
 
 .main-content > section {
@@ -124,22 +142,26 @@
   width:100%;
   height:100%;
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.main-content > section > p {
+.main-content > section > article {
   width: 600px;
-  height: 100%;
-  padding:20px;
+  height: 400px;
+  padding:0px;
   box-sizing: border-box;
   text-align: left;
   font-size: 1em;
-  clear: both;
+  margin:0px;
+}
+
+.organiser-photo {
+  width:100%;
 }
 
 .main-content > section > div {
-  width:200px;
-  height:100%;
+  width:310px;
+  height:410px;
   text-align:left;
   box-sizing: border-box;
 }
@@ -234,7 +256,7 @@
   }
 }
 
-//main
+//Main
 
 .event--preview button {
   

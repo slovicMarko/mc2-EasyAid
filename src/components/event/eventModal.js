@@ -8,31 +8,46 @@ export const Event = ({ onClose, title, date, organizer, about }) => {
   return ReactDOM.createPortal(
     <div className="event">
       <div className="event-content">
-        <div className="event-header">
-          <h2>{title}</h2>
-          <h3>{organizer}</h3>
-        </div>
-        <div className="event-side-info">
-          <h4>Zainteresiranih</h4>
-          <h5>28</h5>
-          <h4>Dolazi</h4>
-          <h5>12</h5>
-        </div>
-        <button className="close-button" onClick={onClose}>
-          Izađi
-        </button>
-        <button className="register-button">Prijavi se!</button>
+        <section className="event-top">
+          <div className="event-header">
+            <h2>{title}</h2>
+            <h3>{organizer}</h3>
+          </div>
+          <div className="event-side-info">
+            <h4>{date}</h4>
+            <h3>mjesto to i to</h3>
+          </div>
+          <aside>
+            <h4>Potrebno</h4>
+            <h5>15</h5>
+            <h4>Dolazi</h4>
+            <h5>12</h5>
+          </aside>
+        </section>
         <div className="main-content">
           <section>
-            <p>{about}</p>
-            <div>
-              <h4>Potrebni materijali</h4>
-              <ul>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-              </ul>
+            <article>
+              <img src="/images/mainContentBack1.jpg" className="organiser-photo"/>
+              {/*<div>
+                <h4>Potrebni materijali</h4>
+                <ul>
+                  <li>Lorem ipsum</li>
+                  <li>Lorem ipsum</li>
+                  <li>Lorem ipsum</li>
+                  <li>Lorem ipsum</li>
+                </ul>
+              </div>*/}
+            </article>
+            <div className="event-text-buttons">
+              <p>{about}</p>
+              <div className="buttons">
+                <button className="close-button" onClick={onClose}>
+                  Izađi
+                </button>
+                <button className="register-button">
+                  Prijavi se!
+                </button>
+              </div>
             </div>
           </section>
         </div>
