@@ -16,18 +16,18 @@ function NavigationNavbar() {
   return (
     <div className="navbar--navigation">
       <Link className="btn--nav" href="/">
-        Naslovna strana
+        Početna
       </Link>
       <Link className="btn--nav" href="/feed">
-        Feed
+        Aktivne akcije
       </Link>
       {user ? (
         <>
           <Link className="btn--nav" href="/activeEvents">
-            Aktivne akcije
+            Prijavljene akcije
           </Link>
           <Link className="btn--nav" href="/organiser">
-            Organizatori
+            Moje akcije
           </Link>
         </>
       ) : null}
