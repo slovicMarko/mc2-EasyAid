@@ -50,7 +50,6 @@ function Register() {
             const errorCode = error.code;
             const errorMessage = error.message;
           });
-
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -85,7 +84,7 @@ function Register() {
             className="input input--text"
             id="formInput#email"
             name="email"
-            placeholder="Enter email"
+            placeholder="unesi email"
             type="text"
             onChange={handleChange}
             value={input.email}
@@ -98,7 +97,7 @@ function Register() {
             className="input input--text"
             id="formInput#text"
             name="username"
-            placeholder="Enter username"
+            placeholder="unesi korisničko ime"
             type="text"
             onChange={handleChange}
             value={input.username}
@@ -111,7 +110,7 @@ function Register() {
             className="input input--password"
             id="formInput#passwprd"
             name="password"
-            placeholder="Enter password"
+            placeholder="unesi lozinku"
             onChange={handleChange}
             value={input.password}
             type="password"
@@ -122,13 +121,8 @@ function Register() {
 
         <div className="form-field">
           {error ? <p className="login-error">{error}</p> : null}
-          <button
-            title="Register"
-            aria-label="Register"
-            type="submit"
-            className="login-btn"
-          >
-            Register
+          <button title="Register" type="submit" className="login-btn">
+            Registriraj se
           </button>
         </div>
       </form>

@@ -69,7 +69,7 @@ function Login() {
             className="input input--text"
             id="formInput#text"
             name="email"
-            placeholder="Enter email"
+            placeholder="unesi email"
             type="text"
             onChange={handleChange}
             value={input.email}
@@ -82,7 +82,7 @@ function Login() {
             className="input input--password"
             id="formInput#passwprd"
             name="password"
-            placeholder="Enter password"
+            placeholder="unesi lozinku"
             onChange={handleChange}
             value={input.password}
             type="password"

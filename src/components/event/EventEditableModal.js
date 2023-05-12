@@ -2,7 +2,7 @@
 
 import ReactDOM from "react-dom";
 
-import "./cssFiles/eventForm.scss";
+import "./../cssFiles/eventForm.scss";
 
 export const EventEditModal = ({ onClose }) => {
   return ReactDOM.createPortal(

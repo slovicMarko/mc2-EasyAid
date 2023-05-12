@@ -1,7 +1,7 @@
 "use client";
 
 import { memo, useMemo, useState } from "react";
-import "./cssFiles/event.scss";
+import "./../cssFiles/event.scss";
 import { Event } from "./eventModal";
 
 export function EventBubble({

@@ -2,7 +2,7 @@
 "use router";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { EventBubble } from "@/components/event";
+import { EventBubble } from "@/components/event/event";
 import "./active.scss";
 
 const isActive = (href) => {

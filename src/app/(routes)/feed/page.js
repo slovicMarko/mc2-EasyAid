@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Leaderboard } from "@/components/leaderboard";
-import { EventBubble } from "@/components/event";
+import { EventBubble } from "@/components/event/event";
 import "./feed.scss";
 
 function MainFeed() {

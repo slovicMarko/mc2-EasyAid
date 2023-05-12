@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import akcija1 from "public/images/akcija1.png";
-import { EventBubble } from "@/components/event";
+import { EventBubble } from "@/components/event/event";
 
-import "./homePage.scss";
+import "./cssFiles/HomePage.scss";
 
 const homeEvents = [
   {
@@ -90,8 +90,6 @@ function HomePage() {
               layout="responsive"
               className="photo1"
             />
-            {/*
-             */}
           </div>
           <div className="side-text">
             <h4>Uvijek aktualni događaji</h4>
@@ -139,7 +137,7 @@ function HomePage() {
                 src="/images/porscheDigital.jpg"
                 alt="Porsche Digital Croatia"
                 title="Porsche Digital Croatia"
-                layout="fill"
+                fill
                 className="sponsor"
               />
             </div>
@@ -148,7 +146,7 @@ function HomePage() {
                 src="/images/tvzMc2.png"
                 alt="Tvz Mc2"
                 title="Tvz Mc2"
-                layout="fill"
+                fill
                 className="sponsor"
               />
             </div>
