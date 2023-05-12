@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import akcija1 from "public/images/akcija1.png";
 import { EventBubble } from "@/components/event/event";
-import InLove from "@/components/inLoveSVG.js"
+import InLove from "@/components/inLoveSVG.js";
 import "./cssFiles/HomePage.scss";
 
 const homeEvents = [
@@ -35,7 +35,7 @@ function HomePage() {
     <>
       <div className="front-windows">
         <div className="content">
-          <InLove className="photo"/>
+          <InLove className="photo" />
           <h1>Volontiraj i pomogni drugima oko sebe!</h1>
           <p className="front-window-font">
             Kroz volontiranje imate priliku ne samo pomoći drugima, već i sami
@@ -115,10 +115,9 @@ function HomePage() {
 
         <h2 className="headings">Problem ti je organizacija i promocija?</h2>
         <div className="about-organisation">
-          <div className="image-container2"></div>
-          <div className="side-text2">
-            <h2>Sve na jednom mjestu</h2>
-            <p>
+          <div className="side-text">
+            <h4>Sve na jednom mjestu</h4>
+            <p className="opis-za-poticanje">
               Dosta vam je korištenja različitih aplikacija kako bi dogovorili
               akciju? Nudimo vam aplikaciju u kojoj možete dogovoriti sve
               detalje unutar jednog obrasca.
@@ -126,6 +125,20 @@ function HomePage() {
             <Link className="link-btn regular-btn" href="/">
               Stvori događaj
             </Link>
+          </div>
+          <div className="image-container2">
+            <Image
+              src="/images/organizator_homepage.svg"
+              alt="Organizator slika"
+              width={400}
+              height={250}
+              sizes="(max-width: 400px)"
+              style={{
+                position: "relative",
+                margin: "0",
+              }}
+              className="photo2"
+            />
           </div>
         </div>
 

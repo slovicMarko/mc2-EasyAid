@@ -1,8 +1,3 @@
-:root {
-  --greenBtn: #379f48;
-  --gray: #303030;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -44,10 +39,10 @@
 }
 
 .photo {
-  transform:scale(1);
-  position:absolute;
-  top:394px;
-  right:-200px;
+  transform: scale(1);
+  position: absolute;
+  top: 394px;
+  right: -200px;
 }
 
 .event-buttons {
@@ -73,13 +68,13 @@
 .link-btn.green-btn {
   background: var(--greenBtn);
   color: #fff;
-  border:2px solid #379f48;
+  border: 2px solid #379f48;
 }
 .link-btn.green-btn:hover {
   transition: 0.4s ease;
   background-color: #2cd849;
   color: var(--gray);
-  border-color:#2cd849;
+  border-color: #2cd849;
   font-weight: bold;
 }
 
@@ -119,9 +114,9 @@
 }
 
 .about-easyAid {
-  width:990px;
+  width: 990px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
 .image-container {
@@ -163,29 +158,9 @@
   margin: 0 10px 104px;
 
   .image-container2 {
-    width: 300px;
-    height: 350px;
-    border-radius: 25px;
-    background-color: rgba(71, 191, 91, 0.24);
-  }
-
-  .side-text2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--gray);
+    position: relative;
     max-width: 400px;
     width: fit-content;
-    margin: 0 0 0 80px;
-
-    h2 {
-      font-size: 24px;
-      font-weight: 800;
-    }
-
-    .regular-btn {
-      margin: 36px 0 0;
-    }
   }
 }
 

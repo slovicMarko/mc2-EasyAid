@@ -17,8 +17,8 @@ const app = initializeApp(firebaseConfig);
 function Login() {
   const router = useRouter();
   const [input, setInput] = useState({
-    email: "marko@email.com",
-    password: "marko123",
+    email: "",
+    password: "",
   });
   const [error, setError] = useState(null);
 
@@ -34,7 +34,6 @@ function Login() {
 
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        console.log(auth.currentUser);
         router.push("/feed");
       })
       .catch((err) => {

@@ -8,32 +8,31 @@ npm run dev
 
 Otvoriti [http://localhost:3000](http://localhost:3000) ze pregled aplikacije.
 
-
 ## Ciljevi u razvoju aplikacije
 
 Glavne funkcije:
 
-* [X] Oblikovati interaktivne akcije
-* [X] Oblikovanje hero page
-* [X] Oblikovanje navbara
-* [X] Oblikovanje ostalih stranica(Feed, Trenutne akcije, organizatori)
-* [ ] Postavljanje cijele baze
-* [ ] Povezati interaktivne akcije s Firebase
-* [X] Povezati login s Firebase
-* [X] Povezati odjavu s Firebase
-* [ ] Povezati register s Firebase
-* [X] Povezati objavu akcija
+- [x] Oblikovati interaktivne akcije
+- [x] Oblikovanje hero page
+- [x] Oblikovanje navbara
+- [x] Oblikovanje ostalih stranica(Feed, Trenutne akcije, organizatori)
+- [x] Postavljanje cijele baze
+- [ ] Povezati interaktivne akcije s Firebase
+- [x] Povezati login s Firebase
+- [x] Povezati odjavu s Firebase
+- [x] Povezati register s Firebase
+- [x] Povezati objavu akcija
 
 Dodatne funkcije:
 
-* [ ] Filtriranje akcija
-* [X] Oblikovanje leaderboarda
-* [ ] Funkcionalan leaderboard
-* [ ] Ispis statistike volontera i organizatora
-* [ ] Slanje obavijesti na mail
-* [ ] Oblikovanje kalendara
-* [ ] Funkcionalan kalendar
-* [ ] Traženje akcija u blizini
+- [ ] Filtriranje akcija
+- [x] Oblikovanje leaderboarda
+- [ ] Funkcionalan leaderboard
+- [ ] Ispis statistike volontera i organizatora
+- [ ] Slanje obavijesti na mail
+- [ ] Oblikovanje kalendara
+- [ ] Funkcionalan kalendar
+- [ ] Traženje akcija u blizini
 
 ## Objava stranice
 
