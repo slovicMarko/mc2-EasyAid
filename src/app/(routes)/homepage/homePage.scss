@@ -66,17 +66,19 @@
 .link-btn.green-btn {
   background: var(--greenBtn);
   color: #fff;
+  border:2px solid #379f48;
 }
 .link-btn.green-btn:hover {
   transition: 0.4s ease;
   background-color: #2cd849;
   color: var(--gray);
+  border-color:#2cd849;
   font-weight: bold;
 }
 
 .link-btn.regular-btn {
-  border: 2px solid var(--gray);
-  color: var(--gray);
+  border: 2px solid #379f48;
+  color: #379f48;
 }
 
 .link-btn.regular-btn:hover {
