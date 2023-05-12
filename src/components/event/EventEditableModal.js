@@ -10,7 +10,7 @@ export const EventEditModal = ({ onClose }) => {
       <div className="event-edit-content" id="edit-content">
         <form action="eventChange.html">
           <div id="edit-header">
-            <label for="event-name-field">Naziv akcije:</label>
+            <label htmlFor="event-name-field">Naziv akcije:</label>
             <br />
             <textarea
               type="text"
@@ -26,7 +26,7 @@ export const EventEditModal = ({ onClose }) => {
           </button>
           <input type="submit" value="Objavi" id="submit-button" />
           <div id="edit-middle">
-            <label for="event-about-field">Opis:</label>
+            <label htmlFor="event-about-field">Opis:</label>
             <br />
             <textarea
               type="text"
@@ -36,7 +36,7 @@ export const EventEditModal = ({ onClose }) => {
               rows="10"
               required
             ></textarea>
-            <label for="background-about-image">Pozadinska slika:</label>
+            <label htmlFor="event-about-image">Pozadinska slika:</label>
             <br />
             <input
               type="file"
@@ -45,7 +45,7 @@ export const EventEditModal = ({ onClose }) => {
             ></input>
           </div>
           <div id="edit-side">
-            <label for="event-materials-field">Potrebni materijali:</label>
+            <label >Potrebni materijali:</label>
           </div>
         </form>
       </div>
