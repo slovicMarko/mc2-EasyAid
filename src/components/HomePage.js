@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import akcija1 from "public/images/akcija1.png";
 import { EventBubble } from "@/components/event/event";
-
+import InLove from "@/components/inLoveSVG.js"
 import "./cssFiles/HomePage.scss";
 
 const homeEvents = [
@@ -35,6 +35,7 @@ function HomePage() {
     <>
       <div className="front-windows">
         <div className="content">
+          <InLove className="photo"/>
           <h1>Volontiraj i pomogni drugima oko sebe!</h1>
           <p className="front-window-font">
             Kroz volontiranje imate priliku ne samo pomoći drugima, već i sami

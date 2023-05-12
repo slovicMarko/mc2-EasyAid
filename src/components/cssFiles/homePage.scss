@@ -43,6 +43,13 @@
   font-size: 18px;
 }
 
+.photo {
+  transform:scale(1);
+  position:absolute;
+  top:394px;
+  right:-200px;
+}
+
 .event-buttons {
   margin: 36px 0;
 }
