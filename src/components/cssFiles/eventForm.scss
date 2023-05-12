@@ -1,83 +1,82 @@
 #edit-content {
-    text-align: left;
+  text-align: left;
 }
 
 #edit-content h3 {
-    font-size:18px;
-    margin-top:5px;
+  font-size: 18px;
+  margin-top: 5px;
 }
 
 #event-name-field {
-    font-size:20px;
-    font-family: "Roboto";
-    height:80px;
-    width:100%;
-    resize:none;
+  font-size: 20px;
+  font-family: "Roboto";
+  height: 80px;
+  width: 100%;
+  resize: none;
 }
 
 #edit-header {
-    width:80%;
-    float:left;
+  width: 80%;
+  float: left;
 }
 
 #edit-middle {
-    float:left;
-    width:65%;
-    height:400px;
+  float: left;
+  width: 65%;
+  height: 400px;
 }
 
 #event-about-field {
-    font-size:14px;
-    font-family: "Roboto";
-    width:600px;
-    resize:none;
+  font-size: 14px;
+  font-family: "Roboto";
+  width: 600px;
+  resize: none;
 }
 
 #edit-side {
-    float:right;
-    width:35%;
-    height:400px;
+  float: right;
+  width: 35%;
+  height: 400px;
 }
 
 label {
-    width:100%;
-    height:30px;
-    float:left;
-    font-size: 16px;
+  width: 100%;
+  height: 30px;
+  float: left;
+  font-size: 16px;
 }
 
 #submit-button {
-    margin:0px 0px 10px 50px;
-    height:50px;
-    width:100px;
-    float:right;
-    background-color: #379f48;
-    color:white;
-    border: none;
-    border-radius: 40px;
-    transition:0.4s ease;
+  margin: 0px 0px 10px 50px;
+  height: 50px;
+  width: 100px;
+  float: right;
+  background-color: #379f48;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  transition: 0.4s ease;
 }
 
 #submit-button:hover {
-    background-color: #2cd849;
-    transition:0.4s ease;
-    color:black;
-    font-weight:bold;
+  background-color: var(--hoverGreen);
+  transition: 0.4s ease;
+  font-weight: bold;
 }
 
 #edit-close {
-    background-color: #edffed;
-    color: var(--gray);
-    border:2px solid var(--gray);
-    transition:0.4s ease;
-    margin-top:30px;
-    margin-bottom:10px;
+  background-color: #edffed;
+  color: var(--greenBtn);
+  border: 2px solid var(--greenBtn);
+  transition: 0.4s ease;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-#edit-close:hover{
-    background-color: #379f48;
-    transition:0.4s ease;
-    color:white;
-    border-color:#379f48;
-    font-weight:bold;
+#edit-close:hover {
+  background-color: var(--hoverGreen);
+  transition: 0.4s ease;
+  color: white;
+  border-color: var(--hoverGreen);
+  font-weight: bold;
 }

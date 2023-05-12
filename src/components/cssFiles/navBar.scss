@@ -1,3 +1,5 @@
+
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -63,7 +65,7 @@
 }
 
 .btn--auth--login {
-  color: #000;
+  color: var(--gray);
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
@@ -71,7 +73,7 @@
 }
 
 .btn--nav {
-  color: #000;
+  color: var(--gray);
   white-space: nowrap;
   text-decoration: none;
   margin: 0 30px;

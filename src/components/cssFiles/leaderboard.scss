@@ -18,7 +18,7 @@ th, td {
 }
 
 .user-name {
-    border-top:1px solid #303030;
+    border-top:1px solid var(--gray);
 }
 
 .num-of-events-heading {
@@ -31,7 +31,7 @@ th, td {
     font-weight:bold;
     font-size: 16px;
     text-align: right;
-    border-top:1px solid #303030;
+    border-top:1px solid var(--gray);
     width:30px;
     padding:0px;
 }

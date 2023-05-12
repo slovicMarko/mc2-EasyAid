@@ -3,6 +3,10 @@
   --gray: #303030;
 }
 
+h3, p {
+  color: var(--gray);
+}
+
 .event {
   position: fixed;
   top: 0;
@@ -24,8 +28,14 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 16px;
 
-  background: rgb(237,255,237);
-  background: linear-gradient(180deg, rgba(237,255,237,1) 0%, rgba(237,255,237,1) 30%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%);
+  background: rgb(237, 255, 237);
+  background: linear-gradient(
+    180deg,
+    rgba(237, 255, 237, 1) 0%,
+    rgba(237, 255, 237, 1) 30%,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .event-content h2 {
@@ -42,11 +52,11 @@
   height: 60px;
   text-align: left;
   font-size: 1em;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 .event-top {
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -55,27 +65,27 @@
 }
 
 .event-side-info h4 {
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 aside {
   width: 100px;
-  margin-top:20px;
+  margin-top: 20px;
   text-align: left;
 }
 
 aside h4 {
   margin-top: 0;
   text-align: left;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 aside h5 {
   margin-top: 0;
   text-align: left;
-  margin-bottom:30px;
+  margin-bottom: 30px;
   font-size: 18px;
-  color:#379f48
+  color: #379f48;
 }
 
 .event-header {
@@ -83,7 +93,7 @@ aside h5 {
 }
 
 .event-text-buttons {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
@@ -92,8 +102,8 @@ aside h5 {
 .buttons {
   display: flex;
   justify-content: space-around;
-  width:240px;
-  height:fit-content;
+  width: 240px;
+  height: fit-content;
 }
 
 .register-button {
@@ -112,9 +122,9 @@ aside h5 {
 .register-button:hover {
   font-weight: bold;
   background-color: #0b6e1a;
-  border-color:#0b6e1a;
-  color:white;
-  cursor:pointer;
+  border-color: #0b6e1a;
+  color: white;
+  cursor: pointer;
 }
 
 .close-button {
@@ -132,53 +142,53 @@ aside h5 {
 
 .close-button:hover {
   font-weight: bold;
-  color:white;
+  color: white;
   background-color: #0b6e1a;
-  border-color:#0b6e1a;
-  cursor:pointer;
+  border-color: #0b6e1a;
+  cursor: pointer;
 }
 
 .main-content {
-  clear:both;
-  height:300px;
+  clear: both;
+  height: 300px;
 }
 
 .main-content > section {
-  background-color: rgba(255,255,255,0.8);
-  width:100%;
-  height:100%;
-  display:flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  display: flex;
   justify-content: space-between;
 }
 
 .main-content > section > article {
   width: 600px;
   height: 400px;
-  padding:0px;
+  padding: 0px;
   box-sizing: border-box;
   text-align: left;
   font-size: 1em;
-  margin:0px;
+  margin: 0px;
 }
 
 .organiser-photo {
-  width:100%;
+  width: 100%;
 }
 
 .main-content > section > div {
-  width:310px;
-  height:410px;
-  text-align:left;
+  width: 310px;
+  height: 410px;
+  text-align: left;
   box-sizing: border-box;
 }
 
 .main-content h4 {
-  margin-top:20;
-  margin-bottom:15px;
+  margin-top: 20;
+  margin-bottom: 15px;
 }
 
 .main-content ul {
-  padding-left:30px;
+  padding-left: 30px;
 }
 
 /*Event Bubble*/
@@ -195,13 +205,13 @@ aside h5 {
   transition: 0.2s ease-in-out;
   font-size: 16px;
   background-color: #edffed;
-  
+
   &:hover {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     background-color: rgba(0, 255, 0, 0.1);
     transition: 0.3s ease;
     transform: translateY(-4px);
-    cursor:pointer;
+    cursor: pointer;
   }
 
   .event-bubble {
@@ -226,7 +236,7 @@ aside h5 {
     width: 90%;
     height: 40px;
     margin: 20px 20px auto 20px;
-    color:white;
+    color: white;
   }
 
   .event-middle {
@@ -265,7 +275,6 @@ aside h5 {
 //Main
 
 .event--preview button {
-  
   color: var(--gray);
   text-align: left;
   border-radius: 16px;
@@ -273,7 +282,7 @@ aside h5 {
   border: none;
   padding: 0;
   transition: 0.3s ease;
-  
+
   &:hover {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     background-color: rgba(0, 255, 0, 0.1);
@@ -320,7 +329,6 @@ aside h5 {
 // active feed
 
 .event--active-feed button {
-  
   color: var(--gray);
   text-align: left;
   border-radius: 16px;
@@ -328,8 +336,8 @@ aside h5 {
   border: none;
   padding: 0;
   transition: 0.3s ease;
-  margin-bottom: 30px;;
-  
+  margin-bottom: 30px;
+
   &:hover {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     background-color: rgba(0, 255, 0, 0.1);
@@ -340,7 +348,7 @@ aside h5 {
 
   .event-bubble {
     min-width: 280px;
-    width:280px;
+    width: 280px;
     min-height: 320px;
     height: fit-content;
   }
@@ -370,5 +378,4 @@ aside h5 {
     letter-spacing: 0.5px;
     line-height: 130%;
   }
-
 }
