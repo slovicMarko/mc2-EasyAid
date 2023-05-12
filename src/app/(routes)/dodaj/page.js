@@ -73,18 +73,6 @@ function DodajAkciju() {
       [e.target.name]: e.target.value,
     }));
   };
-  /*
-  const handleChangeImage = async (e) => {
-    try {
-      setInput((prevState) => ({
-        ...prevState,
-        [e.target.image]: e.target.file[0],
-      }));
-      console.log(e.target.name);
-    } catch (error) {
-      console.error("Error uploading image: ", error);
-    }
-  };*/
 
   const uploadImage = async (file) => {
     try {
@@ -106,7 +94,7 @@ function DodajAkciju() {
           <input
             className="input"
             name="title"
-            placeholder="naslov"
+            placeholder="Ime akcije"
             type="text"
             onChange={handleChange}
             value={input.title}
@@ -118,7 +106,7 @@ function DodajAkciju() {
           rows="10"
           cols="40"
           className="input-textarea"
-          placeholder="opis"
+          placeholder="Ukratko opišite akciju"
           name="description"
           onChange={handleChange}
           value={input.description}
@@ -148,7 +136,7 @@ function DodajAkciju() {
           <input
             className="input"
             name="city"
-            placeholder="grad"
+            placeholder="Gdje se odvija akcija?"
             type="text"
             onChange={handleChange}
             value={input.city}
@@ -159,7 +147,7 @@ function DodajAkciju() {
           <input
             className="input"
             name="number_volunteer"
-            placeholder="broj volontera"
+            placeholder="Koliko je broj volontera?"
             min={1}
             type="number"
             onChange={handleChange}
