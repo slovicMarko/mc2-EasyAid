@@ -110,28 +110,28 @@
 }
 
 .about-easyAid {
+  width:990px;
   display: flex;
-  justify-content: flex-start;
+  justify-content:space-between;
 }
 
 .image-container {
-  margin: 0 10px;
-  width: fit-content;
+  margin: 0;
+  width: 635px;
 
   .photo1 {
     object-fit: contain;
     width: 100%;
     position: relative;
     height: unset;
-    max-height: 380px;
   }
 }
 
 .side-text {
   color: var(--gray);
-  max-width: 300px;
+  max-width: 280px;
   width: fit-content;
-  margin: 0 20px 0 80px;
+  margin: 0px;
 
   h4 {
     margin: 0 0 24px;
