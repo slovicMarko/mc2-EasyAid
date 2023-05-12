@@ -135,11 +135,12 @@ function DodajAkciju() {
           />
         </div>
         <div className="form-field">
-          <label for="background-about-image">Pozadinska slika:</label>
+          <label htmlFor="background-about-image">Pozadinska slika:</label>
           <input
             type="file"
             name="image"
             accept="image/png, image/jpeg"
+            id="background-about-image"
             onChange={(e) => uploadImage(e.target.files[0])}
           />
         </div>
