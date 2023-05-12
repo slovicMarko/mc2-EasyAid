@@ -14,7 +14,7 @@ export const Event = ({ onClose, title, date, organizer, about }) => {
           </div>
           <div className="event-side-info">
             <h4>{date}</h4>
-            <h3>mjesto to i to</h3>
+            <h3>Zagreb</h3>
           </div>
           <aside>
             <h4>Potrebno</h4>
@@ -27,15 +27,6 @@ export const Event = ({ onClose, title, date, organizer, about }) => {
           <section>
             <article>
               <img src="/images/mainContentBack1.jpg" className="organiser-photo"/>
-              {/*<div>
-                <h4>Potrebni materijali</h4>
-                <ul>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                </ul>
-              </div>*/}
             </article>
             <div className="event-text-buttons">
               <p>{about}</p>

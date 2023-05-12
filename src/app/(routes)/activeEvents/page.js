@@ -12,17 +12,17 @@ const isActive = (href) => {
 const activeEvents = [
   {
     id: 1,
-    title: "Event 1 na kojem radis to to i to",
+    title: "Event 1",
     date: "1. ožujka. 2023.",
     organizer: "Hrvatski Crveni Križ",
-    about: "Loremm u bj bh bh bhb hbh bh bh bh bhb h hbh bh bh bhb hb m",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: 2,
     title: "Event 2",
     date: "1. travnja. 2023.",
     organizer: "72 sata bez kompromisa",
-    about: "Loremmmf",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const activeEvents = [
     date: "1. svibnja. 2023.",
     organizer: "Župa Kutina",
     about:
-      "Loremfs hhhh hhhh hhhhhhhhh hhhhhhhhhhhh hhhhhhhh hhhhhhhhh hhhh hhhhhhhmm",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 
@@ -40,21 +40,14 @@ const pastEvents = [
     title: "Event 0",
     date: "1. ožujka. 2023.",
     organizer: "Hrvatski Crveni Križ",
-    about: "Loremm u bj bh bh bhb hbh bh bh bh bhb h hbh bh bh bhb hb m",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: -1,
     title: "Event -1",
-    date: "nekad",
+    date: "2. siječnja. 2023.",
     organizer: "72 sata bez kompromisa",
-    about: "Loremmmf",
-  },
-  {
-    id: -2,
-    title: "Event -2 s tim i tim naslovom",
-    date: "nekad",
-    organizer: "Župa Kutina",
-    about: "Lorem sdnshdi iwiichiihieh ihw hwi oiwi ni wi iwni",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 

@@ -15,33 +15,31 @@ const isActive = (href) => {
 const organiserEvents = [
   {
     id: 1,
-    title: "Event 1 na kojem radis to to i to",
+    title: "Event 1",
     date: "1. ožujka. 2023.",
     organizer: "Hrvatski Crveni Križ",
-    about: "Loreremm u bj bh bh bhb hbh bh bh bh bhb h hbh bh bh bhb hb mmmm",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: 2,
     title: "Event 2",
     date: "1. travnja. 2023.",
     organizer: "72 sata bez kompromisa",
-    about: "Loremmmf",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: 3,
     title: "Event 3",
     date: "1. svibnja. 2023.",
     organizer: "Župa Kutina",
-    about:
-      "Loremfs hhhh hhhh hhhhhhhhh hhhhhhhhhhhh hhhhhhhh hhhhhhhhh hhhh hhhhhhhmm",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",  
   },
   {
     id: 4,
     title: "Event 4",
     date: "1. prosinca. 2023.",
     organizer: "Caritas Zagreb",
-    about:
-      "Loremfs dgdfdfhdfhdfh hhhhhhhhhhhh hhhhhhhh hhhhhhhhh hhhh hhhhhhhmm",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",  
   },
 ];
 
