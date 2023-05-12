@@ -22,6 +22,7 @@ Glavne funkcije:
 - [x] Povezati odjavu s Firebase
 - [x] Povezati register s Firebase
 - [x] Povezati objavu akcija
+- [ ] Na stranici Profil dodati formu i gdje će korisnik moći uređivati svoje podatke
 
 Dodatne funkcije:
 

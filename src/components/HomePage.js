@@ -90,6 +90,7 @@ function HomePage() {
               alt="Volonteri"
               layout="responsive"
               className="photo1"
+              style={{borderRadius: "20px"}}
             />
           </div>
           <div className="side-text">

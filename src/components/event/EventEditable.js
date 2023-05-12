@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
 import "./../cssFiles/eventEditable.scss";
 import { Event } from "./eventModal";
 import { EventEditModal } from "./EventEditableModal";
@@ -28,13 +30,8 @@ export function EventEdit({ title, date, organizer, about }) {
   return (
     <div className="event-organiser">
       <button id="edit-button" onClick={handleFormClick}>
-        Edit
+        <FontAwesomeIcon icon={faPen} className="edit-icon" />
       </button>
-      {/*
-      <button id="info-button" >
-          Info
-      </button>
-      */}
       <button onClick={handleEventClick}>
         <div className="event-edit-bubble">
           <div className="event-edit-bubble-header">

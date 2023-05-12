@@ -9,7 +9,7 @@ import { initializeApp } from "firebase/app";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 import firebaseConfig from "../../../firebase/FirebaseConfig";
 
-import "../login/login.scss";
+import "./dodajAkciju.scss";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -29,6 +29,11 @@ function DodajAkciju() {
     number_volunteer: "",
     image: "",
   });
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push("/organiser");
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -96,15 +101,10 @@ function DodajAkciju() {
       <div className="background-logo">
         <img src="/images/logo.svg" alt="background-logo" />
       </div>
-      <form
-        autoComplete="off"
-        className="form"
-        onSubmit={handleSubmit}
-      >
+      <form autoComplete="off" className="form" onSubmit={handleSubmit}>
         <div className="form-field">
           <input
-            className="input input--text"
-            id="formInput#text"
+            className="input"
             name="title"
             placeholder="naslov"
             type="text"
@@ -117,7 +117,7 @@ function DodajAkciju() {
         <textarea
           rows="10"
           cols="40"
-          className=""
+          className="input-textarea"
           placeholder="opis"
           name="description"
           onChange={handleChange}
@@ -126,22 +126,11 @@ function DodajAkciju() {
         <div className="form-field">
           <input
             className="input"
-            id="formInput#text"
+            placeholder="dd.mm.yyyy."
+            pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}"
             name="date"
             type="date"
             onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-field">
-          <input
-            className="input input--text"
-            id="formInput#text"
-            name="description"
-            placeholder="opis"
-            type="text"
-            onChange={handleChange}
-            value={input.description}
             required
           />
         </div>
@@ -156,7 +145,7 @@ function DodajAkciju() {
         </div>
         <div className="form-field">
           <input
-            className="input input--text"
+            className="input"
             name="city"
             placeholder="grad"
             type="text"
@@ -167,22 +156,22 @@ function DodajAkciju() {
         </div>
         <div className="form-field">
           <input
-            className="input input--text"
+            className="input"
             name="number_volunteer"
             placeholder="broj volontera"
+            min={1}
             type="number"
             onChange={handleChange}
             value={input.number_volunteer}
           />
         </div>
 
-        <div className="form-field">
-          <button
-            title="Spremi"
-            type="submit"
-            className="login-btn"
-          >
-            Spremi
+        <div className="buttons-dodaj">
+          <button title="Odustani" onClick={handleClick} className="cancel-btn">
+            Odustani
+          </button>
+          <button title="Spremi" type="submit" className="save-btn">
+            Dodaj
           </button>
         </div>
       </form>

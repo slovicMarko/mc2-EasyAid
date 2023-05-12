@@ -108,13 +108,18 @@
 .add-icon {
   background-color: white;
   color: #379f48;
-  font-size: 100px;
-  position: absolute;
-  right: 40px;
-  top: 110px;
+  font-size: 84px;
+  position: fixed;
+  right: 68px;
+  bottom: 48px;
   border-radius: 50%;
   z-index: 20;
   transition: 0.4s ease;
+}
+
+.edit-icon{
+  color: #fff;
+  font-size: 24px;
 }
 
 .add-icon:hover {

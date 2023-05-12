@@ -72,10 +72,8 @@
 }
 .link-btn.green-btn:hover {
   transition: 0.4s ease;
-  background-color: #2cd849;
-  color: var(--gray);
-  border-color: #2cd849;
-  font-weight: bold;
+  background-color: var(--hoverGreen);
+  border-color: var(--hoverGreen);
 }
 
 .link-btn.regular-btn {
@@ -85,8 +83,8 @@
 
 .link-btn.regular-btn:hover {
   transition: 0.4s ease;
-  background-color: var(--greenBtn);
-  border: 2px solid var(--greenBtn);
+  background-color: var(--hoverGreen);
+  border: 2px solid var(--hoverGreen);
   color: #fff;
   font-weight: bold;
 }

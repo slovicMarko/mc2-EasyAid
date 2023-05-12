@@ -3,9 +3,12 @@
 :root {
   --greenBtn: #379f48;
   --gray: #303030;
+  --hoverGreen: #0b6e1a;
+  --hoverLightGreen: #2cd849;
 }
 
 body {
+  color: var(--gray);
   background: #fff;
   overflow-x: hidden;
   font-family: "Roboto";
