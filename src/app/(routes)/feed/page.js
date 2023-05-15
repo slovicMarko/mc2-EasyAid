@@ -56,7 +56,6 @@ function MainFeed() {
         <Leaderboard />
       </aside>
       <div>
-        {finishedLoadingAndCanShow && (
           <div>
             {feedEvents.map((event) => (
               <EventBubble
@@ -71,7 +70,6 @@ function MainFeed() {
               />
             ))}
           </div>
-        )}
       </div>
     </div>
   );

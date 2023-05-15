@@ -7,7 +7,7 @@ import { getAuth } from "firebase/auth";
 function SignOut(isInNavbar) {
   const auth = getAuth();
   const router = useRouter();
-  const handleSignOut = (e) => {
+  const handleSignOut = () => {
     auth
       .signOut()
       .then(() => {
