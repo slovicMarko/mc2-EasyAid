@@ -1,9 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import akcija1 from "public/images/akcija1.png";
 import { EventBubble } from "@/components/event/event";
 import InLove from "@/components/inLoveSVG.js";
 import "./cssFiles/HomePage.scss";
+import { getAuth } from "firebase/auth";
 
 const homeEvents = [
   {
@@ -31,6 +35,10 @@ const homeEvents = [
 ];
 
 function HomePage() {
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  const auth = getAuth();
+
   return (
     <>
       <div className="front-windows">
@@ -46,7 +54,10 @@ function HomePage() {
             <Link className="link-btn green-btn" href="/feed">
               Pronađi događaj
             </Link>
-            <Link className="link-btn regular-btn" href="/">
+            <Link
+              className="link-btn regular-btn"
+              href={auth.currentUser ? "/organiser" : "/login"}
+            >
               Stvori događaj
             </Link>
           </div>
@@ -90,7 +101,7 @@ function HomePage() {
               alt="Volonteri"
               layout="responsive"
               className="photo1"
-              style={{borderRadius: "20px"}}
+              style={{ borderRadius: "20px" }}
             />
           </div>
           <div className="side-text">
@@ -123,7 +134,10 @@ function HomePage() {
               akciju? Nudimo vam aplikaciju u kojoj možete dogovoriti sve
               detalje unutar jednog obrasca.
             </p>
-            <Link className="link-btn regular-btn" href="/">
+            <Link
+              className="link-btn regular-btn"
+              href={auth.currentUser ? "/organiser" : "/login"}
+            >
               Stvori događaj
             </Link>
           </div>
