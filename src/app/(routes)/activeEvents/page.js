@@ -51,12 +51,19 @@ const pastEvents = [
 ];
 
 function ActiveFeed() {
-  const [loading, setLoading] = useState(true);
-  const [canShow, setCanShow] = useState(false);
+  //const [loading, setLoading] = useState(true);
+  //const [canShow, setCanShow] = useState(false);
 
-  const router = useRouter();
+  //const router = useRouter();
 
-  const finishedLoadingAndCanShow = loading && !canShow;
+  //const finishedLoadingAndCanShow = loading && !canShow;
+
+  const [showEvent, setShowEvent] = useState(false);
+
+  const handleClick = () => {
+    console.log("radi djelomicno sad treba rj div");
+    setShowEvent(true);
+  }
 
   return (
     <div>
@@ -68,12 +75,13 @@ function ActiveFeed() {
               <EventBubble
                 key={event.id}
                 isPreview={false}
-                isInActive
+                isInActive={true}
                 isInFeed={false}
                 title={event.title}
                 date={event.date}
                 organizer={event.organizer}
                 about={event.about}
+                activeFunc={handleClick}
               />
             ))}
           </div>
@@ -83,7 +91,7 @@ function ActiveFeed() {
               <EventBubble
                 key={event.id}
                 isPreview={false}
-                isInActive
+                isInActive={true}
                 isInFeed={false}
                 title={event.title}
                 date={event.date}
@@ -94,7 +102,9 @@ function ActiveFeed() {
           </div>
         </section>
         <section id="section-info">
-          <div id="about-event"></div>
+          <div id="about-event">
+
+          </div>
           <hr />
           <div className="overall-statistics">
             <h2>Odrađenih akcija</h2>

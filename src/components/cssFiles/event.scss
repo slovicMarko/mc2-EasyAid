@@ -379,3 +379,9 @@ aside h5 {
     line-height: 130%;
   }
 }
+
+@media only screen and (max-width:1000px) {
+  .event-button button {
+      min-width:400px;
+  }
+}

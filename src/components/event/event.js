@@ -12,6 +12,7 @@ export function EventBubble({
   date,
   organizer,
   about,
+  activeFunc,
 }) {
   const [isEventOpen, setIsEventOpen] = useState(false);
 
@@ -36,7 +37,7 @@ export function EventBubble({
 
   return (
     <div className={eventClass}>
-      <button onClick={handleEventClick}>
+      <button onClick={isInActive ? activeFunc : handleEventClick}>
         <div className="event-bubble">
           <div className="event-bubble-header">
             <h2>{title}</h2>
