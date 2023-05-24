@@ -194,12 +194,12 @@ aside h5 {
 /*Event Bubble*/
 
 .event-button button {
-  width: 30%;
-  min-width: 600px;
+  //width: 30%;
+  width: 500px;
   height: 18%;
   min-height: 300px;
   padding: 0;
-  margin: 50px 0 0 0;
+  //margin: 50px 0 0 0;
   border-radius: 16px;
   border: none;
   transition: 0.2s ease-in-out;
@@ -210,7 +210,7 @@ aside h5 {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     background-color: rgba(0, 255, 0, 0.1);
     transition: 0.3s ease;
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     cursor: pointer;
   }
 
@@ -287,7 +287,7 @@ aside h5 {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     background-color: rgba(0, 255, 0, 0.1);
     transition: 0.3s ease;
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     cursor: pointer;
   }
 
@@ -342,14 +342,14 @@ aside h5 {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     background-color: rgba(0, 255, 0, 0.1);
     transition: 0.3s ease;
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     cursor: pointer;
   }
 
   .event-bubble {
-    min-width: 280px;
-    width: 280px;
-    min-height: 320px;
+    min-width: 500px;
+    width: 500px;
+    min-height: 300px;
     height: fit-content;
   }
 

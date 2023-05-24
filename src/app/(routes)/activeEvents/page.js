@@ -31,6 +31,7 @@ const activeEvents = [
     organizer: "Župa Kutina",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
+  
 ];
 
 const pastEvents = [
@@ -50,13 +51,8 @@ const pastEvents = [
   },
 ];
 
+/*
 function ActiveFeed() {
-  //const [loading, setLoading] = useState(true);
-  //const [canShow, setCanShow] = useState(false);
-
-  //const router = useRouter();
-
-  //const finishedLoadingAndCanShow = loading && !canShow;
 
   const [showEvent, setShowEvent] = useState(false);
 
@@ -113,6 +109,59 @@ function ActiveFeed() {
             <p>8 sati</p>
             <h2>Broj različitih organizacija</h2>
             <p>3</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
+
+export default ActiveFeed;
+*/
+
+function ActiveFeed() {
+
+  const [showEvent, setShowEvent] = useState(false);
+
+  const handleClick = () => {
+    console.log("radi djelomicno sad treba rj div");
+    setShowEvent(true);
+  }
+
+  return (
+    <div>
+      <div className="active-feed">
+        <section className="section-events">
+          <h1>Aktivne akcije</h1>
+          <div className="active-events">
+            {activeEvents.map((event) => (
+              <EventBubble
+                key={event.id}
+                isPreview={false}
+                isInActive={true}
+                isInFeed={false}
+                title={event.title}
+                date={event.date}
+                organizer={event.organizer}
+                about={event.about}
+                activeFunc={handleClick}
+              />
+            ))}
+          </div>
+          <h1>Prošle akcije</h1>
+          <div className="past-events">
+            {pastEvents.map((event) => (
+              <EventBubble
+                key={event.id}
+                isPreview={false}
+                isInActive={true}
+                isInFeed={false}
+                title={event.title}
+                date={event.date}
+                organizer={event.organizer}
+                about={event.about}
+              />
+            ))}
           </div>
         </section>
       </div>

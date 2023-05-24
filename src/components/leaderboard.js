@@ -43,12 +43,7 @@ const leaderboardData = [
     name: "Dubravko Dubravkić",
     score: 3,
   },
-  {
-    place: 8,
-    profilePic: "/images/profilePic.jpg",
-    name: "Jelena Jelinić",
-    score: 2,
-  },
+
 ];
 
 export const Leaderboard = () => {
