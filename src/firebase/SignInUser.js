@@ -37,11 +37,10 @@ function Login() {
         router.push("/feed");
       })
       .catch((err) => {
-        if (
-          err.code === AuthErrorCodes.INVALID_PASSWORD ||
-          err.code === AuthErrorCodes.USER_DELETED
-        ) {
-          setError("Neispravan email ili lozinka.");
+        if (err.code === AuthErrorCodes.INVALID_PASSWORD) {
+          setError("Neispravna lozinka.");
+        } else if (err.code === AuthErrorCodes.USER_DELETED) {
+          setError("Korisnik ne postoji.");
         } else {
           console.log(err.code);
           alert(err.code);
