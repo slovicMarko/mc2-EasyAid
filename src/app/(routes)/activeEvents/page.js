@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { EventBubble } from "@/components/event/event";
 import "./active.scss";
+import { getAuth } from "firebase/auth";
 
 const isActive = (href) => {
   return router.pathname === href;
@@ -31,7 +32,6 @@ const activeEvents = [
     organizer: "Župa Kutina",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
-  
 ];
 
 const pastEvents = [
@@ -120,52 +120,60 @@ export default ActiveFeed;
 */
 
 function ActiveFeed() {
+  const auth = getAuth();
+  const router = useRouter();
 
   const [showEvent, setShowEvent] = useState(false);
 
   const handleClick = () => {
     console.log("radi djelomicno sad treba rj div");
     setShowEvent(true);
-  }
+  };
 
-  return (
-    <div>
-      <div className="active-feed">
-        <section className="section-events">
-          <h1>Aktivne akcije</h1>
-          <div className="active-events">
-            {activeEvents.map((event) => (
-              <EventBubble
-                key={event.id}
-                isPreview={false}
-                isInActive={true}
-                isInFeed={false}
-                title={event.title}
-                date={event.date}
-                organizer={event.organizer}
-                about={event.about}
-                activeFunc={handleClick}
-              />
-            ))}
-          </div>
-          <h1>Prošle akcije</h1>
-          <div className="past-events">
-            {pastEvents.map((event) => (
-              <EventBubble
-                key={event.id}
-                isPreview={false}
-                isInActive={true}
-                isInFeed={false}
-                title={event.title}
-                date={event.date}
-                organizer={event.organizer}
-                about={event.about}
-              />
-            ))}
-          </div>
-        </section>
+  return auth.currentUser ? (
+    auth.currentUser.emailVerified ? (
+      <div>
+        <div className="active-feed">
+          <section className="section-events">
+            <h1>Aktivne akcije</h1>
+            <div className="active-events">
+              {activeEvents.map((event) => (
+                <EventBubble
+                  key={event.id}
+                  isPreview={false}
+                  isInActive={true}
+                  isInFeed={false}
+                  title={event.title}
+                  date={event.date}
+                  organizer={event.organizer}
+                  about={event.about}
+                  activeFunc={handleClick}
+                />
+              ))}
+            </div>
+            <h1>Prošle akcije</h1>
+            <div className="past-events">
+              {pastEvents.map((event) => (
+                <EventBubble
+                  key={event.id}
+                  isPreview={false}
+                  isInActive={true}
+                  isInFeed={false}
+                  title={event.title}
+                  date={event.date}
+                  organizer={event.organizer}
+                  about={event.about}
+                />
+              ))}
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
+    ) : (
+      router.push("/feed")
+    )
+  ) : (
+    router.push("/feed")
   );
 }
 

@@ -8,6 +8,8 @@ import { useRouter } from "next/navigation";
 import { EventEdit } from "@/components/event/EventEditable";
 import "./organiser.scss";
 
+import { getAuth } from "firebase/auth";
+
 const isActive = (href) => {
   return router.pathname === href;
 };
@@ -32,14 +34,14 @@ const organiserEvents = [
     title: "Event 3",
     date: "1. svibnja. 2023.",
     organizer: "Župa Kutina",
-    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",  
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: 4,
     title: "Event 4",
     date: "1. prosinca. 2023.",
     organizer: "Caritas Zagreb",
-    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",  
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 
@@ -47,6 +49,7 @@ function OrganiserFeed() {
   const [loading, setLoading] = useState(true);
   const [canShow, setCanShow] = useState(false);
 
+  const auth = getAuth();
   const router = useRouter();
 
   const addEvent = () => {
@@ -55,27 +58,33 @@ function OrganiserFeed() {
 
   const finishedLoadingAndCanShow = loading && !canShow;
 
-  return (
-    <div>
-      <FontAwesomeIcon
-        icon={faCirclePlus}
-        className="add-icon"
-        onClick={addEvent}
-      />
-      {finishedLoadingAndCanShow && (
-        <div>
-          {organiserEvents.map((event) => (
-            <EventEdit
-              key={event.id}
-              title={event.title}
-              date={event.date}
-              organizer={event.organizer}
-              about={event.about}
-            />
-          ))}
-        </div>
-      )}
-    </div>
+  return auth.currentUser ? (
+    auth.currentUser.emailVerified ? (
+      <div>
+        <FontAwesomeIcon
+          icon={faCirclePlus}
+          className="add-icon"
+          onClick={addEvent}
+        />
+        {finishedLoadingAndCanShow && (
+          <div>
+            {organiserEvents.map((event) => (
+              <EventEdit
+                key={event.id}
+                title={event.title}
+                date={event.date}
+                organizer={event.organizer}
+                about={event.about}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    ) : (
+      router.push("/feed")
+    )
+  ) : (
+    router.push("/feed")
   );
 }
 

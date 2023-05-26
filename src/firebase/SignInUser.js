@@ -37,12 +37,13 @@ function Login() {
         router.push("/feed");
       })
       .catch((err) => {
-        if (err.code === AuthErrorCodes.INVALID_PASSWORD) {
+        if (err.code === AuthErrorCodes.INVALID_EMAIL) {
+          setError("Neispravna email adresa.");
+        } else if (err.code === AuthErrorCodes.INVALID_PASSWORD) {
           setError("Neispravna lozinka.");
         } else if (err.code === AuthErrorCodes.USER_DELETED) {
           setError("Korisnik ne postoji.");
         } else {
-          console.log(err.code);
           alert(err.code);
         }
       });
@@ -63,11 +64,12 @@ function Login() {
       <div className="app-name">EasyAid</div>
       <form autoComplete="off" className="form" onSubmit={handleSubmit}>
         <div className="form-field">
+          <p className="form-label">Email</p>
           <input
-            className="input input--text"
+            className="input"
             id="formInput#text"
             name="email"
-            placeholder="unesi email"
+            placeholder="primjer@email.com"
             type="text"
             onChange={handleChange}
             value={input.email}
@@ -76,11 +78,12 @@ function Login() {
           />
         </div>
         <div className="form-field">
+          <p className="form-label">Lozinka</p>
           <input
-            className="input input--password"
-            id="formInput#passwprd"
+            className="input"
+            id="formInput#password"
             name="password"
-            placeholder="unesi lozinku"
+            placeholder="Pr!mjer123"
             onChange={handleChange}
             value={input.password}
             type="password"

@@ -22,14 +22,16 @@ function NavigationNavbar() {
         Aktivne akcije
       </Link>
       {user ? (
-        <>
-          <Link className="btn--nav" href="/activeEvents">
-            Prijavljene akcije
-          </Link>
-          <Link className="btn--nav" href="/organiser">
-            Moje akcije
-          </Link>
-        </>
+        user.emailVerified ? (
+          <>
+            <Link className="btn--nav" href="/activeEvents">
+              Prijavljene akcije
+            </Link>
+            <Link className="btn--nav" href="/organiser">
+              Moje akcije
+            </Link>
+          </>
+        ) : null
       ) : null}
     </div>
   );

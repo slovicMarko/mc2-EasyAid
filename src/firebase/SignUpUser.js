@@ -13,6 +13,7 @@ import {
 
 import firebaseConfig from "./FirebaseConfig";
 import { initializeApp } from "firebase/app";
+import checkPasswordStrength from "./checkPassword";
 
 const app = initializeApp(firebaseConfig);
 
@@ -23,12 +24,8 @@ function Register() {
     password: "",
   });
   const [error, setError] = useState(null);
-
   const router = useRouter();
   const auth = getAuth();
-
-  let user = auth.currentUser;
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setError("");
@@ -36,31 +33,35 @@ function Register() {
     let username = input.username;
     let password = input.password;
 
-    createUserWithEmailAndPassword(auth, email, password)
+
+    createUserWithEmailAndPassword(
+      auth,
+      email,
+      checkPasswordStrength(password) ? password : " "
+    )
       .then((userCredential) => {
         const user = userCredential.user;
         updateProfile(user, {
           displayName: username,
         })
           .then(() => {
-            console.log("Profile updated");
             router.push(`/profile/${user.displayName}`);
           })
           .catch((error) => {
-            const errorCode = error.code;
             const errorMessage = error.message;
+            alert(errorMessage);
           });
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
+
         if (errorCode === AuthErrorCodes.INVALID_EMAIL) {
           setError("Neispravna email adresa.");
         } else if (errorCode === AuthErrorCodes.WEAK_PASSWORD) {
-          setError("Lozinka mora sadržavati minimalno 6 znakova.");
+          setError(
+            "Šifra mora sadržavati 8 znakova, veliko i malo slovo, specijalan znak i broj."
+          );
         } else {
-          console.log(errorCode);
-          alert(errorCode);
         }
       });
   };
@@ -80,11 +81,12 @@ function Register() {
       <div className="app-name">EasyAid</div>
       <form autoComplete="off" className="form" onSubmit={handleSubmit}>
         <div className="form-field">
+          <p className="form-label">Email</p>
           <input
             className="input input--text"
             id="formInput#email"
             name="email"
-            placeholder="unesi email"
+            placeholder="primjer@email.com"
             type="text"
             onChange={handleChange}
             value={input.email}
@@ -93,11 +95,12 @@ function Register() {
           />
         </div>
         <div className="form-field">
+          <p className="form-label">Korisničko ime</p>
           <input
             className="input input--text"
             id="formInput#text"
             name="username"
-            placeholder="unesi korisničko ime"
+            placeholder="Primjer"
             type="text"
             onChange={handleChange}
             value={input.username}
@@ -106,11 +109,12 @@ function Register() {
           />
         </div>
         <div className="form-field">
+          <p className="form-label">Lozinka</p>
           <input
             className="input input--password"
             id="formInput#passwprd"
             name="password"
-            placeholder="unesi lozinku"
+            placeholder="Pr!mjer123"
             onChange={handleChange}
             value={input.password}
             type="password"
