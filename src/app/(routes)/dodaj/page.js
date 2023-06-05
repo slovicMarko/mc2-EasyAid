@@ -19,6 +19,7 @@ const storage = getStorage();
 function DodajAkciju() {
   const auth = getAuth();
   const router = useRouter();
+
   const [input, setInput] = useState({
     active: true,
     title: "",
@@ -86,97 +87,87 @@ function DodajAkciju() {
     }
   };
 
-  return auth.currentUser ? (
-    auth.currentUser.emailVerified ? (
-      <div className="form-container">
-        <div className="background-logo">
-          <img src="/images/logo.svg" alt="background-logo" />
-        </div>
-        <form autoComplete="off" className="form" onSubmit={handleSubmit}>
-          <div className="form-field">
-            <input
-              className="input"
-              name="title"
-              placeholder="Ime akcije"
-              type="text"
-              onChange={handleChange}
-              value={input.title}
-              required
-            />
-          </div>
-
-          <textarea
-            rows="10"
-            cols="40"
-            className="input-textarea"
-            placeholder="Ukratko opišite akciju"
-            name="description"
-            onChange={handleChange}
-            value={input.description}
-          ></textarea>
-          <div className="form-field">
-            <input
-              className="input"
-              placeholder="dd.mm.yyyy."
-              pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}"
-              name="date"
-              type="date"
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="background-about-image">Pozadinska slika:</label>
-            <input
-              type="file"
-              name="image"
-              accept="image/png, image/jpeg"
-              id="background-about-image"
-              onChange={(e) => uploadImage(e.target.files[0])}
-            />
-          </div>
-          <div className="form-field">
-            <input
-              className="input"
-              name="city"
-              placeholder="Gdje se odvija akcija?"
-              type="text"
-              onChange={handleChange}
-              value={input.city}
-              required
-            />
-          </div>
-          <div className="form-field">
-            <input
-              className="input"
-              name="number_volunteer"
-              placeholder="Koliko je broj volontera?"
-              min={1}
-              type="number"
-              onChange={handleChange}
-              value={input.number_volunteer}
-            />
-          </div>
-
-          <div className="buttons-dodaj">
-            <button
-              title="Odustani"
-              onClick={handleClick}
-              className="cancel-btn"
-            >
-              Odustani
-            </button>
-            <button title="Spremi" type="submit" className="save-btn">
-              Dodaj
-            </button>
-          </div>
-        </form>
+  return (
+    <div className="form-container">
+      <div className="background-logo">
+        <img src="/images/logo.svg" alt="background-logo" />
       </div>
-    ) : (
-      router.push("/feed")
-    )
-  ) : (
-    router.push("/feed")
+      <form autoComplete="off" className="form" onSubmit={handleSubmit}>
+        <div className="form-field">
+          <input
+            className="input"
+            name="title"
+            placeholder="Ime akcije"
+            type="text"
+            onChange={handleChange}
+            value={input.title}
+            required
+          />
+        </div>
+
+        <textarea
+          rows="10"
+          cols="40"
+          className="input-textarea"
+          placeholder="Ukratko opišite akciju"
+          name="description"
+          onChange={handleChange}
+          value={input.description}
+        ></textarea>
+        <div className="form-field">
+          <input
+            className="input"
+            placeholder="dd.mm.yyyy."
+            pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}"
+            name="date"
+            type="date"
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="background-about-image">Pozadinska slika:</label>
+          <input
+            type="file"
+            name="image"
+            accept="image/png, image/jpeg"
+            id="background-about-image"
+            onChange={(e) => uploadImage(e.target.files[0])}
+          />
+        </div>
+        <div className="form-field">
+          <input
+            className="input"
+            name="city"
+            placeholder="Gdje se odvija akcija?"
+            type="text"
+            onChange={handleChange}
+            value={input.city}
+            required
+          />
+        </div>
+        <div className="form-field">
+          <input
+            className="input"
+            name="number_volunteer"
+            placeholder="Koliko je broj volontera?"
+            min={1}
+            type="number"
+            onChange={handleChange}
+            value={input.number_volunteer}
+          />
+        </div>
+
+        <div className="buttons-dodaj">
+          <button title="Odustani" onClick={handleClick} className="cancel-btn">
+            Odustani
+          </button>
+          <button title="Spremi" type="submit" className="save-btn">
+            Dodaj
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }
 
