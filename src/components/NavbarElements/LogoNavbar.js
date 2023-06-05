@@ -11,7 +11,8 @@ function LogoNavbar() {
           title="EasyAid"
           width={400}
           height={30}
-          style={{ objectFit: "contain" }}
+          priority
+          style={{ objectFit: "contain", width:"auto"}}
           className="logo--slika"
         />
       </Link>

@@ -99,9 +99,8 @@ function HomePage() {
             <Image
               src={akcija1}
               alt="Volonteri"
-              layout="responsive"
               className="photo1"
-              style={{ borderRadius: "20px" }}
+              style={{ borderRadius: "20px", height: "auto" }}
             />
           </div>
           <div className="side-text">
@@ -167,6 +166,8 @@ function HomePage() {
                 alt="Porsche Digital Croatia"
                 title="Porsche Digital Croatia"
                 fill
+                sizes="(max-width: 768px) 100vw"
+
                 className="sponsor"
               />
             </div>
@@ -176,6 +177,8 @@ function HomePage() {
                 alt="Tvz Mc2"
                 title="Tvz Mc2"
                 fill
+                sizes="(max-width: 768px) 100vw"
+
                 className="sponsor"
               />
             </div>
@@ -186,6 +189,7 @@ function HomePage() {
                 alt="Tehničko veleučilište u Zagrebu"
                 title="Tehničko veleučilište u Zagrebu"
                 fill
+                sizes="(max-width: 768px) 100vw"
                 className="sponsor"
               />
             </div>
