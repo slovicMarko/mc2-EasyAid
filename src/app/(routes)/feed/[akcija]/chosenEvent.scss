@@ -1,0 +1,81 @@
+:root {
+    --border-padding:15px;
+}
+
+.akcija {
+    display:flex;
+    justify-content: center;
+    height:fit-content;
+    width:100vw;
+}
+
+.akcija * {
+   //border: 1px solid grey; //maknuti kansije
+}
+
+.content {
+    max-width: 1024px;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+header {
+    background-color: #edffed;
+    display:flex;
+}
+
+header > article {
+    max-width:700px;
+    width:70%;
+    display:flex;
+    flex-direction: column;
+}
+
+header > article > h1 {
+    max-width:700px;
+    width:100%;
+    height:30px;
+    text-align: left;
+    padding:var(--border-padding);
+}
+
+header > article > h2 {
+    max-width:700px;
+    width:100%;
+    height:30px;
+    text-align: left;
+    padding:var(--border-padding);
+}
+
+header > aside {
+    max-width:300px;
+    width:30%;
+    display:flex;
+    flex-direction: column;
+}
+
+img {
+    width:100%;
+}
+
+.text-content {
+    display:flex;
+    justify-content: space-between;
+}
+
+.text-content > p {
+    width:75%;
+    max-width: 768px;
+    min-height: 300px;
+    height: fit-content;
+    padding:15px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.text-content > div {
+    padding-right: var(--border-padding);
+}

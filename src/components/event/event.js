@@ -16,6 +16,7 @@ export function EventBubble({
 }) {
   const [isEventOpen, setIsEventOpen] = useState(false);
 
+  //za modale deprecated
   const handleEventClick = () => {
     setIsEventOpen(true);
   };
@@ -23,6 +24,7 @@ export function EventBubble({
   const handleEventClose = () => {
     setIsEventOpen(false);
   };
+  //
 
   const eventClass = useMemo(() => {
     if (isPreview === true) {
@@ -37,7 +39,7 @@ export function EventBubble({
 
   return (
     <div className={eventClass}>
-      <button onClick={isInActive ? activeFunc : handleEventClick}>
+      <button onClick={activeFunc}>
         <div className="event-bubble">
           <div className="event-bubble-header">
             <h2>{title}</h2>

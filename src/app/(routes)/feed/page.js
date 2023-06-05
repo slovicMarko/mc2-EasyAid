@@ -97,6 +97,11 @@ function MainFeed() {
     return router.pathname === href; // check if the current page's URL path matches the link's href attribute
   };
 
+  const handleClick = () => {
+    console.log("radi djelomicno sad treba rj div");
+    setShowEvent(true);
+  };
+
   const finishedLoadingAndCanShow = loading && !canShow;
 
   const feedEvents = [
