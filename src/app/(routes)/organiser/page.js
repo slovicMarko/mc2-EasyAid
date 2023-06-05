@@ -50,41 +50,40 @@ function OrganiserFeed() {
   const [canShow, setCanShow] = useState(false);
 
   const auth = getAuth();
+  const user = auth.currentUser;
   const router = useRouter();
 
   const addEvent = () => {
     router.push("/dodaj");
   };
 
+  if (!user) {
+    router.push("/feed");
+  }
+
   const finishedLoadingAndCanShow = loading && !canShow;
 
-  return auth.currentUser ? (
-    auth.currentUser.emailVerified ? (
-      <div>
-        <FontAwesomeIcon
-          icon={faCirclePlus}
-          className="add-icon"
-          onClick={addEvent}
-        />
-        {finishedLoadingAndCanShow && (
-          <div>
-            {organiserEvents.map((event) => (
-              <EventEdit
-                key={event.id}
-                title={event.title}
-                date={event.date}
-                organizer={event.organizer}
-                about={event.about}
-              />
-            ))}
-          </div>
-        )}
-      </div>
-    ) : (
-      router.push("/feed")
-    )
-  ) : (
-    router.push("/feed")
+  return (
+    <div>
+      <FontAwesomeIcon
+        icon={faCirclePlus}
+        className="add-icon"
+        onClick={addEvent}
+      />
+      {finishedLoadingAndCanShow && (
+        <div>
+          {organiserEvents.map((event) => (
+            <EventEdit
+              key={event.id}
+              title={event.title}
+              date={event.date}
+              organizer={event.organizer}
+              about={event.about}
+            />
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 
