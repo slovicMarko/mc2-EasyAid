@@ -84,6 +84,7 @@ export default MainFeed;
 "use router";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Leaderboard } from "@/components/leaderboard";
 import { EventBubble } from "@/components/event/event";
 import "./feed.scss";
@@ -119,16 +120,14 @@ function MainFeed() {
       title: "Event 3",
       date: "1. svibnja. 2023.",
       organizer: "Župa Kutina",
-      about:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
       id: 4,
       title: "Event 4",
       date: "1. prosinca. 2023.",
       organizer: "Caritas Zagreb",
-      about:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
   ];
 
@@ -141,7 +140,8 @@ function MainFeed() {
       <aside>
         <Leaderboard />
       </aside>
-        {feedEvents.map((event) => (
+      {feedEvents.map((event) => (
+        <Link href={`/feed/${event.id + event.title}`}>
           <EventBubble
             key={event.id}
             isPreview={false}
@@ -152,7 +152,8 @@ function MainFeed() {
             organizer={event.organizer}
             about={event.about}
           />
-        ))}
+        </Link>
+      ))}
     </div>
   );
 }
