@@ -52,6 +52,7 @@ export function EventBubble({
         </div>
       </button>
 
+      {/*
       {isEventOpen && (
         <Event
           onClose={handleEventClose}
@@ -61,6 +62,7 @@ export function EventBubble({
           about={about}
         />
       )}
+      */}
     </div>
   );
 }
