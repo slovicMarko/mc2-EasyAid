@@ -56,6 +56,14 @@
 .section-events {
     width:1024px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-events > h1 {
+    width:1024px;
+    text-align: left;
 }
 
 .active-events {
@@ -72,4 +80,24 @@
     column-gap: 24px;
     row-gap:24px;
     justify-items: center;
+}
+
+@media (max-width:1100px) {
+    .active-events {
+        grid-template-columns: 500px; 
+        justify-content: center; 
+        justify-items: center;
+        column-gap: 0; 
+        row-gap: 24px; 
+    }
+    .past-events {
+        grid-template-columns: 500px; 
+        justify-content: center; 
+        justify-items: center;
+        column-gap: 0; 
+        row-gap: 24px; 
+    }
+    .section-events > h1 {
+        width:500px;
+    }
 }

@@ -112,6 +112,7 @@ function MainFeed() {
       date: "1. ožujka. 2023.",
       organizer: "Hrvatski Crveni Križ",
       about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      daysLeft: 4,
     },
     {
       id: 2,
@@ -119,6 +120,7 @@ function MainFeed() {
       date: "1. travnja. 2023.",
       organizer: "72 sata bez kompromisa",
       about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      daysLeft: 5,
     },
     {
       id: 3,
@@ -126,6 +128,7 @@ function MainFeed() {
       date: "1. svibnja. 2023.",
       organizer: "Župa Kutina",
       about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      daysLeft: 6,
     },
     {
       id: 4,
@@ -133,12 +136,13 @@ function MainFeed() {
       date: "1. prosinca. 2023.",
       organizer: "Caritas Zagreb",
       about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      daysLeft: 3,
     },
   ];
 
   return (
     <div className="feed-wrapper">
-      <header>
+      <header className="feed-buttons">
         <button>Filteri</button>
         <button>Sortiranje</button>
       </header>
@@ -156,6 +160,7 @@ function MainFeed() {
             date={event.date}
             organizer={event.organizer}
             about={event.about}
+            daysLeft={event.daysLeft}
           />
         </Link>
       ))}
