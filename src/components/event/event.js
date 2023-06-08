@@ -10,9 +10,11 @@ export function EventBubble({
   isInFeed,
   title,
   date,
+  daysLeft,
   organizer,
   about,
   activeFunc,
+  anyChanges,
 }) {
   const [isEventOpen, setIsEventOpen] = useState(false);
 
@@ -39,7 +41,14 @@ export function EventBubble({
 
   return (
     <div className={eventClass}>
+
       <button onClick={activeFunc}>
+        {(daysLeft < 5) ? <div className="days-alert">
+          <h2 >Još {daysLeft} dana za prijavu!</h2>
+        </div> : <></>}
+        {anyChanges ? <div className="change-alert">
+          <h2 >Promjene na akciji!</h2>
+        </div> : <></>}
         <div className="event-bubble">
           <div className="event-bubble-header">
             <h2>{title}</h2>
@@ -52,6 +61,7 @@ export function EventBubble({
         </div>
       </button>
 
+      {/*
       {isEventOpen && (
         <Event
           onClose={handleEventClose}
@@ -61,6 +71,7 @@ export function EventBubble({
           about={about}
         />
       )}
+      */}
     </div>
   );
 }
