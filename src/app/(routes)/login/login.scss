@@ -15,12 +15,35 @@
   user-select: none;
 }
 
+.input-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+
+  .input {
+    width: 126px;
+  }
+
+  .form-label {
+    margin-left: 15px;
+  }
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
+
+  .input {
+    width: 300px;
+  }
+
+  .form-label {
+    width: 300px;
+  }
 }
 
 .background-logo {
@@ -32,14 +55,12 @@
 }
 
 .form-label {
-  width: 300px;
   text-align: left;
   font-weight: 500;
   margin-top: 0;
 }
 
 .input {
-  width: 300px;
   height: 50px;
   font-size: 20px;
   border-style: solid;

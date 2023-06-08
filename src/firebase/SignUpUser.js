@@ -8,19 +8,30 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   AuthErrorCodes,
-  updateProfile,
 } from "firebase/auth";
 
 import firebaseConfig from "./FirebaseConfig";
 import { initializeApp } from "firebase/app";
 import checkPasswordStrength from "./checkPassword";
 
+import { getFirestore, addDoc, collection } from "firebase/firestore";
+
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+function setUserID(uid, firstName, lastName) {
+  addDoc(collection(db, "users"), {
+    userID: uid,
+    fname: firstName,
+    lname: lastName,
+  });
+}
 
 function Register() {
   const [input, setInput] = useState({
+    fname: "",
+    lname: "",
     email: "",
-    username: "",
     password: "",
   });
   const [error, setError] = useState(null);
@@ -30,9 +41,9 @@ function Register() {
     e.preventDefault();
     setError("");
     let email = input.email.toLocaleLowerCase().trim();
-    let username = input.username;
     let password = input.password;
-
+    let fname = input.fname;
+    let lname = input.lname;
 
     createUserWithEmailAndPassword(
       auth,
@@ -41,16 +52,8 @@ function Register() {
     )
       .then((userCredential) => {
         const user = userCredential.user;
-        updateProfile(user, {
-          displayName: username,
-        })
-          .then(() => {
-            router.push(`/profile/${user.displayName}`);
-          })
-          .catch((error) => {
-            const errorMessage = error.message;
-            alert(errorMessage);
-          });
+        setUserID(user.uid, fname, lname);
+        router.push(`/profile/${user.uid}`);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -80,11 +83,38 @@ function Register() {
       </div>
       <div className="app-name">EasyAid</div>
       <form autoComplete="off" className="form" onSubmit={handleSubmit}>
+        <div className="input-name">
+          <div className="form-field-name">
+            <p className="form-label">Ime</p>
+            <input
+              className="input"
+              name="fname"
+              placeholder="Pero"
+              type="text"
+              onChange={handleChange}
+              value={input.fname}
+              required
+              autoComplete="true"
+            />
+          </div>
+          <div className="form-field-name">
+            <p className="form-label">Prezime</p>
+            <input
+              className="input"
+              name="lname"
+              placeholder="Perić"
+              type="text"
+              onChange={handleChange}
+              value={input.lname}
+              required
+              autoComplete="true"
+            />
+          </div>
+        </div>
         <div className="form-field">
           <p className="form-label">Email</p>
           <input
-            className="input input--text"
-            id="formInput#email"
+            className="input"
             name="email"
             placeholder="primjer@email.com"
             type="text"
@@ -95,24 +125,9 @@ function Register() {
           />
         </div>
         <div className="form-field">
-          <p className="form-label">Korisničko ime</p>
-          <input
-            className="input input--text"
-            id="formInput#text"
-            name="username"
-            placeholder="Primjer"
-            type="text"
-            onChange={handleChange}
-            value={input.username}
-            required
-            autoComplete="true"
-          />
-        </div>
-        <div className="form-field">
           <p className="form-label">Lozinka</p>
           <input
-            className="input input--password"
-            id="formInput#passwprd"
+            className="input"
             name="password"
             placeholder="Pr!mjer123"
             onChange={handleChange}
