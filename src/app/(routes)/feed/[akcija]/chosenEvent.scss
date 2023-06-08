@@ -1,0 +1,117 @@
+:root {
+    --border-padding:15px;
+    --font-big:18px;
+    --font-normal:16px;
+    --font-small:14px;
+}
+
+.akcija {
+    display:flex;
+    justify-content: center;
+    height:fit-content;
+    width:100vw;
+}
+
+.akcija * {
+   //border: 1px solid grey; //maknuti kansije
+}
+
+.content {
+    max-width: 1024px;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.heading {
+    background-color: #edffed;
+    display:flex;
+    justify-content: space-between;
+}
+
+.heading > article {
+    max-width:700px;
+    width:70%;
+    display:flex;
+    flex-direction: column;
+}
+
+.heading > article > h1 {
+    max-width:700px;
+    width:100%;
+    height:60px;
+    text-align: left;
+    padding:var(--border-padding);
+    box-sizing: border-box;
+    font-size: var(--font-big);
+}
+
+.heading > article > h2 {
+    max-width:700px;
+    width:100%;
+    height:50px;
+    text-align: left;
+    padding:var(--border-padding);
+    box-sizing: border-box;
+    font-size: var(--font-normal);
+}
+
+.heading > aside {
+    max-width:100px;
+    width:10%;
+    display:flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: var(--border-padding);
+}
+
+.heading > aside > h3 {
+    margin:0;
+}
+
+.heading > section {
+    max-width: 150px;
+    width:15%;
+    height:50px;
+}
+.heading > section > h2 {
+    font-size: var(--font-big);
+}
+
+img {
+    width:100%;
+}
+
+.text-content {
+    display:flex;
+    justify-content: space-between;
+}
+
+.text-content > p {
+    width:75%;
+    max-width: 768px;
+    min-height: 300px;
+    height: fit-content;
+    padding:15px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.text-content > div {
+    padding-right: var(--border-padding);
+}
+
+.location {
+    //display:flex;
+    //flex-wrap: wrap;
+    width:100%;
+    height: 500px;
+}
+
+iframe {
+
+    width:100%;
+    height:100%;
+}
