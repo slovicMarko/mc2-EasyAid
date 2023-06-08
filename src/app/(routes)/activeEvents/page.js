@@ -17,6 +17,7 @@ const activeEvents = [
     date: "1. ožujka. 2023.",
     organizer: "Hrvatski Crveni Križ",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    anyChanges: true,
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const activeEvents = [
     date: "1. travnja. 2023.",
     organizer: "72 sata bez kompromisa",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    anyChanges: true,
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const activeEvents = [
     date: "1. svibnja. 2023.",
     organizer: "Župa Kutina",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    anyChanges: false,
   },
 ];
 
@@ -148,6 +151,8 @@ function ActiveFeed() {
                   organizer={event.organizer}
                   about={event.about}
                   activeFunc={handleClick}
+                  daysLeft={event.daysLeft}
+                  anyChanges={event.anyChanges}
                 />
               ))}
             </div>

@@ -10,6 +10,7 @@
     justify-content: center;
     height:fit-content;
     width:100vw;
+    flex-wrap: wrap;
 }
 
 .akcija * {
@@ -25,10 +26,18 @@
     flex-direction: column;
 }
 
-.heading {
+.heading-color {
     background-color: #edffed;
+    width:100vw;
+}
+
+.heading {
+    //background-color: #edffed;
+    width:100%;
+    max-width: 1024px;
     display:flex;
     justify-content: space-between;
+    margin:0 auto;
 }
 
 .heading > article {

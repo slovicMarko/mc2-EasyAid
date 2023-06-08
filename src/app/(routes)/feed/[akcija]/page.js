@@ -3,22 +3,25 @@ import "./chosenEvent.scss"
 function Akcija() {
   return (
     <div className="akcija">
-      <section className="page-content">
+      <div className="heading-color">
         <div className="heading">
-          <article>
-            <h1>Neki nazivv dd  ds d s</h1>
-            <h2>Crveni križ Zagreb</h2>
-          </article>
-          <section>
-            <h2>24.lipnja.2023</h2>
-          </section>
-          <aside>
-            <h2>Potrebno</h2>
-            <h3>6</h3>
-            <h2>Dolazi</h2>
-            <h3>6</h3>
-          </aside>
-        </div>
+            <article>
+              <h1>Neki nazivv dd  ds d s</h1>
+              <h2>Crveni križ Zagreb</h2>
+            </article>
+            <section>
+              <h2>24.lipnja.2023</h2>
+            </section>
+            <aside>
+              <h2>Potrebno</h2>
+              <h3>6</h3>
+              <h2>Dolazi</h2>
+              <h3>6</h3>
+            </aside>
+          </div>
+      </div>
+      <section className="page-content">
+
         <article className="text-content">
           <p>
             Opis Lorem Ipsum Opis Lorem Ipsum Opis Lorem Ipsum Opis Lorem IpsumOpis Lorem Ipsum Opis Lorem Ipsum Opis Lorem Ipsums

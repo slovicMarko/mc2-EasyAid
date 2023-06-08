@@ -113,6 +113,7 @@ function MainFeed() {
       organizer: "Hrvatski Crveni Križ",
       about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       daysLeft: 4,
+      anyChanges: true,
     },
     {
       id: 2,
@@ -121,6 +122,7 @@ function MainFeed() {
       organizer: "72 sata bez kompromisa",
       about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       daysLeft: 5,
+      anyChanges: true,
     },
     {
       id: 3,
@@ -129,6 +131,7 @@ function MainFeed() {
       organizer: "Župa Kutina",
       about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       daysLeft: 6,
+      anyChanges: true,
     },
     {
       id: 4,
@@ -137,6 +140,7 @@ function MainFeed() {
       organizer: "Caritas Zagreb",
       about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       daysLeft: 3,
+      anyChanges: false,
     },
   ];
 
@@ -161,6 +165,7 @@ function MainFeed() {
             organizer={event.organizer}
             about={event.about}
             daysLeft={event.daysLeft}
+            anyChanges={event.anyChanges}
           />
         </Link>
       ))}
