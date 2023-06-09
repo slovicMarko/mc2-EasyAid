@@ -1,6 +1,6 @@
 import React from "react";
 import Register from "../../../firebase/SignUpUser";
-import "../login/login.scss";
+import "../prijava/login.scss";
 
 function RegisterScreen() {
   return (

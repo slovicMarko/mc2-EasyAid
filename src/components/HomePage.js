@@ -51,12 +51,12 @@ function HomePage() {
           </p>
 
           <div className="event-buttons">
-            <Link className="link-btn green-btn" href="/feed">
+            <Link className="link-btn green-btn" href="/aktivne_akcije">
               Pronađi događaj
             </Link>
             <Link
               className="link-btn regular-btn"
-              href={auth.currentUser ? "/organiser" : "/login"}
+              href={auth.currentUser ? "/moje_akcije" : "/prijava"}
             >
               Stvori događaj
             </Link>
@@ -67,35 +67,38 @@ function HomePage() {
         <h2 className="headings">Želiš volontirati, a ne znaš gdje početi?</h2>
         <div className="top-events">
           <div className="event-lijevi">
-            <Link href={`/feed/${homeEvents[0].id}`}>
+            <Link href={`/aktivne_akcije/${homeEvents[0].id}`}>
               <EventBubble
                 isPreview
-                title={homeEvents[0].title}
-                date={homeEvents[0].date}
-                organizer={homeEvents[0].organizer}
-                about={homeEvents[0].about}
+                action={{
+                  name: homeEvents[0].title,
+                  date: homeEvents[0].date,
+                  about: homeEvents[0].about,
+                }}
               />
             </Link>
           </div>
           <div className="event-sredina">
-            <Link href={`/feed/${homeEvents[1].id}`}>
+            <Link href={`/aktivne_akcije/${homeEvents[1].id}`}>
               <EventBubble
                 isPreview
-                title={homeEvents[1].title}
-                date={homeEvents[1].date}
-                organizer={homeEvents[1].organizer}
-                about={homeEvents[1].about}
+                action={{
+                  name: homeEvents[1].title,
+                  date: homeEvents[1].date,
+                  about: homeEvents[1].about,
+                }}
               />
             </Link>
           </div>
           <div className="event-desni">
-            <Link href={`/feed/${homeEvents[2].id}`}>
+            <Link href={`/aktivne_akcije/${homeEvents[2].id}`}>
               <EventBubble
                 isPreview
-                title={homeEvents[2].title}
-                date={homeEvents[2].date}
-                organizer={homeEvents[2].organizer}
-                about={homeEvents[2].about}
+                action={{
+                  name: homeEvents[2].title,
+                  date: homeEvents[2].date,
+                  about: homeEvents[2].about,
+                }}
               />
             </Link>
           </div>
@@ -124,7 +127,7 @@ function HomePage() {
               akciju
             </p>
 
-            <Link className="link-btn green-btn" href="/feed">
+            <Link className="link-btn green-btn" href="/aktivne_akcije">
               Pronađi događaj
             </Link>
           </div>
@@ -141,7 +144,7 @@ function HomePage() {
             </p>
             <Link
               className="link-btn regular-btn"
-              href={auth.currentUser ? "/organiser" : "/login"}
+              href={auth.currentUser ? "/moje_akcije" : "/prijava"}
             >
               Stvori događaj
             </Link>

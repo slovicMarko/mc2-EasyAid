@@ -53,7 +53,7 @@ function Register() {
       .then((userCredential) => {
         const user = userCredential.user;
         setUserID(user.uid, fname, lname);
-        router.push(`/profile/${user.uid}`);
+        router.push(`/profil/${user.uid}`);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -147,7 +147,7 @@ function Register() {
       </form>
       <div className="log-reg-switch" id="switch">
         Već imaš račun?&nbsp;
-        <Link className="switch" href="/login">
+        <Link className="switch" href="/prijava">
           Prijavi se!
         </Link>
       </div>

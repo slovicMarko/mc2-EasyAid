@@ -7,7 +7,7 @@ import "./../cssFiles/eventEditable.scss";
 import { Event } from "./eventModal";
 import { EventEditModal } from "./EventEditableModal";
 
-export function EventEdit({ title, date, organizer, about }) {
+export function EventEdit({ action }) {
   const [isEventOpen, setIsEventOpen] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
 
@@ -35,13 +35,13 @@ export function EventEdit({ title, date, organizer, about }) {
       <button onClick={handleEventClick}>
         <div className="event-edit-bubble">
           <div className="event-edit-bubble-header">
-            <h2>{title}</h2>
+            <h2>{action.name}</h2>
           </div>
           <div className="event-edit-middle">
-            <h3>{organizer}</h3>
-            <h4>{date}</h4>
+            <h3>Organizator</h3>
+            <h4>{action.date}</h4>
           </div>
-          <p>{about}</p>
+          <p>{action.about}</p>
         </div>
       </button>
 

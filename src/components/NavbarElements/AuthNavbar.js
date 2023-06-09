@@ -23,17 +23,17 @@ function AuthNavbar() {
     <div className="navbar--auth">
       {user ? (
         <>
-          <Link className="btn--auth--login" href={`/profile/${user.uid}`}>
+          <Link className="btn--auth--login" href={`/profil/${user.uid}`}>
             Profil
           </Link>
           <SignOut isInNavbar />
         </>
       ) : (
         <>
-          <Link className="btn--auth--login" href="/login">
+          <Link className="btn--auth--login" href="/prijava">
             Prijavi se
           </Link>
-          <Link className="btn--auth--reg" href="/register">
+          <Link className="btn--auth--reg" href="/registracija">
             Registriraj se
           </Link>
         </>

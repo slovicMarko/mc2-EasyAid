@@ -34,7 +34,7 @@ function Login() {
 
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        router.push("/feed");
+        router.push("/aktivne_akcije");
       })
       .catch((err) => {
         if (err.code === AuthErrorCodes.INVALID_EMAIL) {
@@ -106,7 +106,7 @@ function Login() {
       </form>
       <div className="log-reg-switch" id="switch">
         Nemas račun?&nbsp;
-        <Link className="switch" href="/register">
+        <Link className="switch" href="/registracija">
           Registriraj se!
         </Link>
       </div>

@@ -23,7 +23,7 @@ function DodajAkciju() {
   const [input, setInput] = useState({
     about: "",
     actionID: "",
-    final_date: "",
+    date: "",
     //location: [],
     address: "",
     city: "",
@@ -42,7 +42,7 @@ function DodajAkciju() {
 
     let about = input.about;
     let actionID = input.actionID;
-    let final_date = input.final_date;
+    let date = input.date;
     //let location = input.location;
     let address = input.address;
     let city = input.city;
@@ -54,7 +54,7 @@ function DodajAkciju() {
       about: about,
       actionID: actionID,
       active: true,
-      final_date: final_date,
+      date: date,
       address: address,
       city: city,
       name: name,
@@ -118,7 +118,7 @@ function DodajAkciju() {
           <p className="form-label">Datum</p>
           <input
             className="input"
-            name="final_date"
+            name="date"
             type="date"
             pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}."
             onChange={handleChange}

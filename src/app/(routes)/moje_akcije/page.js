@@ -2,13 +2,14 @@
 "use router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import { EventEdit } from "@/components/event/EventEditable";
-import "./organiser.scss";
+import "./moje_akcije.scss";
 
 import { getAuth } from "firebase/auth";
+import { fetchEvents } from "@/firebase/fetchEvents";
 
 const isActive = (href) => {
   return router.pathname === href;
@@ -46,19 +47,32 @@ const organiserEvents = [
 ];
 
 function OrganiserFeed() {
+  const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [canShow, setCanShow] = useState(false);
+  const [userID, setUserID] = useState();
 
-  const auth = getAuth();
-  const user = auth.currentUser;
   const router = useRouter();
 
   const addEvent = () => {
     router.push("/dodaj");
   };
 
-  const finishedLoadingAndCanShow = loading && !canShow;
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetchEvents({
+        collection: "actions",
+        docField: "ownerID",
+        docValue: "cJ0CTN4rsoVXdFiNSf4Z11FgUU22",
+      });
+      setListing(response);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   return (
     <div>
       <FontAwesomeIcon
@@ -66,19 +80,11 @@ function OrganiserFeed() {
         className="add-icon"
         onClick={addEvent}
       />
-      {finishedLoadingAndCanShow && (
-        <div>
-          {organiserEvents.map((event) => (
-            <EventEdit
-              key={event.id}
-              title={event.title}
-              date={event.date}
-              organizer={event.organizer}
-              about={event.about}
-            />
-          ))}
-        </div>
-      )}
+      <div>
+        {Listing.map((action) => (
+          <EventEdit key={action.actionID} action={action} />
+        ))}
+      </div>
     </div>
   );
 }

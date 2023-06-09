@@ -1,6 +1,6 @@
 import VerifyEmail from "@/firebase/verifyEmail";
 
-import "./profile.scss";
+import "./profil.scss";
 
 function Profile() {
   return (
