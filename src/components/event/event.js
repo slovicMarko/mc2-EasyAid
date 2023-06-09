@@ -8,13 +8,10 @@ export function EventBubble({
   isPreview,
   isInActive,
   isInFeed,
-  title,
-  date,
-  daysLeft,
-  organizer,
-  about,
   activeFunc,
+  daysLeft,
   anyChanges,
+  action,
 }) {
   const [isEventOpen, setIsEventOpen] = useState(false);
 
@@ -26,6 +23,7 @@ export function EventBubble({
   const handleEventClose = () => {
     setIsEventOpen(false);
   };
+
   //
 
   const eventClass = useMemo(() => {
@@ -41,23 +39,30 @@ export function EventBubble({
 
   return (
     <div className={eventClass}>
-
       <button onClick={activeFunc}>
-        {(daysLeft < 5) ? <div className="days-alert">
-          <h2 >Još {daysLeft} dana za prijavu!</h2>
-        </div> : <></>}
-        {anyChanges ? <div className="change-alert">
-          <h2 >Promjene na akciji!</h2>
-        </div> : <></>}
+        {daysLeft < 5 ? (
+          <div className="days-alert">
+            <h2>Još {daysLeft} dana za prijavu!</h2>
+          </div>
+        ) : (
+          <></>
+        )}
+        {anyChanges ? (
+          <div className="change-alert">
+            <h2>Promjene na akciji!</h2>
+          </div>
+        ) : (
+          <></>
+        )}
         <div className="event-bubble">
           <div className="event-bubble-header">
-            <h2>{title}</h2>
+            <h2>{action.name}</h2>
           </div>
           <div className="event-middle">
-            <h3>{organizer}</h3>
-            <h4>{date}</h4>
+            <h3>{action.ownerID}</h3>
+            <h4>{action.date}</h4>
           </div>
-          <p>{about}</p>
+          <p>{action.about}</p>
         </div>
       </button>
 

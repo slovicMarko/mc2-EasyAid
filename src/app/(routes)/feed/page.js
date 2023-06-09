@@ -80,69 +80,94 @@ function MainFeed() {
 export default MainFeed;
 
 */
+
 "use client";
 "use router";
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Leaderboard } from "@/components/leaderboard";
 import { EventBubble } from "@/components/event/event";
 import "./feed.scss";
 
+import "firebase/auth";
+import "firebase/firestore";
+import "firebase/storage";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import firebaseConfig from "@/firebase/FirebaseConfig";
+
+const feedEvents = [
+  {
+    id: 1,
+    title: "Event 1 ",
+    date: "1. ožujka. 2023.",
+    organizer: "Hrvatski Crveni Križ",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    daysLeft: 4,
+    anyChanges: true,
+  },
+  {
+    id: 2,
+    title: "Event 2",
+    date: "1. travnja. 2023.",
+    organizer: "72 sata bez kompromisa",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    daysLeft: 5,
+    anyChanges: true,
+  },
+  {
+    id: 3,
+    title: "Event 3",
+    date: "1. svibnja. 2023.",
+    organizer: "Župa Kutina",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    daysLeft: 6,
+    anyChanges: true,
+  },
+  {
+    id: 4,
+    title: "Event 4",
+    date: "1. prosinca. 2023.",
+    organizer: "Caritas Zagreb",
+    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    daysLeft: 3,
+    anyChanges: false,
+  },
+];
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+async function fetchEvents() {
+  const events = new Array();
+  try {
+    const querySnapshot = await getDocs(collection(db, "actions"));
+    querySnapshot.forEach((doc) => {
+      events.push(doc.data());
+    });
+  } catch (error) {
+    console.log("Error getting documents:", error);
+  }
+
+  return events;
+}
+
 function MainFeed() {
+  const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [canShow, setCanShow] = useState(false);
 
-  const router = useRouter();
-  const isActive = (href) => {
-    return router.pathname === href; // check if the current page's URL path matches the link's href attribute
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetchEvents();
+      setListing(response);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
 
-  const handleClick = () => {
-    console.log("radi djelomicno sad treba rj div");
-    setShowEvent(true);
-  };
-
-  const finishedLoadingAndCanShow = loading && !canShow;
-
-  const feedEvents = [
-    {
-      id: 1,
-      title: "Event 1 ",
-      date: "1. ožujka. 2023.",
-      organizer: "Hrvatski Crveni Križ",
-      about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      daysLeft: 4,
-      anyChanges: true,
-    },
-    {
-      id: 2,
-      title: "Event 2",
-      date: "1. travnja. 2023.",
-      organizer: "72 sata bez kompromisa",
-      about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      daysLeft: 5,
-      anyChanges: true,
-    },
-    {
-      id: 3,
-      title: "Event 3",
-      date: "1. svibnja. 2023.",
-      organizer: "Župa Kutina",
-      about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      daysLeft: 6,
-      anyChanges: true,
-    },
-    {
-      id: 4,
-      title: "Event 4",
-      date: "1. prosinca. 2023.",
-      organizer: "Caritas Zagreb",
-      about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      daysLeft: 3,
-      anyChanges: false,
-    },
-  ];
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="feed-wrapper">
@@ -153,19 +178,16 @@ function MainFeed() {
       <aside>
         <Leaderboard />
       </aside>
-      {feedEvents.map((event) => (
-        <Link href={`/feed/${event.id}`}>
+      {Listing.map((action) => (
+        <Link href={`/feed/${action.actionID}`}>
           <EventBubble
-            key={event.id}
+            key={action.actionID}
             isPreview={false}
             isInActive={false}
             isInFeed={true}
-            title={event.title}
-            date={event.date}
-            organizer={event.organizer}
-            about={event.about}
-            daysLeft={event.daysLeft}
-            anyChanges={event.anyChanges}
+            action={action}
+            daysLeft={2}
+            anyChanges={false}
           />
         </Link>
       ))}
