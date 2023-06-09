@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { getFirestore, setDoc, doc } from "firebase/firestore";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 import firebaseConfig from "../../../firebase/FirebaseConfig";
@@ -21,16 +21,15 @@ function DodajAkciju() {
   const router = useRouter();
 
   const [input, setInput] = useState({
-    active: true,
-    title: "",
-    adress: "",
-    date: "",
-    description: "",
+    about: "",
+    actionID: "",
+    final_date: "",
+    //location: [],
+    address: "",
     city: "",
-    image: "",
-    link: "",
-    number_volunteer: "",
-    image: "",
+    name: "",
+    tags: [],
+    vol_num: Number(),
   });
 
   const handleClick = (e) => {
@@ -41,32 +40,30 @@ function DodajAkciju() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let active = input.active;
-    let title = input.title;
-    let adress = input.adress;
-    let date = input.date;
-    let description = input.description;
+    let about = input.about;
+    let actionID = input.actionID;
+    let final_date = input.final_date;
+    //let location = input.location;
+    let address = input.address;
     let city = input.city;
-    let link = input.link;
-    let number_volunteer = input.number_volunteer;
+    let name = input.name;
+    let tags = input.tags;
+    let vol_num = input.vol_num;
 
-    setDoc(
-      doc(
-        db,
-        "organizator",
-        "volonterski-centar-kutina",
-        "organizator-project",
-        title
-      ),
-      {
-        active: active,
-        adress: adress,
-        description: description,
-        city: city,
-        link: link,
-        number_volunteer: number_volunteer,
-      }
-    );
+    addDoc(collection(db, "actions"), {
+      about: about,
+      actionID: actionID,
+      active: true,
+      final_date: final_date,
+      address: address,
+      city: city,
+      name: name,
+      ownerID: auth.currentUser.uid,
+      registered: [],
+      tags: tags,
+      vol_num: vol_num,
+    });
+
     router.push("/organiser");
   };
 
@@ -94,37 +91,41 @@ function DodajAkciju() {
       </div>
       <form autoComplete="off" className="form" onSubmit={handleSubmit}>
         <div className="form-field">
+          <p className="form-label">Naziv akcije</p>
           <input
             className="input"
-            name="title"
-            placeholder="Ime akcije"
+            name="name"
+            placeholder="naziv akcije"
             type="text"
             onChange={handleChange}
             value={input.title}
             required
           />
         </div>
-
-        <textarea
-          rows="10"
-          cols="40"
-          className="input-textarea"
-          placeholder="Ukratko opišite akciju"
-          name="description"
-          onChange={handleChange}
-          value={input.description}
-        ></textarea>
         <div className="form-field">
+          <p className="form-label">Opis akcije</p>
+          <textarea
+            rows="10"
+            cols="40"
+            className="input-textarea"
+            placeholder="ukratko opišite akciju"
+            name="about"
+            onChange={handleChange}
+            value={input.about}
+          ></textarea>
+        </div>
+        <div className="form-field">
+          <p className="form-label">Datum</p>
           <input
             className="input"
-            placeholder="dd.mm.yyyy."
-            pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}"
-            name="date"
+            name="final_date"
             type="date"
+            pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}."
             onChange={handleChange}
             required
           />
         </div>
+        {/*
         <div className="form-field">
           <label htmlFor="background-about-image">Pozadinska slika:</label>
           <input
@@ -135,11 +136,26 @@ function DodajAkciju() {
             onChange={(e) => uploadImage(e.target.files[0])}
           />
         </div>
+        */}
+
         <div className="form-field">
+          <p className="form-label">Adresa</p>
+          <input
+            className="input"
+            name="address"
+            placeholder="Koja je adresa akcije?"
+            type="text"
+            onChange={handleChange}
+            value={input.address}
+            required
+          />
+        </div>
+        <div className="form-field">
+          <p className="form-label">Mjesto</p>
           <input
             className="input"
             name="city"
-            placeholder="Gdje se odvija akcija?"
+            placeholder="U kojem mjestu?"
             type="text"
             onChange={handleChange}
             value={input.city}
@@ -147,14 +163,16 @@ function DodajAkciju() {
           />
         </div>
         <div className="form-field">
+          <p className="form-label">Količina volontera</p>
+
           <input
             className="input"
-            name="number_volunteer"
-            placeholder="Koliko je broj volontera?"
+            name="vol_num"
+            placeholder="Koliko je potrebno volontera?"
             min={1}
             type="number"
             onChange={handleChange}
-            value={input.number_volunteer}
+            value={input.vol_num}
           />
         </div>
 

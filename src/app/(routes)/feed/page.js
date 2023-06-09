@@ -154,7 +154,7 @@ function MainFeed() {
         <Leaderboard />
       </aside>
       {feedEvents.map((event) => (
-        <Link href={`/feed/${event.id + event.title}`}>
+        <Link href={`/feed/${event.id}`}>
           <EventBubble
             key={event.id}
             isPreview={false}

@@ -23,10 +23,7 @@ function AuthNavbar() {
     <div className="navbar--auth">
       {user ? (
         <>
-          <Link
-            className="btn--auth--login"
-            href={`/profile/${user.displayName}`}
-          >
+          <Link className="btn--auth--login" href={`/profile/${user.uid}`}>
             Profil
           </Link>
           <SignOut isInNavbar />

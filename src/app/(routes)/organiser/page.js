@@ -57,10 +57,6 @@ function OrganiserFeed() {
     router.push("/dodaj");
   };
 
-  if (!user) {
-    router.push("/feed");
-  }
-
   const finishedLoadingAndCanShow = loading && !canShow;
 
   return (

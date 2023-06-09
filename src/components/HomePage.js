@@ -67,31 +67,37 @@ function HomePage() {
         <h2 className="headings">Želiš volontirati, a ne znaš gdje početi?</h2>
         <div className="top-events">
           <div className="event-lijevi">
-            <EventBubble
-              isPreview
-              title={homeEvents[0].title}
-              date={homeEvents[0].date}
-              organizer={homeEvents[0].organizer}
-              about={homeEvents[0].about}
-            />
+            <Link href={`/feed/${homeEvents[0].id}`}>
+              <EventBubble
+                isPreview
+                title={homeEvents[0].title}
+                date={homeEvents[0].date}
+                organizer={homeEvents[0].organizer}
+                about={homeEvents[0].about}
+              />
+            </Link>
           </div>
           <div className="event-sredina">
-            <EventBubble
-              isPreview
-              title={homeEvents[1].title}
-              date={homeEvents[1].date}
-              organizer={homeEvents[1].organizer}
-              about={homeEvents[1].about}
-            />
+            <Link href={`/feed/${homeEvents[1].id}`}>
+              <EventBubble
+                isPreview
+                title={homeEvents[1].title}
+                date={homeEvents[1].date}
+                organizer={homeEvents[1].organizer}
+                about={homeEvents[1].about}
+              />
+            </Link>
           </div>
           <div className="event-desni">
-            <EventBubble
-              isPreview
-              title={homeEvents[2].title}
-              date={homeEvents[2].date}
-              organizer={homeEvents[2].organizer}
-              about={homeEvents[2].about}
-            />
+            <Link href={`/feed/${homeEvents[2].id}`}>
+              <EventBubble
+                isPreview
+                title={homeEvents[2].title}
+                date={homeEvents[2].date}
+                organizer={homeEvents[2].organizer}
+                about={homeEvents[2].about}
+              />
+            </Link>
           </div>
         </div>
         <div className="about-easyAid">
@@ -167,7 +173,6 @@ function HomePage() {
                 title="Porsche Digital Croatia"
                 fill
                 sizes="(max-width: 768px) 100vw"
-
                 className="sponsor"
               />
             </div>
@@ -178,7 +183,6 @@ function HomePage() {
                 title="Tvz Mc2"
                 fill
                 sizes="(max-width: 768px) 100vw"
-
                 className="sponsor"
               />
             </div>
