@@ -45,6 +45,7 @@ export function EventEdit({ action }) {
         </div>
       </button>
 
+      {/*
       {isFormOpen && <EventEditModal onClose={handleFormClose} />}
       {isEventOpen && (
         <Event
@@ -55,6 +56,7 @@ export function EventEdit({ action }) {
           about={about}
         />
       )}
+      //za modale*/}     
     </div>
   );
 }
