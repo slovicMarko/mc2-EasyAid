@@ -11,6 +11,9 @@ import "firebase/auth";
 import { fetchEvents } from "@/firebase/fetchEvents";
 import "./aktivne_akcije.scss";
 
+const imageURL= "/images/mainContentBack1.jpg"
+
+
 function MainFeed() {
   const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,16 +31,6 @@ function MainFeed() {
     fetchData();
   }, []);
 
-  const [MenuOn, SetMenu] = useState(false);
-  const [filterMenuOn, SetFilterMenu] = useState(false);
-  const [sortMenuOn, SetSortMenu]=  useState(false);
-  //let filterMenuOn = false;
-  //let sortMenuOn = false;
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   function UpperMenuSet (button) {
     if (button == "filter") {
       if (filterMenuOn === true) {
@@ -50,7 +43,7 @@ function MainFeed() {
       else if (filterMenuOn === false) {
         SetFilterMenu(true);
       }
-
+  
     }
     else if(button=="sort") {
       if (sortMenuOn === true) {
@@ -63,9 +56,20 @@ function MainFeed() {
       else if (sortMenuOn === false) {
         SetSortMenu(true);
       }
-
+  
     }
+  
+  }
+  
 
+  const [MenuOn, SetMenu] = useState(false);
+  const [filterMenuOn, SetFilterMenu] = useState(false);
+  const [sortMenuOn, SetSortMenu]=  useState(false);
+  //let filterMenuOn = false;
+  //let sortMenuOn = false;
+
+  if (loading) {
+    return <div>Loading...</div>;
   }
 
   return (
@@ -90,6 +94,7 @@ function MainFeed() {
               action={action}
               daysLeft={2}
               anyChanges={false}
+              imageURL={imageURL}
             />
           </Link>
         ))}
@@ -97,5 +102,6 @@ function MainFeed() {
     </div>
   );
 }
+
 
 export default MainFeed;

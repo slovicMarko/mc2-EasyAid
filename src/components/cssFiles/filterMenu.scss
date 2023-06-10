@@ -4,3 +4,9 @@
     background-color: white;
     grid-column-start: span 2;
 }
+
+@media (max-width:1100px) {
+    .filter-content {
+        grid-column-start: span 1;
+    }
+}

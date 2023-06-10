@@ -12,6 +12,7 @@ export function EventBubble({
   daysLeft,
   anyChanges,
   action,
+  imageURL
 }) {
   const [isEventOpen, setIsEventOpen] = useState(false);
 
@@ -56,6 +57,7 @@ export function EventBubble({
         )}
         <div className="event-bubble">
           <div className="event-bubble-header">
+            <img src={imageURL}/>
             <h2>{action.name}</h2>
           </div>
           <div className="event-middle">
