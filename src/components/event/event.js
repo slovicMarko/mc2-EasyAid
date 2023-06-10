@@ -58,9 +58,9 @@ export function EventBubble({
         <div className="event-bubble">
           <div className="event-bubble-header">
             <img src={imageURL}/>
-            <h2>{action.name}</h2>
           </div>
           <div className="event-middle">
+            <h2>{action.name}</h2>
             <h3>{action.ownerID}</h3>
             <h4>{action.date}</h4>
           </div>

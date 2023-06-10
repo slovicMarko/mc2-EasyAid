@@ -21,7 +21,30 @@ function Profile() {
           </form>
         </div>
       </section>
-      
+      <div className="profile-about">
+          <form className="about-form">
+            <label htmlFor="about">About:</label>
+            <textarea id="about" name="about" />
+          </form>
+          <form className="contact-form">
+            <label htmlFor="city">City:</label>
+            <input type="text" id="city" name="city" />
+            <label htmlFor="phone">Phone number:</label>
+            <input type="text" id="phone" name="phone" />
+          </form>
+      </div>
+      <div className="profile-clickables">
+        <form>
+          <div>
+            <input type="checkbox" id="email-notif" name="email-notif" value="Email"/>
+            <label for="email-notif"> I would like to receive email reminders before actions.</label>
+          </div>
+          <div>
+            <input type="checkbox" id="newsletter" name="newsletter" value="Newsletter"/>
+            <label for="newsletter"> I would like to receive weekly newsletter about new actions.</label>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
