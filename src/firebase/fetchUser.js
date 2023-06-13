@@ -1,9 +1,11 @@
 import {
   getFirestore,
+  doc,
+  query,
+  where,
+  getDoc,
   collection,
   getDocs,
-  where,
-  query,
 } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "@/firebase/FirebaseConfig";
@@ -11,8 +13,8 @@ import firebaseConfig from "@/firebase/FirebaseConfig";
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export async function fetchEvents(data) {
-  const events = new Array();
+export async function fetchUser(data) {
+  const user = new Array();
   try {
     const q = query(
       collection(db, data.collection),
@@ -20,11 +22,12 @@ export async function fetchEvents(data) {
     );
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-      events.push(doc.data());
+      user.push(doc.data());
+      localStorage.setItem("userDocID", doc.id);
     });
   } catch (error) {
     console.log("Error getting documents:", error);
   }
 
-  return events;
+  return user[0];
 }

@@ -33,7 +33,8 @@ function Login() {
     let password = input.password;
 
     signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
+      .then((user) => {
+        localStorage.setItem("user", user.user.uid);
         router.push("/aktivne_akcije");
       })
       .catch((err) => {

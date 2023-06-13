@@ -11,6 +11,8 @@ function SignOut(isInNavbar) {
     auth
       .signOut()
       .then(() => {
+        localStorage.removeItem("user");
+        localStorage.removeItem("userDocID");
         router.push("/");
       })
       .catch(() => {

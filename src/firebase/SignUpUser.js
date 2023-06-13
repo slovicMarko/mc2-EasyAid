@@ -24,6 +24,10 @@ function setUserID(uid, firstName, lastName) {
     userID: uid,
     fname: firstName,
     lname: lastName,
+    about: null,
+    city: null,
+    region: null,
+    telephone: null,
   });
 }
 
@@ -52,6 +56,7 @@ function Register() {
     )
       .then((userCredential) => {
         const user = userCredential.user;
+        localStorage.setItem("user", user.uid);
         setUserID(user.uid, fname, lname);
         router.push(`/profil/${user.uid}`);
       })

@@ -7,10 +7,12 @@
   --hoverGreen: #0b6e1a;
   --hoverLightGreen: #2cd849;
   --lightGreenBackground: #edffed;
+  --navbar: rgb(196, 255, 187);
+  --lightGreen: rgb(196, 255, 187);
 }
 
 body {
-  color: #303030;
+  color: #4d4d4d;
   background: #fff;
   overflow-x: hidden;
   font-family: "Roboto";
