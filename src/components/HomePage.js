@@ -34,6 +34,8 @@ const homeEvents = [
   },
 ];
 
+const fotoURL = "/images/mainContentBack1.jpg";
+
 function HomePage() {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
@@ -75,6 +77,7 @@ function HomePage() {
                   date: homeEvents[0].date,
                   about: homeEvents[0].about,
                 }}
+                imageURL={fotoURL}
               />
             </Link>
           </div>
@@ -87,6 +90,7 @@ function HomePage() {
                   date: homeEvents[1].date,
                   about: homeEvents[1].about,
                 }}
+                imageURL={fotoURL}
               />
             </Link>
           </div>
@@ -99,6 +103,7 @@ function HomePage() {
                   date: homeEvents[2].date,
                   about: homeEvents[2].about,
                 }}
+                imageURL={fotoURL}
               />
             </Link>
           </div>
