@@ -15,6 +15,8 @@ const isActive = (href) => {
   return router.pathname === href;
 };
 
+const imageURL = "/images/mainContentBack1.jpg";
+
 const organiserEvents = [
   {
     id: 1,
@@ -22,6 +24,7 @@ const organiserEvents = [
     date: "1. ožujka. 2023.",
     organizer: "Hrvatski Crveni Križ",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageURL: imageURL,
   },
   {
     id: 2,
