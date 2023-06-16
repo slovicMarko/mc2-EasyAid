@@ -15,6 +15,7 @@ const isActive = (href) => {
   return router.pathname === href;
 };
 
+
 function OrganiserFeed() {
   const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -51,7 +52,7 @@ function OrganiserFeed() {
       />
       <div>
         {Listing.map((action) => (
-          <EventEdit key={action.actionID} action={action} />
+          <EventEdit key={action.actionID} action={action}/>
         ))}
       </div>
     </div>

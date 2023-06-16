@@ -119,15 +119,22 @@
   padding: 0;
   margin: 0px 0 0 0;
   border-radius: 16px;
+  border:none;
   transition: 0.2s ease-in-out;
   font-size: 16px;
   position: absolute;
   top: 50px;
-  right: -100px;
+  right: 0px;
   z-index: 10;
-  background-color: #379f48;
-  color: white;
+  background-color: rgba(0,0,0,0);
+  color: #379f48;
 }
+
+#edit-button:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
 
 #info-button {
   width: 90px;
@@ -148,7 +155,7 @@
   color: var(--gray);
 }
 
-.event-organiser button {
+.event-organiser .event-preview-button {
   width: 100%;
   min-width: 600px;
   height: 100%;
