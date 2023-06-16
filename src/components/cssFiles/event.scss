@@ -196,7 +196,6 @@ aside h5 {
 .event-button button {
   //width: 30%;
   width: 500px;
-  height: 18%;
   min-height: 300px;
   padding: 0;
   //margin: 50px 0 0 0;
@@ -224,7 +223,7 @@ aside h5 {
   .event-bubble-header {
     background-color: #379f48;
     width: 100%;
-    height: 90px;
+    height: 240px;
     position: relative;
     border-radius: 16px 16px 0 0;
     border: none;
@@ -262,14 +261,14 @@ aside h5 {
     font-size: 1em;
     width: 60%;
     height: 40px;
-    margin: 20px 10px 10px 20px;
+    margin: 5px 10px 5px 20px;
   }
   .event-bubble h4 {
     float: left;
     font-size: 1.4;
     width: 30%;
     height: 40px;
-    margin: 18px 20px 10px 0px;
+    margin: 5px 20px 10px 0px;
     text-align: center;
     font-weight: normal;
   }
@@ -278,10 +277,11 @@ aside h5 {
     text-align: left;
     font-size: 1em;
     width: 90%;
-    height: 40%;
-    min-height: 100px;
-    margin: 10px auto 10px 20px;
-    padding-bottom: 10px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    height: 60px;
+    margin: 0px auto 10px 20px;
+
   }
 }
 
@@ -342,6 +342,7 @@ aside h5 {
 // active feed
 
 .event--active-feed button {
+  min-height: 300px;
   color: var(--gray);
   text-align: left;
   border-radius: 16px;
@@ -367,13 +368,44 @@ aside h5 {
   }
 
   .event-bubble-header {
-    color: #f0f0f0;
-    background-color: var(--greenBtn);
-    min-height: 72px;
-    height: fit-content;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    background-color: #379f48;
+    width: 100%;
+    height: 240px;
+    position: relative;
+    border-radius: 16px 16px 0 0;
+    border: none;
+    overflow:hidden;
   }
+
+  .event-bubble-header > img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius:16px 16px 0 0;
+    position:absolute;
+    top:0;
+    left:0;
+  }
+  
+  
+  .event-bubble h3 {
+    float: left;
+    text-align: left;
+    font-size: 1em;
+    width: 60%;
+    height: 40px;
+    margin: 5px 10px 5px 20px;
+  }
+  .event-bubble h4 {
+    float: left;
+    font-size: 1.4;
+    width: 30%;
+    height: 40px;
+    margin: 5px 20px 10px 0px;
+    text-align: center;
+    font-weight: normal;
+  }
+
 
   .event-bubble-header h2 {
     font-size: 16px;
@@ -384,12 +416,18 @@ aside h5 {
 
   .event-middle {
     padding: 16px 32px 0;
+    width: 100%;
   }
 
   .event-bubble p {
-    padding: 16px 32px 32px;
-    letter-spacing: 0.5px;
-    line-height: 130%;
+    text-align: left;
+    font-size: 1em;
+    width: 90%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    height: 60px;
+    margin: 0px auto 10px 20px;
+
   }
 }
 

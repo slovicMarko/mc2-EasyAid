@@ -9,6 +9,12 @@ import { fetchEvents } from "@/firebase/fetchEvents";
 
 import "./prijavljene_akcije.scss";
 
+const isActive = (href) => {
+  return router.pathname === href;
+};
+
+const imageURL = "/images/mainContentBack1.jpg";
+
 function ActiveFeed() {
   const [showEvent, setShowEvent] = useState(false);
   const [ListingActive, setListingActive] = useState([]);
@@ -81,6 +87,7 @@ function ActiveFeed() {
                   action={action}
                   daysLeft={2}
                   anyChanges={false}
+                  imageURL={imageURL}
                 />
               ))}
             </div>
@@ -95,6 +102,7 @@ function ActiveFeed() {
                   action={action}
                   daysLeft={2}
                   anyChanges={false}
+                  imageURL={imageURL}
                 />
               ))}
             </div>

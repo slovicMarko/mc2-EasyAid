@@ -1,5 +1,6 @@
 .leaderboard-block {
-  width: 250px;
+    //margin-top:50px;
+    width:100%;
 }
 
 .leaderboard-block > h2 {
@@ -11,10 +12,9 @@ table {
   border-collapse: collapse;
 }
 
-th,
-td {
-  padding: 10px 0px 10px 0px;
-  height: 40px;
+th, td {
+    padding:10px 0px 10px 0px;
+    height:40px;
 }
 
 .user-name {
@@ -22,18 +22,18 @@ td {
 }
 
 .num-of-events-heading {
-  width: 30px;
-  padding: 0px;
+    width:80px;
+    padding:0px;
 }
 
 .num-of-events {
-  color: #379f48;
-  font-weight: bold;
-  font-size: 16px;
-  text-align: right;
-  border-top: 1px solid var(--gray);
-  width: 30px;
-  padding: 0px;
+    color:#379f48;
+    font-weight:bold;
+    font-size: 16px;
+    text-align: center;
+    border-top:1px solid var(--gray);
+    width:30px;
+    padding:0px;
 }
 
 .profile-picture > img {
@@ -44,5 +44,6 @@ td {
 }
 
 .profile-picture {
-  padding: 5px;
+    padding:5px;
+    width:70px;
 }
