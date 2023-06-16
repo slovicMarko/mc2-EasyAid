@@ -1,3 +1,4 @@
+/*
 .sort-content {
     width:100vw;
     height:200px;
@@ -9,4 +10,12 @@
     .sort-content {
         grid-column-start: span 1;
     }
+}
+
+*/
+
+.sort-content {
+    width:150px;
+    position: relative;
+    z-index: 200;
 }
