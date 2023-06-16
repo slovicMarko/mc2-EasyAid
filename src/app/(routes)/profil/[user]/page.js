@@ -20,20 +20,19 @@ function Profile() {
         docValue: userID,
       });
       setUser(response);
-      console.log(response);
       setLoading(false);
     };
     fetchData();
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="spin"></div>;
   }
 
   return (
     <div className="profile-page-content">
       <div className="container-buttons">
-        <section className="profile-main">
+        <div className="profile-main">
           <Link
             className="button-edit"
             href={`/profil/${userID + "/uredi"}`}
@@ -42,51 +41,27 @@ function Profile() {
             Uredi
           </Link>
 
-          <aside>
-            <img src="/images/123.jpeg" />
-            <h2>
+          <div>
+            <img className="profile-image" src="/images/123.jpeg" />
+            <h2 className="profile-name">
               {user.fname} {user.lname}
             </h2>
-            <p>{user.city ? user.city + ", Hrvatska" : "grad"}</p>
-            <p>{user.region ? user.region + " županija" : "županija"}</p>
-            <p>{user.telephone ? user.telephone : "broj mobitela"}</p>
-          </aside>
-        </section>
+            <p className="secondary-info">
+              {user.city ? user.city + ", Hrvatska" : "grad"}
+            </p>
+            <p className="secondary-info">
+              {user.region ? user.region + " županija" : "županija"}
+            </p>
+            <p className="secondary-info">
+              {user.telephone ? user.telephone : "broj mobitela"}
+            </p>
+          </div>
+        </div>
       </div>
-      <section className="profile-info">
+      <div className="profile-info">
         <h2>O MENI</h2>
         <p>{user.about ? user.about : "potreban opis"}</p>
-      </section>
-      {/*
-      <div className="profile-clickables">
-      <form>
-      <div>
-      <input
-      type="checkbox"
-      id="email-notif"
-      name="email-notif"
-      value="Email"
-      />
-      <label for="email-notif">
-      {" "}
-      I would like to receive email reminders before actions.
-      </label>
       </div>
-      <div>
-            <input
-            type="checkbox"
-              id="newsletter"
-              name="newsletter"
-              value="Newsletter"
-              />
-            <label for="newsletter">
-            {" "}
-            I would like to receive weekly newsletter about new actions.
-            </label>
-            </div>
-            </form>
-<button onClick={VerifyEmail}> Potvrdi račun </button>
-          </div>*/}
     </div>
   );
 }

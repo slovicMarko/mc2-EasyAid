@@ -1,9 +1,7 @@
 import {
   getFirestore,
-  doc,
   query,
   where,
-  getDoc,
   collection,
   getDocs,
 } from "firebase/firestore";
@@ -19,11 +17,11 @@ export async function fetchUser(data) {
 
   const user = new Array();
   try {
-    const q = query(
+    const condition = query(
       collection(db, data.collection),
       where(data.docField, "==", data.docValue)
     );
-    const querySnapshot = await getDocs(q);
+    const querySnapshot = await getDocs(condition);
     querySnapshot.forEach((doc) => {
       user.push(doc.data());
       localStorage.setItem("userDocID", doc.id);

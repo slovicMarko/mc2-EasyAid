@@ -15,40 +15,6 @@ const isActive = (href) => {
   return router.pathname === href;
 };
 
-const imageURL = "/images/mainContentBack1.jpg";
-
-const organiserEvents = [
-  {
-    id: 1,
-    title: "Event 1",
-    date: "1. ožujka. 2023.",
-    organizer: "Hrvatski Crveni Križ",
-    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageURL: imageURL,
-  },
-  {
-    id: 2,
-    title: "Event 2",
-    date: "1. travnja. 2023.",
-    organizer: "72 sata bez kompromisa",
-    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    id: 3,
-    title: "Event 3",
-    date: "1. svibnja. 2023.",
-    organizer: "Župa Kutina",
-    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    id: 4,
-    title: "Event 4",
-    date: "1. prosinca. 2023.",
-    organizer: "Caritas Zagreb",
-    about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-];
-
 function OrganiserFeed() {
   const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -74,7 +40,7 @@ function OrganiserFeed() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="spin"></div>;
   }
   return (
     <div>

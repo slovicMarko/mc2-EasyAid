@@ -68,7 +68,7 @@ function ActiveFeed() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="spin"></div>;
   }
 
   return auth.currentUser ? (

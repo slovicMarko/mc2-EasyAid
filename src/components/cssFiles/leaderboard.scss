@@ -4,12 +4,12 @@
 }
 
 .leaderboard-block > h2 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 table {
-    width:100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th, td {
@@ -17,13 +17,8 @@ th, td {
     height:40px;
 }
 
-.user-place {
-    width:40px;
-    text-align: center;
-}
-
 .user-name {
-    border-top:1px solid var(--gray);
+  border-top: 1px solid var(--gray);
 }
 
 .num-of-events-heading {
@@ -41,11 +36,11 @@ th, td {
     padding:0px;
 }
 
-.profile-picture > img{
-    color:#379f48;
-    height:60px;
-    width:60px;
-    border-radius: 50%;
+.profile-picture > img {
+  color: #379f48;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
 }
 
 .profile-picture {

@@ -1,17 +1,14 @@
 .form-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin: 100px 0 0 0;
+  margin: 0 auto;
+  width: 1024px;
 }
 
 .background-logo {
   position: absolute;
   z-index: -99;
-  right: 62vw;
-  top: 7vw;
+  right: 55%;
+  top: 10%;
   user-select: none;
 }
 
@@ -56,6 +53,7 @@
   padding: 15px;
   transition: 0.05s ease-in;
   user-select: none;
+  resize: none;
   font-family: "Roboto";
 }
 
@@ -113,6 +111,3 @@
   color: #fff;
 }
 
-img {
-  user-select: none;
-}

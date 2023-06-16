@@ -17,12 +17,12 @@ Glavne funkcije:
 - [x] Oblikovanje navbara
 - [x] Oblikovanje ostalih stranica(Feed, Trenutne akcije, organizatori)
 - [x] Postavljanje cijele baze
-- [ ] Povezati interaktivne akcije s Firebase
+- [X] Povezati interaktivne akcije s Firebase
 - [x] Povezati login s Firebase
 - [x] Povezati odjavu s Firebase
 - [x] Povezati register s Firebase
 - [x] Povezati objavu akcija
-- [ ] Na stranici Profil dodati formu i gdje će korisnik moći uređivati svoje podatke
+- [X] Na stranici Profil dodati formu i gdje će korisnik moći uređivati svoje podatke
 
 Dodatne funkcije:
 

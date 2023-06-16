@@ -60,7 +60,11 @@ function MainFeed() {
   const [sortMenuOn, SetSortMenu] = useState(false);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="blur">
+        <div className="spin"></div>
+      </div>
+    );
   }
 
   return (
