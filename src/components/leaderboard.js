@@ -62,7 +62,7 @@ export const Leaderboard = () => {
         <tbody>
           {leaderboardData.map((user, index) => (
             <tr key={index}>
-              <td>{user.place}.</td>
+              <td className="user-place">{user.place}.</td>
               <td className="profile-picture">
                 <img src={user.profilePic} />
               </td>

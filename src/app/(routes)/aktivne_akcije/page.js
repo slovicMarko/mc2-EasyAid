@@ -10,6 +10,9 @@ import { SortMenu } from "@/components/SortMenu";
 import "firebase/auth";
 import { fetchEvents } from "@/firebase/fetchEvents";
 import "./aktivne_akcije.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFilter, faSort } from '@fortawesome/free-solid-svg-icons'
+
 
 const imageURL = "/images/mainContentBack1.jpg";
 
@@ -55,8 +58,6 @@ function MainFeed() {
   const [MenuOn, SetMenu] = useState(false);
   const [filterMenuOn, SetFilterMenu] = useState(false);
   const [sortMenuOn, SetSortMenu] = useState(false);
-  //let filterMenuOn = false;
-  //let sortMenuOn = false;
 
   if (loading) {
     return <div>Loading...</div>;
@@ -66,14 +67,11 @@ function MainFeed() {
     <div>
       <div className="feed-wrapper">
         <header className="feed-buttons">
-          <button onClick={() => UpperMenuSet("filter")}>Filteri</button>
-          <button onClick={() => UpperMenuSet("sort")}>Sortiranje</button>
+          <button onClick={() => UpperMenuSet("filter")}> <FontAwesomeIcon icon={faFilter} style={{color: "#ffffff",}} /> </button>
+          <button onClick={() => UpperMenuSet("sort")}> <FontAwesomeIcon icon={faSort} style={{color: "#ffffff",}} /> </button>
         </header>
         {filterMenuOn ? <FilterMenu /> : <></>}
         {sortMenuOn ? <SortMenu /> : <></>}
-        <aside>
-          <Leaderboard />
-        </aside>
         {Listing.map((action) => (
           <Link href={`/aktivne_akcije/${action.actionID}`}>
             <EventBubble
@@ -88,6 +86,9 @@ function MainFeed() {
             />
           </Link>
         ))}
+        <aside>
+          <Leaderboard />
+        </aside>
       </div>
     </div>
   );

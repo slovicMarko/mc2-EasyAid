@@ -14,6 +14,9 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 export async function fetchUser(data) {
+
+  
+
   const user = new Array();
   try {
     const q = query(
