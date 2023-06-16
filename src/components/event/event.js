@@ -14,18 +14,7 @@ export function EventBubble({
   action,
   imageURL
 }) {
-  const [isEventOpen, setIsEventOpen] = useState(false);
 
-  //za modale deprecated
-  const handleEventClick = () => {
-    setIsEventOpen(true);
-  };
-
-  const handleEventClose = () => {
-    setIsEventOpen(false);
-  };
-
-  //
 
   const eventClass = useMemo(() => {
     if (isPreview === true) {
@@ -68,17 +57,6 @@ export function EventBubble({
         </div>
       </button>
 
-      {/*
-      {isEventOpen && (
-        <Event
-          onClose={handleEventClose}
-          title={title}
-          date={date}
-          organizer={organizer}
-          about={about}
-        />
-      )}
-      */}
     </div>
   );
 }

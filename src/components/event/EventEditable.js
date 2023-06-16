@@ -35,9 +35,10 @@ export function EventEdit({ action }) {
       <button onClick={handleEventClick}>
         <div className="event-edit-bubble">
           <div className="event-edit-bubble-header">
-            <h2>{action.name}</h2>
+            <img src={action.imageURL}/>
           </div>
           <div className="event-edit-middle">
+            <h2>{action.name}</h2>
             <h3>Organizator</h3>
             <h4>{action.date}</h4>
           </div>
@@ -45,18 +46,6 @@ export function EventEdit({ action }) {
         </div>
       </button>
 
-      {/*
-      {isFormOpen && <EventEditModal onClose={handleFormClose} />}
-      {isEventOpen && (
-        <Event
-          onClose={handleEventClose}
-          title={title}
-          date={date}
-          organizer={organizer}
-          about={about}
-        />
-      )}
-      //za modale*/}     
     </div>
   );
 }
