@@ -33,6 +33,7 @@ function MainFeed() {
     fetchData();
   }, []);
 
+  /*
   function UpperMenuSet(button) {
     if (button == "filter") {
       if (filterMenuOn === true) {
@@ -54,6 +55,12 @@ function MainFeed() {
       }
     }
   }
+  */
+
+  function UpperMenuSet(button) {
+    if(filterMenuOn === true) SetFilterMenu(false);
+    else SetFilterMenu(true);
+  }
 
   const [MenuOn, SetMenu] = useState(false);
   const [filterMenuOn, SetFilterMenu] = useState(false);
@@ -71,11 +78,14 @@ function MainFeed() {
     <div>
       <div className="feed-wrapper">
         <header className="feed-buttons">
-          <button onClick={() => UpperMenuSet("filter")}> <FontAwesomeIcon icon={faFilter} style={{color: "#ffffff",}} /> </button>
-          <button onClick={() => UpperMenuSet("sort")}> <FontAwesomeIcon icon={faSort} style={{color: "#ffffff",}} /> </button>
+          <button onClick={() => UpperMenuSet("filter")}> <FontAwesomeIcon icon={faFilter} style={{color: "#ffffff",}} size="lg"/> </button>
+          <div>
+          <FontAwesomeIcon icon={faSort} style={{color: "#ffffff",}} size="xl"/>
+          <SortMenu/>
+          </div>
         </header>
         {filterMenuOn ? <FilterMenu /> : <></>}
-        {sortMenuOn ? <SortMenu /> : <></>}
+        {/*{sortMenuOn ? <SortMenu /> : <></>}*/}
         {Listing.map((action) => (
           <Link href={`/aktivne_akcije/${action.actionID}`}>
             <EventBubble

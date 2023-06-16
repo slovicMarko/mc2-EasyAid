@@ -10,6 +10,7 @@ import Link from "next/link";
 function Profile() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState();
+  const [profilePicture, setProfilePicture] = useState(null);
   const userID = localStorage.getItem("user");
 
   useEffect(() => {
@@ -19,7 +20,8 @@ function Profile() {
         docField: "userID",
         docValue: userID,
       });
-      setUser(response);
+      setUser(response[0]);
+      setProfilePicture(response[1]);
       setLoading(false);
     };
     fetchData();
@@ -41,10 +43,12 @@ function Profile() {
             Uredi
           </Link>
 
-          <button className="button-edit" onClick={VerifyEmail}>Potvrdi račun</button>
+          <button className="button-edit" onClick={VerifyEmail}>
+            Potvrdi račun
+          </button>
 
           <div>
-            <img className="profile-image" src="/images/123.jpeg" />
+            <img className="profile-image" src={profilePicture} />
             <h2 className="profile-name">
               {user.fname} {user.lname}
             </h2>

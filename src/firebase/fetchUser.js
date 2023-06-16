@@ -7,13 +7,17 @@ import {
 } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "@/firebase/FirebaseConfig";
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const storeage = getStorage(app);
 
 export async function fetchUser(data) {
-
-  
+  const imageRef = ref(
+    storeage,
+    `users/${data.docValue}/profile_image/profile_picture`
+  );
 
   const user = new Array();
   try {
@@ -26,9 +30,12 @@ export async function fetchUser(data) {
       user.push(doc.data());
       localStorage.setItem("userDocID", doc.id);
     });
+
+    const imageUrl = await getDownloadURL(imageRef);
+    user.push(imageUrl);
   } catch (error) {
     console.log("Error getting documents:", error);
   }
 
-  return user[0];
+  return user;
 }

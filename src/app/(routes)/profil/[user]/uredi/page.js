@@ -33,12 +33,12 @@ function Uredi() {
     telephone: "",
   });
 
+  const imageRef = ref(
+    storeage,
+    `users/${userID}/profile_image/profile_picture`
+  );
   const uploadImage = () => {
     if (ImageUpload == null) return;
-    const imageRef = ref(
-      storeage,
-      `users/${userID}/profile_image/${ImageUpload.name + v4()}`
-    );
     uploadBytes(imageRef, ImageUpload).then(() => {
       alert("Image uploaded");
     });
@@ -46,11 +46,11 @@ function Uredi() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetchUser({
+      const response = (await fetchUser({
         collection: "users",
         docField: "userID",
         docValue: userID,
-      });
+      }))[0];
       setInput({
         about: response.about,
         city: response.city,
