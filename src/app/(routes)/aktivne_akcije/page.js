@@ -55,11 +55,13 @@ function MainFeed() {
   const [MenuOn, SetMenu] = useState(false);
   const [filterMenuOn, SetFilterMenu] = useState(false);
   const [sortMenuOn, SetSortMenu] = useState(false);
-  //let filterMenuOn = false;
-  //let sortMenuOn = false;
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="blur">
+        <div className="spin"></div>
+      </div>
+    );
   }
 
   return (

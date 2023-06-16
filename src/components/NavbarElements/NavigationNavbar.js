@@ -15,19 +15,19 @@ function NavigationNavbar() {
 
   return (
     <div className="navbar--navigation">
-      <Link className="btn--nav" href="/">
+      <Link className={"btn--nav"} href="/">
         Početna
       </Link>
-      <Link className="btn--nav" href="/aktivne_akcije">
+      <Link className={"btn--nav"} href="/aktivne_akcije">
         Aktivne akcije
       </Link>
       {user ? (
         user.emailVerified ? (
           <>
-            <Link className="btn--nav" href="/prijavljene_akcije">
+            <Link className={"btn--nav"} href="/prijavljene_akcije">
               Prijavljene akcije
             </Link>
-            <Link className="btn--nav" href="/moje_akcije">
+            <Link className={"btn--nav"} href="/moje_akcije">
               Moje akcije
             </Link>
           </>

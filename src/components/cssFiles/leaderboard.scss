@@ -1,48 +1,48 @@
 .leaderboard-block {
-    //margin-top:50px;
-    width:250px;
+  width: 250px;
 }
 
 .leaderboard-block > h2 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 table {
-    width:100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
-th, td {
-    padding:10px 0px 10px 0px;
-    height:40px;
+th,
+td {
+  padding: 10px 0px 10px 0px;
+  height: 40px;
 }
 
 .user-name {
-    border-top:1px solid var(--gray);
+  border-top: 1px solid var(--gray);
 }
 
 .num-of-events-heading {
-    width:30px;
-    padding:0px;
+  width: 30px;
+  padding: 0px;
 }
 
 .num-of-events {
-    color:#379f48;
-    font-weight:bold;
-    font-size: 16px;
-    text-align: right;
-    border-top:1px solid var(--gray);
-    width:30px;
-    padding:0px;
+  color: #379f48;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: right;
+  border-top: 1px solid var(--gray);
+  width: 30px;
+  padding: 0px;
 }
 
-.profile-picture > img{
-    color:#379f48;
-    height:60px;
-    width:60px;
-    border-radius: 50%;
+.profile-picture > img {
+  color: #379f48;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
 }
 
 .profile-picture {
-    padding:5px;
+  padding: 5px;
 }

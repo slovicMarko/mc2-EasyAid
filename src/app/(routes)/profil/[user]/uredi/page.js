@@ -8,6 +8,8 @@ import { updateDoc, getFirestore, doc } from "firebase/firestore";
 import firebaseConfig from "@/firebase/FirebaseConfig";
 import { initializeApp } from "firebase/app";
 
+import "./uredi.scss";
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
@@ -78,7 +80,7 @@ function Uredi() {
       region: region,
       telephone: telephone,
     })
-      .then((docRef) => {
+      .then(() => {
         console.log("Document updated");
       })
       .catch((error) => {
@@ -89,50 +91,66 @@ function Uredi() {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="spin"></div>;
   }
 
   return (
     <div className="form-container">
       <div className="background-logo">
-        {/* <img src="/images/logo.svg" alt="background-logo" /> */}
+        <img src="/images/logo.svg" alt="background-logo" />
       </div>
       <form autoComplete="off" className="form" onSubmit={handleSubmit}>
-        <div className="form-field">
-          <p className="form-label">Ime</p>
-          <input
-            className="input"
-            name="fname"
-            placeholder="ime"
-            type="text"
-            onChange={handleChange}
-            value={input.fname}
-            required
-          />
+        <div className="first-last-name">
+          <div className="form-field">
+            <p className="form-label">Ime</p>
+            <input
+              className="input"
+              name="fname"
+              placeholder="ime"
+              type="text"
+              onChange={handleChange}
+              value={input.fname}
+              required
+            />
+          </div>
+          <div className="form-field">
+            <p className="form-label">Prezime</p>
+            <input
+              className="input"
+              name="lname"
+              placeholder="prezime"
+              type="text"
+              onChange={handleChange}
+              value={input.lname}
+              required
+            />
+          </div>
+        </div>
+        <div className="about-me">
+          <div className="form-field">
+            <p className="form-label">O meni</p>
+            <textarea
+              rows="10"
+              cols="40"
+              className="input-textarea"
+              placeholder="opišite sebe"
+              name="about"
+              onChange={handleChange}
+              value={input.about}
+            ></textarea>
+          </div>
         </div>
         <div className="form-field">
-          <p className="form-label">Prezime</p>
+          <p className="form-label">Broj telefona</p>
           <input
             className="input"
-            name="lname"
-            placeholder="prezime"
-            type="text"
+            name="vol_num"
+            placeholder="Vaš broj mobitela?"
+            min={1}
+            type="number"
             onChange={handleChange}
-            value={input.lname}
-            required
+            value={input.telephone}
           />
-        </div>
-        <div className="form-field">
-          <p className="form-label">O meni</p>
-          <textarea
-            rows="10"
-            cols="40"
-            className="input-textarea"
-            placeholder="opišite sebe"
-            name="about"
-            onChange={handleChange}
-            value={input.about}
-          ></textarea>
         </div>
         {/*
         <div className="form-field">
@@ -146,50 +164,39 @@ function Uredi() {
           />
         </div>
         */}
-        <div className="form-field">
-          <p className="form-label">Grad</p>
-          <input
-            className="input"
-            name="city"
-            placeholder="Iz kojeg grada dolazite??"
-            type="text"
-            onChange={handleChange}
-            value={input.city}
-            required
-          />
-        </div>
-        <div className="form-field">
-          <p className="form-label">Županija</p>
-          <input
-            className="input"
-            name="region"
-            placeholder="U kojem mjestu?"
-            type="text"
-            onChange={handleChange}
-            value={input.region}
-            required
-          />
-        </div>
-        <div className="form-field">
-          <p className="form-label">Broj telefona</p>
-
-          <input
-            className="input"
-            name="vol_num"
-            placeholder="Vaš broj mobitela?"
-            min={1}
-            type="number"
-            onChange={handleChange}
-            value={input.telephone}
-          />
+        <div className="location">
+          <div className="form-field">
+            <p className="form-label">Grad</p>
+            <input
+              className="input"
+              name="city"
+              placeholder="Iz kojeg grada dolazite??"
+              type="text"
+              onChange={handleChange}
+              value={input.city}
+              required
+            />
+          </div>
+          <div className="form-field">
+            <p className="form-label">Županija</p>
+            <input
+              className="input"
+              name="region"
+              placeholder="U kojem mjestu?"
+              type="text"
+              onChange={handleChange}
+              value={input.region}
+              required
+            />
+          </div>
         </div>
 
         <div className="buttons-dodaj">
           <button title="Odustani" onClick={handleClick} className="cancel-btn">
             Odustani
           </button>
-          <button title="Spremi" type="submit" className="save-btn">
-            Dodaj
+          <button title="Ažuriraj" type="submit" className="save-btn">
+            Ažuriraj
           </button>
         </div>
       </form>

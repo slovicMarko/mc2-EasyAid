@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
 :root {
   --greenBtn: #379f48;
   --lightGray: #7c7c7c;
@@ -18,4 +27,21 @@ body {
   font-family: "Roboto";
   margin: 0;
   text-align: center;
+}
+
+.spin::before {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px #cfd0d1;
+  border-bottom-color: var(--greenBtn);
+  border-radius: 50%;
+  content: "";
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 50px;
+  will-change: transform;
+  transition: 1s ease-in-out;
 }
