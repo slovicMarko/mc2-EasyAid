@@ -8,13 +8,18 @@ import { updateDoc, getFirestore, doc } from "firebase/firestore";
 import firebaseConfig from "@/firebase/FirebaseConfig";
 import { initializeApp } from "firebase/app";
 
+import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { v4 } from "uuid";
+
 import "./uredi.scss";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const storeage = getStorage(app);
 
 function Uredi() {
   const [loading, setLoading] = useState(true);
+  const [ImageUpload, setImageUpload] = useState(null);
   const userID = localStorage.getItem("user");
   const docID = localStorage.getItem("userDocID");
   const router = useRouter();
@@ -27,6 +32,17 @@ function Uredi() {
     region: "",
     telephone: "",
   });
+
+  const uploadImage = () => {
+    if (ImageUpload == null) return;
+    const imageRef = ref(
+      storeage,
+      `users/${userID}/profile_image/${ImageUpload.name + v4()}`
+    );
+    uploadBytes(imageRef, ImageUpload).then(() => {
+      alert("Image uploaded");
+    });
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -152,18 +168,19 @@ function Uredi() {
             value={input.telephone}
           />
         </div>
-        {/*
+
         <div className="form-field">
-          <label htmlFor="background-about-image">Pozadinska slika:</label>
+          <label htmlFor="background-about-image">Slika profila: </label>
           <input
             type="file"
             name="image"
             accept="image/png, image/jpeg"
             id="background-about-image"
-            onChange={(e) => uploadImage(e.target.files[0])}
+            onChange={(e) => setImageUpload(e.target.files[0])}
           />
+          <button onClick={uploadImage}>Prenesi</button>
         </div>
-        */}
+
         <div className="location">
           <div className="form-field">
             <p className="form-label">Grad</p>

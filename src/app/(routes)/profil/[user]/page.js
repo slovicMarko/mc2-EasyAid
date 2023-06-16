@@ -41,6 +41,8 @@ function Profile() {
             Uredi
           </Link>
 
+          <button className="button-edit" onClick={VerifyEmail}>Potvrdi račun</button>
+
           <div>
             <img className="profile-image" src="/images/123.jpeg" />
             <h2 className="profile-name">
