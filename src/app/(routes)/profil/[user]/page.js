@@ -53,13 +53,13 @@ function Profile() {
               {user.fname} {user.lname}
             </h2>
             <p className="secondary-info">
-              {user.city ? user.city + ", Hrvatska" : "grad"}
+              {user.city ? user.city + ", Hrvatska" : null}
             </p>
             <p className="secondary-info">
-              {user.region ? user.region + " županija" : "županija"}
+              {user.region ? user.region + " županija" : null}
             </p>
             <p className="secondary-info">
-              {user.telephone ? user.telephone : "broj mobitela"}
+              {user.telephone ? user.telephone : null}
             </p>
           </div>
         </div>

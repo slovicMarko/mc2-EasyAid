@@ -34,7 +34,7 @@ function DodajAkciju() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    router.push("/organiser");
+    router.push("/moje_akcije");
   };
 
   const handleSubmit = (e) => {

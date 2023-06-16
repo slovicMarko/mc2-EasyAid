@@ -18,8 +18,8 @@ const isActive = (href) => {
 function OrganiserFeed() {
   const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [userID, setUserID] = useState();
 
+  const userID = localStorage.getItem("user");
   const router = useRouter();
 
   const addEvent = () => {
@@ -31,7 +31,7 @@ function OrganiserFeed() {
       const response = await fetchEvents({
         collection: "actions",
         docField: "ownerID",
-        docValue: "cJ0CTN4rsoVXdFiNSf4Z11FgUU22",
+        docValue: userID,
       });
       setListing(response);
       setLoading(false);
