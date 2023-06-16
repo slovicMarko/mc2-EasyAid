@@ -46,11 +46,13 @@ function Uredi() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = (await fetchUser({
-        collection: "users",
-        docField: "userID",
-        docValue: userID,
-      }))[0];
+      const response = (
+        await fetchUser({
+          collection: "users",
+          docField: "userID",
+          docValue: userID,
+        })
+      )[0];
       setInput({
         about: response.about,
         city: response.city,
@@ -160,10 +162,9 @@ function Uredi() {
           <p className="form-label">Broj telefona</p>
           <input
             className="input"
-            name="vol_num"
+            name="telephone"
             placeholder="Vaš broj mobitela?"
-            min={1}
-            type="number"
+            type="string"
             onChange={handleChange}
             value={input.telephone}
           />
