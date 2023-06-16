@@ -23,8 +23,13 @@
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
     "react-portal": "^4.2.2",
+<<<<<<< HEAD
     "sass": "^1.62.0",
     "uuid": "^9.0.0"
+=======
+    "react-select": "^5.7.3",
+    "sass": "^1.62.0"
+>>>>>>> f0a95ff04442a326890adbd27b1ef5d496484f5b
   },
   "devDependencies": {
     "@swc/core": "^1.3.56",
