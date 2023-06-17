@@ -78,7 +78,7 @@ function ActiveFeed() {
                     isInActive={false}
                     isInFeed={true}
                     action={action}
-                    daysLeft={2}
+                    daysLeft={999}
                     anyChanges={false}
                     imageURL={imageURL}
                   />
