@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import akcija1 from "public/images/akcija1.png";
@@ -8,6 +8,7 @@ import { EventBubble } from "@/components/event/event";
 import InLove from "@/components/inLoveSVG.js";
 import "./cssFiles/HomePage.scss";
 import { getAuth } from "firebase/auth";
+import { fetchEvents } from "@/firebase/fetchEvents";
 
 const homeEvents = [
   {
@@ -38,9 +39,29 @@ const fotoURL = "/images/mainContentBack1.jpg";
 
 function HomePage() {
   const [isSignedIn, setIsSignedIn] = useState(false);
+  const [Listing, setListing] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetchEvents({
+        collection: "actions",
+        docField: "active",
+        docValue: true,
+      });
+      setListing(response);
+      console.log(response);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
 
 
   const auth = getAuth();
+
+  if (loading) {
+    return <div className="spin"></div>;
+  }
 
   return (
     <>
@@ -75,16 +96,16 @@ function HomePage() {
                 isPreview
                 action={[
                   {
-                    name: homeEvents[0].title,
-                    date: homeEvents[0].date,
-                    about: homeEvents[0].about,
+                    name: Listing[0][0].name,
+                    date: Listing[0][0].date,
+                    about: "",
+                    photo: Listing[0][0].photo,
                   },
                   {
-                    fname: "abc",
-                    lname: "abc",
+                    fname: Listing[0][1].fname,
+                    lname: Listing[0][1].lname,
                   },
                 ]}
-                imageURL={fotoURL}
               />
             </Link>
           </div>
@@ -94,13 +115,14 @@ function HomePage() {
                 isPreview
                 action={[
                   {
-                    name: homeEvents[1].title,
-                    date: homeEvents[1].date,
-                    about: homeEvents[1].about,
+                    name: Listing[1][0].name,
+                    date: Listing[1][0].date,
+                    about: "",
+                    photo: Listing[1][0].photo,
                   },
                   {
-                    fname: "abc",
-                    lname: "abc",
+                    fname: Listing[1][1].fname,
+                    lname: Listing[1][1].lname,
                   },
                 ]}
                 imageURL={fotoURL}
@@ -113,13 +135,14 @@ function HomePage() {
                 isPreview
                 action={[
                   {
-                    name: homeEvents[2].title,
-                    date: homeEvents[2].date,
-                    about: homeEvents[2].about,
+                    name: Listing[2][0].name,
+                    date: Listing[2][0].date,
+                    about: "",
+                    photo: Listing[2][0].photo,
                   },
                   {
-                    fname: "abc",
-                    lname: "abc",
+                    fname: Listing[2][1].fname,
+                    lname: Listing[2][1].lname,
                   },
                 ]}
                 imageURL={fotoURL}
