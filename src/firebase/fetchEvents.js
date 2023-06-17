@@ -21,11 +21,11 @@ export async function fetchEvents(data) {
       where(data.docField, "==", data.docValue)
     );
     const querySnapshot = await getDocs(condition);
-    const promises = [];
+    const docs = [];
     querySnapshot.forEach(doc => {
-      promises.push(fetchData(doc));
+      docs.push(doc);
     });
-    const events = await Promise.all(promises);
+    const events = await Promise.all(docs.map(doc => fetchData(doc)));
     return events;
   } catch (error) {
     console.log("Error getting documents:", error);

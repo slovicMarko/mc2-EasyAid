@@ -72,11 +72,17 @@ function HomePage() {
             <Link href={`/aktivne_akcije/${homeEvents[0].id}`}>
               <EventBubble
                 isPreview
-                action={{
-                  name: homeEvents[0].title,
-                  date: homeEvents[0].date,
-                  about: homeEvents[0].about,
-                }}
+                action={[
+                  {
+                    name: homeEvents[0].title,
+                    date: homeEvents[0].date,
+                    about: homeEvents[0].about,
+                  },
+                  {
+                    fname: "abc",
+                    lname: "abc",
+                  },
+                ]}
                 imageURL={fotoURL}
               />
             </Link>
@@ -85,11 +91,17 @@ function HomePage() {
             <Link href={`/aktivne_akcije/${homeEvents[1].id}`}>
               <EventBubble
                 isPreview
-                action={{
-                  name: homeEvents[1].title,
-                  date: homeEvents[1].date,
-                  about: homeEvents[1].about,
-                }}
+                action={[
+                  {
+                    name: homeEvents[1].title,
+                    date: homeEvents[1].date,
+                    about: homeEvents[1].about,
+                  },
+                  {
+                    fname: "abc",
+                    lname: "abc",
+                  },
+                ]}
                 imageURL={fotoURL}
               />
             </Link>
@@ -98,11 +110,17 @@ function HomePage() {
             <Link href={`/aktivne_akcije/${homeEvents[2].id}`}>
               <EventBubble
                 isPreview
-                action={{
-                  name: homeEvents[2].title,
-                  date: homeEvents[2].date,
-                  about: homeEvents[2].about,
-                }}
+                action={[
+                  {
+                    name: homeEvents[2].title,
+                    date: homeEvents[2].date,
+                    about: homeEvents[2].about,
+                  },
+                  {
+                    fname: "abc",
+                    lname: "abc",
+                  },
+                ]}
                 imageURL={fotoURL}
               />
             </Link>
