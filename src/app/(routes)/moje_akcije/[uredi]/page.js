@@ -269,15 +269,18 @@ function Uredi() {
           />
         </div>
 
+        <button title="Spremi" type="submit" className="save-btn">
+            Ažuriraj
+        </button>
         <div className="buttons-dodaj">
+          <button onClick={handleFinish} className="end-event-btn">
+            Zatvori akciju
+          </button>
           <button title="Odustani" onClick={handleClick} className="cancel-btn">
             Odustani
           </button>
-          <button title="Spremi" type="submit" className="save-btn">
-            Ažuriraj
-          </button>
         </div>
-        <button onClick={handleFinish} className="end-event-btn">Zatvori akciju</button>
+        
       </form>
     </div>
   );

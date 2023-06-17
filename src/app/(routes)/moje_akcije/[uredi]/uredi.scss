@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 104px 0 200px 0;
 }
 
 .background-logo {
@@ -73,14 +74,31 @@
   justify-content: space-evenly;
 }
 
-.save-btn,
 .cancel-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 45%;
   height: 50px;
-  margin: 20px 0 0 0;
+  margin: 0 0 0 0;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.4s ease;
+  border-style: none;
+}
+
+.save-btn
+ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 334px;
+  height: 50px;
+  margin: 20px auto 10px auto;
   font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
@@ -115,9 +133,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 334px;
+  width: 45%;
   height: 50px;
-  margin:10px auto;
   font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
