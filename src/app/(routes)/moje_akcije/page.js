@@ -10,10 +10,6 @@ import "./moje_akcije.scss";
 
 import { fetchEvents } from "@/firebase/fetchEvents";
 
-const isActive = (href) => {
-  return router.pathname === href;
-};
-
 function OrganiserFeed() {
   const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);

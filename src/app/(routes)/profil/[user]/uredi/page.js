@@ -8,7 +8,7 @@ import { updateDoc, getFirestore, doc } from "firebase/firestore";
 import firebaseConfig from "@/firebase/FirebaseConfig";
 import { initializeApp } from "firebase/app";
 
-import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 import "./uredi.scss";
 
@@ -18,7 +18,7 @@ const storeage = getStorage(app);
 
 function Uredi() {
   const [loading, setLoading] = useState(true);
-  const [ImageUpload, setImageUpload] = useState(null);
+  const [image, setImage] = useState();
   const userID = localStorage.getItem("user");
   const docID = localStorage.getItem("userDocID");
   const router = useRouter();
@@ -36,11 +36,18 @@ function Uredi() {
     storeage,
     `users/${userID}/profile_image/profile_picture`
   );
-  const uploadImage = async () => {
-    if (ImageUpload == null) return;
-    await uploadBytes(imageRef, ImageUpload).then(() => {
-      alert("Image uploaded");
-    });
+  const uploadImage = async (file) => {
+    try {
+      await uploadBytes(imageRef, file);
+
+      async function getImage() {
+        const downloadURL = await getDownloadURL(imageRef);
+        setImage(downloadURL);
+      }
+      getImage();
+    } catch (error) {
+      console.error("Greška pri prijenosu: ", error);
+    }
   };
 
   useEffect(() => {
@@ -81,11 +88,13 @@ function Uredi() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(image);
 
     let about = input.about;
     let city = input.city;
     let fname = input.fname;
     let lname = input.lname;
+    let photo = image;
     let region = input.region;
     let telephone = input.telephone;
 
@@ -94,6 +103,7 @@ function Uredi() {
       city: city,
       fname: fname,
       lname: lname,
+      photo: image,
       region: region,
       telephone: telephone,
     })
@@ -176,9 +186,8 @@ function Uredi() {
             name="image"
             accept="image/png, image/jpeg"
             id="background-about-image"
-            onChange={(e) => setImageUpload(e.target.files[0])}
+            onChange={(e) => uploadImage(e.target.files[0])}
           />
-          <button onClick={uploadImage}>Prenesi</button>
         </div>
 
         <div className="location">

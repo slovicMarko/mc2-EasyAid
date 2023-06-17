@@ -64,9 +64,9 @@ function Akcija() {
               <div className="needed-stuff">
                 <h3>Potrebne stvari</h3>
                 <ul>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
+                  <li>Dobra volja</li>
+                  <li>Osmijeh</li>
+                  <li>Humor</li>
                 </ul>
               </div>
             ) : (
@@ -75,7 +75,7 @@ function Akcija() {
           </div>
         </article>
         <article>
-          <img src="../images/mainContentBack1.jpg" alt="slika akcije" />
+          <img src={action[0].photo} className="action-photo" alt="slika akcije" />
         </article>
         <article className="info">
           <section>

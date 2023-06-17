@@ -31,8 +31,8 @@ export async function fetchUser(data) {
       localStorage.setItem("userDocID", doc.id);
     });
 
-    const imageUrl = await getDownloadURL(imageRef);
-    user.push(imageUrl);
+    //const imageUrl = await getDownloadURL(imageRef);
+    //user.push(imageUrl);
   } catch (error) {
     console.log("Error getting documents:", error);
   }

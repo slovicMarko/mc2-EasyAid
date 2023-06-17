@@ -1,17 +1,18 @@
 "use client";
 import VerifyEmail from "@/firebase/verifyEmail";
 import { fetchUser } from "@/firebase/fetchUser";
-
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 import "./profil.scss";
-import Link from "next/link";
+import { getAuth } from "firebase/auth";
 
 function Profile() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState();
   const [profilePicture, setProfilePicture] = useState(null);
   const userID = localStorage.getItem("user");
+  const auth = getAuth();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,9 +37,8 @@ function Profile() {
       <div className="profile-page-content">
         <div className="container-buttons">
           <div className="profile-main">
-
             <div>
-              <img className="profile-image" src={profilePicture} />
+              <img className="profile-image" src={user.photo} />
               <h2 className="profile-name">
                 {user.fname} {user.lname}
               </h2>
@@ -61,13 +61,12 @@ function Profile() {
               >
                 Uredi
               </Link>
-
-              <button className="button-edit" onClick={VerifyEmail}>
-                Potvrdi račun
-              </button>
+              {auth.currentUser.emailVerified ? null : (
+                <button className="button-edit" onClick={VerifyEmail}>
+                  Potvrdi račun
+                </button>
+              )}
             </div>
-            
-
           </div>
         </div>
         <div className="profile-info">
@@ -77,16 +76,11 @@ function Profile() {
       </div>
       <div className="bottom-actions">
         <h2>Pohađane akcije</h2>
-        <div>
-
-        </div>
+        <div></div>
         <h2>Organizirane akcije</h2>
-        <div>
-          
-        </div>
+        <div></div>
       </div>
     </div>
-    
   );
 }
 

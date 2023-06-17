@@ -26,6 +26,8 @@ function setUserID(uid, firstName, lastName) {
     lname: lastName,
     about: null,
     city: null,
+    photo:
+      "https://firebasestorage.googleapis.com/v0/b/mc2-easyaid.appspot.com/o/default%2Fprofile_picture%2Fdefault.png?alt=media&token=9bab98bc-add9-48ca-a43b-e849be806e80",
     region: null,
     telephone: null,
   });

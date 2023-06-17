@@ -38,11 +38,10 @@ export function EventEdit({ action }) {
         <button onClick={handleEventClick} className="event-preview-button">
           <div className="event-edit-bubble">
             <div className="event-edit-bubble-header">
-              <img src="/images/mainContentBack1.jpg" />
+              <img src={action.photo} />
             </div>
             <div className="event-edit-middle">
               <h2>{action.name}</h2>
-              <h3>Organizator</h3>
               <h4>{action.date}</h4>
             </div>
             <p>{action.about}</p>
