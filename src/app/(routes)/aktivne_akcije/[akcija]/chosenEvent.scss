@@ -28,7 +28,6 @@
 }
 
 .heading {
-    //background-color: #edffed;
     width:100%;
     max-width: 1024px;
     display:flex;
@@ -116,7 +115,7 @@ img {
 .text-content > p {
     width:75%;
     max-width: 768px;
-    min-height: 300px;
+    min-height: 150px;
     height: fit-content;
     padding:15px;
     box-sizing: border-box;
@@ -128,7 +127,6 @@ img {
 }
 
 .text-content > div {
-    //padding-right: var(--border-padding);
     display:flex;
     flex-direction: column;
     justify-content: space-between;

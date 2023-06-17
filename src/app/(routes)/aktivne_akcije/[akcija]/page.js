@@ -11,7 +11,7 @@ function Akcija() {
   const [loading, setLoading] = useState(true);
 
   const pathname = usePathname().replace("/aktivne_akcije/", "");
-  const hasMaterials = true;
+  const hasMaterials = false;
 
   useEffect(() => {
     const fetchData = async () => {

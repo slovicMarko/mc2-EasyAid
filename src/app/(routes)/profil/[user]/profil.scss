@@ -40,7 +40,7 @@
 
   .secondary-info {
     font-style: italic;
-    color: #686868;
+    color: #303030;
   }
 
   .profile-buttons {
@@ -63,6 +63,10 @@
     border-radius: 20px;
     background-color: var(--lightGreenBackground);
     padding: 24px;
-    color: #686868;
+    color: #303030;
   }
+}
+
+.bottom-actions {
+  text-align:left;
 }

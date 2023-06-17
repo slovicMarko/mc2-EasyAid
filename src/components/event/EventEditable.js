@@ -29,9 +29,11 @@ export function EventEdit({ action }) {
 
   return (
     <div className="event-organiser">
-      <button id="edit-button" onClick={handleFormClick}>
-        <FontAwesomeIcon icon={faPen} className="edit-icon" />
-      </button>
+      <Link href={`/dodaj/${action.actionID}`}>
+        <button id="edit-button" onClick={handleFormClick}>
+          <FontAwesomeIcon icon={faPen} className="edit-icon" />
+        </button>
+      </Link>
       <Link href={`/aktivne_akcije/${action.actionID}`}>
       <button onClick={handleEventClick} className="event-preview-button">
         <div className="event-edit-bubble">
