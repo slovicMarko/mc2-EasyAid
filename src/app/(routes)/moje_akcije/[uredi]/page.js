@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { updateDoc, getFirestore, doc } from "firebase/firestore";
+import { updateDoc, getFirestore, doc, deleteDoc } from "firebase/firestore";
 import firebaseConfig from "@/firebase/FirebaseConfig";
 import { initializeApp } from "firebase/app";
 
@@ -93,8 +93,12 @@ function Uredi() {
     }));
   };
 
-  console.log(image);
   const docRef = doc(db, "actions", docID);
+
+  const handleDelete = async () => {
+    await deleteDoc(docRef);
+    router.push(`/moje_akcije`);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -270,7 +274,7 @@ function Uredi() {
         </div>
 
         <button title="Spremi" type="submit" className="save-btn">
-            Ažuriraj
+          Ažuriraj
         </button>
         <div className="buttons-dodaj">
           <button onClick={handleFinish} className="end-event-btn">
@@ -280,8 +284,10 @@ function Uredi() {
             Odustani
           </button>
         </div>
-        
       </form>
+      <button onClick={handleDelete} className="end-event-btn">
+        Obriši akciju
+      </button>
     </div>
   );
 }

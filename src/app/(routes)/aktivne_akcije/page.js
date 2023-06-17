@@ -65,7 +65,7 @@ function MainFeed() {
           </div>
         </header>
         {filterMenuOn ? <FilterMenu /> : <></>}
-        {Listing.map((action) => (
+        {Listing.reverse().map((action) => (
           <Link href={`/aktivne_akcije/${action[0].actionID}`}>
             <EventBubble
               key={action.actionID}

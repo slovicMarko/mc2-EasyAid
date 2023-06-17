@@ -12,8 +12,6 @@ function Akcija() {
   const [action, setAction] = useState();
   const [loading, setLoading] = useState(true);
 
-  const auth = getAuth();
-
   const pathname = usePathname().replace("/aktivne_akcije/", "");
   const hasMaterials = false;
 
@@ -59,12 +57,7 @@ function Akcija() {
         <article className="text-content">
           <p>{action[0].about}</p>
           <div>
-            <Link
-              className="sing-up-link"
-              href={auth.currentUser ? "/aktivne_akcije" : "/prijava"}
-            >
-              <button className="sign-up-event">Prijavi se</button>
-            </Link>
+            <button className="sign-up-event">"Prijavi se</button>
             {hasMaterials ? (
               <div className="needed-stuff">
                 <h3>Potrebne stvari</h3>

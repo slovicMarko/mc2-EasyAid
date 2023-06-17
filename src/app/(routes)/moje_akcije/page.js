@@ -45,7 +45,7 @@ function OrganiserFeed() {
         onClick={addEvent}
       />
       <div className="organiser-container">
-        {Listing.map((action) => (
+        {Listing.reverse().map((action) => (
           <EventEdit key={action[0].actionID} action={action[0]} />
         ))}
       </div>

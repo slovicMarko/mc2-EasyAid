@@ -199,7 +199,7 @@ function Uredi() {
             <input
               className="input"
               name="city"
-              placeholder="Iz kojeg grada dolazite??"
+              placeholder="Iz kojeg grada dolazite?"
               type="text"
               onChange={handleChange}
               value={input.city}
@@ -211,7 +211,7 @@ function Uredi() {
             <input
               className="input"
               name="region"
-              placeholder="U kojem mjestu?"
+              placeholder="Iz koje županije?"
               type="text"
               onChange={handleChange}
               value={input.region}
