@@ -12,10 +12,8 @@ export function EventBubble({
   daysLeft,
   anyChanges,
   action,
-  imageURL
+  imageURL,
 }) {
-
-
   const eventClass = useMemo(() => {
     if (isPreview === true) {
       return "event--preview";
@@ -26,6 +24,7 @@ export function EventBubble({
     }
     return "";
   }, [isPreview, isInActive, isInFeed]);
+
 
   return (
     <div className={eventClass}>
@@ -46,17 +45,20 @@ export function EventBubble({
         )}
         <div className="event-bubble">
           <div className="event-bubble-header">
-            <img src={imageURL}/>
+            <img src={imageURL} />
           </div>
           <div className="event-middle">
             <h2>{action.name}</h2>
             <h3>{action.ownerID}</h3>
             <h4>{action.date}</h4>
           </div>
-          <p>{action.about}</p>
+          <p>
+            {action.about.length > 100
+              ? action.about.slice(0, 100) + "..."
+              : action.about}
+          </p>
         </div>
       </button>
-
     </div>
   );
 }

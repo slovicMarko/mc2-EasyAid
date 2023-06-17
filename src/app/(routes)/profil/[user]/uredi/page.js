@@ -9,7 +9,6 @@ import firebaseConfig from "@/firebase/FirebaseConfig";
 import { initializeApp } from "firebase/app";
 
 import { getStorage, ref, uploadBytes } from "firebase/storage";
-import { v4 } from "uuid";
 
 import "./uredi.scss";
 

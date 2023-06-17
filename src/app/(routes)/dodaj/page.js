@@ -4,11 +4,13 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { getFirestore, addDoc, collection } from "firebase/firestore";
-import { initializeApp } from "firebase/app";
-import { getStorage, ref, uploadBytes } from "firebase/storage";
 import firebaseConfig from "../../../firebase/FirebaseConfig";
+import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
+
+import { v4 } from "uuid";
 
 import "./dodajAkciju.scss";
 
@@ -22,9 +24,7 @@ function DodajAkciju() {
 
   const [input, setInput] = useState({
     about: "",
-    actionID: "",
     date: "",
-    //location: [],
     address: "",
     city: "",
     name: "",
@@ -41,10 +41,9 @@ function DodajAkciju() {
     e.preventDefault();
 
     let about = input.about;
-    let actionID = input.actionID;
-    let date = input.date;
-    //let location = input.location;
+    let actionID = v4();
     let address = input.address;
+    let date = input.date;
     let city = input.city;
     let name = input.name;
     let tags = input.tags;
@@ -64,7 +63,7 @@ function DodajAkciju() {
       vol_num: vol_num,
     });
 
-    router.push("/organiser");
+    router.push("/moje_akcije");
   };
 
   const handleChange = (e) => {
@@ -125,7 +124,7 @@ function DodajAkciju() {
             required
           />
         </div>
-        {/*
+
         <div className="form-field">
           <label htmlFor="background-about-image">Pozadinska slika:</label>
           <input
@@ -136,7 +135,6 @@ function DodajAkciju() {
             onChange={(e) => uploadImage(e.target.files[0])}
           />
         </div>
-        */}
 
         <div className="form-field">
           <p className="form-label">Adresa</p>

@@ -10,9 +10,8 @@ import { SortMenu } from "@/components/SortMenu";
 import "firebase/auth";
 import { fetchEvents } from "@/firebase/fetchEvents";
 import "./aktivne_akcije.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFilter, faSort } from '@fortawesome/free-solid-svg-icons'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilter, faSort } from "@fortawesome/free-solid-svg-icons";
 
 const imageURL = "/images/mainContentBack1.jpg";
 
@@ -28,6 +27,7 @@ function MainFeed() {
         docValue: true,
       });
       setListing(response);
+      console.log(response);
       setLoading(false);
     };
     fetchData();
@@ -58,7 +58,7 @@ function MainFeed() {
   */
 
   function UpperMenuSet(button) {
-    if(filterMenuOn === true) SetFilterMenu(false);
+    if (filterMenuOn === true) SetFilterMenu(false);
     else SetFilterMenu(true);
   }
 
@@ -67,21 +67,28 @@ function MainFeed() {
   const [sortMenuOn, SetSortMenu] = useState(false);
 
   if (loading) {
-    return (
-      <div className="blur">
-        <div className="spin"></div>
-      </div>
-    );
+    return <div className="spin"></div>;
   }
 
   return (
     <div>
       <div className="feed-wrapper">
         <header className="feed-buttons">
-          <button onClick={() => UpperMenuSet("filter")}> <FontAwesomeIcon icon={faFilter} style={{color: "#ffffff",}} size="lg"/> </button>
+          <button onClick={() => UpperMenuSet("filter")}>
+            {" "}
+            <FontAwesomeIcon
+              icon={faFilter}
+              style={{ color: "#ffffff" }}
+              size="lg"
+            />{" "}
+          </button>
           <div>
-          <FontAwesomeIcon icon={faSort} style={{color: "#ffffff",}} size="xl"/>
-          <SortMenu/>
+            <FontAwesomeIcon
+              icon={faSort}
+              style={{ color: "#ffffff" }}
+              size="xl"
+            />
+            <SortMenu />
           </div>
         </header>
         {filterMenuOn ? <FilterMenu /> : <></>}
