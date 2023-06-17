@@ -23,7 +23,6 @@ function Akcija() {
         })
       )[0];
       setAction(response);
-      console.log(response);
       setLoading(false);
     };
     fetchData();

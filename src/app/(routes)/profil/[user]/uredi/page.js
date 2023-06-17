@@ -36,14 +36,12 @@ function Uredi() {
     storeage,
     `users/${userID}/profile_image/profile_picture`
   );
-  const uploadImage = () => {
+  const uploadImage = async () => {
     if (ImageUpload == null) return;
-    uploadBytes(imageRef, ImageUpload).then(() => {
+    await uploadBytes(imageRef, ImageUpload).then(() => {
       alert("Image uploaded");
     });
   };
-
-  
 
   useEffect(() => {
     const fetchData = async () => {

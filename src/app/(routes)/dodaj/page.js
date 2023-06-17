@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import firebaseConfig from "../../../firebase/FirebaseConfig";
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getFirestore, addDoc, collection } from "firebase/firestore";
 
 import { v4 } from "uuid";
@@ -22,8 +22,12 @@ function DodajAkciju() {
   const auth = getAuth();
   const router = useRouter();
 
+  const [image, setImage] = useState(
+    "https://firebasestorage.googleapis.com/v0/b/mc2-easyaid.appspot.com/o/default%2Faction%2Fdefault.jpg?alt=media&token=fa184678-3133-483e-89d6-8386c106987b"
+  );
   const [input, setInput] = useState({
     about: "",
+    actionID: v4(),
     date: "",
     address: "",
     city: "",
@@ -41,11 +45,12 @@ function DodajAkciju() {
     e.preventDefault();
 
     let about = input.about;
-    let actionID = v4();
+    let actionID = input.actionID;
     let address = input.address;
     let date = input.date;
     let city = input.city;
     let name = input.name;
+    let photo = image;
     let tags = input.tags;
     let vol_num = input.vol_num;
 
@@ -57,6 +62,7 @@ function DodajAkciju() {
       address: address,
       city: city,
       name: name,
+      photo: photo,
       ownerID: auth.currentUser.uid,
       registered: [],
       tags: tags,
@@ -75,11 +81,16 @@ function DodajAkciju() {
 
   const uploadImage = async (file) => {
     try {
-      const storageRef = ref(storage, "images/" + file.name);
-      await uploadBytes(storageRef, file);
-      console.log("Image uploaded successfully.");
+      const imageRef = ref(storage, `actions/${input.actionID}/action_photo`);
+      await uploadBytes(imageRef, file);
+
+      async function getImage() {
+        const downloadURL = await getDownloadURL(imageRef);
+        setImage(downloadURL);
+      }
+      getImage();
     } catch (error) {
-      console.error("Error uploading image: ", error);
+      console.error("Greška pri prijenosu: ", error);
     }
   };
 
