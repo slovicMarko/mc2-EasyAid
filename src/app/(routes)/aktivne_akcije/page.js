@@ -19,7 +19,6 @@ function MainFeed() {
   const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filterMenuOn, SetFilterMenu] = useState(false);
-  const [sortMenuOn, SetSortMenu] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
