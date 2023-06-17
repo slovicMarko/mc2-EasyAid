@@ -118,7 +118,7 @@
   min-height: 90px;
   padding: 0;
   margin: 0px 0 0 0;
-  border-radius: 16px;
+  border-radius: 0 16px 0 16px;
   border:none;
   transition: 0.2s ease-in-out;
   font-size: 16px;
@@ -126,13 +126,15 @@
   top: 50px;
   right: 0px;
   z-index: 10;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0.153);
   color: #379f48;
+  transition: 0.3s ease;
 }
 
 #edit-button:hover {
-  transform: translateY(-2px);
+  //transform: translateY(-2px);
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.406);
 }
 
 

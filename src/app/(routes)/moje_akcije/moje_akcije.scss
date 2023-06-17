@@ -117,17 +117,19 @@
   transition: 0.4s ease;
 }
 
-.edit-icon{
-  color: #fff;
-  font-size: 30px;
-}
-
 .add-icon:hover {
   transition: 0.6s ease;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   transform: translateY(-2px);
   cursor: pointer;
 }
+
+.edit-icon{
+  color: #fff;
+  font-size: 30px;
+  text-shadow: 4px 4px 8px #303030;
+}
+
 
 @media (max-width: 560px) {
   .add-icon {
