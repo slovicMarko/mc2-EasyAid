@@ -18,7 +18,7 @@ const storeage = getStorage(app);
 
 function Uredi() {
   const [loading, setLoading] = useState(true);
-  const [image, setImage] = useState();
+  const [image, setImage] = useState(null);
   const userID = localStorage.getItem("user");
   const docID = localStorage.getItem("userDocID");
   const router = useRouter();
@@ -29,6 +29,7 @@ function Uredi() {
     fname: "",
     lname: "",
     region: "",
+    photo: "",
     telephone: "",
   });
 
@@ -65,6 +66,7 @@ function Uredi() {
         fname: response.fname,
         lname: response.lname,
         region: response.region,
+        photo: response.photo,
         telephone: response.telephone,
       });
       setLoading(false);
@@ -89,12 +91,13 @@ function Uredi() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(image);
-
+    if (image != null) {
+      setImage(input.photo);
+    }
     let about = input.about;
     let city = input.city;
     let fname = input.fname;
     let lname = input.lname;
-    let photo = image;
     let region = input.region;
     let telephone = input.telephone;
 

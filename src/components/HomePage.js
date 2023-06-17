@@ -10,31 +10,6 @@ import "./cssFiles/HomePage.scss";
 import { getAuth } from "firebase/auth";
 import { fetchEvents } from "@/firebase/fetchEvents";
 
-const homeEvents = [
-  {
-    id: 1,
-    title: "Event 1 na kojem radis to to i to",
-    date: "1. ožujka. 2023.",
-    organizer: "Hrvatski Crveni Križ",
-    about: "Loreremm u bj bh bh bhb hbh bh bh bh bhb h hbh bh bh bhb hb mmmm",
-  },
-  {
-    id: 2,
-    title: "Event 2",
-    date: "1. travnja. 2023.",
-    organizer: "72 sata bez kompromisa",
-    about: "Loremmmf",
-  },
-  {
-    id: 3,
-    title: "Event 3",
-    date: "1. svibnja. 2023.",
-    organizer: "Župa Kutina",
-    about:
-      "Loremfs hhhh hhhh hhhhhhhhh hhhhhhhhhhhh hhhhhhhh hhhhhhhhh hhhh hhhhhhhmm",
-  },
-];
-
 const fotoURL = "/images/mainContentBack1.jpg";
 
 function HomePage() {
@@ -55,7 +30,6 @@ function HomePage() {
     };
     fetchData();
   }, []);
-
 
   const auth = getAuth();
 
@@ -91,7 +65,7 @@ function HomePage() {
         <h2 className="headings">Želiš volontirati, a ne znaš gdje početi?</h2>
         <div className="top-events">
           <div className="event-lijevi">
-            <Link href={`/aktivne_akcije/${homeEvents[0].id}`}>
+            <Link href={`/aktivne_akcije/${Listing[0][0].actionID}`}>
               <EventBubble
                 isPreview
                 action={[
@@ -110,7 +84,7 @@ function HomePage() {
             </Link>
           </div>
           <div className="event-sredina">
-            <Link href={`/aktivne_akcije/${homeEvents[1].id}`}>
+            <Link href={`/aktivne_akcije/${Listing[1][0].actionID}`}>
               <EventBubble
                 isPreview
                 action={[
@@ -130,7 +104,7 @@ function HomePage() {
             </Link>
           </div>
           <div className="event-desni">
-            <Link href={`/aktivne_akcije/${homeEvents[2].id}`}>
+            <Link href={`/aktivne_akcije/${Listing[2][0].actionID}`}>
               <EventBubble
                 isPreview
                 action={[

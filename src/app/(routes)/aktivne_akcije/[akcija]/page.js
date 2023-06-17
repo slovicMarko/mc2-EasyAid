@@ -1,6 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { getAuth } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { fetchEvents } from "@/firebase/fetchEvents";
 
@@ -9,6 +11,8 @@ import "./chosenEvent.scss";
 function Akcija() {
   const [action, setAction] = useState();
   const [loading, setLoading] = useState(true);
+
+  const auth = getAuth();
 
   const pathname = usePathname().replace("/aktivne_akcije/", "");
   const hasMaterials = false;
@@ -55,7 +59,12 @@ function Akcija() {
         <article className="text-content">
           <p>{action[0].about}</p>
           <div>
-            <button className="sign-up-event">Prijavi se</button>
+            <Link
+              className="sing-up-link"
+              href={auth.currentUser ? "/aktivne_akcije" : "/prijava"}
+            >
+              <button className="sign-up-event">Prijavi se</button>
+            </Link>
             {hasMaterials ? (
               <div className="needed-stuff">
                 <h3>Potrebne stvari</h3>
@@ -71,7 +80,11 @@ function Akcija() {
           </div>
         </article>
         <article>
-          <img src={action[0].photo} className="action-photo" alt="slika akcije" />
+          <img
+            src={action[0].photo}
+            className="action-photo"
+            alt="slika akcije"
+          />
         </article>
         <article className="info">
           <section>
