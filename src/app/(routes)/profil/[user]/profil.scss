@@ -1,7 +1,11 @@
 .profile-page-content {
   max-width: 1000px;
+  width:100%;
   margin: 72px auto;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .profile-main {
@@ -18,12 +22,13 @@
     color: var(--greenBtn);
     cursor: pointer;
     text-decoration: none;
+    font-size: 16px;
   }
 
   .profile-image {
     width: 254px;
     height: 254px;
-    object-fit: scale-down;
+    object-fit: cover;
     object-position: center;
     border-radius: 100%;
     margin-top: 30px;
@@ -37,11 +42,17 @@
     font-style: italic;
     color: #686868;
   }
+
+  .profile-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .profile-info {
   text-align: left;
-  margin: 0 136px;
+  margin: 0 0px;
 
   h2 {
     margin: 0 0 0 24px;
