@@ -1,8 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { getAuth } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { fetchEvents } from "@/firebase/fetchEvents";
 
