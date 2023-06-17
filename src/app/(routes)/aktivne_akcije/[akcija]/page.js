@@ -48,10 +48,6 @@ function Akcija() {
               <h2>Potrebno</h2>
               <h3>{action[0].vol_num}</h3>
             </div>
-            <div>
-              <h2>Dolazi</h2>
-              <h3>6</h3>
-            </div>
           </aside>
         </div>
       </div>
