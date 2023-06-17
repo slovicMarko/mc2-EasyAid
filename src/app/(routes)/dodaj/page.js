@@ -79,9 +79,10 @@ function DodajAkciju() {
     }));
   };
 
+  const imageRef = ref(storage, `actions/${input.actionID}/action_photo`);
+
   const uploadImage = async (file) => {
     try {
-      const imageRef = ref(storage, `actions/${input.actionID}/action_photo`);
       await uploadBytes(imageRef, file);
 
       async function getImage() {

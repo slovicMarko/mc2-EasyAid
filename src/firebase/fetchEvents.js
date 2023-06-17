@@ -22,10 +22,11 @@ export async function fetchEvents(data) {
     );
     const querySnapshot = await getDocs(condition);
     const docs = [];
-    querySnapshot.forEach(doc => {
+    querySnapshot.forEach((doc) => {
       docs.push(doc);
+      localStorage.setItem("ActionDocID", doc.id);
     });
-    const events = await Promise.all(docs.map(doc => fetchData(doc)));
+    const events = await Promise.all(docs.map((doc) => fetchData(doc)));
     return events;
   } catch (error) {
     console.log("Error getting documents:", error);

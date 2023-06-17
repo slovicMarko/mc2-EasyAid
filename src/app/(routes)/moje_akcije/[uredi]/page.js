@@ -7,7 +7,7 @@ import { updateDoc, getFirestore, doc } from "firebase/firestore";
 import firebaseConfig from "@/firebase/FirebaseConfig";
 import { initializeApp } from "firebase/app";
 
-import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 import "./uredi.scss";
 import { fetchEvents } from "@/firebase/fetchEvents";
@@ -18,9 +18,9 @@ const storage = getStorage(app);
 
 function Uredi() {
   const [loading, setLoading] = useState(true);
-  const [ImageUpload, setImageUpload] = useState(null);
   const router = useRouter();
   const pathname = usePathname().replace("/moje_akcije/", "");
+  const docID = localStorage.getItem("ActionDocID");
 
   const [image, setImage] = useState();
   const [input, setInput] = useState({
@@ -39,11 +39,18 @@ function Uredi() {
 
   const imageRef = ref(storage, `actions/${input.actionID}/action_photo`);
 
-  const uploadImage = async () => {
-    if (ImageUpload == null) return;
-    await uploadBytes(imageRef, ImageUpload).then(() => {
-      alert("Image uploaded");
-    });
+  const uploadImage = async (file) => {
+    try {
+      await uploadBytes(imageRef, file);
+
+      async function getImage() {
+        const downloadURL = await getDownloadURL(imageRef);
+        setImage(downloadURL);
+      }
+      getImage();
+    } catch (error) {
+      console.error("Greška pri prijenosu: ", error);
+    }
   };
 
   useEffect(() => {
@@ -54,8 +61,7 @@ function Uredi() {
           docField: "actionID",
           docValue: pathname,
         })
-      )[0];
-      console.log(response);
+      )[0][0];
       setInput({
         about: response.about,
         actionID: response.actionID,
@@ -87,7 +93,8 @@ function Uredi() {
     }));
   };
 
-  const docRef = doc(db, "actions", pathname);
+  console.log(image);
+  const docRef = doc(db, "actions", docID);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -113,7 +120,45 @@ function Uredi() {
       address: address,
       city: city,
       name: name,
-      photo: photo,
+      photo: image,
+      ownerID: ownerID,
+      registered: registered,
+      tags: tags,
+      vol_num: vol_num,
+    })
+      .then(() => {
+        console.log("Document updated");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    router.push(`/moje_akcije`);
+  };
+
+  const handleFinish = (e) => {
+    e.preventDefault();
+
+    let about = input.about;
+    let actionID = input.actionID;
+    let date = input.date;
+    let address = input.address;
+    let city = input.city;
+    let name = input.name;
+    let photo = image;
+    let registered = input.registered;
+    let ownerID = input.ownerID;
+    let tags = input.tags;
+    let vol_num = input.vol_num;
+
+    updateDoc(docRef, {
+      about: about,
+      actionID: actionID,
+      active: false,
+      date: date,
+      address: address,
+      city: city,
+      name: name,
+      photo: image,
       ownerID: ownerID,
       registered: registered,
       tags: tags,
@@ -139,6 +184,7 @@ function Uredi() {
         <img src="/images/logo.svg" alt="background-logo" />
       </div>
       <form autoComplete="off" className="form" onSubmit={handleSubmit}>
+        <button onClick={handleFinish}>Zatvori akciju</button>
         <div className="form-field">
           <p className="form-label">Naziv akcije</p>
           <input
@@ -147,7 +193,7 @@ function Uredi() {
             placeholder="naziv akcije"
             type="text"
             onChange={handleChange}
-            value={input.title}
+            value={input.name}
             required
           />
         </div>
@@ -229,7 +275,7 @@ function Uredi() {
             Odustani
           </button>
           <button title="Spremi" type="submit" className="save-btn">
-            Dodaj
+            Ažuriraj
           </button>
         </div>
       </form>
