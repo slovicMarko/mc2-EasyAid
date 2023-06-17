@@ -220,7 +220,6 @@ function Uredi() {
             type="date"
             pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}."
             onChange={handleChange}
-            required
           />
         </div>
 
