@@ -76,7 +76,6 @@ function MainFeed() {
               action={action}
               daysLeft={2}
               anyChanges={false}
-              imageURL={imageURL}
             />
           </Link>
         ))}
