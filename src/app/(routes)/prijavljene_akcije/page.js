@@ -80,7 +80,7 @@ function ActiveFeed() {
             <div className="active-events">
               {ListingActive.map((action) => (
                 <EventBubble
-                  key={action.actionID}
+                  key={action[0].actionID}
                   isPreview={false}
                   isInActive={false}
                   isInFeed={true}
@@ -95,7 +95,7 @@ function ActiveFeed() {
             <div className="past-events">
               {ListingPast.map((action) => (
                 <EventBubble
-                  key={action.actionID}
+                  key={action[0].actionID}
                   isPreview={false}
                   isInActive={false}
                   isInFeed={true}

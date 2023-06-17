@@ -8,13 +8,11 @@ import { useRouter } from "next/navigation";
 import { EventEdit } from "@/components/event/EventEditable";
 import "./moje_akcije.scss";
 
-import { getAuth } from "firebase/auth";
 import { fetchEvents } from "@/firebase/fetchEvents";
 
 const isActive = (href) => {
   return router.pathname === href;
 };
-
 
 function OrganiserFeed() {
   const [Listing, setListing] = useState([]);
@@ -52,7 +50,7 @@ function OrganiserFeed() {
       />
       <div>
         {Listing.map((action) => (
-          <EventEdit key={action.actionID} action={action}/>
+          <EventEdit key={action[0].actionID} action={action[0]} />
         ))}
       </div>
     </div>

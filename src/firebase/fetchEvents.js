@@ -1,3 +1,4 @@
+"use client";
 import {
   getFirestore,
   collection,
@@ -7,24 +8,37 @@ import {
 } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "@/firebase/FirebaseConfig";
+import { fetchUser } from "./fetchUser";
+import { useState } from "react";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 export async function fetchEvents(data) {
-  const events = new Array();
   try {
     const condition = query(
       collection(db, data.collection),
       where(data.docField, "==", data.docValue)
     );
     const querySnapshot = await getDocs(condition);
-    querySnapshot.forEach((doc) => {
-      events.push(doc.data());
+    const promises = [];
+    querySnapshot.forEach(doc => {
+      promises.push(fetchData(doc));
     });
+    const events = await Promise.all(promises);
+    return events;
   } catch (error) {
     console.log("Error getting documents:", error);
   }
+}
 
-  return events;
+async function fetchData(doc) {
+  const user = (
+    await fetchUser({
+      collection: "users",
+      docField: "userID",
+      docValue: doc.data().ownerID,
+    })
+  )[0];
+  return [doc.data(), user];
 }

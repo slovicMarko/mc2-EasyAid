@@ -1,8 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import "./../cssFiles/event.scss";
-import { Event } from "./eventModal";
 
 export function EventBubble({
   isPreview,
@@ -24,7 +23,6 @@ export function EventBubble({
     }
     return "";
   }, [isPreview, isInActive, isInFeed]);
-
 
   return (
     <div className={eventClass}>
@@ -48,14 +46,14 @@ export function EventBubble({
             <img src={imageURL} />
           </div>
           <div className="event-middle">
-            <h2>{action.name}</h2>
-            <h3>{action.ownerID}</h3>
-            <h4>{action.date}</h4>
+            <h2>{action[0].name}</h2>
+            <h3>{`${action[1].fname} ${action[1].lname}`}</h3>
+            <h4>{action[0].date}</h4>
           </div>
           <p>
-            {action.about.length > 100
-              ? action.about.slice(0, 100) + "..."
-              : action.about}
+            {action[0].about.length > 100
+              ? action[0].about.slice(0, 100) + "..."
+              : action[0].about}
           </p>
         </div>
       </button>

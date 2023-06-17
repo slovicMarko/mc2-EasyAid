@@ -43,6 +43,8 @@ function Uredi() {
     });
   };
 
+  
+
   useEffect(() => {
     const fetchData = async () => {
       const response = (
