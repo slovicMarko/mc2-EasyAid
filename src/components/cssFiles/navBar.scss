@@ -79,7 +79,7 @@
   width: auto;
 }
 
-.bold {
+.btn--nav:hover {
   font-weight: 800;
 }
 
@@ -106,4 +106,5 @@
   transition: 0.4s ease;
   background-color: #0b6e1a;
   border-color: #0b6e1a;
+  cursor: pointer;
 }

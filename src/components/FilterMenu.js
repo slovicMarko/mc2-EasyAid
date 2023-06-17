@@ -1,13 +1,17 @@
 import "../components/cssFiles/filterMenu.scss"
 import Select from 'react-select'
 
-const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
+const organiser = [
+    { value: 'all', label: 'Sve' },
+    { value: 'X1', label: 'Caritas Hrvatska' },
+    { value: 'X2', label: 'Crveni Križ' },
+]
+
+const places = [
+    { value: 'all', label: 'Sve' },
+    { value: 'zg', label: 'Zagrebačka' },
+    { value: 'sk', label: 'Sisačko-moslavačka' },
+    { value: 'zd', label: 'Zadarska' },
 ]
 
 const category = [
@@ -37,7 +41,7 @@ export function FilterMenu () {
             <div className="organiser-dropdown">
                 <h2>Organizator</h2>
                 <Select 
-                options={options}
+                options={organiser}
                 maxMenuHeight={150}
                 //onChange={}
                 theme={(theme) => ({
@@ -54,7 +58,7 @@ export function FilterMenu () {
             <div className="location-dropdown">
                 <h2>Lokacija</h2>
                 <Select 
-                options={options}
+                options={places}
                 maxMenuHeight={150}
                 //onChange={}
                 theme={(theme) => ({

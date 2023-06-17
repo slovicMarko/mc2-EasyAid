@@ -48,7 +48,7 @@ function OrganiserFeed() {
         className="add-icon"
         onClick={addEvent}
       />
-      <div>
+      <div className="organiser-container">
         {Listing.map((action) => (
           <EventEdit key={action[0].actionID} action={action[0]} />
         ))}

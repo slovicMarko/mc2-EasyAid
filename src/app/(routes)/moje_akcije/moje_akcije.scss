@@ -1,3 +1,15 @@
+.organiser-container {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  grid-column-gap: 24px;
+  column-gap: 24px;
+  grid-row-gap: 24px;
+  row-gap: 24px;
+  justify-content: center;
+  justify-items: center;
+  margin-top:24px;
+}
+
 .rectangle {
   display: flex;
   flex-direction: column;
@@ -111,7 +123,8 @@
   font-size: 84px;
   position: fixed;
   right: 68px;
-  bottom: 48px;
+  //bottom: 48px;
+  top:110px;
   border-radius: 50%;
   z-index: 20;
   transition: 0.4s ease;

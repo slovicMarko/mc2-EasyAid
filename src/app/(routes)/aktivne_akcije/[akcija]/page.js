@@ -1,6 +1,9 @@
 import "./chosenEvent.scss"
 
-function Akcija() {
+function Akcija({action}) {
+
+  const hasMaterials = true;
+
   return (
     <div className="akcija">
       <div className="heading-color">
@@ -13,10 +16,14 @@ function Akcija() {
               <h2>24.lipnja.2023</h2>
             </section>
             <aside>
-              <h2>Potrebno</h2>
-              <h3>6</h3>
-              <h2>Dolazi</h2>
-              <h3>6</h3>
+              <div>
+                <h2>Potrebno</h2>
+                <h3>6</h3>
+              </div>
+              <div>
+                <h2>Dolazi</h2>
+                <h3>6</h3>
+              </div>
             </aside>
           </div>
       </div>
@@ -29,12 +36,18 @@ function Akcija() {
             Opis Lorem Ipsum Opis Lorem Ipsum Opis Lorem Ipsum Opis Lorem IpsumOpis Lorem Ipsum Opis Lorem Ipsum Opis Lorem Ipsums
           </p>
           <div>
-            <h3>Potrebne stvari</h3>
-            <ul>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-            </ul>
+            <button className="sign-up-event">Prijavi se</button>
+            {
+              hasMaterials ?
+            <div className="needed-stuff">
+              <h3>Potrebne stvari</h3>
+              <ul>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+              </ul>
+            </div>
+            : <></>}
           </div>
         </article>
         <article>
