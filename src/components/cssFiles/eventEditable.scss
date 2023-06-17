@@ -116,14 +116,15 @@
   padding: 0;
   margin: 0px 0 0 0;
   border-radius: 0 16px 0 16px;
-  border:none;
+  //border:none;
+  border:1px solid rgb(68, 68, 68);
   transition: 0.2s ease-in-out;
   font-size: 16px;
   position: absolute;
   top: 0px;
   right: 0px;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.153);
+  background-color: rgba(0, 0, 0, 0.266);
   color: #379f48;
   transition: 0.3s ease;
 }

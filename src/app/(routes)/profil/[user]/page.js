@@ -35,17 +35,6 @@ function Profile() {
     <div className="profile-page-content">
       <div className="container-buttons">
         <div className="profile-main">
-          <Link
-            className="button-edit"
-            href={`/profil/${userID + "/uredi"}`}
-            user={user}
-          >
-            Uredi
-          </Link>
-
-          <button className="button-edit" onClick={VerifyEmail}>
-            Potvrdi račun
-          </button>
 
           <div>
             <img className="profile-image" src={profilePicture} />
@@ -62,6 +51,19 @@ function Profile() {
               {user.telephone ? user.telephone : null}
             </p>
           </div>
+
+          <Link
+            className="button-edit"
+            href={`/profil/${userID + "/uredi"}`}
+            user={user}
+          >
+            Uredi
+          </Link>
+
+          <button className="button-edit" onClick={VerifyEmail}>
+            Potvrdi račun
+          </button>
+
         </div>
       </div>
       <div className="profile-info">

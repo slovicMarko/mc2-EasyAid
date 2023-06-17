@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link"; 
 
 import { EventEdit } from "@/components/event/EventEditable";
 import "./moje_akcije.scss";
@@ -50,7 +51,9 @@ function OrganiserFeed() {
       />
       <div className="organiser-container">
         {Listing.map((action) => (
-          <EventEdit key={action[0].actionID} action={action[0]} />
+          <Link href={`/aktivne_akcije/${action.actionID}`}>
+            <EventEdit key={action[0].actionID} action={action[0]} />
+          </Link>
         ))}
       </div>
     </div>

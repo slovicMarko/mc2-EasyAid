@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { EventBubble } from "@/components/event/event";
-
+import Link from "next/link";
 import { getAuth } from "firebase/auth";
 import { fetchEvents } from "@/firebase/fetchEvents";
 
@@ -23,11 +23,6 @@ function ActiveFeed() {
 
   const auth = getAuth();
   const router = useRouter();
-
-  const handleClick = () => {
-    console.log("radi djelomicno sad treba rj div");
-    setShowEvent(true);
-  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -79,31 +74,35 @@ function ActiveFeed() {
             <h1>Aktivne akcije</h1>
             <div className="active-events">
               {ListingActive.map((action) => (
-                <EventBubble
-                  key={action[0].actionID}
-                  isPreview={false}
-                  isInActive={false}
-                  isInFeed={true}
-                  action={action}
-                  daysLeft={2}
-                  anyChanges={false}
-                  imageURL={imageURL}
-                />
+                <Link href={`/aktivne_akcije/${action.actionID}`}>
+                  <EventBubble
+                    key={action[0].actionID}
+                    isPreview={false}
+                    isInActive={false}
+                    isInFeed={true}
+                    action={action}
+                    daysLeft={2}
+                    anyChanges={false}
+                    imageURL={imageURL}
+                  />
+                </Link>
               ))}
             </div>
             <h1>Prošle akcije</h1>
             <div className="past-events">
               {ListingPast.map((action) => (
-                <EventBubble
-                  key={action[0].actionID}
-                  isPreview={false}
-                  isInActive={false}
-                  isInFeed={true}
-                  action={action}
-                  daysLeft={2}
-                  anyChanges={false}
-                  imageURL={imageURL}
-                />
+                <Link href={`/aktivne_akcije/${action.actionID}`}>
+                  <EventBubble
+                    key={action[0].actionID}
+                    isPreview={false}
+                    isInActive={false}
+                    isInFeed={true}
+                    action={action}
+                    daysLeft={999}
+                    anyChanges={false}
+                    imageURL={imageURL}
+                  />
+                </Link>
               ))}
             </div>
           </section>
