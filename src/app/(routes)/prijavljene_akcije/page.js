@@ -9,9 +9,6 @@ import { fetchEvents } from "@/firebase/fetchEvents";
 
 import "./prijavljene_akcije.scss";
 
-const isActive = (href) => {
-  return router.pathname === href;
-};
 
 const imageURL = "/images/mainContentBack1.jpg";
 
@@ -74,7 +71,7 @@ function ActiveFeed() {
             <h1>Aktivne akcije</h1>
             <div className="active-events">
               {ListingActive.map((action) => (
-                <Link href={`/aktivne_akcije/${action.actionID}`}>
+                <Link href={`/aktivne_akcije/${action[0].actionID}`}>
                   <EventBubble
                     key={action[0].actionID}
                     isPreview={false}
