@@ -90,7 +90,7 @@ function Register() {
       </div>
       <div className="app-name">EasyAid</div>
       <form autoComplete="off" className="form" onSubmit={handleSubmit}>
-        <div className="input-name">
+        <div className="input-name-register">
           <div className="form-field-name">
             <p className="form-label">Ime</p>
             <input

@@ -84,7 +84,7 @@ function HomePage() {
             </Link>
           </div>
           <div className="event-sredina">
-            <Link href={`/aktivne_akcije/${Listing[1][0].actionID}`}>
+            <Link href={`/aktivne_akcije/${Listing[1][0].actionID}`} className="link">
               <EventBubble
                 isPreview
                 action={[
@@ -99,7 +99,6 @@ function HomePage() {
                     lname: Listing[1][1].lname,
                   },
                 ]}
-                imageURL={fotoURL}
               />
             </Link>
           </div>

@@ -6,12 +6,14 @@ import Link from "next/link";
 
 import "./profil.scss";
 import { getAuth } from "firebase/auth";
+import { usePathname } from "next/navigation";
 
 function Profile() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState();
   const [profilePicture, setProfilePicture] = useState(null);
   const userID = localStorage.getItem("user");
+  const pathname = usePathname().replace("/profil/", "");
   const auth = getAuth();
 
   useEffect(() => {
@@ -19,7 +21,7 @@ function Profile() {
       const response = await fetchUser({
         collection: "users",
         docField: "userID",
-        docValue: userID,
+        docValue: pathname,
       });
       setUser(response[0]);
       setProfilePicture(response[1]);
@@ -53,7 +55,7 @@ function Profile() {
               </p>
             </div>
 
-            <div className="profile-buttons">
+            <div className={pathname == userID ? "profile-buttons" : "none"}>
               <Link
                 className="button-edit"
                 href={`/profil/${userID + "/uredi"}`}
@@ -61,11 +63,11 @@ function Profile() {
               >
                 Uredi
               </Link>
-              {auth.currentUser.emailVerified ? null : (
+              {auth.currentUser ? auth.currentUser.emailVerified ? null : (
                 <button className="button-edit" onClick={VerifyEmail}>
                   Potvrdi račun
                 </button>
-              )}
+              ): null}
             </div>
           </div>
         </div>

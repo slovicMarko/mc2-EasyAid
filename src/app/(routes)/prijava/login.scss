@@ -15,7 +15,7 @@
   user-select: none;
 }
 
-.input-name {
+.input-name-register {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -97,6 +97,10 @@
   user-select: none;
   transition: 0.4s ease;
   border-style: none;
+}
+
+.login-error {
+  width: 320px;
 }
 
 .login-btn:hover {

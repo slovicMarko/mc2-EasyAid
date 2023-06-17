@@ -44,7 +44,11 @@ export function EventEdit({ action }) {
               <h2>{action.name}</h2>
               <h4>{action.date}</h4>
             </div>
-            <p>{action.about}</p>
+            <p>
+              {action.about.length > 100
+                ? action.about.slice(0, 100) + "..."
+                : action.about}
+            </p>
           </div>
         </button>
       </Link>

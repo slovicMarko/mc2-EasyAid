@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import Link from "next/link"
 import "./../cssFiles/event.scss";
 
 export function EventBubble({
@@ -46,7 +47,9 @@ export function EventBubble({
           </div>
           <div className="event-middle">
             <h2>{action[0].name}</h2>
+            <Link href={`/profil/${action[1].userID}`} className="link">
             <h3>{`${action[1]?.fname} ${action[1]?.lname}`}</h3>
+            </Link>
             <h4>{action[0].date}</h4>
           </div>
           <p>

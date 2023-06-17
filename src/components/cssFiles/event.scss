@@ -3,7 +3,8 @@
   --gray: #303030;
 }
 
-h3, p {
+h3,
+p {
   color: var(--gray);
 }
 
@@ -225,17 +226,17 @@ aside h5 {
     position: relative;
     border-radius: 16px 16px 0 0;
     border: none;
-    overflow:hidden;
+    overflow: hidden;
   }
 
   .event-bubble-header > img {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius:16px 16px 0 0;
-    position:absolute;
-    top:0;
-    left:0;
+    border-radius: 16px 16px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .event-middle {
@@ -275,10 +276,9 @@ aside h5 {
     font-size: 1em;
     width: 90%;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     height: 60px;
     margin: 0px auto 10px 20px;
-
   }
 }
 
@@ -309,7 +309,7 @@ aside h5 {
   }
 
   .event-bubble-header {
-    width:100%;
+    width: 100%;
     color: #f0f0f0;
     background-color: var(--greenBtn);
     height: 180px;
@@ -319,33 +319,33 @@ aside h5 {
   }
 
   .event-bubble-header > img {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius:16px 16px 0 0;
-    position:absolute;
-    top:0;
-    left:0;
+    border-radius: 16px 16px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .event-middle h2 {
     font-size: 16px;
     margin: 0;
-    color:#303030;
+    color: #303030;
   }
 
   .event-middle h4 {
     font-size: 14px;
     margin: 10px 0 0 0;
-    color:#303030;
+    color: #303030;
   }
 
   .event-middle {
-    padding:12px 12px 12px 12px;
+    padding: 12px 12px 12px 12px;
   }
 
   .event-bubble p {
-    margin:0;
+    margin: 0;
     padding: 0 12px 0 12px;
     letter-spacing: 0.5px;
     line-height: 130%;
@@ -389,20 +389,19 @@ aside h5 {
     position: relative;
     border-radius: 16px 16px 0 0;
     border: none;
-    overflow:hidden;
+    overflow: hidden;
   }
 
   .event-bubble-header > img {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius:16px 16px 0 0;
-    position:absolute;
-    top:0;
-    left:0;
+    border-radius: 16px 16px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-  
-  
+
   .event-bubble h3 {
     float: left;
     text-align: left;
@@ -421,7 +420,6 @@ aside h5 {
     font-weight: normal;
   }
 
-
   .event-bubble-header h2 {
     font-size: 16px;
     font-weight: 800;
@@ -439,10 +437,9 @@ aside h5 {
     font-size: 1em;
     width: 90%;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     height: 60px;
     margin: 0px auto 10px 20px;
-
   }
 }
 
@@ -453,16 +450,16 @@ aside h5 {
 .days-alert > h2 {
   position: absolute;
   z-index: 100;
-  top:-10px;
-  right:-10px;
+  top: -10px;
+  right: -10px;
   font-size: 16px;
-  background-color:rgb(225, 97, 22);
-  color:white;
-  margin:0;
-  height:38px;
-  width:150px;
+  background-color: rgb(225, 97, 22);
+  color: white;
+  margin: 0;
+  height: 38px;
+  width: 150px;
   text-align: center;
-  padding:4px;
+  padding: 4px;
   border-radius: 16px;
 }
 
@@ -473,21 +470,26 @@ aside h5 {
 .change-alert > h2 {
   position: absolute;
   z-index: 100;
-  top:40px;
-  right:-10px;
+  top: 40px;
+  right: -10px;
   font-size: 16px;
-  background-color:rgb(245, 237, 9);
-  color:#303030;
-  margin:0;
-  height:22px;
-  width:150px;
+  background-color: rgb(245, 237, 9);
+  color: #303030;
+  margin: 0;
+  height: 22px;
+  width: 150px;
   text-align: center;
-  padding:12px 4px 12px 4px;
+  padding: 12px 4px 12px 4px;
   border-radius: 16px;
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width: 1000px) {
   .event-button button {
-      min-width:400px;
+    min-width: 400px;
   }
+}
+
+.link {
+  text-decoration: none;
+  color: #4d4d4d;
 }

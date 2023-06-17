@@ -1,6 +1,6 @@
 .profile-page-content {
   max-width: 1000px;
-  width:100%;
+  width: 100%;
   margin: 104px auto;
   display: flex;
   justify-content: space-between;
@@ -46,7 +46,7 @@
   .profile-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 
@@ -68,11 +68,15 @@
 }
 
 .bottom-actions {
-  text-align:left;
+  text-align: left;
   max-width: 1000px;
   width: 100%;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .bottom-actions > div {
-  height:100px;
+  height: 100px;
+}
+
+.none {
+  display: none;
 }

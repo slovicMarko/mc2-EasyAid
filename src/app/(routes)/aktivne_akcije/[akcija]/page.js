@@ -2,15 +2,18 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { fetchEvents } from "@/firebase/fetchEvents";
 
 import "./chosenEvent.scss";
+import { getAuth } from "firebase/auth";
 
 function Akcija() {
   const [action, setAction] = useState();
   const [loading, setLoading] = useState(true);
   const pathname = usePathname().replace("/aktivne_akcije/", "");
   const hasMaterials = false;
+  const auth = getAuth();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,7 +40,9 @@ function Akcija() {
         <div className="heading">
           <article>
             <h1>{action[0].name}</h1>
-            <h2>{`${action[1].fname} ${action[1].lname} `}</h2>
+            <Link href={`/profil/${action[1].userID}`} className="link">
+              <h2>{`${action[1].fname} ${action[1].lname} `}</h2>
+            </Link>
           </article>
           <section>
             <h2>{action[0].date}</h2>
@@ -54,7 +59,10 @@ function Akcija() {
         <article className="text-content">
           <p>{action[0].about}</p>
           <div>
-            <button className="sign-up-event">"Prijavi se</button>
+            <Link href={auth.currentUser ? `/aktivne_akcije/${pathname}` : "/prijava"} className="link">
+              <button className="sign-up-event">Prijavi se</button>
+            </Link>
+
             {hasMaterials ? (
               <div className="needed-stuff">
                 <h3>Potrebne stvari</h3>
