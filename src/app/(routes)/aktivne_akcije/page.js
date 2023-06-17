@@ -73,7 +73,7 @@ function MainFeed() {
               isInActive={false}
               isInFeed={true}
               action={action}
-              daysLeft={2}
+              daysLeft={6}
               anyChanges={false}
             />
           </Link>

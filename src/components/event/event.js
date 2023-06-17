@@ -23,10 +23,6 @@ export function EventBubble({
     return "";
   }, [isPreview, isInActive, isInFeed]);
 
-  const currDate = new Date();
-  let daysLeft_ = action.date;
-  console.log(daysLeft_);
-
   return (
     <div className={eventClass}>
       <button onClick={activeFunc}>

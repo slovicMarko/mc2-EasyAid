@@ -1,21 +1,6 @@
-/*
-.sort-content {
-    width:100vw;
-    height:200px;
-    background-color: white;
-    grid-column-start: span 2;
-}
-
-@media (max-width:1100px) {
-    .sort-content {
-        grid-column-start: span 1;
-    }
-}
-
-*/
 
 .sort-content {
     width:150px;
     position: relative;
-    z-index: 200;
+    z-index: 2000;
 }
