@@ -103,11 +103,8 @@
 /*Event Bubble Edit*/
 
 .event-organiser {
-  width: 30%;
-  min-width: 600px;
-  margin: 0 auto;
-  height: 18%;
-  min-height: 360px;
+  width: 500px;
+  height: 415px;
   position: relative;
 }
 
@@ -123,7 +120,7 @@
   transition: 0.2s ease-in-out;
   font-size: 16px;
   position: absolute;
-  top: 50px;
+  top: 0px;
   right: 0px;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.153);
@@ -158,12 +155,10 @@
 }
 
 .event-organiser .event-preview-button {
-  width: 100%;
-  min-width: 600px;
-  height: 100%;
-  min-height: 300px;
+  width: 500px;
+  height: 415px;
   padding: 0;
-  margin: 50px 0 0 0;
+  //margin: 50px 0 0 0;
   border-radius: 16px;
   border: none;
   transition: 0.2s ease-in-out;
@@ -217,20 +212,30 @@
     width: 100%;
   }
 
+.event-edit-middle h2 {
+    text-align: left;
+    font-size: 1.25rem;
+    width: 90%;
+    height: 40px;
+    margin: 10px 20px auto 20px;
+    color: #303030;
+    position: relative;
+}
+
   .event-edit-bubble h3 {
     float: left;
     text-align: left;
     font-size: 1em;
     width: 60%;
-    height: 60px;
-    margin: 20px 10px 10px 20px;
+    height: 40px;
+    margin: 5px 10px 5px 20px;
   }
   .event-edit-bubble h4 {
     float: left;
     font-size: 1.4;
     width: 30%;
-    height: 60px;
-    margin: 18px 20px 10px 0px;
+    height: 40px;
+    margin: 5px 20px 10px 0px;
     text-align: center;
     font-weight: normal;
   }
@@ -239,10 +244,10 @@
     text-align: left;
     font-size: 1em;
     width: 90%;
-    height: 40%;
-    min-height: 100px;
-    margin: 10px auto 10px 20px;
-    padding-bottom: 10px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    height: 60px;
+    margin: 0px auto 10px 20px;
   }
 }
 
