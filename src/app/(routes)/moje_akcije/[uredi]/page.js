@@ -220,7 +220,6 @@ function Uredi() {
             type="date"
             pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}."
             onChange={handleChange}
-            required
           />
         </div>
 
@@ -273,21 +272,23 @@ function Uredi() {
           />
         </div>
 
-        <button title="Spremi" type="submit" className="save-btn">
-          Ažuriraj
-        </button>
-        <div className="buttons-dodaj">
-          <button onClick={handleFinish} className="end-event-btn">
-            Zatvori akciju
-          </button>
-          <button title="Odustani" onClick={handleClick} className="cancel-btn">
-            Odustani
-          </button>
+          <div className="buttons-dodaj mrgnUp">
+            <button title="Odustani" onClick={handleClick} className="cancel-btn">
+                Odustani
+            </button>
+            <button title="Spremi" type="submit" className="save-btn">
+              Ažuriraj
+            </button>
+          </div>
+          <div className="buttons-dodaj">
+            <button onClick={handleFinish} className="end-event-btn">
+              Zatvori akciju
+            </button>
+            <button onClick={handleDelete} className="end-event-btn">
+              Obriši akciju
+            </button>
         </div>
       </form>
-      <button onClick={handleDelete} className="end-event-btn">
-        Obriši akciju
-      </button>
     </div>
   );
 }

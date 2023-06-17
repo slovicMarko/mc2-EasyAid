@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin: 104px 0 200px 0;
+  width:100%;
 }
 
 .background-logo {
@@ -38,6 +40,7 @@
   padding: 0 15px;
   transition: 0.4s ease-in;
   user-select: none;
+  
 }
 
 .input:focus {
@@ -72,6 +75,7 @@
 .buttons-dodaj {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 10px;
 }
 
 .cancel-btn {
@@ -96,9 +100,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 334px;
+  width: 45%;
   height: 50px;
-  margin: 20px auto 10px auto;
   font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
@@ -148,4 +151,8 @@
   background-color: red;
   border-color: red;
   color: #fff;
+}
+
+.mrgnUp {
+  margin-top: 30px;
 }
