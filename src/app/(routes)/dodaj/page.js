@@ -4,12 +4,12 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import firebaseConfig from "../../../firebase/FirebaseConfig";
-import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getFirestore, addDoc, collection } from "firebase/firestore";
 
+import firebaseConfig from "../../../firebase/FirebaseConfig";
+import { initializeApp } from "firebase/app";
 import { v4 } from "uuid";
 
 import "./dodajAkciju.scss";

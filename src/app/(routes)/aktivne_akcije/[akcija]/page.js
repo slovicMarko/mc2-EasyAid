@@ -1,8 +1,6 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { getAuth } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { fetchEvents } from "@/firebase/fetchEvents";
 
@@ -11,7 +9,6 @@ import "./chosenEvent.scss";
 function Akcija() {
   const [action, setAction] = useState();
   const [loading, setLoading] = useState(true);
-
   const pathname = usePathname().replace("/aktivne_akcije/", "");
   const hasMaterials = false;
 
