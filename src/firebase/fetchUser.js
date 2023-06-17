@@ -7,7 +7,7 @@ import {
 } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "@/firebase/FirebaseConfig";
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { getStorage, ref } from "firebase/storage";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -31,8 +31,6 @@ export async function fetchUser(data) {
       localStorage.setItem("userDocID", doc.id);
     });
 
-    //const imageUrl = await getDownloadURL(imageRef);
-    //user.push(imageUrl);
   } catch (error) {
     console.log("Error getting documents:", error);
   }

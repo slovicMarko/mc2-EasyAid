@@ -9,7 +9,6 @@ import {
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "@/firebase/FirebaseConfig";
 import { fetchUser } from "./fetchUser";
-import { useState } from "react";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

@@ -43,7 +43,6 @@ export function FilterMenu () {
                 <Select 
                 options={organiser}
                 maxMenuHeight={150}
-                //onChange={}
                 theme={(theme) => ({
                     ...theme,
                     borderRadius:16,
@@ -60,7 +59,6 @@ export function FilterMenu () {
                 <Select 
                 options={places}
                 maxMenuHeight={150}
-                //onChange={}
                 theme={(theme) => ({
                     ...theme,
                     borderRadius:16,
@@ -77,7 +75,6 @@ export function FilterMenu () {
                 <Select 
                 options={category}
                 maxMenuHeight={150}
-                //onChange={}
                 theme={(theme) => ({
                     ...theme,
                     borderRadius:16,

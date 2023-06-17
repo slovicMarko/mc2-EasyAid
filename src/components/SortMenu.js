@@ -15,7 +15,6 @@ export function SortMenu () {
             <Select 
                 options={order}
                 maxMenuHeight={150}
-                //onChange={}
                 theme={(theme) => ({
                     ...theme,
                     borderRadius:16,
