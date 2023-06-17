@@ -18,7 +18,9 @@
 .input-name-register {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  width: 340px;
   padding: 10px;
 
   .input {
