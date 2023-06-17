@@ -39,6 +39,7 @@ const fotoURL = "/images/mainContentBack1.jpg";
 function HomePage() {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
+
   const auth = getAuth();
 
   return (
