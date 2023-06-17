@@ -13,8 +13,6 @@ import "./aktivne_akcije.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter, faSort } from "@fortawesome/free-solid-svg-icons";
 
-const imageURL = "/images/mainContentBack1.jpg";
-
 function MainFeed() {
   const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
