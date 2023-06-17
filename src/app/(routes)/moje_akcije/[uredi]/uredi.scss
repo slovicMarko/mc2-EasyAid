@@ -111,3 +111,24 @@
   color: #fff;
 }
 
+.end-event-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 334px;
+  height: 50px;
+  margin:10px auto;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: red;
+  background-color: #fff;
+  border: 2px solid red;
+  transition: 0.4s ease;
+}
+
+.end-event-btn:hover {
+  background-color: red;
+  border-color: red;
+  color: #fff;
+}

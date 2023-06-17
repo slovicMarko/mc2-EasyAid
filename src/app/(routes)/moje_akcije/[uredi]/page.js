@@ -184,7 +184,6 @@ function Uredi() {
         <img src="/images/logo.svg" alt="background-logo" />
       </div>
       <form autoComplete="off" className="form" onSubmit={handleSubmit}>
-        <button onClick={handleFinish}>Zatvori akciju</button>
         <div className="form-field">
           <p className="form-label">Naziv akcije</p>
           <input
@@ -278,6 +277,7 @@ function Uredi() {
             Ažuriraj
           </button>
         </div>
+        <button onClick={handleFinish} className="end-event-btn">Zatvori akciju</button>
       </form>
     </div>
   );
