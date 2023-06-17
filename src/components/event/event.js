@@ -46,7 +46,7 @@ export function EventBubble({
           </div>
           <div className="event-middle">
             <h2>{action[0].name}</h2>
-            <h3>{`${action[1].fname} ${action[1].lname}`}</h3>
+            <h3>{`${action[1]?.fname} ${action[1]?.lname}`}</h3>
             <h4>{action[0].date}</h4>
           </div>
           <p>
