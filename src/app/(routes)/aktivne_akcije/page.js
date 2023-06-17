@@ -18,6 +18,8 @@ const imageURL = "/images/mainContentBack1.jpg";
 function MainFeed() {
   const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [filterMenuOn, SetFilterMenu] = useState(false);
+  const [sortMenuOn, SetSortMenu] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,38 +35,10 @@ function MainFeed() {
     fetchData();
   }, []);
 
-  /*
-  function UpperMenuSet(button) {
-    if (button == "filter") {
-      if (filterMenuOn === true) {
-        SetFilterMenu(false);
-      } else if (sortMenuOn == true) {
-        SetSortMenu(false);
-        SetFilterMenu(true);
-      } else if (filterMenuOn === false) {
-        SetFilterMenu(true);
-      }
-    } else if (button == "sort") {
-      if (sortMenuOn === true) {
-        SetSortMenu(false);
-      } else if (filterMenuOn == true) {
-        SetFilterMenu(false);
-        SetSortMenu(true);
-      } else if (sortMenuOn === false) {
-        SetSortMenu(true);
-      }
-    }
-  }
-  */
-
-  function UpperMenuSet(button) {
+  function UpperMenuSet() {
     if (filterMenuOn === true) SetFilterMenu(false);
     else SetFilterMenu(true);
   }
-
-  const [MenuOn, SetMenu] = useState(false);
-  const [filterMenuOn, SetFilterMenu] = useState(false);
-  const [sortMenuOn, SetSortMenu] = useState(false);
 
   if (loading) {
     return <div className="spin"></div>;
@@ -74,7 +48,7 @@ function MainFeed() {
     <div>
       <div className="feed-wrapper">
         <header className="feed-buttons">
-          <button onClick={() => UpperMenuSet("filter")}>
+          <button onClick={() => UpperMenuSet()}>
             {" "}
             <FontAwesomeIcon
               icon={faFilter}
@@ -92,9 +66,8 @@ function MainFeed() {
           </div>
         </header>
         {filterMenuOn ? <FilterMenu /> : <></>}
-        {/*{sortMenuOn ? <SortMenu /> : <></>}*/}
         {Listing.map((action) => (
-          <Link href={`/aktivne_akcije/${action.actionID}`}>
+          <Link href={`/aktivne_akcije/${action[0].actionID}`}>
             <EventBubble
               key={action.actionID}
               isPreview={false}
