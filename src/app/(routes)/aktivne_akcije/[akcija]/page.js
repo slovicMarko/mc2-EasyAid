@@ -28,7 +28,7 @@ function Akcija() {
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [pathname]);
 
   if (loading) {
     return <div className="spin"></div>;
@@ -59,7 +59,12 @@ function Akcija() {
         <article className="text-content">
           <p>{action[0].about}</p>
           <div>
-            <Link href={auth.currentUser ? `/aktivne_akcije/${pathname}` : "/prijava"} className="link">
+            <Link
+              href={
+                auth.currentUser ? `/aktivne_akcije/${pathname}` : "/prijava"
+              }
+              className="link"
+            >
               <button className="sign-up-event">Prijavi se</button>
             </Link>
 

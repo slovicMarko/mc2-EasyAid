@@ -72,7 +72,7 @@ function Uredi() {
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [userID]);
 
   const handleClick = (e) => {
     e.preventDefault();

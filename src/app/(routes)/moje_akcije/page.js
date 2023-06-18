@@ -13,7 +13,6 @@ import { fetchEvents } from "@/firebase/fetchEvents";
 function OrganiserFeed() {
   const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const userID = localStorage.getItem("user");
   const router = useRouter();
 
@@ -32,7 +31,7 @@ function OrganiserFeed() {
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [userID]);
 
   if (loading) {
     return <div className="spin"></div>;

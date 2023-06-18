@@ -79,7 +79,7 @@ function Uredi() {
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [pathname]);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -272,21 +272,21 @@ function Uredi() {
           />
         </div>
 
-          <div className="buttons-dodaj mrgnUp">
-            <button title="Odustani" onClick={handleClick} className="cancel-btn">
-                Odustani
-            </button>
-            <button title="Spremi" type="submit" className="save-btn">
-              Ažuriraj
-            </button>
-          </div>
-          <div className="buttons-dodaj">
-            <button onClick={handleFinish} className="end-event-btn">
-              Zatvori akciju
-            </button>
-            <button onClick={handleDelete} className="end-event-btn">
-              Obriši akciju
-            </button>
+        <div className="buttons-dodaj mrgnUp">
+          <button title="Odustani" onClick={handleClick} className="cancel-btn">
+            Odustani
+          </button>
+          <button title="Spremi" type="submit" className="save-btn">
+            Ažuriraj
+          </button>
+        </div>
+        <div className="buttons-dodaj">
+          <button onClick={handleFinish} className="end-event-btn">
+            Zatvori akciju
+          </button>
+          <button onClick={handleDelete} className="end-event-btn">
+            Obriši akciju
+          </button>
         </div>
       </form>
     </div>

@@ -11,7 +11,6 @@ import { usePathname } from "next/navigation";
 function Profile() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState();
-  const [profilePicture, setProfilePicture] = useState(null);
   const userID = localStorage.getItem("user");
   const pathname = usePathname().replace("/profil/", "");
   const auth = getAuth();
@@ -28,7 +27,7 @@ function Profile() {
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [pathname]);
 
   if (loading) {
     return <div className="spin"></div>;
@@ -40,7 +39,11 @@ function Profile() {
         <div className="container-buttons">
           <div className="profile-main">
             <div>
-              <img className="profile-image" src={user.photo} />
+              <img
+                className="profile-image"
+                src={user.photo}
+                alt="profile_picture"
+              />
               <h2 className="profile-name">
                 {user.fname} {user.lname}
               </h2>
@@ -63,11 +66,13 @@ function Profile() {
               >
                 Uredi
               </Link>
-              {auth.currentUser ? auth.currentUser.emailVerified ? null : (
-                <button className="button-edit" onClick={VerifyEmail}>
-                  Potvrdi račun
-                </button>
-              ): null}
+              {auth.currentUser ? (
+                auth.currentUser.emailVerified ? null : (
+                  <button className="button-edit" onClick={VerifyEmail}>
+                    Potvrdi račun
+                  </button>
+                )
+              ) : null}
             </div>
           </div>
         </div>
