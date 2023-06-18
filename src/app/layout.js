@@ -2,7 +2,7 @@
 
 import "./globals.css";
 
-import Navbar from "../components/NavbarElements/Navbar";
+import { Navbar } from "../components/NavbarElements/Navbar";
 
 export default function RootLayout({ children }) {
   return (
