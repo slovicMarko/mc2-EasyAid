@@ -26,7 +26,6 @@ function MainFeed() {
         docValue: true,
       });
       setListing(response);
-      console.log(response);
       setLoading(false);
     };
     fetchData();
@@ -64,17 +63,16 @@ function MainFeed() {
         </header>
         {filterMenuOn ? <FilterMenu /> : <></>}
         {Listing.reverse().map((action) => (
-          <Link href={`/aktivne_akcije/${action[0].actionID}`}>
-            <EventBubble
-              key={action.actionID}
-              isPreview={false}
-              isInActive={false}
-              isInFeed={true}
-              action={action}
-              daysLeft={6}
-              anyChanges={false}
-            />
-          </Link>
+          <Link key={action[0].actionID} href={`/aktivne_akcije/${action[0].actionID}`}>
+          <EventBubble
+            isPreview={false}
+            isInActive={false}
+            isInFeed={true}
+            action={action}
+            daysLeft={6}
+            anyChanges={false}
+          />
+        </Link>
         ))}
         <aside>
           <Leaderboard />

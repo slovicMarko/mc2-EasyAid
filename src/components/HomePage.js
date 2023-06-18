@@ -6,7 +6,7 @@ import Link from "next/link";
 import akcija1 from "public/images/akcija1.png";
 import { EventBubble } from "@/components/event/event";
 import InLove from "@/components/inLoveSVG.js";
-import "./cssFiles/HomePage.scss";
+import "./cssFiles/homePage.scss";
 import { getAuth } from "firebase/auth";
 import { fetchEvents } from "@/firebase/fetchEvents";
 
@@ -25,7 +25,6 @@ function HomePage() {
         docValue: true,
       });
       setListing(response);
-      console.log(response);
       setLoading(false);
     };
     fetchData();
@@ -84,7 +83,10 @@ function HomePage() {
             </Link>
           </div>
           <div className="event-sredina">
-            <Link href={`/aktivne_akcije/${Listing[1][0].actionID}`} className="link">
+            <Link
+              href={`/aktivne_akcije/${Listing[1][0].actionID}`}
+              className="link"
+            >
               <EventBubble
                 isPreview
                 action={[

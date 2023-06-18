@@ -69,17 +69,15 @@ function ActiveFeed() {
           <section className="section-events">
             <h1>Aktivne akcije</h1>
             <div className="active-events">
-              {ListingActive.reverse().map((action) => (
+              {ListingActive.reverse().forEach((action) => (
                 <Link href={`/aktivne_akcije/${action[0].actionID}`}>
                   <EventBubble
-                    key={action[0].actionID}
                     isPreview={false}
                     isInActive={false}
-                    isInFeed={true} 
+                    isInFeed={true}
                     action={action}
                     daysLeft={999}
                     anyChanges={false}
-                    imageURL={imageURL}
                   />
                 </Link>
               ))}
@@ -87,16 +85,17 @@ function ActiveFeed() {
             <h1>Prošle akcije</h1>
             <div className="past-events">
               {ListingPast.reverse().map((action) => (
-                <Link href={`/aktivne_akcije/${action[0].actionID}`}>
+                <Link
+                  key={action[0].actionID}
+                  href={`/aktivne_akcije/${action[0].actionID}`}
+                >
                   <EventBubble
-                    key={action[0].actionID}
                     isPreview={false}
                     isInActive={false}
                     isInFeed={true}
                     action={action}
-                    daysLeft={999}
+                    daysLeft={6}
                     anyChanges={false}
-                    imageURL={imageURL}
                   />
                 </Link>
               ))}
