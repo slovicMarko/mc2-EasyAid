@@ -13,7 +13,6 @@ import { fetchEvents } from "@/firebase/fetchEvents";
 const fotoURL = "/images/mainContentBack1.jpg";
 
 function HomePage() {
-  const [isSignedIn, setIsSignedIn] = useState(false);
   const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -120,7 +119,6 @@ function HomePage() {
                     lname: Listing[2][1].lname,
                   },
                 ]}
-                imageURL={fotoURL}
               />
             </Link>
           </div>
@@ -137,7 +135,8 @@ function HomePage() {
           <div className="side-text">
             <h4>Uvijek aktualni događaji</h4>
             <p>
-              U odjeljku "Aktualni događaji" možeš vidjeti sve aktualne akcije
+              U odjeljku &quotAktualni događaji&quot možeš vidjeti sve aktualne
+              akcije
             </p>
 
             <h4>Pretraga po lokaciji</h4>
