@@ -19,8 +19,6 @@ const storeage = getStorage(app);
 function Uredi() {
   const [loading, setLoading] = useState(true);
   const [image, setImage] = useState(null);
-  const userID = localStorage.getItem("user");
-  const docID = localStorage.getItem("userDocID");
   const router = useRouter();
 
   const [input, setInput] = useState({
@@ -35,7 +33,7 @@ function Uredi() {
 
   const imageRef = ref(
     storeage,
-    `users/${userID}/profile_image/profile_picture`
+    `users/${localStorage.getItem("user")}/profile_image/profile_picture`
   );
   const uploadImage = async (file) => {
     try {
@@ -57,7 +55,7 @@ function Uredi() {
         await fetchUser({
           collection: "users",
           docField: "userID",
-          docValue: userID,
+          docValue: localStorage.getItem("user"),
         })
       )[0];
       setInput({
@@ -72,11 +70,11 @@ function Uredi() {
       setLoading(false);
     };
     fetchData();
-  }, [userID]);
+  }, []);
 
   const handleClick = (e) => {
     e.preventDefault();
-    router.push(`/profil/${userID}`);
+    router.push(`/profil/${localStorage.getItem("user")}`);
   };
 
   const handleChange = (e) => {
@@ -86,7 +84,7 @@ function Uredi() {
     }));
   };
 
-  const docRef = doc(db, "users", docID);
+  const docRef = doc(db, "users", localStorage.getItem("userDocID"));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -117,7 +115,7 @@ function Uredi() {
         console.log(error);
       });
 
-    router.push(`/profil/${userID}`);
+    router.push(`/profil/${localStorage.getItem("user")}`);
   };
 
   if (loading) {

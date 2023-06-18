@@ -20,7 +20,6 @@ function Uredi() {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const pathname = usePathname().replace("/moje_akcije/", "");
-  const docID = localStorage.getItem("ActionDocID");
 
   const [image, setImage] = useState();
   const [input, setInput] = useState({
@@ -93,7 +92,7 @@ function Uredi() {
     }));
   };
 
-  const docRef = doc(db, "actions", docID);
+  const docRef = doc(db, "actions", localStorage.getItem("ActionDocID"));
 
   const handleDelete = async () => {
     await deleteDoc(docRef);
