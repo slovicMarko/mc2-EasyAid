@@ -1,7 +1,7 @@
 import AuthNavbar from "@/components/NavbarElements/AuthNavbar";
 import NavigationNavbar from "@/components/NavbarElements/NavigationNavbar";
 import LogoNavbar from "@/components/NavbarElements/LogoNavbar";
-import "../cssFiles/navbar.scss";
+import "./navbar.scss";
 
 function Navbar() {
   return (
