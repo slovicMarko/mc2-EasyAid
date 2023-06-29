@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 function Profile() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState();
+  const [profilePicture, setProfilePicture] = useState(null);
   const pathname = usePathname().replace("/profil/", "");
   const auth = getAuth();
 
@@ -57,7 +58,13 @@ function Profile() {
               </p>
             </div>
 
-            <div className={pathname == localStorage.getItem("user") ? "profile-buttons" : "none"}>
+            <div
+              className={
+                pathname == localStorage.getItem("user")
+                  ? "profile-buttons"
+                  : "none"
+              }
+            >
               <Link
                 className="button-edit"
                 href={`/profil/${localStorage.getItem("user") + "/uredi"}`}
