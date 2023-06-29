@@ -21,7 +21,6 @@ function Profile() {
         docField: "userID",
         docValue: pathname,
       });
-      console.log(response);
       setUser(response[0]);
       setLoading(false);
     };
