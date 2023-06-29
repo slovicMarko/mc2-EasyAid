@@ -11,7 +11,6 @@ import { usePathname } from "next/navigation";
 function Profile() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState();
-  const [profilePicture, setProfilePicture] = useState(null);
   const pathname = usePathname().replace("/profil/", "");
   const auth = getAuth();
 
@@ -22,8 +21,8 @@ function Profile() {
         docField: "userID",
         docValue: pathname,
       });
+      console.log(response);
       setUser(response[0]);
-      setProfilePicture(response[1]);
       setLoading(false);
     };
     fetchData();
