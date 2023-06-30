@@ -8,11 +8,12 @@ import { useRouter } from "next/navigation";
 import { EventEdit } from "@/components/event/EventEditable";
 import "./moje_akcije.scss";
 
-import { fetchEvents } from "@/firebase/fetchEvents";
+import { fetchOwnerEvents } from "@/firebase/fetchOwnerEvents";
 
 function OrganiserFeed() {
-  const [Listing, setListing] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [ListingActive, setListingActive] = useState([]);
+  const [ListingPast, setListingPast] = useState([]);
   const router = useRouter();
 
   const addEvent = () => {
@@ -21,12 +22,22 @@ function OrganiserFeed() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetchEvents({
+      const responseActive = await fetchOwnerEvents({
         collection: "actions",
-        docField: "ownerID",
-        docValue: localStorage.getItem("user"),
+        docField: "active",
+        docValue: true,
+        docFieldTwo: "ownerID",
+        docValueTwo: localStorage.getItem("user"),
       });
-      setListing(response);
+      const responsePast = await fetchOwnerEvents({
+        collection: "actions",
+        docField: "active",
+        docValue: false,
+        docFieldTwo: "ownerID",
+        docValueTwo: localStorage.getItem("user"),
+      });
+      setListingActive(responseActive);
+      setListingPast(responsePast);
       setLoading(false);
     };
     fetchData();
@@ -42,8 +53,15 @@ function OrganiserFeed() {
         className="add-icon"
         onClick={addEvent}
       />
+      <h1>Aktivne akcije</h1>
       <div className="organiser-container">
-        {Listing.reverse().map((action) => (
+        {ListingActive.reverse().map((action) => (
+          <EventEdit key={action[0].actionID} action={action[0]} />
+        ))}
+      </div>
+      <h1>Neaktivne akcije</h1>
+      <div className="organiser-container">
+        {ListingPast.reverse().map((action) => (
           <EventEdit key={action[0].actionID} action={action[0]} />
         ))}
       </div>
