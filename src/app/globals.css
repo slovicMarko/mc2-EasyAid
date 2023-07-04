@@ -26,7 +26,6 @@ body {
   overflow-x: hidden;
   font-family: "Roboto";
   margin: 0;
-  text-align: center;
 }
 
 .spin::before {
@@ -49,4 +48,44 @@ body {
 .link {
   text-decoration: none;
   color: #4d4d4d;
+}
+
+
+.action-btn {
+  min-width: fit-content;
+  text-align: center;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 50px;
+  border: none;
+  transition: 0.4s ease;
+  user-select: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.action-btn.green-btn {
+  background: var(--greenBtn);
+  color: #fff;
+  border: 2px solid var(--greenBtn);
+}
+.action-btn.green-btn:hover {
+  transition: 0.4s ease;
+  background-color: var(--hoverGreen);
+  border-color: var(--hoverGreen);
+}
+
+.action-btn.regular-btn {
+  border: 2px solid var(--greenBtn);
+  background-color: transparent;
+  color: var(--greenBtn);
+}
+
+.action-btn.regular-btn:hover {
+  transition: 0.4s ease;
+  background-color: var(--hoverGreen);
+  border: 2px solid var(--hoverGreen);
+  color: #fff;
+  font-weight: bold;
 }

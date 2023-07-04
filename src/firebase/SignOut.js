@@ -20,7 +20,7 @@ function SignOut(isInNavbar) {
       });
   };
 
-  let signOutClass = isInNavbar ? "sign-out-navbar" : "";
+  let signOutClass = isInNavbar ? "action-btn green-btn" : "";
 
   return (
     <div title="Odjavi me" className={signOutClass} onClick={handleSignOut}>

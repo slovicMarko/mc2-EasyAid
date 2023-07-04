@@ -26,7 +26,6 @@ function ActiveFeed() {
         docValueTwo: localStorage.getItem("user"),
       });
       setListing(response);
-      console.log(Listing);
       setLoading(false);
     };
     fetchData();
@@ -43,7 +42,10 @@ function ActiveFeed() {
           <section className="section-events">
             <div className="active-events">
               {Listing.map((action) => (
-                <Link href={`/aktivne_akcije/${action[0].actionID}`}>
+                <Link
+                  key={action[0].actionID}
+                  href={`/aktivne_akcije/${action[0].actionID}`}
+                >
                   <EventBubble
                     isPreview={false}
                     isInActive={false}
