@@ -14,8 +14,8 @@
 }
 
 .heading-color {
-  background-color: #edffed;
-  width: 100vw;
+  background-color: var(--lightGreenBackground);
+  width: 100%;
 }
 
 .heading {
@@ -23,12 +23,9 @@
   max-width: 1024px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 32px auto;
 }
 
-.title {
-  margin-top: 48px;
-}
 
 .organiser {
   font-size: 22px;
@@ -94,6 +91,7 @@ iframe {
   min-width: 400px;
   width: 45.6%;
   height: 90%;
+  border-radius: 20px;
 }
 
 .contact-informations{

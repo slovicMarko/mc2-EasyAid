@@ -1,9 +1,16 @@
 "use client";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { fetchEvents } from "@/firebase/fetchEvents";
+import {
+  AddUserToEvent,
+  RemoveUserFromEvent,
+} from "@/firebase/ManageRegisteredUsers";
 
 import "./chosenEvent.scss";
 import { getAuth } from "firebase/auth";
@@ -49,16 +56,35 @@ function Akcija() {
             </h3>
           </article>
           <div className="proposal-button-container">
-            <Link
-              href={
-                auth.currentUser ? `/aktivne_akcije/${pathname}` : "/prijava"
-              }
-              className="link"
-            >
-              <button className="action-btn regular-btn proposal-button">
-                Prijavi se
-              </button>
-            </Link>
+            {auth.currentUser ? (
+              action[1].userID ===
+              localStorage.getItem(
+                "user"
+              ) ? null : action[0].registered.includes(
+                  localStorage.getItem("user")
+                ) ? (
+                <button
+                  className="action-btn regular-btn proposal-button"
+                  onClick={RemoveUserFromEvent}
+                >
+                  - Odustani
+                </button>
+              ) : (
+                <button
+                  className="action-btn regular-btn proposal-button"
+                  onClick={AddUserToEvent}
+                  type="submit"
+                >
+                  + Dodaj
+                </button>
+              )
+            ) : (
+              <Link href={"/prijava"} className="link">
+                <button className="action-btn regular-btn proposal-button">
+                  Prijavi se
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -101,9 +127,12 @@ function Akcija() {
           ></iframe>
           <section className="contact-informations">
             <h2 className="contact-title">Kontakt</h2>
-            <p className="contact-info">{`${action[1].fname} ${action[1].lname} `}</p>
-            <p className="contact-info">{action[1].telephone}</p>
-            <p className="contact-info">{action[1].email}</p>
+            <p className="contact-info">
+              <FontAwesomeIcon icon={faPhone} /> {action[1].telephone}
+            </p>
+            <p className="contact-info">
+              <FontAwesomeIcon icon={faEnvelope} /> {action[1].email}
+            </p>
           </section>
         </article>
       </section>
