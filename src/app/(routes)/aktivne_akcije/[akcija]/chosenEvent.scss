@@ -113,8 +113,8 @@ iframe {
   display: flex;
   align-items: center;
   padding: 8px 0;
-  border-bottom: 1px solid var(--gray);
-  width: 30%;
+  border-bottom: 1px solid var(--hoverGray);
+  width: 35%;
 }
 
 .registered-user-picture {
@@ -124,4 +124,12 @@ iframe {
   object-position: center;
   border-radius: 100%;
   margin: 0 16px;
+}
+
+.registered-user-name {
+  font-style: italic;
+}
+
+.registered-user-name:hover {
+  border-bottom: 1px solid var(--hoverGray);
 }

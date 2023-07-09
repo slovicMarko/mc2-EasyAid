@@ -146,9 +146,11 @@ function Akcija() {
                       src={user[0].photo}
                     />
                   </div>
-                  <p>
-                    {user[0].fname} {user[0].lname}
-                  </p>
+                  <Link href={`profil/${user[0].userID}`} className="link">
+                    <p className="registered-user-name">
+                      {user[0].fname} {user[0].lname}
+                    </p>
+                  </Link>
                 </div>
               ))
             ) : (
