@@ -3,14 +3,17 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import akcija1 from "public/images/akcija1.png";
-import { EventBubble } from "@/components/event/event";
-import InLove from "@/components/inLoveSVG.js";
-import "./cssFiles/homePage.scss";
-import { getAuth } from "firebase/auth";
-import { fetchEvents } from "@/firebase/fetchEvents";
 
-const fotoURL = "/images/mainContentBack1.jpg";
+import { fetchEvents } from "@/firebase/fetchEvents";
+import { getAuth } from "firebase/auth";
+
+import { EventBubble } from "@/components/event/event";
+
+import akcija1 from "public/images/akcija1.png";
+import InLove from "@/components/inLoveSVG.js";
+
+import "./cssFiles/homePage.scss";
+import "./cssFiles/eventHomepage.scss";
 
 function HomePage() {
   const [Listing, setListing] = useState([]);
@@ -62,7 +65,7 @@ function HomePage() {
       <div className="container">
         <h2 className="headings">Želiš volontirati, a ne znaš gdje početi?</h2>
         <div className="top-events">
-          <div className="event-lijevi">
+          <div className="event-left events">
             <Link href={`/aktivne_akcije/${Listing[0][0].actionID}`}>
               <EventBubble
                 isPreview
@@ -81,7 +84,7 @@ function HomePage() {
               />
             </Link>
           </div>
-          <div className="event-sredina">
+          <div className="event-middle events">
             <Link
               href={`/aktivne_akcije/${Listing[1][0].actionID}`}
               className="link"
@@ -103,7 +106,7 @@ function HomePage() {
               />
             </Link>
           </div>
-          <div className="event-desni">
+          <div className="event-right events">
             <Link href={`/aktivne_akcije/${Listing[2][0].actionID}`}>
               <EventBubble
                 isPreview
@@ -123,6 +126,8 @@ function HomePage() {
             </Link>
           </div>
         </div>
+        <h2 className="headings">Koje su prednosti za volontere?</h2>
+
         <div className="about-easyAid">
           <div className="image-container">
             <Image
@@ -135,8 +140,8 @@ function HomePage() {
           <div className="side-text">
             <h4>Uvijek aktualni događaji</h4>
             <p>
-              U odjeljku &quotAktualni događaji&quot možeš vidjeti sve aktualne
-              akcije
+              U odjeljku &quot;Aktualni događaji&quot; možeš vidjeti sve
+              aktualne akcije
             </p>
 
             <h4>Pretraga po lokaciji</h4>

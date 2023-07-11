@@ -6,7 +6,6 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 
 import { fetchEvents } from "@/firebase/fetchEvents";
 import { fetchUser } from "@/firebase/fetchUser";

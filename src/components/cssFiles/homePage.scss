@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: fit-content;
+  padding: 0 10%;
   max-width: 1000px;
   text-align: left;
 }
@@ -18,24 +18,22 @@
   flex-direction: column;
   text-align: left;
   max-width: 1000px;
+  padding: 0 10%;
   margin: 0 auto;
-}
 
-.content h1 {
-  width: fit-content;
-  max-width: 600px;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 72px;
-  margin: 104px 0 32px;
-}
-
-.content p {
-  width: fit-content;
-  max-width: 480px;
-  font-weight: 300;
-  line-height: 21px;
-  font-size: 18px;
+  h1 {
+    max-width: 600px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
+    margin: 104px 0 32px;
+  }
+  p {
+    max-width: 480px;
+    font-weight: 300;
+    line-height: 21px;
+    font-size: 18px;
+  }
 }
 
 .photo {
@@ -92,34 +90,26 @@
 .headings {
   display: flex;
   justify-content: center;
-  margin: 104px 10px;
+  margin: 104px 0;
 }
 
 .top-events {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 208px;
-}
-
-.event-lijevi {
-  margin: 0 10px 0 0;
-}
-.event-sredina {
-  margin: 0 10px;
-}
-.event-desni {
-  margin: 0 0 0 10px;
+  width: 100%;
+  margin: 0 0 96px;
 }
 
 .about-easyAid {
-  width: 990px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .image-container {
   margin: 0;
-  width: 635px;
+  max-width: 636px;
+  width: inherit;
 
   .photo1 {
     object-fit: contain;
@@ -131,9 +121,6 @@
 
 .side-text {
   color: var(--gray);
-  max-width: 280px;
-  width: fit-content;
-  margin: 0px;
 
   h4 {
     margin: 0 0 24px;
@@ -153,21 +140,22 @@
 .about-organisation {
   display: flex;
   justify-content: space-between;
-  margin: 0 10px 104px;
+  margin: 0 0 104px;
+  max-width: 1000px;
 
   .image-container2 {
     position: relative;
     max-width: 400px;
     width: fit-content;
   }
+
+  .photo2 {
+    width: 100%;
+  }
 }
 
 .partneri {
   margin: 0 0 208px 0;
-
-  hr {
-    margin: 0 10px;
-  }
 
   .sponsor-images {
     display: flex;
@@ -179,7 +167,7 @@
       object-fit: contain;
       position: relative;
       aspect-ratio: 1;
-      margin: 0 10px;
+      margin: 16px 10px;
 
       .sponsor {
         aspect-ratio: 1;
@@ -191,13 +179,110 @@
   }
 }
 
-@media (max-width: 1100px) {
-  .top-events {
-    flex-wrap: wrap;
-  }
-}
-
 .link {
   text-decoration: none;
   color: #4d4d4d;
+}
+
+@media (min-width: 1120px) {
+  .top-events {
+    justify-content: space-between;
+  }
+
+  .event-left {
+    margin: 0 10px 0 0;
+  }
+  .event-middle {
+    margin: 0 10px;
+  }
+  .event-right {
+    margin: 0 0 0 10px;
+  }
+  .about-easyAid {
+    .side-text {
+      padding-left: 20px;
+    }
+  }
+  .side-text {
+    color: var(--gray);
+    max-width: 280px;
+    width: fit-content;
+
+    h4 {
+      margin: 0 0 24px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 150%;
+      margin: 0 0 24px;
+    }
+
+    .green-btn {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1120px) {
+  .container {
+    margin-top: 136px;
+  }
+  .top-events {
+    flex-direction: column;
+  }
+  .events {
+    margin: 32px auto;
+  }
+  .about-easyAid {
+    .side-text {
+      padding-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    margin-top: 0;
+  }
+  .top-events {
+    flex-direction: column;
+  }
+  .events {
+    margin: 32px auto;
+  }
+  .photo {
+    display: none;
+  }
+
+  .about-easyAid {
+    flex-direction: column;
+    .side-text {
+      padding-top: 36px;
+    }
+  }
+  .side-text {
+    h4 {
+      margin: 0 0 24px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 150%;
+      margin: 0 0 24px;
+    }
+
+    .green-btn {
+      margin: 0;
+    }
+  }
+
+  .about-organisation {
+    flex-direction: column;
+  }
+
+  .sponsor-images {
+    flex-direction: column;
+    align-items: center;
+  }
 }
