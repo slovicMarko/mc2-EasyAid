@@ -113,17 +113,25 @@
 @media screen and (max-width: 800px) {
   .navbar {
     display: none;
+    width:100vw;
   }
   .navbar-screen {
     background-color: var(--lightGreenBackground);
     transition: 1s;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width:100%;
+  }
+  .hamburger-menu {
+    width:100%;
   }
   .menu-btn {
     font-size: 24px;
     background-color: transparent;
     color: var(--gray);
     border: none;
-    position: absolute;
+    //position: absolute;
     margin-left: 9%;
     margin-top: 9%;
   }

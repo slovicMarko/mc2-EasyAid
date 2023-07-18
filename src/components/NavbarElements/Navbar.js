@@ -25,8 +25,8 @@ function Navbar() {
         <button className="menu-btn" onClick={() => MenuSet()}>
           <FontAwesomeIcon icon={faBars} size="lg" />
         </button>
+        {menuOn ? <HamburgerMenu /> : null}
       </div>
-      {menuOn ? <HamburgerMenu /> : null}
     </>
   );
 }
