@@ -16,7 +16,6 @@
 .navbar--navigation {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: auto;
 }
 
@@ -64,7 +63,7 @@
   color: var(--gray);
   font-size: 18px;
   text-decoration: none;
-  margin: 0 40px;
+  margin: 16px 10%;
 }
 
 .btn--auth--login:hover {
@@ -132,19 +131,21 @@
     color: var(--gray);
     border: none;
     //position: absolute;
-    margin-left: 9%;
-    margin-top: 9%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 16px;
   }
   .navbar--navigation {
     flex-direction: column;
   }
 
   .btn--nav {
-    margin: 16px auto;
+    margin: 16px 10%;
   }
 
   .navbar--auth {
     justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
     margin: 0 auto;
   }
