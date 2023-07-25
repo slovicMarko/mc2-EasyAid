@@ -22,9 +22,15 @@ function Navbar() {
         <AuthNavbar />
       </div>
       <div className="navbar-screen">
-        <button className="menu-btn" onClick={() => MenuSet()}>
-          <FontAwesomeIcon icon={faBars} size="lg" />
-        </button>
+        <div className="hamburger-header">
+          <button className="menu-btn" onClick={() => MenuSet()}>
+            <FontAwesomeIcon icon={faBars} size="lg" />
+          </button>
+          <div className="hamburger-logo">
+            <LogoNavbar />
+          </div>
+        </div>
+        
         {menuOn ? <HamburgerMenu /> : null}
       </div>
     </>

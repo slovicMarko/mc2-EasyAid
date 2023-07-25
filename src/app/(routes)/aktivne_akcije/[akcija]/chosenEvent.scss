@@ -24,6 +24,7 @@
   display: flex;
   justify-content: space-between;
   margin: 32px auto;
+  box-sizing: border-box;
 }
 
 .organiser {
@@ -132,4 +133,51 @@ iframe {
 
 .registered-user-name:hover {
   border-bottom: 1px solid var(--hoverGray);
+}
+
+
+@media screen and (max-width:800px) {
+
+  .heading {
+    width: 100%;
+    max-width: 800px;
+    padding:0 10% 0 10%;
+  }
+
+  .contacts {
+    flex-direction: column;
+    height:fit-content;
+    align-items: center;
+    margin-top:24px;
+
+    .contact-informations {
+      margin: 24px 0 0 0;
+      width:500px;
+    }
+  }
+
+  iframe {
+    min-width: 500px;
+    width: 45.6%;
+    height: 400px;
+  }
+
+  .text-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .page-content {
+    margin-top: 48x;
+    max-width: 800px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .description-paragraph {
+    max-width: 500px;
+  }
 }
