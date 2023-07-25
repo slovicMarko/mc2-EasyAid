@@ -31,15 +31,6 @@
   font-size: 22px;
 }
 
-.proposal-button-container {
-  margin-top: 48px;
-  width: fit-content;
-}
-
-.proposal-button {
-  width: 136px;
-}
-
 .page-content {
   margin-top: 96px;
   max-width: 1024px;
@@ -102,10 +93,6 @@ iframe {
   margin-top: 0;
 }
 
-.registered-list {
-  margin-bottom: 156px;
-}
-
 .registered-title {
   margin-top: 0;
 }
@@ -115,7 +102,6 @@ iframe {
   align-items: center;
   padding: 8px 0;
   border-bottom: 1px solid var(--hoverGray);
-  width: 35%;
 }
 
 .registered-user-picture {
@@ -135,29 +121,32 @@ iframe {
   border-bottom: 1px solid var(--hoverGray);
 }
 
-
-@media screen and (max-width:800px) {
-
+@media screen and (max-width: 800px) {
   .heading {
+    flex-direction: column;
     width: 100%;
     max-width: 800px;
-    padding:0 10% 0 10%;
+    padding: 0 10% 0 10%;
   }
 
   .contacts {
     flex-direction: column;
-    height:fit-content;
+    height: fit-content;
     align-items: center;
-    margin-top:24px;
+    margin-top: 24px;
 
     .contact-informations {
       margin: 24px 0 0 0;
-      width:500px;
+      width: 80%;
     }
   }
 
+  .image-container {
+    max-width: 80%;
+  }
+
   iframe {
-    min-width: 500px;
+    min-width: 80%;
     width: 45.6%;
     height: 400px;
   }
@@ -168,7 +157,7 @@ iframe {
   }
 
   .page-content {
-    margin-top: 48x;
+    margin-top: 48px;
     max-width: 800px;
     width: 100%;
     height: fit-content;
@@ -177,7 +166,47 @@ iframe {
     flex-direction: column;
   }
 
-  .description-paragraph {
-    max-width: 500px;
+  .description {
+    margin-top: 24px;
+    max-width: 80%;
+  }
+
+  .proposal-button {
+    width: 100%;
+  }
+
+  .registered-list {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 96px;
+  }
+
+  .registered-user {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 800px) {
+  .proposal-button-container {
+    margin-top: 48px;
+    width: fit-content;
+  }
+
+  .proposal-button {
+    width: 136px;
+  }
+
+  .registered-list {
+    margin-bottom: 156px;
+  }
+
+  .registered-title {
+    margin-top: 0;
+  }
+
+  .registered-user {
+    width: 35%;
   }
 }

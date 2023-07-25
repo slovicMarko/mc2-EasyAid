@@ -53,7 +53,6 @@ body {
 
 .action-btn {
   min-width: fit-content;
-  /*???*/
   text-align: center;
   padding: 12px 30px;
   font-size: 16px;
@@ -91,12 +90,5 @@ body {
   font-weight: bold;
 }
 
-
 @media screen and (max-width: 800px) {
-
-  .action-btn {
-
-    margin-left: 10%;
-  }
-
 }
