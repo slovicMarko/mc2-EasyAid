@@ -29,7 +29,6 @@ function Navbar() {
             <LogoNavbar />
           </div>
         </div>
-
         {menuOn ? <HamburgerMenu onClick={MenuSet} /> : null}
       </div>
     </>
