@@ -108,7 +108,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
   .navbar {
     display: none;
     width: 100vw;
@@ -128,7 +128,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 32px;
-    margin-bottom:24px;
+    margin-bottom: 24px;
   }
 
   .hamburger-menu {
@@ -160,13 +160,14 @@
     margin: 0 auto 12px auto;
   }
   .logo--slika {
+    display: block;
     width: fit-content;
     position: relative;
     margin: 10px 0 10px 46px;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
   .navbar-screen {
     display: none;
   }
@@ -180,13 +181,5 @@
 
   .logo--slika {
     margin: 10px 10px 10px 46px;
-  }
-}
-
-@media (max-width:1024px) {
-
-
-  .logo--slika {
-    display:none;
   }
 }

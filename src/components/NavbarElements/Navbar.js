@@ -10,8 +10,7 @@ import { useState } from "react";
 function Navbar() {
   const [menuOn, SetMenu] = useState(false);
   function MenuSet() {
-    if (menuOn === true) SetMenu(false);
-    else SetMenu(true);
+    menuOn ? SetMenu(false) : SetMenu(true);
   }
 
   return (
@@ -30,8 +29,8 @@ function Navbar() {
             <LogoNavbar />
           </div>
         </div>
-        
-        {menuOn ? <HamburgerMenu /> : null}
+
+        {menuOn ? <HamburgerMenu onClick={MenuSet} /> : null}
       </div>
     </>
   );

@@ -7,7 +7,7 @@ import firebaseConfig from "../../firebase/FirebaseConfig";
 
 import SignOut from "../../firebase/SignOut";
 
-function AuthNavbar() {
+function AuthNavbar(onClick) {
   const app = initializeApp(firebaseConfig);
 
   const [user, setUser] = useState(null);
@@ -23,17 +23,29 @@ function AuthNavbar() {
     <div className="navbar--auth">
       {user ? (
         <>
-          <Link className="btn--auth--login" href={`/profil/${user.uid}`}>
+          <Link
+            className="btn--auth--login"
+            href={`/profil/${user.uid}`}
+            onClick={onClick.onClick}
+          >
             Profil
           </Link>
           <SignOut isInNavbar />
         </>
       ) : (
         <>
-          <Link className="btn--auth--login" href="/prijava">
+          <Link
+            className="btn--auth--login"
+            href="/prijava"
+            onClick={onClick.onClick}
+          >
             Prijavi se
           </Link>
-          <Link className="btn--auth--reg" href="/registracija">
+          <Link
+            className="btn--auth--reg"
+            href="/registracija"
+            onClick={onClick.onClick}
+          >
             Registriraj se
           </Link>
         </>

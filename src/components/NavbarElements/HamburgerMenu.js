@@ -1,13 +1,12 @@
 import AuthNavbar from "@/components/NavbarElements/AuthNavbar";
 import NavigationNavbar from "@/components/NavbarElements/NavigationNavbar";
-import LogoNavbar from "@/components/NavbarElements/LogoNavbar";
 
-export function HamburgerMenu() {
+export function HamburgerMenu({ onClick }) {
   return (
     <>
       <div className="hamburger-menu">
-        <NavigationNavbar />
-        <AuthNavbar />
+        <NavigationNavbar onClick={onClick} />
+        <AuthNavbar onClick={onClick} />
       </div>
     </>
   );
