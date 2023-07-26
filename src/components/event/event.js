@@ -1,8 +1,9 @@
 "use client";
 
 import { useMemo } from "react";
-import Link from "next/link";
 import "./../cssFiles/event.scss";
+
+const months = ["siječnja","veljače", "ožujka", "travnja", "svibnja", "lipnja", "srpnja", "kolovoza", "rujna", "listopada", "studenog", "prosinca"]
 
 export function EventBubble({
   isPreview,
@@ -23,6 +24,8 @@ export function EventBubble({
     }
     return "";
   }, [isPreview, isInActive, isInFeed]);
+
+  const date = action[0].date.split('-') 
 
   return (
     <div className={eventClass}>
@@ -50,7 +53,7 @@ export function EventBubble({
             {/* <Link href={`/profil/${action[1].userID}`} className="link"> */}
             <h3>{`${action[1]?.fname} ${action[1]?.lname}`}</h3>
             {/* </Link> */}
-            <h4>{action[0].date}</h4>
+            <h4>{date[2]}. {months[date[1]-1]} {date[0]}.</h4>
           </div>
           <p>
             {action[0].about.length > 100
