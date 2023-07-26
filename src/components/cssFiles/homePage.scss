@@ -104,18 +104,18 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-}
 
-.image-container {
-  margin: 0;
-  max-width: 636px;
-  width: inherit;
+  .image-container {
+    margin: 0;
+    max-width: 636px;
+    width: inherit;
 
-  .photo1 {
-    object-fit: contain;
-    width: 100%;
-    position: relative;
-    height: unset;
+    .photo1 {
+      object-fit: contain;
+      width: 100%;
+      position: relative;
+      height: unset;
+    }
   }
 }
 
@@ -287,9 +287,8 @@
   }
 
   .content {
-
     h1 {
-      margin-top:24px;
+      margin-top: 24px;
       margin-bottom: 24px;
     }
   }
