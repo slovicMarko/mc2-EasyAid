@@ -247,8 +247,8 @@ aside h5 {
     text-align: left;
     font-size: 1.25rem;
     width: 90%;
-    height: 40px;
-    margin: 10px 20px auto 20px;
+    min-height: 24px;
+    margin: 20px 20px 10px 20px;
     color: #303030;
     position: relative;
   }
@@ -258,16 +258,13 @@ aside h5 {
     text-align: left;
     font-size: 1em;
     width: 60%;
-    height: 40px;
+    min-height: 24px;
     margin: 5px 10px 5px 20px;
   }
   .event-bubble h4 {
-    float: left;
     font-size: 1.4;
     width: 30%;
-    height: 40px;
-    margin: 5px 20px 10px 0px;
-    text-align: center;
+    min-height: 24px;
     font-weight: normal;
   }
 
@@ -277,13 +274,33 @@ aside h5 {
     width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 60px;
+    min-height: 60px;
     margin: 0px auto 10px 20px;
   }
 }
 
-//Main
+@media (max-width: 650px) {
+  .event-button button {
+    .event-bubble h4 {
+      float: left;
+      width: 80%;
+      margin: 5px 20px 10px 20px;
+      text-align: left;
+    }
+  }
+}
 
+@media (min-width: 650px) {
+  .event-button button {
+    .event-bubble h4 {
+      float: left;
+      margin: 5px 20px 10px 0px;
+      text-align: center;
+    }
+  }
+}
+
+//Main
 
 // active feed
 
@@ -337,15 +354,14 @@ aside h5 {
     float: left;
     text-align: left;
     font-size: 1em;
-    width: 60%;
+    width: 80%;
     height: 40px;
     margin: 5px 10px 5px 20px;
   }
   .event-bubble h4 {
-    float: left;
     font-size: 1.4;
     width: 30%;
-    height: 40px;
+    min-height: 24px;
     margin: 5px 20px 10px 0px;
     text-align: center;
     font-weight: normal;
@@ -374,49 +390,59 @@ aside h5 {
   }
 }
 
-.days-alert {
-  position: relative;
-}
+// .days-alert {
+//   position: relative;
+// }
 
-.days-alert > h2 {
-  position: absolute;
-  z-index: 100;
-  top: -10px;
-  right: -10px;
-  font-size: 16px;
-  background-color: rgb(225, 97, 22);
-  color: white;
-  margin: 0;
-  height: 38px;
-  width: 150px;
-  text-align: center;
-  padding: 4px;
-  border-radius: 16px;
-}
+// .days-alert > h2 {
+//   position: absolute;
+//   z-index: 100;
+//   top: -10px;
+//   right: -10px;
+//   font-size: 16px;
+//   background-color: rgb(225, 97, 22);
+//   color: white;
+//   margin: 0;
+//   height: 38px;
+//   width: 150px;
+//   text-align: center;
+//   padding: 4px;
+//   border-radius: 16px;
+// }
 
-.change-alert {
-  position: relative;
-}
+// .change-alert {
+//   position: relative;
+// }
 
-.change-alert > h2 {
-  position: absolute;
-  z-index: 100;
-  top: 40px;
-  right: -10px;
-  font-size: 16px;
-  background-color: rgb(245, 237, 9);
-  color: #303030;
-  margin: 0;
-  height: 22px;
-  width: 150px;
-  text-align: center;
-  padding: 12px 4px 12px 4px;
-  border-radius: 16px;
-}
+// .change-alert > h2 {
+//   position: absolute;
+//   z-index: 100;
+//   top: 40px;
+//   right: -10px;
+//   font-size: 16px;
+//   background-color: rgb(245, 237, 9);
+//   color: #303030;
+//   margin: 0;
+//   height: 22px;
+//   width: 150px;
+//   text-align: center;
+//   padding: 12px 4px 12px 4px;
+//   border-radius: 16px;
+// }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+  .event-button {
+    width: 80%;
+    margin: 0 auto;
+  }
   .event-button button {
-    min-width: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .event-bubble {
+    width: 100%;
   }
 }
 

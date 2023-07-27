@@ -63,16 +63,20 @@ function MainFeed() {
         </header>
         {filterMenuOn ? <FilterMenu /> : <></>}
         {Listing.reverse().map((action) => (
-          <Link key={action[0].actionID} href={`/aktivne_akcije/${action[0].actionID}`}>
-          <EventBubble
-            isPreview={false}
-            isInActive={false}
-            isInFeed={true}
-            action={action}
-            daysLeft={6}
-            anyChanges={false}
-          />
-        </Link>
+          <Link
+            className="event-link"
+            key={action[0].actionID}
+            href={`/aktivne_akcije/${action[0].actionID}`}
+          >
+            <EventBubble
+              isPreview={false}
+              isInActive={false}
+              isInFeed={true}
+              action={action}
+              daysLeft={6}
+              anyChanges={false}
+            />
+          </Link>
         ))}
         <aside>
           <Leaderboard />
