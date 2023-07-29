@@ -90,5 +90,9 @@ body {
   font-weight: bold;
 }
 
+.left-margin {
+  margin-left: 10%;
+}
+
 @media screen and (max-width: 800px) {
 }
