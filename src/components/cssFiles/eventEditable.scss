@@ -274,3 +274,42 @@
   }
   */
 }
+
+@media (max-width:560px) {
+
+  .event-organiser {
+    width:360px;
+    min-width: 360px;
+  }
+
+  .event-organiser .event-preview-button {
+    width:360px;
+    min-width: 360px;
+  }
+}
+
+@media (max-width:425px) {
+
+  .event-organiser {
+    width:320px;
+    min-width: 300px;
+  }
+
+  .event-organiser .event-preview-button {
+    width:320px;
+    min-width: 300px;
+  }
+}
+
+@media (max-width:320px) {
+
+  .event-organiser {
+    width:260px;
+    min-width: 260px;
+  }
+
+  .event-organiser .event-preview-button {
+    width:260px;
+    min-width: 260px;
+  }
+}

@@ -81,3 +81,46 @@
 .none {
   display: none;
 }
+
+@media (max-width:1024px) {
+  .profile-page-content {
+    width:80%;
+    margin-left:auto;
+    margin-right: auto;
+    flex-wrap: nowrap;
+  }
+
+  .profile-info {
+
+    p {
+      width:240px;
+    }
+  }
+
+  .bottom-actions {
+    width: 80%;
+  }
+}
+
+@media (max-width:900px) {
+  .profile-page-content {
+    width:80%;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: flex-start;
+    margin-left:auto;
+    margin-right: auto;
+    flex-wrap: nowrap;
+  }
+
+  .profile-info {
+
+    p {
+      width:240px;
+    }
+  }
+
+  .bottom-actions {
+    width: 80%;
+  }
+}
