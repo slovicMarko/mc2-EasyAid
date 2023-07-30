@@ -156,3 +156,43 @@
 .mrgnUp {
   margin-top: 30px;
 }
+
+@media (max-width:425px) {
+
+  .input {
+    width:240px;
+  }
+
+  .input-textarea {
+    width:240px;
+  }
+
+  .form-label {
+    width:240px;
+  }
+
+  .form-field {
+    width:240px;
+    margin:0 auto;
+  }
+
+  .cancel-btn {
+    width:48%;
+  }
+
+  .end-event-btn {
+    width:48%;
+  }
+
+  .save-btn {
+    width:48%;
+  }
+  .buttons-dodaj {
+    width:276px;
+    justify-content: space-between;
+  }
+
+  form {
+    width:276px;
+  }
+}
