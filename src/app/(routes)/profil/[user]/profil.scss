@@ -57,7 +57,7 @@
   h2 {
     margin: 0 0 0 24px;
   }
-
+  
   p {
     width: 400px;
     border-radius: 20px;
@@ -107,20 +107,62 @@
     width:80%;
     flex-direction: column;
     //justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin-left:auto;
     margin-right: auto;
     flex-wrap: nowrap;
   }
 
   .profile-info {
-
+    width:362px;
+    box-sizing: border-box;
+    margin-top:24px;
     p {
-      width:240px;
+      width:100%;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin:0;
+      text-align: center;
     }
   }
 
   .bottom-actions {
-    width: 80%;
+    width: 362px;
+    text-align: center;
+    
+  }
+}
+
+@media (max-width:425px) {
+
+  .profile-main {
+    padding: 24px;
+      .profile-image{
+        width:200px;
+        height:200px;
+      }
+  }
+
+  .profile-info {
+    width:256px;
+    box-sizing: border-box;
+    margin-top:24px;
+    p {
+      width:100%;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin:0;
+      text-align: center;
+    }
+  }
+
+  .bottom-actions {
+    width: 256px;
+    text-align: center;
+    
   }
 }

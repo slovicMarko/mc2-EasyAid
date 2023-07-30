@@ -87,3 +87,12 @@
     }
   }
 }
+
+@media (max-width:320px) {
+  .event--preview button {
+    .event-bubble {
+      width: 256px;
+      height: 320px;
+    }
+  }
+}

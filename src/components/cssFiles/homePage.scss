@@ -302,3 +302,21 @@
     overflow:scroll
   }
 }
+
+
+@media (max-width:425px) {
+  .content {
+    h1 {
+      font-size: 56px;
+      line-height: 63px;
+    }
+  }
+
+  .headings {
+    margin:80px 0 80px 0;
+  }
+
+  .top-events {
+    margin-bottom: 40px;
+  }
+}
