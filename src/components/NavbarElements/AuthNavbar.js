@@ -30,7 +30,7 @@ function AuthNavbar(onClick) {
           >
             Profil
           </Link>
-          <SignOut isInNavbar />
+          <SignOut isInNavbar className="btn--auth-signout"/>
         </>
       ) : (
         <>

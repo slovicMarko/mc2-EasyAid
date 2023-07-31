@@ -24,6 +24,11 @@
     text-decoration: none;
     font-size: 16px;
   }
+  .profil-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
   .profile-image {
     width: 254px;
@@ -57,7 +62,7 @@
   h2 {
     margin: 0 0 0 24px;
   }
-  
+
   p {
     width: 400px;
     border-radius: 20px;
@@ -82,18 +87,17 @@
   display: none;
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .profile-page-content {
-    width:80%;
-    margin-left:auto;
+    width: 80%;
+    margin-left: auto;
     margin-right: auto;
     flex-wrap: nowrap;
   }
 
   .profile-info {
-
     p {
-      width:240px;
+      width: 240px;
     }
   }
 
@@ -102,28 +106,28 @@
   }
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .profile-page-content {
-    width:80%;
+    width: 80%;
     flex-direction: column;
     //justify-content: center;
     align-items: center;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     flex-wrap: nowrap;
   }
 
   .profile-info {
-    width:362px;
+    width: 362px;
     box-sizing: border-box;
-    margin-top:24px;
+    margin-top: 24px;
     p {
-      width:100%;
+      width: 100%;
       box-sizing: border-box;
     }
 
     h2 {
-      margin:0;
+      margin: 0;
       text-align: center;
     }
   }
@@ -131,31 +135,29 @@
   .bottom-actions {
     width: 362px;
     text-align: center;
-    
   }
 }
 
-@media (max-width:425px) {
-
+@media (max-width: 425px) {
   .profile-main {
     padding: 24px;
-      .profile-image{
-        width:200px;
-        height:200px;
-      }
+    .profile-image {
+      width: 200px;
+      height: 200px;
+    }
   }
 
   .profile-info {
-    width:256px;
+    width: 100%;
     box-sizing: border-box;
-    margin-top:24px;
+    margin-top: 24px;
     p {
-      width:100%;
+      width: 100%;
       box-sizing: border-box;
     }
 
     h2 {
-      margin:0;
+      margin: 0;
       text-align: center;
     }
   }
@@ -163,6 +165,5 @@
   .bottom-actions {
     width: 256px;
     text-align: center;
-    
   }
 }

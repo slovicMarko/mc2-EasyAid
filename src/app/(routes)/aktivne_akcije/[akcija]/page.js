@@ -58,7 +58,7 @@ function Akcija() {
       <div className="heading-color">
         <div className="heading">
           <article>
-            <h1 className="title">{action[0].name}</h1>
+            <h1 className="title-event">{action[0].name}</h1>
             <Link href={`/profil/${action[1].userID}`} className="link">
               <h2 className="organiser">{`${action[1].fname} ${action[1].lname} `}</h2>
             </Link>

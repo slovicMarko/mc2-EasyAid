@@ -7,7 +7,7 @@
   row-gap: 32px;
   justify-content: center;
   justify-items: center;
-  margin:104px 0 200px 0;
+  margin: 104px 0 200px 0;
 }
 
 .rectangle {
@@ -123,7 +123,7 @@
   font-size: 84px;
   position: fixed;
   right: 68px;
-  top:190px;
+  top: 190px;
   border-radius: 50%;
   z-index: 20;
   transition: 0.4s ease;
@@ -136,16 +136,15 @@
   cursor: pointer;
 }
 
-.edit-icon{
+.edit-icon {
   color: #fff;
   font-size: 30px;
   text-shadow: 4px 4px 8px #303030;
 }
 
-h1{
+h1 {
   text-align: center;
 }
-
 
 @media (max-width: 560px) {
   /*
@@ -156,16 +155,16 @@ h1{
   */
 }
 
-@media (max-width:800px) {
-
+@media (max-width: 800px) {
   .add-icon {
-    top:127px;
-    right:40px;
+    top: 127px;
+    right: 40px;
     font-size: 56px;
+    //box-shadow: 2px 4px 7px 0px #393e41;
   }
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
   .organiser-container {
     grid-template-columns: 500px;
     //grid-column-gap: 32px;
@@ -176,35 +175,31 @@ h1{
   }
 }
 
-@media (max-width:560px) {
+@media (max-width: 560px) {
   .organiser-container {
     grid-template-columns: 360px;
-    margin:52px 0 52px 0;
+    margin: 52px 0 52px 0;
   }
 }
 
-@media (max-width:425px) {
+@media screen and (max-width: 425px) {
   .organiser-container {
     grid-template-columns: 320px;
-    margin:52px 0 52px 0;
+    margin: 52px 0 52px 0;
   }
 
   .add-icon {
-    top:180px;
+    top: 180px;
   }
 
   h1 {
-    margin-bottom:100px;
+    margin-bottom: 100px;
   }
 }
 
-
-@media (max-width:320px) {
+@media (max-width: 320px) {
   .organiser-container {
     grid-template-columns: 260px;
-    margin:52px 0 52px 0;
+    margin: 52px 0 52px 0;
   }
-
-
 }
-

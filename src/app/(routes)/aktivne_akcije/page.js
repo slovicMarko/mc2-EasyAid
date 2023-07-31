@@ -78,7 +78,7 @@ function MainFeed() {
             />
           </Link>
         ))}
-        <aside>
+        <aside className="leaderboard-aktivne">
           <Leaderboard />
         </aside>
       </div>

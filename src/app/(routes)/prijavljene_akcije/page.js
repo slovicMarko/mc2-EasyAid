@@ -43,6 +43,7 @@ function ActiveFeed() {
             <div className="active-events">
               {Listing.map((action) => (
                 <Link
+                  className="event-link"
                   key={action[0].actionID}
                   href={`/aktivne_akcije/${action[0].actionID}`}
                 >

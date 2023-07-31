@@ -37,11 +37,13 @@ function Profile() {
         <div className="container-buttons">
           <div className="profile-main">
             <div>
-              <img
-                className="profile-image"
-                src={user.photo}
-                alt="profile_picture"
-              />
+              <div className="profil-image-container">
+                <img
+                  className="profile-image"
+                  src={user.photo}
+                  alt="profile_picture"
+                />
+              </div>
               <h2 className="profile-name">
                 {user.fname} {user.lname}
               </h2>
