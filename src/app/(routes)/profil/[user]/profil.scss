@@ -141,6 +141,8 @@
 @media (max-width: 425px) {
   .profile-main {
     padding: 24px;
+    width:280px;
+    box-sizing: border-box;
     .profile-image {
       width: 200px;
       height: 200px;
@@ -165,5 +167,19 @@
   .bottom-actions {
     width: 256px;
     text-align: center;
+  }
+
+  .profile-page-content {
+    width:280px;
+  }
+}
+
+@media (max-width:375px) {
+  .profile-page-content {
+    width:260px;
+  }
+
+  .profile-main {
+    width:260px;
   }
 }
